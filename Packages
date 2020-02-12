@@ -1,0 +1,36 @@
+Package: jp.dcsyhi.cydiatools
+Version: 2.4
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 500
+Depends: mobilesubstrate, firmware (>=11.0), com.spark.libsparkcolourpicker, com.creaturecoding.libcspreferences, ws.hbang.common
+Filename: ./debs/jp.dcsyhi.cydiatools_2.4_iphoneos-arm.deb
+Size: 225694
+MD5sum: 3f24ba14f75f658ac32c0a7a6f03e038
+SHA1: d609f6abed0f158c9c52dbb04d56012a39f03284
+SHA256: 43ecf529d23264f8d9735ec02840b20e0bd235e662e852ed1f5846ca1e06dd83
+Section: Tweaks
+Description: Customize Cydia colors and more.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/HomePages/CydiaTools/CydiaTools.html
+Icon: file:///Library/PreferenceBundles/CydiaBundle.bundle/icon@2x.png
+Name: Cydia Tools
+
+Package: jp.dcsyhi.quickaccess
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 376
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker
+Filename: ./debs/jp.dcsyhi.quickaccess_1.2_iphoneos-arm.deb
+Size: 98502
+MD5sum: 521a7134f1887921760940de7de13054
+SHA1: 11326a4ae65fe862389f9219c54e01a995595bd1
+SHA256: 74d9fb2be7506faa59d19971d8338debd4c246c5bd4d9dad69a1587100e38994
+Section: Tweaks
+Description: ショートカット類に迅速にアクセスできます。
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/HomePages/CydiaTools/QuickAccess.html
+Icon: file:///Library/PreferenceBundles/QuickBundle.bundle/icon@2x.png
+Name: QuickAccess
+

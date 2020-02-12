@@ -1,0 +1,40 @@
+table {
+  border: 1px solid #ccc;
+  border-collapse: separate;
+  border-radius: 5px;
+  border-spacing: 0;
+}
+table th, table td {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+}
+table th {
+  border-right: 1px solid #ccc;
+  background: #EEE;
+  color: #6699ff;
+}
+table tr:first-child th {
+  border-radius: 5px 0 0 0;
+}
+table tr:first-child td {
+  border-radius: 0 5px 0 0;
+}
+table tr:last-child th {
+  border-bottom: none;
+  border-radius: 0 0 0 5px;
+}
+table tr:last-child td {
+  border-bottom: none;
+  border-radius: 0 0 5px 0;
+}
+td{
+    /*background-color: #6699ff;*/
+}
+.Twitter{
+    color: orange;
+}.Lobi{
+    color: orange;
+}
+a{
+    text-decoration: none;
+}
