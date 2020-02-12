@@ -23,14 +23,14 @@ Maintainer: Dcsyhi
 Installed-Size: 376
 Depends: mobilesubstrate, org.thebigboss.libcolorpicker
 Filename: ./debs/jp.dcsyhi.quickaccess_1.2_iphoneos-arm.deb
-Size: 98502
-MD5sum: 521a7134f1887921760940de7de13054
-SHA1: 11326a4ae65fe862389f9219c54e01a995595bd1
-SHA256: 74d9fb2be7506faa59d19971d8338debd4c246c5bd4d9dad69a1587100e38994
+Size: 98506
+MD5sum: ab612b267c70fd7edda2513f95778364
+SHA1: e81d4b2e291229d76fc54ed0dc60b6bcb8b2e9b7
+SHA256: 989cf8fa14f686d09367319f958feba071255a2dfa84adf2af6134a038eb0867
 Section: Tweaks
 Description: ショートカット類に迅速にアクセスできます。
 Author: Dcsyhi
-Depiction: https://dcsyhi1998.github.io/HomePages/CydiaTools/QuickAccess.html
+Depiction: https://dcsyhi1998.github.io/HomePages/QuickAccess/QuickAccess.html
 Icon: file:///Library/PreferenceBundles/QuickBundle.bundle/icon@2x.png
 Name: QuickAccess
 
