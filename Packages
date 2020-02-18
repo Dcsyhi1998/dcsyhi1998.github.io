@@ -17,16 +17,16 @@ Icon: file:///Library/PreferenceBundles/CydiaBundle.bundle/icon@2x.png
 Name: Cydia Tools
 
 Package: jp.dcsyhi.quickaccess
-Version: 1.2
+Version: 1.3.1
 Architecture: iphoneos-arm
 Maintainer: Dcsyhi
-Installed-Size: 376
-Depends: mobilesubstrate, org.thebigboss.libcolorpicker
-Filename: ./debs/jp.dcsyhi.quickaccess_1.2_iphoneos-arm.deb
-Size: 98506
-MD5sum: ab612b267c70fd7edda2513f95778364
-SHA1: e81d4b2e291229d76fc54ed0dc60b6bcb8b2e9b7
-SHA256: 989cf8fa14f686d09367319f958feba071255a2dfa84adf2af6134a038eb0867
+Installed-Size: 416
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, firmware (>=10.0)
+Filename: ./debs/jp.dcsyhi.quickaccess_1.3.1_iphoneos-arm.deb
+Size: 99866
+MD5sum: 3d37019d20492f0746af84c597136c56
+SHA1: adcb468ebe811212a42e1ee6f97d55934692183b
+SHA256: e19b291fe0abb7c125b49f7ac1367d5f96231a600de338283c7355250ca95387
 Section: Tweaks
 Description: ショートカット類に迅速にアクセスできます。
 Author: Dcsyhi
