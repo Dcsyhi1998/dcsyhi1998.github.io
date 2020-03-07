@@ -21,12 +21,12 @@ Version: 1.3.5
 Architecture: iphoneos-arm
 Maintainer: Dcsyhi
 Installed-Size: 484
-Depends: mobilesubstrate, org.thebigboss.libcolorpicker, firmware (>=10.0)
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, firmware (>=10.0),applist
 Filename: ./debs/jp.dcsyhi.quickaccess_1.3.5_iphoneos-arm.deb
-Size: 105686
-MD5sum: 88aef28b5d23692e30311207d72fc50e
-SHA1: 21b4efe32f6c77ef5ff7b9b26a999721c0a3893b
-SHA256: 2e8fe3aef21b0b293941fad531f96e609bf894d8a15b399c91d12294ee8d11eb
+Size: 105692
+MD5sum: 2099bc190462a269faa3d9edf016f706
+SHA1: bec12490e4622620216ba0f4cca54fd081638d10
+SHA256: d569cd28d991a9da4770ec3cd538f73663e6b2770bcaefca8dd4cea4873d6c6f
 Section: Tweaks
 Description: ショートカット類に迅速にアクセスできます。
 Author: Dcsyhi
