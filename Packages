@@ -1,3 +1,20 @@
+Package: jp.dcsyhi.copyscheme
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 152
+Depends: mobilesubstrate, firmware (>=11.0)
+Filename: ./debs/jp.dcsyhi.copyscheme_1.0_iphoneos-arm.deb
+Size: 22166
+MD5sum: 78f2d84fd74125baad34a198fc91ba0e
+SHA1: 23c8c28ac3fb8e759224d84b7933165b4448eb22
+SHA256: f91421560caae65b2d3524dca25d597b0a37cabceede94a52b293fae922aef88
+Section: Tweaks
+Description: 3d touch
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/HomePages/CopyScheme/CopyScheme.html
+Name: CopyScheme
+
 Package: jp.dcsyhi.cydiatools
 Version: 2.4
 Architecture: iphoneos-arm
