@@ -1,3 +1,21 @@
+Package: jp.dcsyhi.ccmodules
+Version: 0.0.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 412
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.ccmodules_0.0.1_iphoneos-arm.deb
+Size: 129442
+MD5sum: 59c52f49c2f240b274c51bfbf9b77ce6
+SHA1: a6434bded48ebe3b929725b71142bcbc514fb38c
+SHA256: 83ded177ede2a05138dc6335494a22a95da81136818f58aa807672427d08e758
+Section: Control Center (Modules)
+Description: An awesome Control Center module!
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/HomePages/CCModules/CCModules.html
+Icon: file:///Library/ControlCenter/Bundles/CCModules.bundle/Icon@2x.png
+Name: CCModules
+
 Package: jp.dcsyhi.copyscheme
 Version: 1.0
 Architecture: iphoneos-arm
