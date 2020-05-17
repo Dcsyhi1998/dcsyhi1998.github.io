@@ -6,14 +6,8 @@
    "banners":[
       {
          "url":"https://sugiuta.github.io/assets/repo/Banner/lineextention.PNG",
-         "title":"LINE Extention",
-         "package":"com.sugi.lineextention",
-         "hideShadow":false
-      },
-      {
-         "url":"https://sugiuta.github.io/assets/repo/Banner/LockTouch3Logo.png",
-         "title":"LockTouch3",
-         "package":"com.sugi.locktouch3",
+         "title":"QuickAccess",
+         "package":"jp.dcsyhi.quickaccess",
          "hideShadow":false
       }
    ]
