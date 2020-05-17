@@ -17,6 +17,7 @@
     <a href="sileo://source/https://dcsyhi1998.github.io">Sileo</a>
     <a href="zbra://sources/add/https://dcsyhi1998.github.io">Zebra</a>
     <a href="installer://add/repo=https://dcsyhi1998.github.io">Installer</a>
+    <a href="cydia://">Cydia</a>
 </p>
 <br>
 <p align="center">
