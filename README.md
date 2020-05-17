@@ -10,16 +10,11 @@
     <strong>This tweak is designed for classic iPhones (iPhone that without notch)</strong>
 </p>
 <h2 align="center">
-    Add Repo
+    Other
 </h2>
-<p align="center">
-    <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://dcsyhi1998.github.io">Cydia</a>
-    <a href="sileo://source/https://dcsyhi1998.github.io">Sileo</a>
-    <a href="zbra://sources/add/https://dcsyhi1998.github.io">Zebra</a>
-    <a href="installer://add/repo=https://dcsyhi1998.github.io">Installer</a>
-    <a href="https://">Cydia</a>
-</p>
 <br>
 <p align="center">
-    <a href="https://twitter.com/linux_n1">Twitter</a>
+    <a href="https://twitter.com/linux_n1">Twitter</a><br>
+     <a href="https://dcsyhi1998.github.io/">Add Repo</a>
 </p>
+
