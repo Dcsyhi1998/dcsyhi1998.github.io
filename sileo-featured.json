@@ -1,0 +1,20 @@
+  
+{
+   "class":"FeaturedBannersView",
+   "itemSize":"{296, 148}",
+   "itemCornerRadius":10,
+   "banners":[
+      {
+         "url":"https://sugiuta.github.io/assets/repo/Banner/lineextention.PNG",
+         "title":"LINE Extention",
+         "package":"com.sugi.lineextention",
+         "hideShadow":false
+      },
+      {
+         "url":"https://sugiuta.github.io/assets/repo/Banner/LockTouch3Logo.png",
+         "title":"LockTouch3",
+         "package":"com.sugi.locktouch3",
+         "hideShadow":false
+      }
+   ]
+}
