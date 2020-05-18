@@ -7,7 +7,7 @@
     All the tweak I have released are compatible<br> 
     with the devices (iOS12, iOS13) and also A12<br>
     <br/>
-    <strong>This tweak is designed for classic iPhones (iPhone that without notch)</strong>
+    <strong>Devices tested: iPhone Xs Max (iOS12), iPhone7 (iOS11), iPhone8 (iOS13)</strong>
 </p>
 <h2 align="center">
     Other
