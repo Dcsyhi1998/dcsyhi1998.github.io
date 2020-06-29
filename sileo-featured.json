@@ -9,6 +9,12 @@
          "title":"QuickAccess",
          "package":"jp.dcsyhi.quickaccess",
          "hideShadow":false
+      },
+      {
+         "url":"https://dcsyhi1998.github.io/BaseImg/SplitApp_header.png",
+         "title":"SplitApp",
+         "package":"com.twickd.dcsyhi.splitapp",
+         "hideShadow":false
       }
    ]
 }
