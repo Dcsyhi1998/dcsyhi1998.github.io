@@ -11,23 +11,23 @@
 }
 
 #siteTitle {
-    width: 310px;
+    width: 450px;
     letter-spacing: .135em;
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    border-right: .15em solid #ebc034;
+    border-right: .15em solid #ebc034;  /*カーソル風に*/
     transition: all 1.0s ease;
-	-webkit-transition: all 1.0s ease;
+	/*-webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	-o-transition: all 1.0s ease;
-    -ms-transition: all 1.0s ease;
+    -ms-transition: all 1.0s ease;*/
     animation:
         typing 1.5s steps(12, end),
         blink-caret 1s step-end infinite;
 }
 /*Disable Animation on mobile*/
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 450px) {
     #siteTitle {
         border-right: none;
         animation: none;
@@ -162,11 +162,12 @@
     }
 }
 
+/*キーボードのタイピング風に描画*/
 @keyframes typing {
     from {
         width: 0
     }to {
-        width: 550px;
+        width: 450px;
     }
 }
 

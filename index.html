@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137158091-1" type="50e83522499ac7f875d6b319-text/javascript"></script>
-    <script type="50e83522499ac7f875d6b319-text/javascript">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137158091-1" type="text/javascript"></script>
+    <script type="text/javascript">
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -11,13 +10,17 @@
                 gtag('config', 'UA-137158091-1');
     </script>
     <title>Dcsyhi's</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
     <link rel="stylesheet" type="text/css" href="assets/global.css">
     <link rel="stylesheet" type="text/css" href="assets/homepage.css">
 
     <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="7f7c22bfb47473e2eb70f2e2-|49" defer=""></script>
-    <script src="assets/global.js" type="50e83522499ac7f875d6b319-text/javascript"></script>
-    <script src="assets/homepage.js" type="50e83522499ac7f875d6b319-text/javascript"></script>
+    <script src="assets/global.js" type="text/javascript"></script>
+    <script src="assets/homepage.js" type="text/javascript"></script>
 </head>
 <body id="darkMode">
     <div class="navbar">
@@ -27,7 +30,7 @@
             <div class="rightNavContainer">
                 <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://dcsyhi1998.github.io">Add Repo</a>
                 <a href="packages.html">Packages</a>
-                <svg class="themeToggle" width="24" height="24" viewBox="0 0 48 48" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleDarkMode()" data-cf-modified-50e83522499ac7f875d6b319-="">
+                <svg class="themeToggle" width="24" height="24" viewBox="0 0 48 48" onclick="toggleDarkMode()">
                     <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
                             3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
                             13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"></path>
@@ -39,32 +42,37 @@
     <div class="wrapper verticalCenter">
         <h1 id="siteTitle">Dcsyhi Repo</h1>
         <p>My Main Repository</p>
+        <!-- Twitter -->
         <a href="https://twitter.com/linux_n1">
-            <svg class="socialIcon" width="24" height="24" viewBox="0 0 24 24" stroke-width=2 onmouseover="if (!window.__cfRLUnblockHandlers) return false; changeTitle('Tweet Me')" onmouseleave="if (!window.__cfRLUnblockHandlers) return false; changeTitle('')" data-cf-modified-50e83522499ac7f875d6b319-="">
+            <svg class="socialIcon" width="24" height="24" viewBox="0 0 24 24" stroke-width=2 onmouseover="changeTitle('Tweet Me')" onmouseleave="changeTitle('')">
                 <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
             </svg>
         </a>
+        <!-- GitHub -->
         <a href="https://github.com/Dcsyhi1998">
-            <svg class="socialIcon" width="24" height="24" viewBox="0 0 24 24" stroke-width=2 onmouseover="if (!window.__cfRLUnblockHandlers) return false; changeTitle('View My GitHub')" onmouseleave="if (!window.__cfRLUnblockHandlers) return false; changeTitle('')" data-cf-modified-50e83522499ac7f875d6b319-="">
+            <svg class="socialIcon" width="24" height="24" viewBox="0 0 24 24" stroke-width=2 onmouseover="changeTitle('View My GitHub')" onmouseleave="changeTitle('')">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
                 </path>
             </svg>
         </a>
+        <!-- YouTube -->
         <a href="https://www.youtube.com/channel/UC8cNRgmCsgphRIf8tgr94dw">
-            <svg class="socialIcon" width="24" height="24" viewBox="-1 0 26 24" stroke-width="2" onmouseover="if (!window.__cfRLUnblockHandlers) return false; changeTitle('Add Repo to Installer')" onmouseleave="if (!window.__cfRLUnblockHandlers) return false; changeTitle('')" data-cf-modified-50e83522499ac7f875d6b319-="">
+            <svg class="socialIcon" width="24" height="24" viewBox="-1 0 26 24" stroke-width="2" onmouseover="changeTitle('YouTube Channel')" onmouseleave="changeTitle('')">
                 <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
             </svg>
         </a>
+        <!-- Installer -->
         <a href="installer://add/repo=https://dcsyhi1998.github.io">
-            <svg class="socialIcon" width="24" height="24" viewBox="0 0 24 24" stroke-width="13" onmouseover="if (!window.__cfRLUnblockHandlers) return false; changeTitle('Add Repo to Installer')" onmouseleave="if (!window.__cfRLUnblockHandlers) return false; changeTitle('')" data-cf-modified-50e83522499ac7f875d6b319-="">
+            <svg class="socialIcon" width="24" height="24" viewBox="0 0 24 24" stroke-width="13" onmouseover="changeTitle('Add on Installer')" onmouseleave="changeTitle('')">
                 <g transform="matrix(.16597 0 0 .095213 -3.6795 -1.9089)">
                     <path d="m85.76 271.31c-1.6173-1.2611 0.60553
                                         1.6046-24.095-31.064-5.5462-7.3355-11.275-14.967-12.73-16.96-1.4552-1.9926-7.5218-10.068-13.481-17.946-5.9595-7.8778-11.333-15.132-11.941-16.12-1.2905-2.0974-1.7157-4.3152-0.99414-5.1853 1.2651-1.5255 2.4213-1.672 14.774-1.8731 11.049-0.17981 11.898-0.23901 13.053-0.90988 2.5508-1.4824 2.4683-0.66288 2.4689-24.516 3.53e-4 -18.754 0.06737-21.448 0.54972-22.137 0.80205-1.1451 1.8101-0.97373 4.6432 0.78931 8.0283 4.9962 16.362 7.7656 26.168 8.6966 6.9553 0.66032 14.938-0.36872 22.58-2.9108 2.8904-0.96146 9.672-4.1711 12.93-6.1197 1.3108-0.78392 2.7589-0.52199 3.4096 0.6167 0.34679 0.60693 0.49196 5.6598 0.62754 21.843 0.17354 20.713 0.1884 21.069 0.91882 22.049 0.40834 0.54753 1.2815 1.313 1.9403 1.7011 1.1151 0.65681 2.0266 0.71876 13.192 0.89667 7.8179 0.12457 12.32 0.33178 12.929 0.5951 2.1201 0.91646 2.6234 3.1612 1.2475 5.5638-0.77025 1.345-7.5376 10.462-18.593 25.047-4.8573 6.4085-13.068 17.278-23.984 31.75-18.819 24.95-18.716 24.819-20.498 26.134-1.5306 1.1292-3.7134 1.1548-5.1174 0.0599zm5.6225-1.4112c0.87627-0.82462 5.2311-6.3412 9.6774-12.259s12.821-17.03 18.61-24.694c27.876-36.906 34.032-45.173 34.234-45.978 0.35713-1.423 0.0439-2.4134-1.0117-3.1994-0.95355-0.70998-1.4991-0.74832-13.053-0.91734-12.05-0.17627-12.059-0.17696-13.645-1.0583-1.1126-0.61813-1.8249-1.3528-2.3812-2.456l-0.79375-1.5741v-20.672c0-21.825-3.5e-4 -21.83-1.5943-21.949-0.38431-0.0286-1.8825 0.63967-3.3294 1.4851-8.0888 4.7265-16.002 7.2728-25.365 8.1617-11.366 1.079-24.728-2.3007-35.171-8.8961-1.1954-0.75494-2.4023-1.3726-2.6821-1.3726-1.3393 0-1.3554 0.25578-1.3554 21.61 0 14.144-0.12584 21.263-0.39473 22.331-0.53954 2.1427-2.0867 3.4401-4.7851 4.0128-1.5415 0.32713-4.423 0.397-10.596 0.25695-11.498-0.26089-14.576 0.22912-15.123 2.4078-0.46423 1.8496-2.9751-1.6042 43.121 59.314 10.71 14.154 19.907 25.983 20.461 26.318 1.8018 1.0882 3.3758 0.82293 5.1775-0.87256zm-9.9916-134.71c-12.409-1.4016-24.757-7.4332-33.867-16.543-4.6452-4.6452-7.8443-9.1176-10.724-14.993-3.1937-6.5151-4.7958-11.715-5.6984-18.494-2.2699-17.049 3.4086-34.427 15.374-47.048 8.6754-9.151 19.658-15.05 32.446-17.428 4.5525-0.8465 14.374-0.84601 19.05 0.0011 8.3918 1.52 17.188 5.1481 23.812 9.8211 13.836 9.7615 22.684 25.257 24.194 42.372 1.1769 13.342-2.5028 27.025-10.246 38.099-3.3017 4.7222-10.231 11.516-14.964 14.672-4.4171 2.9453-6.5706 4.0816-11.398 6.0138-8.3158 3.3285-18.44 4.6048-27.979 3.5273zm17.286-1.1591c11.4-2.0569 21.834-7.5258 29.986-15.717 4.9193-4.9429 8.1446-9.3867 10.897-15.013 4.6932-9.5947 6.3719-17.732 5.895-28.575-0.5292-12.033-4.608-22.842-12.38-32.808-7.0581-9.051-18.828-16.613-30.429-19.551-9.1277-2.3116-19.191-2.3099-28.397 5e-3 -11.321 2.8465-22.859 10.155-29.811 18.882-7.3002 9.1651-11.275 18.408-12.637 29.383-2.2634 18.246 4.3062 36.534 17.559 48.88 3.0805 2.8698 9.7994 7.5756 13.441 9.4138 5.1921 2.621 12.663 4.8783 18.415 5.5639 3.8564 0.45973 13.808 0.19516 17.462-0.46424zm-15.346-32.106c-8.435-1.9317-15.578-8.3506-18.3-16.446-2.1551-6.4081-1.3878-13.75 2.0884-19.983 1.9005-3.408 6.38-7.7645 9.6823-9.4166 4.412-2.2073 7.0404-2.8507 11.645-2.8507 4.5918 0 7.2337 0.64396 11.597 2.8268 3.1246 1.5632 7.7517 6.0256 9.667 9.3229 2.9481 5.0754 4.0953 11.81 2.9445 17.286-1.757 8.36-8.4059 15.776-16.624 18.542-3.4546 1.1628-9.313 1.4942-12.7 0.71859zm12.659-1.4141c4.7-1.5885 8.9909-4.7072 11.7-8.5035 5.6843-7.9658 6.2766-17.923 1.5454-25.98-4.7079-8.0173-13.348-12.768-22.17-12.189-11.853 0.7766-21.564 10.368-22.473 22.195-0.91084 11.85 6.998 22.478 18.739 25.183 3.3698 0.77643 9.2423 0.44909 12.659-0.70562z"></path>
                 </g>
             </svg>
         </a>
+        <!-- Cydia -->
         <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://dcsyhi1998.github.io">
-            <svg class="socialIcon" width="24" height="24" viewBox="0 0 24 24" stroke-width=2 onmouseover="if (!window.__cfRLUnblockHandlers) return false; changeTitle('Add Repo to Cydia')" onmouseleave="if (!window.__cfRLUnblockHandlers) return false; changeTitle('')" data-cf-modified-50e83522499ac7f875d6b319-="">
+            <svg class="socialIcon" width="24" height="24" viewBox="0 0 24 24" stroke-width=2 onmouseover="changeTitle('Add on Cydia')" onmouseleave="changeTitle('')">
                 <g transform="translate(0,-273)" id="layer1">
                     <path transform="scale(0.26458333)" id="path280" d="" style="stroke-width:0.35714287"></path>
                     <path transform="scale(0.26458333)" id="path284" d="" style="stroke-width:0.35714287"></path>

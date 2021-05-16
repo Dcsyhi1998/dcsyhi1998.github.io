@@ -74,5 +74,5 @@ function removeBanner(element) {
     //Make Package Compact
     element.parentElement.className = "packageWrapperCompact"
     //Remove Old Banner
-    element.parentElement.removeChild(element)  
+    element.parentElement.removeChild(element)
 }
