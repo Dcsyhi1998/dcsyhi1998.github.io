@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137158091-1" type="7f7c22bfb47473e2eb70f2e2-text/javascript"></script>-->
+    <title>Packages</title>
+    <link rel="icon" href="favicon.ico" class="next-head" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/global.css">
+    <link rel="stylesheet" type="text/css" href="assets/packages.css">
+<head>
+<body id="darkMode">
+    <div class="navbar">
+        <div class="navbarContainer">
+        <a href="index.html" class="navbarLogo">&#62; nm ~</a>
+        <div class="logoCursor"></div>
+            <div class="rightNavContainer">
+                <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://dcsyhi1998.github.io">Add Repo</a>
+                <svg class="themeToggle" width="24" height="24" viewBox="0 0 48 48" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleDarkMode()" data-cf-modified-7f7c22bfb47473e2eb70f2e2-="">
+                    <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+                                3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+                                13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h1>All Packages</h1>
+        <!-- 作成してあるTweak -->
+        <span id="Packages">
+            <script>
+                //パッケージの遷移先
+                var Packages = [
+                    //"depiction/zetsu.html",
+                    "depiction/carplay++.html",
+                    //"depiction/fastappls.html",
+                    //"depiction/fastappls.html"
+                ];
+                //パッケージのタイトル
+                var Packages_title = [
+                    //"Zetsu(絶)",
+                    "CarPlay++",
+                    //"FastAppLS",
+                    //"HomerRun",
+                ];
+                //パッケージの詳細
+                var Packages_details = [
+                    //"<em>Zetsu(絶)</em> is a Tweak that allows the app to Multitask.How to start: Select <em>Zetsu(絶)</em> from 3D Touch shortcuts for the app you want to multitask.",
+                    "<em>CarPlay++</em> is a Tweak to give extensions to CarPlay !<br>How to start: Just apply from the setting screen.",
+                    //"<em>FastApp</em> is a Tweak App shortcut on lock screen !<br>How to start: Just apply from the setting screen.",
+                    //"<em>HomerRun</em> is a Tweak App shortcut on lock screen !<br>How to start: Just apply from the setting screen.",
+                ];
+                //バーナ画像
+                var Packages_Banners = [
+                    //"ZetsuBaner.png",
+                    "CarPlay++Banner.png",
+                    //"FastAppLSBanner.png",
+                    //"HomerBanner.png",
+                ];
+
+                for(var i = 0;i < Packages.length;i++){
+                    document.writeln("<a href="+ Packages[i] + ">");
+                        document.write('<div class="packageWrapper" style="background-image: url(./Banners/' + Packages_Banners[i] +');animation-delay: 0s">');
+                            document.write('<img class="bannerImage" src="./Banners/' + Packages_Banners[i] +'" onerror="removeBanner(this)">');
+                            document.write('<div class="packageLowerInfo">');
+                                document.write('<p class="packageTitle">' + Packages_title[i] + "</p>");
+                                document.write('<p>');
+                                    document.write('<p>');
+                                        document.write(Packages_details[i]);
+                                    document.write('</p>');
+                                document.write('</p>');
+                            document.write('</div>');
+                        document.write('</div>');
+                    document.writeln('</a>');
+                }
+            </script>
+        </span>
+    </div>
+
+    <!-- ダークモードに変更可能にするためのjs -->
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="7f7c22bfb47473e2eb70f2e2-|49" defer=""></script>
+
+</body>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/showdown" type="7f7c22bfb47473e2eb70f2e2-text/javascript"></script>
+    <script src="assets/global.js" type="7f7c22bfb47473e2eb70f2e2-text/javascript"></script>
+    <script src="assets/packages.js" type="7f7c22bfb47473e2eb70f2e2-text/javascript"></script>
+</head>
+</html>

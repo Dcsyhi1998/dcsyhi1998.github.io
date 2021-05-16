@@ -1,0 +1,140 @@
+.packageWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0;
+    animation: fadeUp .5s ease;
+    animation-fill-mode: forwards;
+    max-height: 555px;
+    background-color: rgba(0,0,0,.5);
+}
+.bannerImage {
+    margin-bottom: calc(1rem + 40px);
+    visibility: hidden;
+    width: 100%;
+}
+.bannerIcon {
+    padding: 10px;
+    position: absolute;
+    width: 30%;
+}
+
+.packageLowerInfo {
+    max-height: calc(1rem + 40px);
+    min-width: calc(100% - 40px);
+    position: absolute;
+    background-color: var(--navbar-bg-color);
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+}
+.packageLowerInfo:after {
+    content: " ";
+    display: block;
+    background-color: var(--navbar-bg-color);
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.packageLowerInfo p {
+    color: rgba(255,255,255,0)
+}
+.packageTitle {
+    color: var(--text-color) !important;
+}
+
+.packageLowerInfo p, .packageLowerInfo, .packageWrapper, .bannerIcon {
+    transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+}
+
+.packageWrapper:hover {
+    background-position-x: 7.5%;
+    background-position-y: 7.5%;
+    background-size: 120%;
+}
+.packageWrapper:hover .bannerIcon {
+    width: 32.5%;
+}
+.packageWrapper:hover .packageLowerInfo {
+    max-height: calc(6rem + 41px);
+}
+.packageWrapper:hover .packageLowerInfo .packageTitle {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.packageWrapper:hover .packageLowerInfo p {
+    color: var(--text-color) !important;
+}
+
+@keyframes fadeUp {
+    from {
+        max-width: 0;
+        margin-top: 50px;
+        opacity: 0;
+        border-radius: 50%;
+    }
+    to {
+        max-width: 100%;
+        margin-top: 0;
+        opacity: 1;
+        border-radius: 10px;
+    }
+}
+
+/*Compact Package*/
+.packageWrapperCompact {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp .5s ease;
+    animation-fill-mode: forwards;
+    max-height: 180px;
+    min-height: 180px;
+    background-color: var(--navbar-bg-color);
+}
+.packageWrapperCompact .packageLowerInfo {
+    min-width: calc(100% - 200px);
+    max-height: 160px;
+    padding-left: 100px;
+}
+.packageWrapperCompact .packageTitle {
+    font-size: 18pt;
+    font-weight: bold;
+}
+.packageWrapperCompact p {
+    color: var(--text-color) !important;
+}
+.packageWrapperCompact .bannerIcon {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    padding: 0;
+    width: 60px;
+    z-index: 999;
+}
+
+.packageWrapperCompact:hover .packageTitle {
+    font-size: 24pt;
+    margin-bottom: 5px;
+}
+.packageWrapperCompact:hover .packageLowerInfo {
+    padding-left: 130px;
+}
+.packageWrapperCompact:hover .bannerIcon {
+    width: 100px;
+}
