@@ -31,7 +31,7 @@
           {
             "class": "DepictionScreenshotsView",
             "itemCornerRadius": 8,
-            "itemSize": "{360, 423}",
+            "itemSize": "{360, 400}",
             "screenshots": [
               {
                 "accessibilityText": "Screenshot",
@@ -78,17 +78,17 @@
           },
           {
             "class": "DepictionTableTextView",
-            "text": "Evelyn (ev_ynw)",
+            "text": "Dcsyhi (@linux_n1)",
             "title": "Author"
           },
           {
             "class": "DepictionTableTextView",
-            "text": "1.1",
+            "text": "1.0.1",
             "title": "Version"
           },
           {
             "class": "DepictionTableTextView",
-            "text": "iOS13.0 - 13.5",
+            "text": "iOS13.0 - 14.x",
             "title": "Compatibility"
           },
           {
@@ -108,9 +108,9 @@
             "spacing": 16
           },
           {
-            "action": "https://twitter.com/ev_ynw",
+            "action": "https://twitter.com/intent/follow?screen_name=linux_n1",
             "class": "DepictionTableButtonView",
-            "title": "Find me on Twitter (@ev_ynw)",
+            "title": "Find me on Twitter (@linux_n1)",
             "openExternal": true
           },
           {
@@ -119,7 +119,7 @@
             "title": "Send me an email"
           },
           {
-            "action": "https://paypal.me/evynw",
+            "action": "https://www.paypal.me/DevDcsyhi",
             "class": "DepictionTableButtonView",
             "title": "Buy me a 🍺 via PayPal"
           },
@@ -128,7 +128,7 @@
             "spacing": 40
           },
           {
-            "URL": "https://evynw.github.io/CydiaIcon.png",
+            "URL": "https://dcsyhi1998.github.io/CydiaIcon.png",
             "alignment": 1,
             "class": "DepictionImageView",
             "cornerRadius": 0,
@@ -144,7 +144,7 @@
       {
         "class": "DepictionStackView",
         "tabname": "Changelog",
-        "tintColor": "#6679aa",
+        "tintColor": "#f5a447",
         "views": [
           {
             "class": "DepictionSubheaderView",
@@ -171,5 +171,5 @@
         ]
       }
     ],
-    "tintColor": "#6679aa"
+    "tintColor": "#f5a447"
   }
