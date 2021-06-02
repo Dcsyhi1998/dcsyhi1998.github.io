@@ -154,7 +154,7 @@
           },
           {
             "class": "DepictionMarkdownView",
-            "markdown": "<h2>Update content:/h2><ul><li>Support for ios13 devices</li><li>Real-time update of icon layout</li><li>Addition of icon size change</li><li>Wallpaper slide show</li><li>Real-time wallpaper update</li><li>For music playing wallpaper</li><li>Change the layout of the status bar</li><li>Addition of weather icon</li></ul>",
+            "markdown": "<h3>Update content:</h3><ul><li>Support for ios13 devices</li><li>Real-time update of icon layout</li><li>Addition of icon size change</li><li>Wallpaper slide show</li><li>Real-time wallpaper update</li><li>For music playing wallpaper</li><li>Change the layout of the status bar</li><li>Addition of weather icon</li></ul>",
             "useRawFormat": true
           },
           {
