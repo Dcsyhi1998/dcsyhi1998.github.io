@@ -1,4 +1,3 @@
-  
 {
    "class":"FeaturedBannersView",
    "itemSize":"{296, 148}",
@@ -11,22 +10,16 @@
          "hideShadow":false
       },
       {
-         "url":"https://dcsyhi1998.github.io/BaseImg/SplitApp_header.png",
-         "title":"SplitApp",
-         "package":"com.twickd.dcsyhi.splitapp",
-         "hideShadow":false
-      },
-      {
          "url":"https://pbs.twimg.com/card_img/1282322133410934784/NrrK-35B?format=jpg&name=small",
          "title":"FastApp LS",
          "package":"com.twickd.dcsyhi.fastappls",
          "hideShadow":false
       },
       {
-         "url":"https://pbs.twimg.com/card_img/1283075585728630785/yXhHEmFb?format=jpg&name=small",
-         "title":"HomerRun",
-         "package":"com.twickd.dcsyhi.homerrun",
+         "url":"https://dcsyhi1998.github.io/Banners/CarPlay++Banner.png",
+         "title":"CarPlay++",
+         "package":"jp.dcsyhi.carplayplus",
          "hideShadow":false
-      },
+      }
    ]
 }
