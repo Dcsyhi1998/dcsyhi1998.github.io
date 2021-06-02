@@ -93,7 +93,7 @@
           },
           {
             "class": "DepictionTableTextView",
-            "text": "libcolorpicker ,libpddokdo",
+            "text": "libpddokdo,libcolorpicker",
             "title": "Dependency"
           },
           {
@@ -148,13 +148,13 @@
         "views": [
           {
             "class": "DepictionSubheaderView",
-            "title": "1.1",
+            "title": "1.0.1",
             "useBoldText": true,
             "useBottomMargin": false
           },
           {
             "class": "DepictionMarkdownView",
-            "markdown": "<ul>\n<li>Updated image sizes to be compatible with latest version of Snowboard and iThemer</li>\n</ul>",
+            "markdown": "<h2>Update content:/h2><ul><li>Support for ios13 devices</li><li>Real-time update of icon layout</li><li>Addition of icon size change</li><li>Wallpaper slide show</li><li>Real-time wallpaper update</li><li>For music playing wallpaper</li><li>Change the layout of the status bar</li><li>Addition of weather icon</li></ul>",
             "useRawFormat": true
           },
           {
