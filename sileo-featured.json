@@ -14,12 +14,6 @@
          "title":"FastApp LS",
          "package":"com.twickd.dcsyhi.fastappls",
          "hideShadow":false
-      },
-      {
-         "url":"https://dcsyhi1998.github.io/BaseImg/QuickAccessIcon.png",
-         "title":"QuickAccess",
-         "package":"jp.dcsyhi.quickaccess",
-         "hideShadow":false
       }
    ]
 }
