@@ -16,7 +16,7 @@
           },
           {
             "class": "DepictionMarkdownView",
-            "markdown": "<p style=\"font-size:10pt;\"><strong>For iOS13. Themes music controls on lock screen, control centre, Music.app and Prysm.</strong> Apply with Snowboard with UI extension.</p>\n<p style=\"font-size:10pt;\">Icons for Prysm music controls also included in .theme folder. Copy all .pngs in the “For Prysm” sub-folder, and paste them by replacing at /Library/Application Support/Prysm/Icons/</p>\n<p style=\"font-size:10pt;\">Installed to: /Library/Themes/</p>\n<p style=\"font-size:10pt;\"><strong>Need help?</strong> Link to tutorials in my pinned tweet</p>",
+            "markdown":"<p>this Tweak to give you extra extensions for Carplay.CarPlay generally supports a 2 × 4 icon grid for a total of 8 icons on the home screen. For some people this may not be enough and that is where <strong><em>CarPlay++</em></strong> comes in handy.<a href=\"https://www.idownloadblog.com/2021/04/24/carplayplusplus/ \">iDB</a>",
             "useRawFormat": true
           },
           {
@@ -31,7 +31,7 @@
           {
             "class": "DepictionScreenshotsView",
             "itemCornerRadius": 8,
-            "itemSize": "{360, 300}",
+            "itemSize": "{360, 250}",
             "screenshots": [
               {
                 "accessibilityText": "Screenshot",
