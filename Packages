@@ -1,38 +1,3 @@
-Package: jp.dcsyhi.ccmodules
-Version: 0.0.1
-Architecture: iphoneos-arm
-Maintainer: Dcsyhi
-Installed-Size: 412
-Depends: mobilesubstrate
-Filename: ./debs/jp.dcsyhi.ccmodules_0.0.1_iphoneos-arm.deb
-Size: 129442
-MD5sum: 59c52f49c2f240b274c51bfbf9b77ce6
-SHA1: a6434bded48ebe3b929725b71142bcbc514fb38c
-SHA256: 83ded177ede2a05138dc6335494a22a95da81136818f58aa807672427d08e758
-Section: Control Center (Modules)
-Description: An awesome Control Center module!
-Author: Dcsyhi
-Depiction: https://dcsyhi1998.github.io/HomePages/CCModules/CCModules.html
-Icon: file:///Library/ControlCenter/Bundles/CCModules.bundle/Icon@2x.png
-Name: CCModules
-
-Package: jp.dcsyhi.copyscheme
-Version: 1.0
-Architecture: iphoneos-arm
-Maintainer: Dcsyhi
-Installed-Size: 152
-Depends: mobilesubstrate, firmware (>=11.0)
-Filename: ./debs/jp.dcsyhi.copyscheme_1.0_iphoneos-arm.deb
-Size: 22166
-MD5sum: 78f2d84fd74125baad34a198fc91ba0e
-SHA1: 23c8c28ac3fb8e759224d84b7933165b4448eb22
-SHA256: f91421560caae65b2d3524dca25d597b0a37cabceede94a52b293fae922aef88
-Section: Tweaks
-Description: 3d touch
-Author: Dcsyhi
-Depiction: https://dcsyhi1998.github.io/HomePages/CopyScheme/CopyScheme.html
-Name: CopyScheme
-
 Package: jp.dcsyhi.cydiatools
 Version: 2.4
 Architecture: iphoneos-arm
@@ -50,23 +15,6 @@ Author: Dcsyhi
 Depiction: https://dcsyhi1998.github.io/HomePages/CydiaTools/CydiaTools.html
 Icon: file:///Library/PreferenceBundles/CydiaBundle.bundle/icon@2x.png
 Name: Cydia Tools
-
-Package: jp.dcsyhi.ip-time
-Version: 0.0.1
-Architecture: iphoneos-arm
-Maintainer: Dcsyhi
-Installed-Size: 136
-Depends: mobilesubstrate
-Filename: ./debs/jp.dcsyhi.ip-time_0.0.1_iphoneos-arm.deb
-Size: 4780
-MD5sum: e8cd8e17ebc77359c2cae2d3a113fc12
-SHA1: c0279056bba81c52da7b1cdec792caa6f12a43ed
-SHA256: 3ce39afd141b971fdf378e3cf2818ecf2b588ccbb573d79b7ecbdc7411e28f2b
-Section: Tweaks
-Description: Show the time and IP address.Only Japanese format is supported.
-Author: Dcsyhi
-Depiction: https://dcsyhi1998.github.io/HomePages/IP-Time/IP-Time.html
-Name: IP Time for Dcsyhi
 
 Package: jp.dcsyhi.quickaccess
 Version: 1.3.5
