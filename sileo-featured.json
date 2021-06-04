@@ -4,8 +4,8 @@
    "itemCornerRadius":10,
    "banners":[
       {
-         "url":"https://dcsyhi1998.github.io/Banners/CarPlay++Banner.png",
-         "title":"CarPlay++",
+         "url":"https://dcsyhi1998.github.io/Banners/AirawBanner.png",
+         "title":"Airaw",
          "package":"jp.dcsyhi.carplayplus",
          "hideShadow":false
       },
