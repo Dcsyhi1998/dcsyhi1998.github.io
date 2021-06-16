@@ -1,1 +1,1 @@
-<h1>today 6/2 will be released CarPlay ++ 1.0.1</h1>
+<h1>https://chariz.com/buy/airaw</h1>
