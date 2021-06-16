@@ -1,0 +1,16 @@
+Package: jp.dcsyhi.airawtransparenticon
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1464
+Depends: mobilesubstrate,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0),jp.dcsyhi.airaw
+Filename: ./debs/jp.dcsyhi.airawtransparenticon_1.0_iphoneos-arm.deb
+Size: 8618
+MD5sum: 5d9ab4c50e6e8868f960b5aa4c1f569e
+SHA1: 5293d10dc3271cb0e8b8a6d90adaaa68933c7d80
+SHA256: 8e63c287eda4d9f705dffe51dfe155ea39ae45cc7e696fbf696a5e32a21f8aa1
+Section: Tweaks
+Description: Add Transparent icons to CarPlay. you need to have Airaw.
+Author: Dcsyhi
+Name: AirawTransparentIcon
+
