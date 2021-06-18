@@ -14,3 +14,20 @@ Description: Add Transparent icons to CarPlay. you need to have Airaw.
 Author: Dcsyhi
 Name: AirawTransparentIcon
 
+Package: jp.dcsyhi.zetsu
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 208
+Depends: mobilesubstrate,preferenceloader
+Filename: ./debs/jp.dcsyhi.zetsu_1.0.1_iphoneos-arm.deb
+Size: 39074
+MD5sum: 2c2196740de5053be107a132c8539516
+SHA1: 2d46e3002398d6553e098e0449f41c2427795373
+SHA256: 9a5587125f017597fcd483ef76fb5eb1ce996e7ef68bfef5b35c1e196738118d
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu(絶)
+
