@@ -1,7 +1,7 @@
 //Loading dark mode from cookie
 var darkMode
 if (document.cookie) {
-    darkMode = readCookie("darkMode")
+    //darkMode = readCookie("darkMode")
     if (darkMode == false) {
         document.getElementsByTagName("body")[0].id = "lightMode"
     }

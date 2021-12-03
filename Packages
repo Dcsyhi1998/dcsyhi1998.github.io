@@ -1,33 +1,32 @@
-Package: jp.dcsyhi.airawtransparenticon
+Package: jp.dcsyhi.clockwidget
 Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: Dcsyhi
-Installed-Size: 1464
-Depends: mobilesubstrate,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0),jp.dcsyhi.airaw
-Filename: ./debs/jp.dcsyhi.airawtransparenticon_1.0_iphoneos-arm.deb
-Size: 8618
-MD5sum: 5d9ab4c50e6e8868f960b5aa4c1f569e
-SHA1: 5293d10dc3271cb0e8b8a6d90adaaa68933c7d80
-SHA256: 8e63c287eda4d9f705dffe51dfe155ea39ae45cc7e696fbf696a5e32a21f8aa1
-Section: Tweaks
-Description: Add Transparent icons to CarPlay. you need to have Airaw.
+Installed-Size: 148
+Depends: mobilesubstrate, preferenceloader,jp.dcsyhi.airaw
+Filename: ./debs/jp.dcsyhi.clockwidget_1.0_iphoneos-arm.deb
+Size: 16642
+MD5sum: e356091d7000c1bac4a3440ac11dc8b8
+SHA1: 65756c59f20b1a3975cdcb69593746f900acdad4
+SHA256: 42535ebb8b6d992d522fb29e1996b86445cf8cc2e7deb2ec50e6d92ad9d6379f
+Section: Addons
+Description: Airaw Widgets:Simple Digital clock widget,Requires Airaw ver 1.5!
 Author: Dcsyhi
-Name: AirawTransparentIcon
+Name: ClockWidget
 
-Package: jp.dcsyhi.zetsu
-Version: 1.0.1
+Package: jp.dcsyhi.musiccontrol
+Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: Dcsyhi
-Installed-Size: 208
-Depends: mobilesubstrate,preferenceloader
-Filename: ./debs/jp.dcsyhi.zetsu_1.0.1_iphoneos-arm.deb
-Size: 39074
-MD5sum: 2c2196740de5053be107a132c8539516
-SHA1: 2d46e3002398d6553e098e0449f41c2427795373
-SHA256: 9a5587125f017597fcd483ef76fb5eb1ce996e7ef68bfef5b35c1e196738118d
-Section: Tweaks
-Description: Multitasking on iOS14.x
+Installed-Size: 216
+Depends: mobilesubstrate, preferenceloader,jp.dcsyhi.airaw
+Filename: ./debs/jp.dcsyhi.musiccontrol_1.0_iphoneos-arm.deb
+Size: 42180
+MD5sum: f3e889f76c55dc7eaddbc194de7eb3a2
+SHA1: 835c543260374e2143a5235c92d8cd73a5d8c06c
+SHA256: e0cb5791d52f67c3086f6047d87fe6c760c65ca2390539a395630f3208b16195
+Section: Addons
+Description: Airaw Widgets:Simple music control,Requires Airaw ver 1.5!
 Author: Dcsyhi
-Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
-Name: Zetsu(絶)
+Name: MusicControl
 
