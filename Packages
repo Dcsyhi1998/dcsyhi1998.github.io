@@ -15,18 +15,18 @@ Author: Dcsyhi
 Name: ClockWidget
 
 Package: jp.dcsyhi.musiccontrol
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Maintainer: Dcsyhi
 Installed-Size: 216
 Depends: mobilesubstrate, preferenceloader,jp.dcsyhi.airaw
-Filename: ./debs/jp.dcsyhi.musiccontrol_1.0_iphoneos-arm.deb
-Size: 42180
-MD5sum: f3e889f76c55dc7eaddbc194de7eb3a2
-SHA1: 835c543260374e2143a5235c92d8cd73a5d8c06c
-SHA256: e0cb5791d52f67c3086f6047d87fe6c760c65ca2390539a395630f3208b16195
+Filename: ./debs/jp.dcsyhi.musiccontrol_1.1_iphoneos-arm.deb
+Size: 42310
+MD5sum: 36fac76cbf224d5313efc81488178768
+SHA1: 22ed07d1eb2b03ae51f0cc781ae49c57de1a5d06
+SHA256: a9bf017734f7bb9c63c6cab6fbdd8dede3b2e7f0e914be8426903ff486f773c4
 Section: Addons
-Description: Airaw Widgets:Simple music control,Requires Airaw ver 1.5!
+Description: Airaw Widgets:Simple music control,Requires < Airaw ver 1.5!
 Author: Dcsyhi
 Name: MusicControl
 
