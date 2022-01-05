@@ -3,24 +3,28 @@ info:
   description: |
     # Introduction
     **Airaw API** serves to facilitate the creation of widgets for CarPlay.
-    It can be used within HTML or JavaScript.
+    It can be used within HTML or JavaScript.If you have a request, please contact us on Twitter:[Dcsyhi(@linux_n1)](https://twitter.com/linux_n1).
 
     **Airaw API** provides the following information:
+      - CarPlay Information
       - Battery Information
-      - System Information
       - Statusbar Information
-      - Weather Information
+      - System Information
       - Music Information
+      - Weather Information
 
     I am very grateful for the source code of [XenInfo](http://www.junesiphone.com/xeninfo/).
     Airaw API would have been difficult to implement.
     I am very grateful to the developer [@JunesiPhone](https://twitter.com/junesiphone).
 
     Airaw API author [Dcsyhi(@linux_n1)](https://twitter.com/linux_n1)
+
     # Function types
+
     **Airaw API** will call the mainUpdate merge when the device information is updated.
     The argument of mainUpdate is type.The type argument provides the following information.
 
+    - if (type == "CarPlay")
     - if (type == "battery")
     - if (type == "statusbar")
     - if (type == "system")
@@ -40,12 +44,42 @@ info:
 x-tagGroups:
   - name: Information
     tags:
+      - CarPlay Information
       - Battery Information
       - Statusbar Information
       - System Information
       - Music Information
       - Weather Information
 paths:
+  #CarPlayの情報取得
+  /CarPlay:
+    get:
+      tags:
+        - CarPlay Information
+      summary: How to get CarPlay information
+      description: How to use acquired variables.
+      parameters:
+        - name: pageIndex
+          in: query
+          description: After scrolling on the CarPlay screen, the page number is returned.
+          required: false
+          style: form
+          schema:
+            type: integer
+            items:
+              type: string
+              default: available
+      x-codeSamples:
+        - lang: 'JavaScript(pageIndex)'
+          source: |
+            function mainUpdate(type){
+              if(type == "CarPlay"){
+                //page number
+                if(pageIndex == 1){
+                  //widget animation
+                }
+              }
+            }
   #バッテリー情報
   /Battery:
     get:
@@ -655,20 +689,3 @@ paths:
                 myElement.src = "/var/mobile/Documents/MusicArt.png?"+ (new Date()).getTime();
               }
             }
-  /user:
-    post:
-      tags:
-        - user
-      summary: Create user
-      description: This can only be done by the logged in user.
-      operationId: createUser
-      responses:
-        default:
-          description: successful operation
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/User'
-        description: Created user object
-        required: true
