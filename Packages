@@ -14,6 +14,23 @@ Description: Airaw Widgets:Simple Digital clock widget,Requires Airaw ver 1.5!
 Author: Dcsyhi
 Name: ClockWidget
 
+Package: jp.dcsyhi.logs
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1000
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0)
+Filename: ./debs/jp.dcsyhi.logs_1.0_iphoneos-arm.deb
+Size: 604826
+MD5sum: 62b7ed16c7a2383704c5ed90a974c59f
+SHA1: 0cd90d903e437b77a9b2b62100b6efd27d685f57
+SHA256: e3ee496ec955a2a0e1a2c81129bf1c001c3a5e0b3b9963d8e368cd8ab0e1fc1a
+Section: Development
+Description: This Tweek is to make it easy to view NSLog from your mobile phone.Tweak for debugging on the device.
+Author: Dcsyhi
+Icon: file:///Library/PreferenceBundles/L0gs.bundle/icon.png
+Name: L0gs
+
 Package: jp.dcsyhi.musiccontrol
 Version: 1.1
 Architecture: iphoneos-arm
