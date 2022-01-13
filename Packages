@@ -48,19 +48,20 @@ Author: Dcsyhi
 Name: MusicControl
 
 Package: jp.dcsyhi.zetsu
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Maintainer: Dcsyhi
-Installed-Size: 1032
+Installed-Size: 1036
 Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0),applist
-Filename: ./debs/jp.dcsyhi.zetsu_1.0_iphoneos-arm.deb
-Size: 487546
-MD5sum: ee148386a3b50aa4132bf240b7659690
-SHA1: 83266a9e51fa48e81365fea47587661157d6f375
-SHA256: 1915efeaa7f0772a2d498a77250faa2fd7a3bc31e71e563fc7046ee22c01ed3a
+Filename: ./debs/jp.dcsyhi.zetsu_1.1_iphoneos-arm.deb
+Size: 484176
+MD5sum: 7d6143291ea56179d4b56ee54e35f374
+SHA1: 32966b7ee43cdc25a726d5bd861d70608bd28c98
+SHA256: 1dd7cca9813f7f44dc0eb2d3fba1cd2f68f5a812c7ed9ff3b53beac3921ba42f
 Section: Tweaks
 Description: Multitasking on iOS14.x
 Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
 Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
 Name: Zetsu
 
