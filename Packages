@@ -32,6 +32,22 @@ Icon: file:///Library/PreferenceBundles/L0gs.bundle/icon.png
 Name: L0gs
 
 Package: jp.dcsyhi.musiccontrol
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 216
+Depends: mobilesubstrate, preferenceloader,jp.dcsyhi.airaw
+Filename: ./debs/jp.dcsyhi.musiccontrol_1.0_iphoneos-arm.deb
+Size: 42180
+MD5sum: f3e889f76c55dc7eaddbc194de7eb3a2
+SHA1: 835c543260374e2143a5235c92d8cd73a5d8c06c
+SHA256: e0cb5791d52f67c3086f6047d87fe6c760c65ca2390539a395630f3208b16195
+Section: Addons
+Description: Airaw Widgets:Simple music control,Requires Airaw ver 1.5!
+Author: Dcsyhi
+Name: MusicControl
+
+Package: jp.dcsyhi.musiccontrol
 Version: 1.1
 Architecture: iphoneos-arm
 Maintainer: Dcsyhi
@@ -46,6 +62,41 @@ Section: Addons
 Description: Airaw Widgets:Simple music control,Requires < Airaw ver 1.5!
 Author: Dcsyhi
 Name: MusicControl
+
+Package: jp.dcsyhi.zetsu
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1032
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0),applist
+Filename: ./debs/jp.dcsyhi.zetsu_1.0_iphoneos-arm.deb
+Size: 487546
+MD5sum: ee148386a3b50aa4132bf240b7659690
+SHA1: 83266a9e51fa48e81365fea47587661157d6f375
+SHA256: 1915efeaa7f0772a2d498a77250faa2fd7a3bc31e71e563fc7046ee22c01ed3a
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1036
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0),applist
+Filename: ./debs/jp.dcsyhi.zetsu_1.1_iphoneos-arm.deb
+Size: 484176
+MD5sum: 7d6143291ea56179d4b56ee54e35f374
+SHA1: 32966b7ee43cdc25a726d5bd861d70608bd28c98
+SHA256: 1dd7cca9813f7f44dc0eb2d3fba1cd2f68f5a812c7ed9ff3b53beac3921ba42f
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
 
 Package: jp.dcsyhi.zetsu
 Version: 1.1.2
