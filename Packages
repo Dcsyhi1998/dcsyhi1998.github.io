@@ -152,3 +152,21 @@ Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
 Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
 Name: Zetsu
 
+Package: jp.dcsyhi.zetsu
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 2148
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=14.0),com.lacertosusrepo.libdeusprefs (>= 1.0)
+Filename: ./debs/jp.dcsyhi.zetsu_1.2_iphoneos-arm.deb
+Size: 1626514
+MD5sum: 96af37f5f12dc891f942442e35627ab7
+SHA1: 06266f0a5038e5bdf06a3fa5ca63bc03b22bd2d5
+SHA256: e7b48756d972d429dc1d689ff85e8e8916509cadfd6b4769a6b3a61aa2dd2112
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
