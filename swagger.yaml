@@ -32,7 +32,7 @@ info:
     - if (type == "weather")
 
     <SecurityDefinitions />
-  version: 1.5.2
+  version: 1.5.3
   title: Airaw API
   contact:
     name: API Support
@@ -370,7 +370,7 @@ paths:
       summary: How to get weather information
       description: How to use acquired variables.to get the weather information use libPDDokdo. To get the information correctly you need to have the native weather app installed.
       parameters:
-        - name: temperature
+        - name: weather.temperature
           in: query
           description: Returns current temperature.
           required: false
@@ -380,7 +380,7 @@ paths:
             items:
               type: string
               default: available
-        - name: conditions
+        - name: weather.conditions
           in: query
           description: Returns current weather conditions.
           required: false
@@ -390,7 +390,7 @@ paths:
             items:
               type: string
               default: available
-        - name: location
+        - name: weather.location
           in: query
           description: Returns current weather location.
           required: false
@@ -400,7 +400,7 @@ paths:
             items:
               type: string
               default: available
-        - name: conditioncode
+        - name: weather.conditioncode
           in: query
           description: Returns current condition code.[Reference source](https://github.com/schneelittchen/Nita/blob/e5504a411f493f71d38945597ad1b5d843cc1d26/Tweak/Nita.x)
           required: false
@@ -410,7 +410,7 @@ paths:
             items:
               type: string
               default: available
-        - name: hightemperature
+        - name: weather.hightemperature
           in: query
           description: Returns current high temperature.
           required: false
@@ -420,7 +420,7 @@ paths:
             items:
               type: string
               default: available
-        - name: lowtemperature
+        - name: weather.lowtemperature
           in: query
           description: Returns current low temperature.
           required: false
@@ -430,7 +430,7 @@ paths:
             items:
               type: string
               default: available
-        - name: sunrise
+        - name: weather.sunrise
           in: query
           description: Returns current sunrise.
           required: false
@@ -440,7 +440,7 @@ paths:
             items:
               type: string
               default: available
-        - name: sunset
+        - name: weather.sunset
           in: query
           description: Returns current sunset.
           required: false
@@ -455,28 +455,28 @@ paths:
           source: |
             function mainUpdate(type){
               if(type == "weather"){
-                myElement.innerHTML = temperature;
+                myElement.innerHTML = weather.temperature;
               }
             }
         - lang: 'JavaScript(conditions)'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
-                myElement.innerHTML = conditions;
+                myElement.innerHTML = weather.conditions;
               }
             }
         - lang: 'JavaScript(location)'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
-                myElement.innerHTML = location;
+                myElement.innerHTML = weather.location;
               }
             }
         - lang: 'JavaScript(Duration)'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
-                myElement.innerHTML = currentDuration;
+                myElement.innerHTML = weather.currentDuration;
               }
             }
         - lang: 'JavaScript(conditioncode)'
@@ -484,49 +484,49 @@ paths:
             function mainUpdate(type){
               var weatherString;
               if(type == "weather"){
-                if (conditioncode <= 2)
+                if (weather.conditioncode <= 2)
                   weatherString = @"🌪";
-                else if (conditioncode <= 4)
+                else if (weather.conditioncode <= 4)
                   weatherString = @"⛈";
-                else if (conditioncode <= 8)
+                else if (weather.conditioncode <= 8)
                   weatherString = @"🌨";
-                else if (conditioncode == 9)
+                else if (weather.conditioncode == 9)
                   weatherString = @"🌧";
-                else if (conditioncode == 10)
+                else if (weather.conditioncode == 10)
                   weatherString = @"🌨";
-                else if (conditioncode <= 12)
+                else if (weather.conditioncode <= 12)
                   weatherString = @"🌧";
-                else if (conditioncode <= 18)
+                else if (weather.conditioncode <= 18)
                   weatherString = @"🌨";
-                else if (conditioncode <= 22)
+                else if (weather.conditioncode <= 22)
                   weatherString = @"🌫";
-                else if (conditioncode <= 24)
+                else if (weather.conditioncode <= 24)
                   weatherString = @"💨";
-                else if (conditioncode == 25)
+                else if (weather.conditioncode == 25)
                   weatherString = @"❄️";
-                else if (conditioncode == 26)
+                else if (weather.conditioncode == 26)
                   weatherString = @"☁️";
-                else if (conditioncode <= 28)
+                else if (weather.conditioncode <= 28)
                   weatherString = @"🌥";
-                else if (conditioncode <= 30)
+                else if (weather.conditioncode <= 30)
                   weatherString = @"⛅️";
-                else if (conditioncode <= 32 && (hour >= 18 || hour <= 6))
+                else if (weather.conditioncode <= 32 && (hour >= 18 || hour <= 6))
                   weatherString = @"🌙";
-                else if (conditioncode <= 32)
+                else if (weather.conditioncode <= 32)
                   weatherString = @"☀️";
-                else if (conditioncode <= 34)
+                else if (weather.conditioncode <= 34)
                   weatherString = @"🌤";
-                else if (conditioncode == 35)
+                else if (weather.conditioncode == 35)
                   weatherString = @"🌧";
-                else if (conditioncode == 36)
+                else if (weather.conditioncode == 36)
                   weatherString = @"🔥";
-                else if (conditioncode <= 38)
+                else if (weather.conditioncode <= 38)
                   weatherString = @"🌩";
-                else if (conditioncode == 39)
+                else if (weather.conditioncode == 39)
                   weatherString = @"🌦";
-                else if (conditioncode == 40)
+                else if (weather.conditioncode == 40)
                   weatherString = @"🌧";
-                else if (conditioncode <= 43)
+                else if (weather.conditioncode <= 43)
                   weatherString = @"🌨";
                 else
                   weatherString = @"N/A";
@@ -537,28 +537,28 @@ paths:
           source: |
             function mainUpdate(type){
               if(type == "weather"){
-                myElement.innerHTML = hightemperature;
+                myElement.innerHTML = weather.hightemperature;
               }
             }
         - lang: 'JavaScript(lowtemperature)'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
-                myElement.innerHTML = lowtemperature;
+                myElement.innerHTML = weather.lowtemperature;
               }
             }
         - lang: 'JavaScript(sunrise)'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
-                myElement.innerHTML = sunrise;
+                myElement.innerHTML = weather.sunrise;
               }
             }
         - lang: 'JavaScript(sunset)'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
-                myElement.innerHTML = sunset;
+                myElement.innerHTML = weather.sunset;
               }
             }
   #再生中の音楽情報情報
