@@ -1,3 +1,19 @@
+Package: com.sugiuta.sumusicwidget
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: sugiuta
+Installed-Size: 424
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.sugiuta.sumusicwidget_1.0_iphoneos-arm.deb
+Size: 81468
+MD5sum: 500ff8273046bab9bcb4c65fafa0dcd2
+SHA1: c4498915d3fe0c6f4190aef85c587e3785669da0
+SHA256: 4b1cbc4d1b06d9c93f4ab9d33a7ae53c8faeb3d8b300972b7f5be37adf74815a
+Section: Addons
+Description: An awesome Airaw Widgets extension!
+Author: sugiuta
+Name: SUMusicWidget
+
 Package: jp.dcsyhi.clockwidget
 Version: 1.0
 Architecture: iphoneos-arm
