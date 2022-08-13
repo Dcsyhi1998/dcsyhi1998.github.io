@@ -79,6 +79,22 @@ Description: Airaw Widgets:Simple music control,Requires < Airaw ver 1.5!
 Author: Dcsyhi
 Name: MusicControl
 
+Package: jp.dcsyhi.twiwidget
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 156
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.twiwidget_1.0_iphoneos-arm.deb
+Size: 18720
+MD5sum: 3e6a0c7339652a5f129ea3e883b2c04a
+SHA1: 465497437e8cde5e1156f95a7d3a2489cd712f09
+SHA256: 5716ce2e64c3aad5dc83bc36e6d4b039d3a42d423e023ab825fc932b2acaa0a3
+Section: Addons
+Description: An awesome Airaw Widgets extension!
+Author: Dcsyhi
+Name: TwiWidget
+
 Package: jp.dcsyhi.zetsu
 Version: 1.0
 Architecture: iphoneos-arm
