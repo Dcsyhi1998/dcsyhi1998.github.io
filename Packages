@@ -95,6 +95,22 @@ Description: An awesome Airaw Widgets extension!Display your Twitter account inf
 Author: Dcsyhi
 Name: TwiWidget
 
+Package: jp.dcsyhi.twiwidget
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 156
+Depends: mobilesubstrate, preferenceloader,jp.dcsyhi.airaw
+Filename: ./debs/jp.dcsyhi.twiwidget_1.0.1_iphoneos-arm.deb
+Size: 18740
+MD5sum: f0d3165e2e01e9070304769195d53ebe
+SHA1: 9877b739ef0b7cd9995f55e21d3bf012e741fe45
+SHA256: 7dd5d03b9b1010d7c51fdbd360084e4a2a58d224774753eec1954c4bc69d3d89
+Section: Addons
+Description: An awesome Airaw Widgets extension!Display your Twitter account information😎
+Author: Dcsyhi
+Name: TwiWidget
+
 Package: jp.dcsyhi.zetsu
 Version: 1.0
 Architecture: iphoneos-arm
