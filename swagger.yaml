@@ -32,14 +32,13 @@ info:
     - if (type == "weather")
 
     <SecurityDefinitions />
-  version: 1.5.3
+  version: 1.6.0
   title: Airaw API
   contact:
     name: API Support
     email: dcsyhi1998@gmail.com
     url: https://chariz.com/buy/airaw
   x-logo:
-    # url: 'https://dcsyhi1998.github.io/Banners/AirawBanner.png'
     altText: Airaw API
 x-tagGroups:
   - name: Information
@@ -70,7 +69,7 @@ paths:
               type: string
               default: available
       x-codeSamples:
-        - lang: 'JavaScript(pageIndex)'
+        - lang: 'pageIndex'
           source: |
             function mainUpdate(type){
               if(type == "CarPlay"){
@@ -118,26 +117,124 @@ paths:
             items:
               type: string
               default: available
+        - name: batteryCycles
+          in: query
+          description: Returns the number of times the smartphone has been charged.
+          required: false
+          style: form
+          schema:
+            type: integer
+            items:
+              type: string
+              default: available
+        - name: batteryHealth
+          in: query
+          description: Returns the current battery status.
+          required: false
+          style: form
+          schema:
+            type: float
+            items:
+              type: string
+              default: available
+        - name: batteryVoltage
+          in: query
+          description: Returns the output voltage of the battery.
+          required: false
+          style: form
+          schema:
+            type: integer
+            items:
+              type: string
+              default: available
+        - name: batteryCelsius
+          in: query
+          description: Returns the current temperature of the battery.
+          required: false
+          style: form
+          schema:
+            type: float
+            items:
+              type: string
+              default: available
+        - name: bateryInfo.devices
+          in: query
+          description: Returns information about devices connected via Bluetooth.
+          required: false
+          style: form
+          schema:
+            type: json
+            enum:
+            - deviceName
+            - batteryPercent
+            - machineName
+            - deviceIdentifier
+            - deviceProductIdentifier
+            items:
+              type: string
+              default: available
       x-codeSamples:
-        - lang: 'JavaScript(Percent)'
+        - lang: 'Percent'
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 myElement.innerHTML = batteryPercent;
               }
             }
-        - lang: 'JavaScript(Charging)'
+        - lang: 'Charging'
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 myElement.innerHTML = batteryCharging;
               }
             }
-        - lang: 'JavaScript(LowPowerMode)'
+        - lang: 'LowPowerMode'
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 myElement.innerHTML = batteryLowPowerMode;
+              }
+            }
+        - lang: 'Cycles'
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryCycles;
+              }
+            }
+        - lang: 'Health'
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryHealth + "%";
+              }
+            }
+        - lang: 'Voltage'
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryVoltage + "mV";
+              }
+            }
+        - lang: 'Celsius'
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryCelsius + "°C";
+              }
+            }
+        - lang: 'bateryInfo.devices'
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                var batteryArray = bateryInfo.devices;
+                for (var i = 0; i < dayArray.length; i++) {
+                  document.getElementById('deviceName' + i).innerHTML = batteryArray[i].deviceName;
+                  document.getElementById('batteryPercent' + i).innerHTML = batteryArray[i].batteryPercent;
+                  document.getElementById('machineName' + i).innerHTML = batteryArray[i].machineName;
+                  document.getElementById('deviceIdentifier' + i).innerHTML = batteryArray[i].deviceIdentifier;
+                  document.getElementById('deviceProductIdentifier' + i).innerHTML = batteryArray[i].deviceProductIdentifier;
+                }
               }
             }
   #ステータスバー情報
@@ -199,35 +296,35 @@ paths:
               type: string
               default: available
       x-codeSamples:
-        - lang: 'JavaScript(signalBars)'
+        - lang: 'signalBars'
           source: |
             function mainUpdate(type){
               if(type == "statusbar"){
                 myElement.innerHTML = signalBars;
               }
             }
-        - lang: 'JavaScript(signalName)'
+        - lang: 'signalName'
           source: |
             function mainUpdate(type){
               if(type == "statusbar"){
                 myElement.innerHTML = signalName;
               }
             }
-        - lang: 'JavaScript(wifiBars)'
+        - lang: 'wifiBars'
           source: |
             function mainUpdate(type){
               if(type == "statusbar"){
                 myElement.innerHTML = wifiBars;
               }
             }
-        - lang: 'JavaScript(wifiName)'
+        - lang: 'wifiName'
           source: |
             function mainUpdate(type){
               if(type == "statusbar"){
                 myElement.innerHTML = wifiName;
               }
             }
-        - lang: 'JavaScript(signalNetworkType)'
+        - lang: 'signalNetworkType'
           source: |
             function mainUpdate(type){
               if(type == "statusbar"){
@@ -313,49 +410,49 @@ paths:
               type: string
               default: available
       x-codeSamples:
-        - lang: 'JavaScript(deviceName)'
+        - lang: 'deviceName'
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = deviceName;
               }
             }
-        - lang: 'JavaScript(deviceType)'
+        - lang: 'deviceType'
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = deviceType;
               }
             }
-        - lang: 'JavaScript(systemVersion)'
+        - lang: 'systemVersion'
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = systemVersion;
               }
             }
-        - lang: 'JavaScript(ipAddress)'
+        - lang: 'ipAddress'
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = ipAddress;
               }
             }
-        - lang: 'JavaScript(ramFree)'
+        - lang: 'ramFree'
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = ramFree;
               }
             }
-        - lang: 'JavaScript(ramUsed)'
+        - lang: 'ramUsed'
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = ramUsed;
               }
             }
-        - lang: 'JavaScript(ramTotal)'
+        - lang: 'ramTotal'
           source: |
             function mainUpdate(type){
               if(type == "system"){
@@ -370,6 +467,16 @@ paths:
       summary: How to get weather information
       description: How to use acquired variables.to get the weather information use libPDDokdo. To get the information correctly you need to have the native weather app installed.
       parameters:
+        - name: weather.city
+          in: query
+          description: Returns current city name.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
         - name: weather.temperature
           in: query
           description: Returns current temperature.
@@ -380,9 +487,19 @@ paths:
             items:
               type: string
               default: available
-        - name: weather.conditions
+        - name: weather.feelsLike
           in: query
-          description: Returns current weather conditions.
+          description: Returns current feelsLike.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.condition
+          in: query
+          description: Returns current weather condition.
           required: false
           style: form
           schema:
@@ -402,7 +519,7 @@ paths:
               default: available
         - name: weather.conditioncode
           in: query
-          description: Returns current condition code.[Reference source](https://github.com/schneelittchen/Nita/blob/e5504a411f493f71d38945597ad1b5d843cc1d26/Tweak/Nita.x)
+          description: Returns current condition code.[Reference source](https://github.com/schneelittchen/Nita/blob/e5504a411f493f71d38945597ad1b5d843cc1d26/Tweak/Nita.x#L63)
           required: false
           style: form
           schema:
@@ -410,7 +527,7 @@ paths:
             items:
               type: string
               default: available
-        - name: weather.hightemperature
+        - name: weather.high
           in: query
           description: Returns current high temperature.
           required: false
@@ -420,7 +537,7 @@ paths:
             items:
               type: string
               default: available
-        - name: weather.lowtemperature
+        - name: weather.low
           in: query
           description: Returns current low temperature.
           required: false
@@ -450,36 +567,124 @@ paths:
             items:
               type: string
               default: available
+        - name: weather.celsius
+          in: query
+          description: Returns current celsius (Celsius or Fahrenheit).
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.humidity
+          in: query
+          description: Returns current humidity.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.visibility
+          in: query
+          description: Returns current visibility.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.pressure
+          in: query
+          description: Returns current pressure.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.heatIndex
+          in: query
+          description: Returns current heatIndex.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.uvIndex
+          in: query
+          description: Returns current uvIndex.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.dayForecasts
+          in: query
+          description: Returns the weekly weather information.
+          required: false
+          style: form
+          schema:
+            type: json
+            enum:
+            - dayNumber
+            - dayOfWeek
+            - icon
+            - high
+            - low
+        - name: weather.hourlyForecasts
+          in: query
+          description: Returns hourly weather information throughout the day.
+          required: false
+          style: form
+          type: json
+          schema:
+            type: json
+            enum:
+            - time
+            - conditionCode
+            - temperature
+            - percentPrecipitation
+            - detail
+            - hourIndex
       x-codeSamples:
-        - lang: 'JavaScript(temperature)'
+        - lang: 'temperature'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.temperature;
               }
             }
-        - lang: 'JavaScript(conditions)'
+        - lang: 'condition'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.conditions;
               }
             }
-        - lang: 'JavaScript(location)'
+        - lang: 'location'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.location;
               }
             }
-        - lang: 'JavaScript(Duration)'
+        - lang: 'Duration'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.currentDuration;
               }
             }
-        - lang: 'JavaScript(conditioncode)'
+        - lang: 'conditioncode'
           source: |
             function mainUpdate(type){
               var weatherString;
@@ -533,28 +738,28 @@ paths:
                 myElement.innerHTML = weatherString;
               }
             }
-        - lang: 'JavaScript(hightemperature)'
+        - lang: 'hightemperature'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.hightemperature;
               }
             }
-        - lang: 'JavaScript(lowtemperature)'
+        - lang: 'lowtemperature'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.lowtemperature;
               }
             }
-        - lang: 'JavaScript(sunrise)'
+        - lang: 'sunrise'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.sunrise;
               }
             }
-        - lang: 'JavaScript(sunset)'
+        - lang: 'sunset'
           source: |
             function mainUpdate(type){
               if(type == "weather"){
@@ -635,57 +840,74 @@ paths:
           required: false
           style: form
           schema:
-            type: directory
+            type: path
+            items:
+              type: string
+              default: available
+        - name: VideoArtwork
+          in: query
+          description: Music videos(spotify only) can be obtained with the following path '/var/mobile/Documents/VideoMusicArt.mp4'
+          required: false
+          style: form
+          schema:
+            type: path
             items:
               type: string
               default: available
       x-codeSamples:
-        - lang: 'JavaScript(artist)'
+        - lang: 'artist'
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = artist;
               }
             }
-        - lang: 'JavaScript(album)'
+        - lang: 'album'
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = album;
               }
             }
-        - lang: 'JavaScript(title)'
+        - lang: 'title'
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = title;
               }
             }
-        - lang: 'JavaScript(Duration)'
+        - lang: 'Duration'
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = currentDuration;
               }
             }
-        - lang: 'JavaScript(ElapsedTime)'
+        - lang: 'ElapsedTime'
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = currentElapsedTime;
               }
             }
-        - lang: 'JavaScript(isplaying)'
+        - lang: 'isplaying'
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = isplaying;
               }
             }
-        - lang: 'JavaScript(Artwork)'
+        - lang: 'Artwork'
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.src = "/var/mobile/Documents/MusicArt.png?"+ (new Date()).getTime();
+              }
+            }
+        - lang: 'VideoArtwork'
+          source: |
+            function mainUpdate(type){
+              if(type == "music"){
+                videoElement.src = "/var/mobile/Documents/VideoMusicArt.mp4?"+ (new Date()).getTime();
               }
             }
