@@ -44,26 +44,10 @@
                 "itemCornerRadius": 8,
                 "itemSize": "{360, 250}",
                 "screenshots": [
-                {
-                    "accessibilityText": "Screenshot",
-                    "url": "https://dcsyhi1998.github.io/icons/Airaw/demo.png"
-                },
-                {
-                    "accessibilityText": "Screenshot",
-                    "url": "https://dcsyhi1998.github.io/icons/Airaw/demo1.png"
-                },
-                {
-                    "accessibilityText": "Screenshot",
-                    "url": "https://dcsyhi1998.github.io/icons/Airaw/demo2.png"
-                },
-                {
-                    "accessibilityText": "Screenshot",
-                    "url": "https://dcsyhi1998.github.io/icons/Airaw/demo3.png"
-                },
-                {
-                    "accessibilityText": "Screenshot",
-                    "url": "https://dcsyhi1998.github.io/icons/Airaw/demo4.png"
-                }
+                    {
+                        "accessibilityText": "Screenshot",
+                        "url": "https://dcsyhi1998.github.io/icons/zetsu/zetsu_demo.png"
+                    }
                 ]
             },
             {
