@@ -142,8 +142,15 @@
             {
                 "class": "DepictionReviewView",
                 "title": "Amazing tweak",
-                "author": "dino rec",
-                "markdown":"You can customize CarPlay to your liking !!",
+                "author": "M2",
+                "markdown":"Best Multitasking Tweak.",
+                "rating": 5
+            },
+            {
+                "class": "DepictionReviewView",
+                "title": "Best",
+                "author": "ㄇㄉㄈㄎ",
+                "markdown":"Zetsu, the best multitasking tweak.",
                 "rating": 5
             }
         ]
@@ -151,19 +158,8 @@
       {
         "class": "DepictionStackView",
         "tabname": "Changelog",
-        "tintColor": "#f5a447",
+        "tintColor": "#c1c1c2",
         "views": [
-          {
-            "class": "DepictionSubheaderView",
-            "title": "1.0.1",
-            "useBoldText": true,
-            "useBottomMargin": false
-          },
-          {
-            "class": "DepictionMarkdownView",
-            "markdown": "<h3>Update content:</h3><ul><li>Support for ios13 devices</li><li>Real-time update of icon layout</li><li>Addition of icon size change</li><li>Wallpaper slide show</li><li>Real-time wallpaper update</li><li>For music playing wallpaper</li><li>Change the layout of the status bar</li><li>Addition of weather icon</li></ul>",
-            "useRawFormat": true
-          },
           {
             "class": "DepictionSubheaderView",
             "title": "1.0",
@@ -172,11 +168,11 @@
           },
           {
             "class": "DepictionMarkdownView",
-            "markdown": "<ul>\n<li>Initial release</li>\n</ul>",
+            "markdown": "<ul>\n<li>Initial Release (iOS15 Support)</li>\n</ul>",
             "useRawFormat": true
           }
         ]
       }
     ],
-    "tintColor": "#f5a447"
+    "tintColor": "#c1c1c2"
   }
