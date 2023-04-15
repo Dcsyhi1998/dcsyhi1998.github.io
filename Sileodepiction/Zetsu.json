@@ -16,7 +16,18 @@
             },
             {
                 "class": "DepictionMarkdownView",
-                "markdown":"<p>this Tweak to give you extra extensions for Carplay.CarPlay generally supports a 2 × 4 icon grid for a total of 8 icons on the home screen. For some people this may not be enough and that is where <strong><em>Airaw</em></strong> comes in handy.<a href=\"https://www.idownloadblog.com/2021/06/11/airaw/ \">iDB</a><p>If you like how CarPlay works, make me a donation through <a href=\"https://www.paypal.me/DevDcsyhi \">PayPal</a>!</p><p>That will motivate me to update the tweak and put more functions on it. or support me by following me on <a href=\"https://twitter.com/intent/follow?screen_name=linux_n1 \">Twitter</a>.</p><p>If you have a function or request you want to add, we will respond on <a href=\"https://twitter.com/intent/follow?screen_name=linux_n1 \">Twitter</a>.</p>",
+                "markdown":"<p>Zetsu is a Tweak that allows the app to Multitask.How to start: Select Zetsu from 3D Touch shortcuts for the app you want to multitask.</p>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "License",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<p>Zetsu was made using the source of <a href=\"https://github.com/nicho1asdev/Konban\">konban13</a>. Without this source, Zetsu would have been difficult to implement.I am very grateful to the developers Eva (Nepeta) and nicho1asdev.<br><br>Click here to check the <a href=\"https://github.com/nicho1asdev/Konban/blob/master/LICENSE\">License</a></p>",
                 "useRawFormat": true
             },
             {
@@ -83,17 +94,17 @@
             },
             {
                 "class": "DepictionTableTextView",
-                "text": "1.0.1",
+                "text": "1.0",
                 "title": "Version"
             },
             {
                 "class": "DepictionTableTextView",
-                "text": "iOS13.0 - 14.x",
+                "text": "iOS13.0 - 15.x",
                 "title": "Compatibility"
             },
             {
                 "class": "DepictionTableTextView",
-                "text": "libpddokdo,libcolorpicker",
+                "text": "Rocketbootstrapm,PreferenceLoader",
                 "title": "Dependency"
             },
             {
