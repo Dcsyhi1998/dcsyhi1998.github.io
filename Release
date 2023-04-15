@@ -1,7 +1,7 @@
 Origin: Dcsyhi1998's repo
 Label: Dcsyhi1998
 Suite: stable
-Version: 1.0
+Version: 1.1
 Codename: dcsyhi
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main
