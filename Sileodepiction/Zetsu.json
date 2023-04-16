@@ -91,12 +91,12 @@
             },
             {
                 "class": "DepictionTableTextView",
-                "text": "iOS13.0 - 15.x",
+                "text": "iOS15.x",
                 "title": "Compatibility"
             },
             {
                 "class": "DepictionTableTextView",
-                "text": "Rocketbootstrapm,PreferenceLoader",
+                "text": "PreferenceLoader",
                 "title": "Dependency"
             },
             {
