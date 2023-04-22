@@ -3,7 +3,7 @@
     "headerImage": "https://dcsyhi1998.github.io/Banners/ZetsuBaner.png",
     "minVersion": "0.3",
     "tabs": [
-      {
+    {
         "class": "DepictionStackView",
         "tabname": "Details",
         "tintColor": "#c1c1c2",
@@ -164,25 +164,36 @@
                 "rating": 5
             }
         ]
-      },
-      {
+    },
+    {
         "class": "DepictionStackView",
         "tabname": "Changelog",
         "tintColor": "#c1c1c2",
         "views": [
-          {
-            "class": "DepictionSubheaderView",
-            "title": "1.0",
-            "useBoldText": true,
-            "useBottomMargin": false
-          },
-          {
-            "class": "DepictionMarkdownView",
-            "markdown": "<ul>\n<li>Initial Release (iOS15 Support)</li>\n</ul>",
-            "useRawFormat": true
-          }
+            {
+                "class": "DepictionSubheaderView",
+                "title": "v1.1",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown": "<ul>\n<li>Correction of horizontal screen.</li>\n<br><li>Crash fix at screen shot.</li><br><li>Crash fix when receiving a call</li><br><li>Fix crash when Face ID authentication.</li><br><li>Crash fix when connecting to bluetooth</li><br></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "v1.0",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown": "<ul>\n<li>Initial Release (iOS15 Support)</li>\n</ul>",
+                "useRawFormat": true
+            }
         ]
-      }
+    }
     ],
     "tintColor": "#c1c1c2"
-  }
+}
