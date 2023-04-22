@@ -178,7 +178,7 @@
             },
             {
                 "class": "DepictionMarkdownView",
-                "markdown": "<ul>\n<li>Correction of horizontal screen.</li>\n<br><li>Crash fix at screen shot.</li><br><li>Crash fix when receiving a call</li><br><li>Fix crash when Face ID authentication.</li><br><li>Crash fix when connecting to bluetooth</li><br></ul>",
+                "markdown": "<ul>\n<li>Correction of horizontal screen.</li>\n<li>Crash fix at screen shot.</li><li>Crash fix when receiving a call</li><li>Fix crash when Face ID authentication.</li><li>Crash fix when connecting to bluetooth</li></ul>",
                 "useRawFormat": true
             },
             {
