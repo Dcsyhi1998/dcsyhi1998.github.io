@@ -37,10 +37,10 @@ Maintainer: Dcsyhi
 Installed-Size: 1256
 Depends: mobilesubstrate,preferenceloader
 Filename: ./debs/jp.dcsyhi.dashapp_1.0_iphoneos-arm64.deb
-Size: 898778
-MD5sum: 2ac6bd9f739ac7cbd6041ce81b98bc2a
-SHA1: c09f1d7b445009c3be55bc61fd5419b550cf89ee
-SHA256: cfae8475eedbf1a56d9b6c5bcb9a90d0db9964d9c6e2cdee358f3ac71cb18727
+Size: 900246
+MD5sum: 15477171852062d92d235ed8405a267f
+SHA1: 6809f30a322ba0c47178653930b83159797d634a
+SHA256: a5b675ef18d6aa8d0867f1967a8aab8b099c6b06b8b14813835bdd5a0865ad46
 Section: Tweaks
 Description: DashApp😎Change the lock screen camera to your favorite app.⚡️
 Author: Dcsyhi
