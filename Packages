@@ -310,13 +310,13 @@ Package: jp.dcsyhi.zetsu
 Version: 1.4
 Architecture: iphoneos-arm
 Maintainer: Dcsyhi
-Installed-Size: 2228
+Installed-Size: 2276
 Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=14.0) ,com.lacertosusrepo.libdeusprefs (>= 1.0)
 Filename: ./debs/jp.dcsyhi.zetsu_1.4_iphoneos-arm.deb
-Size: 1631204
-MD5sum: 7fcaab3cef3829c55712a6dc8fe3e424
-SHA1: 6bd2657c80acfb9135c4ef0422df020ecf0c80aa
-SHA256: fc9abf1334d78001dedc1ca22c56a6bea9d0ce191538d1c3760a08e8b830fc14
+Size: 1636432
+MD5sum: 09370075a5b46adf0508a5a4df07bde5
+SHA1: dbc49a6f3eb73ac8b9427ac175153ff8aa5b6f98
+SHA256: 8be35a5aa074119acc7d217b96e04dc9dd066c1c2379864600cc0300d3b1df51
 Section: Tweaks
 Description: Multitasking on iOS14.x
 Author: Dcsyhi
