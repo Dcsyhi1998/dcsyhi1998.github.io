@@ -362,3 +362,22 @@ Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
 Name: Zetsu(Rootless)
 Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Zetsu.json
 
+Package: jp.dcsyhi.zetsurootless15
+Version: 1.2
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 2448
+Depends: mobilesubstrate,firmware (>=15.0),preferenceloader
+Filename: ./debs/jp.dcsyhi.zetsurootless15_1.2_iphoneos-arm64.deb
+Size: 1844324
+MD5sum: 39014be725dbeb31f200e420b933e091
+SHA1: 5ba46d3fc55948fa489857383d9391d95628b391
+SHA256: 77cb888173b1d0c44a8282801edb3f0e0a7710cc219c6ea73a265b1e519e539c
+Section: Tweaks
+Description: Multitasking on iOS15.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu(Rootless)
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Zetsu.json
+
