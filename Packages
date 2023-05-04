@@ -46,6 +46,39 @@ Description: DashApp😎Change the lock screen camera to your favorite app.⚡�
 Author: Dcsyhi
 Name: DashApp (Rootless)
 
+Package: jp.dcsyhi.dashapp
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1256
+Depends: mobilesubstrate,preferenceloader
+Filename: ./debs/jp.dcsyhi.dashapp_1.1_iphoneos-arm64.deb
+Size: 900314
+MD5sum: 34b38377095421cfa6e81103ba97ddda
+SHA1: a0c5c17d160e9fb0896350626ba869233d82dac8
+SHA256: 32844daf38d3dcf4394a7a8832f7164593b52e0f50dddca73bc7f744b4ec1c37
+Section: Tweaks
+Description: DashApp😎Change the lock screen camera to your favorite app.⚡️
+Author: Dcsyhi
+Name: DashApp (Rootless)
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1276
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.0_iphoneos-arm64.deb
+Size: 791024
+MD5sum: 329e6cfd2154c6a0e63924eabf7f783e
+SHA1: 2feaff58385e6b0efc8ba951dcad8ad162b5f233
+SHA256: 422a2dfa1cb2ae3c064fee6f80d478de19d294ac8fa22c71e9d000bf1962b790
+Section: Tweaks
+Description: You can arrange apps or modules on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
 Package: jp.dcsyhi.logs
 Version: 1.0
 Architecture: iphoneos-arm
