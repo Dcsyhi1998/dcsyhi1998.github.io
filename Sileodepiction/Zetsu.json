@@ -172,6 +172,17 @@
         "views": [
             {
                 "class": "DepictionSubheaderView",
+                "title": "v1.2",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown": "<ul>\n<li>Fixed Zetsu settings not being set correctly.</li></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
                 "title": "v1.1",
                 "useBoldText": true,
                 "useBottomMargin": false
