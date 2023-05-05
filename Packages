@@ -14,6 +14,22 @@ Description: An awesome Airaw Widgets extension!
 Author: sugiuta
 Name: SUMusicWidget
 
+Package: jp.dcsyhi.adkeyboard
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 624
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.adkeyboard_1.0_iphoneos-arm64.deb
+Size: 279712
+MD5sum: edf083e85ce840ab4d8cd07fcd36a25e
+SHA1: 3f855f7a248024e1838bee4157984b6e7240370b
+SHA256: 382d9760b237fa50a3d71b83726f98b488d610f04ded280fc477150fed354a6d
+Section: Tweaks
+Description: Make keyboard color adaptive to app color.
+Author: Dcsyhi
+Name: ADKeyboard
+
 Package: jp.dcsyhi.clockwidget
 Version: 1.0
 Architecture: iphoneos-arm
@@ -73,6 +89,23 @@ Size: 790868
 MD5sum: 0e9006b6e222bfcea7ddeacb8a074575
 SHA1: 3c2abdc8eb5a5fb520fbddec9dde032ba175d4ec
 SHA256: 3d20f138471fd8f394dcfc373f661b4132d3a07cac649e6163d6c7846140c7aa
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1276
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.1_iphoneos-arm64.deb
+Size: 791098
+MD5sum: 1bc76eedf16d4ce3c2606014e98cebe8
+SHA1: 63f19bb4a65168db8fcbf994c4f6e51573ea4682
+SHA256: e655e77edafc922d690028cb525717f57aea470292d9a71d57ee44cb95a10d06
 Section: Tweaks
 Description: You can arrange apps on the dock of keyboard ⌨️.
 Author: Dcsyhi
