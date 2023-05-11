@@ -46,6 +46,22 @@ Description: Make keyboard color adaptive to app color.
 Author: Dcsyhi
 Name: ADKeyboard
 
+Package: jp.dcsyhi.adkeyboard
+Version: 1.2
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 624
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.adkeyboard_1.2_iphoneos-arm64.deb
+Size: 282106
+MD5sum: 79a38a148bab0659c5cf515ad4965720
+SHA1: d55bf4cd795389950cadb6173a00ddff8f2a2002
+SHA256: 81ba965d8b03fecd775f282a6d38b7c3c114283ef207df98eaf26329c418f240
+Section: Tweaks
+Description: Make keyboard color adaptive to app color.
+Author: Dcsyhi
+Name: ADKeyboard
+
 Package: jp.dcsyhi.clockwidget
 Version: 1.0
 Architecture: iphoneos-arm
