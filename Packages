@@ -160,6 +160,23 @@ Author: Dcsyhi
 Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
 Name: KBApp
 
+Package: jp.dcsyhi.kbappdock
+Version: 1.2
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1276
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.2_iphoneos-arm64.deb
+Size: 792520
+MD5sum: 5abb5b265f26bd7f759055537ff0a980
+SHA1: 641cc77300ad6f987de5eae7fbf87ce709c58b4a
+SHA256: 471563c9ab79315a66e65df6b649aaf2eb92b37925bb23c1a0fbafeaf73defb9
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
 Package: jp.dcsyhi.logs
 Version: 1.0
 Architecture: iphoneos-arm
