@@ -69,7 +69,7 @@ paths:
               type: string
               default: available
       x-codeSamples:
-        - lang: 'pageIndex'
+        - lang: "pageIndex"
           source: |
             function mainUpdate(type){
               if(type == "CarPlay"){
@@ -165,70 +165,70 @@ paths:
           schema:
             type: json
             enum:
-            - deviceName
-            - batteryPercent
-            - machineName
-            - deviceIdentifier
-            - deviceProductIdentifier
+              - deviceName
+              - batteryPercent
+              - machineName
+              - deviceIdentifier
+              - deviceProductIdentifier
             items:
               type: string
               default: available
       x-codeSamples:
-        - lang: 'Percent'
+        - lang: "Percent"
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 myElement.innerHTML = batteryPercent;
               }
             }
-        - lang: 'Charging'
+        - lang: "Charging"
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 myElement.innerHTML = batteryCharging;
               }
             }
-        - lang: 'LowPowerMode'
+        - lang: "LowPowerMode"
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 myElement.innerHTML = batteryLowPowerMode;
               }
             }
-        - lang: 'Cycles'
+        - lang: "Cycles"
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 myElement.innerHTML = batteryCycles;
               }
             }
-        - lang: 'Health'
+        - lang: "Health"
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 myElement.innerHTML = batteryHealth + "%";
               }
             }
-        - lang: 'Voltage'
+        - lang: "Voltage"
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 myElement.innerHTML = batteryVoltage + "mV";
               }
             }
-        - lang: 'Celsius'
+        - lang: "Celsius"
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 myElement.innerHTML = batteryCelsius + "°C";
               }
             }
-        - lang: 'bateryInfo.devices'
+        - lang: "bateryInfo.devices"
           source: |
             function mainUpdate(type){
               if(type == "battery"){
                 var batteryArray = bateryInfo.devices;
-                for (var i = 0; i < dayArray.length; i++) {
+                for (var i = 0; i < batteryArray.length; i++) {
                   document.getElementById('deviceName' + i).innerHTML = batteryArray[i].deviceName;
                   document.getElementById('batteryPercent' + i).innerHTML = batteryArray[i].batteryPercent;
                   document.getElementById('machineName' + i).innerHTML = batteryArray[i].machineName;
@@ -296,35 +296,35 @@ paths:
               type: string
               default: available
       x-codeSamples:
-        - lang: 'signalBars'
+        - lang: "signalBars"
           source: |
             function mainUpdate(type){
               if(type == "statusbar"){
                 myElement.innerHTML = signalBars;
               }
             }
-        - lang: 'signalName'
+        - lang: "signalName"
           source: |
             function mainUpdate(type){
               if(type == "statusbar"){
                 myElement.innerHTML = signalName;
               }
             }
-        - lang: 'wifiBars'
+        - lang: "wifiBars"
           source: |
             function mainUpdate(type){
               if(type == "statusbar"){
                 myElement.innerHTML = wifiBars;
               }
             }
-        - lang: 'wifiName'
+        - lang: "wifiName"
           source: |
             function mainUpdate(type){
               if(type == "statusbar"){
                 myElement.innerHTML = wifiName;
               }
             }
-        - lang: 'signalNetworkType'
+        - lang: "signalNetworkType"
           source: |
             function mainUpdate(type){
               if(type == "statusbar"){
@@ -410,49 +410,49 @@ paths:
               type: string
               default: available
       x-codeSamples:
-        - lang: 'deviceName'
+        - lang: "deviceName"
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = deviceName;
               }
             }
-        - lang: 'deviceType'
+        - lang: "deviceType"
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = deviceType;
               }
             }
-        - lang: 'systemVersion'
+        - lang: "systemVersion"
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = systemVersion;
               }
             }
-        - lang: 'ipAddress'
+        - lang: "ipAddress"
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = ipAddress;
               }
             }
-        - lang: 'ramFree'
+        - lang: "ramFree"
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = ramFree;
               }
             }
-        - lang: 'ramUsed'
+        - lang: "ramUsed"
           source: |
             function mainUpdate(type){
               if(type == "system"){
                 myElement.innerHTML = ramUsed;
               }
             }
-        - lang: 'ramTotal'
+        - lang: "ramTotal"
           source: |
             function mainUpdate(type){
               if(type == "system"){
@@ -635,11 +635,11 @@ paths:
           schema:
             type: json
             enum:
-            - dayNumber
-            - dayOfWeek
-            - icon
-            - high
-            - low
+              - dayNumber
+              - dayOfWeek
+              - icon
+              - high
+              - low
         - name: weather.hourlyForecasts
           in: query
           description: Returns hourly weather information throughout the day.
@@ -649,42 +649,42 @@ paths:
           schema:
             type: json
             enum:
-            - time
-            - conditionCode
-            - temperature
-            - percentPrecipitation
-            - detail
-            - hourIndex
+              - time
+              - conditionCode
+              - temperature
+              - percentPrecipitation
+              - detail
+              - hourIndex
       x-codeSamples:
-        - lang: 'temperature'
+        - lang: "temperature"
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.temperature;
               }
             }
-        - lang: 'condition'
+        - lang: "condition"
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.conditions;
               }
             }
-        - lang: 'location'
+        - lang: "location"
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.location;
               }
             }
-        - lang: 'Duration'
+        - lang: "Duration"
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.currentDuration;
               }
             }
-        - lang: 'conditioncode'
+        - lang: "conditioncode"
           source: |
             function mainUpdate(type){
               var weatherString;
@@ -738,28 +738,28 @@ paths:
                 myElement.innerHTML = weatherString;
               }
             }
-        - lang: 'hightemperature'
+        - lang: "hightemperature"
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.hightemperature;
               }
             }
-        - lang: 'lowtemperature'
+        - lang: "lowtemperature"
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.lowtemperature;
               }
             }
-        - lang: 'sunrise'
+        - lang: "sunrise"
           source: |
             function mainUpdate(type){
               if(type == "weather"){
                 myElement.innerHTML = weather.sunrise;
               }
             }
-        - lang: 'sunset'
+        - lang: "sunset"
           source: |
             function mainUpdate(type){
               if(type == "weather"){
@@ -844,67 +844,77 @@ paths:
             items:
               type: string
               default: available
-        - name: VideoArtwork
+        # - name: VideoArtwork
+        #   in: query
+        #   description: Music videos(spotify only) can be obtained with the following path '/var/mobile/Documents/VideoMusicArt.mp4'
+        #   required: false
+        #   style: form
+        #   schema:
+        #     type: path
+        #     items:
+        #       type: string
+        #       default: available
+        - name: PlayingApplication
           in: query
-          description: Music videos(spotify only) can be obtained with the following path '/var/mobile/Documents/VideoMusicArt.mp4'
+          description: You can get the bundleIdentifier of the playing app.(e.g.) For YouTube "com.google.ios.youtube" When playback is stopped, the "null" character is displayed.
           required: false
           style: form
           schema:
-            type: path
+            type: strings
             items:
               type: string
               default: available
       x-codeSamples:
-        - lang: 'artist'
+        - lang: "artist"
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = artist;
               }
             }
-        - lang: 'album'
+        - lang: "album"
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = album;
               }
             }
-        - lang: 'title'
+        - lang: "title"
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = title;
               }
             }
-        - lang: 'Duration'
+        - lang: "Duration"
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = currentDuration;
               }
             }
-        - lang: 'ElapsedTime'
+        - lang: "ElapsedTime"
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = currentElapsedTime;
               }
             }
-        - lang: 'isplaying'
+        - lang: "isplaying"
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.innerHTML = isplaying;
               }
             }
-        - lang: 'Artwork'
+        - lang: "Artwork"
           source: |
             function mainUpdate(type){
               if(type == "music"){
                 myElement.src = "/var/mobile/Documents/MusicArt.png?"+ (new Date()).getTime();
               }
             }
-        - lang: 'VideoArtwork'
+        - lang: "VideoArtwork"
           source: |
             function mainUpdate(type){
               if(type == "music"){

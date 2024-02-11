@@ -1,7 +1,7 @@
 .screenshotWrapper {
     overflow-x: auto;
     overflow-y: hidden;
-    max-height: 300px;
+    max-height: 450px;
     white-space: nowrap;
     user-select: none;
     -webkit-user-select: none;
