@@ -14,6 +14,38 @@ Description: An awesome Airaw Widgets extension!
 Author: sugiuta
 Name: SUMusicWidget
 
+Package: com.sugiuta.sumusicwidget
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: sugiuta
+Installed-Size: 280
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.sugiuta.sumusicwidget_1.1_iphoneos-arm64.deb
+Size: 32404
+MD5sum: f0440701c48f44c14b701e368eb05af2
+SHA1: 71d485185a468ab606de4ec62608d5dfd8938657
+SHA256: d9c0370db0aebe94bec5d0717e6e7a71525b48edc7b78b1613bb9bb07f19a8ce
+Section: Addons
+Description: An awesome Airaw Widgets extension!
+Author: sugiuta
+Name: SUMusicWidget
+
+Package: com.sugiuta.sumusicwidget
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: sugiuta
+Installed-Size: 280
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.sugiuta.sumusicwidget_1.1_iphoneos-arm.deb
+Size: 32560
+MD5sum: 8e3bd6937f60262cc7c023c845b2d1fe
+SHA1: e3818a9a177952db6b6d5a77cb7a26684338bd80
+SHA256: 5717cf8dc78da1184e2c0969c0d091b46bf07870a9ce61b7134d3a7ed7a9bd52
+Section: Addons
+Description: An awesome Airaw Widgets extension!
+Author: sugiuta
+Name: SUMusicWidget
+
 Package: jp.dcsyhi.adkeyboard
 Version: 1.0
 Architecture: iphoneos-arm64
