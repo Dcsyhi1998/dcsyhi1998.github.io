@@ -12,6 +12,7 @@ info:
       - System Information
       - Music Information
       - Weather Information
+      - Calling from widget
 
     I am very grateful for the source code of [XenInfo](http://www.junesiphone.com/xeninfo/).
     Airaw API would have been difficult to implement.
@@ -32,7 +33,7 @@ info:
     - if (type == "weather")
 
     <SecurityDefinitions />
-  version: 1.6.0
+  version: 1.6.6
   title: Airaw API
   contact:
     name: API Support
@@ -49,6 +50,7 @@ x-tagGroups:
       - System Information
       - Music Information
       - Weather Information
+      - Calling from widget
 paths:
   #CarPlayの情報取得
   /CarPlay:
@@ -921,3 +923,72 @@ paths:
                 videoElement.src = "/var/mobile/Documents/VideoMusicArt.mp4?"+ (new Date()).getTime();
               }
             }
+  # 関数呼び出し
+  /Calling
+    get:
+      tags:
+        - Calling from widget
+      summary: How to Calling from widget information
+      description: How to use acquired variables.
+      parameters:
+        - name: window.location = 'arapi:arcall_Battery';
+          in: query
+          description: Update battery information from widget.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: window.location = 'arapi:arcall_Statusbar';
+          in: query
+          description: Update status bar information from widget.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: window.location = 'arapi:arcall_System';
+          in: query
+          description: Update system information from widget.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: window.location = 'arapi:arcall_Weather';
+          in: query
+          description: Update weather information from widget.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: window.location = 'arapi:arcall_Music';
+          in: query
+          description: Update music information from widget.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: window.location = 'arapi:arcall_all';
+          in: query
+          description: Update all information from widget.
+          required: false
+          style: form
+          schema:
+            type: boolean
+            items:
+              type: string
+              default: available
+      x-codeSamples:
