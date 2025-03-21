@@ -14,6 +14,7 @@ info:
       - Weather Information
       - Calling from widget
 
+
     I am very grateful for the source code of [XenInfo](http://www.junesiphone.com/xeninfo/).
     Airaw API would have been difficult to implement.
     I am very grateful to the developer [@JunesiPhone](https://twitter.com/junesiphone).
@@ -230,7 +231,7 @@ paths:
             function mainUpdate(type){
               if(type == "battery"){
                 var batteryArray = bateryInfo.devices;
-                for (var i = 0; i < batteryArray.length; i++) {
+                for (var i = 0; i < dayArray.length; i++) {
                   document.getElementById('deviceName' + i).innerHTML = batteryArray[i].deviceName;
                   document.getElementById('batteryPercent' + i).innerHTML = batteryArray[i].batteryPercent;
                   document.getElementById('machineName' + i).innerHTML = batteryArray[i].machineName;
@@ -846,23 +847,14 @@ paths:
             items:
               type: string
               default: available
-        # - name: VideoArtwork
-        #   in: query
-        #   description: Music videos(spotify only) can be obtained with the following path '/var/mobile/Documents/VideoMusicArt.mp4'
-        #   required: false
-        #   style: form
-        #   schema:
-        #     type: path
-        #     items:
-        #       type: string
-        #       default: available
-        - name: PlayingApplication
+        - name: VideoArtwork
+
           in: query
-          description: You can get the bundleIdentifier of the playing app.(e.g.) For YouTube "com.google.ios.youtube" When playback is stopped, the "null" character is displayed.
+          description: Music videos(spotify only) can be obtained with the following path '/var/mobile/Documents/VideoMusicArt.mp4'
           required: false
           style: form
           schema:
-            type: strings
+            type: path
             items:
               type: string
               default: available
@@ -923,8 +915,7 @@ paths:
                 videoElement.src = "/var/mobile/Documents/VideoMusicArt.mp4?"+ (new Date()).getTime();
               }
             }
-  # 関数呼び出し
-  /Calling
+  /Calling:
     get:
       tags:
         - Calling from widget
@@ -991,4 +982,3 @@ paths:
             items:
               type: string
               default: available
-      x-codeSamples:
