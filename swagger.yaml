@@ -982,3 +982,14 @@ paths:
             items:
               type: string
               default: available
+      x-codeSamples:
+        - lang: "Calling"
+          source: |
+            <script>
+                //window.location = 'arapi:arcall_Battery';
+                //window.location = 'arapi:arcall_Statusbar';
+                //window.location = 'arapi:arcall_System';
+                //window.location = 'arapi:arcall_Weather';
+                //window.location = 'arapi:arcall_Music';
+                //window.location = 'arapi:arcall_all';
+            </script>
