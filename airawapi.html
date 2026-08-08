@@ -1,4 +1,4 @@
-
+<!-- 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -17,5 +17,1619 @@
 <body>
     <redoc spec-url="./swagger.yaml"></redoc>
     <script src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"> </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airaw Widget API Reference</title>
+    <link rel="website icon" type="png" href="icons/Airaw/Airaw.png">
+    <meta name="description" content="Airaw API serves to facilitate the creation of widgets for CarPlay.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://dcsyhi1998.github.io/icons/Airaw/Airaw.png">
+    <meta content="@linux_n1" name="twitter:creator">
+    <meta property="og:title" content="Airaw API">
+    <meta property="og:image" content=https://dcsyhi1998.github.io/icons/Airaw/Airaw.png">
+    <meta property="og:description" content="Airaw API serves to facilitate the creation of widgets for CarPlay.">
+    <meta content="https://dcsyhi1998.github.io/airawapi" property="og:url">
+    <meta content="Airaw,Airaw API,airaw,airaw api" name="keywords">
+<style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #1c2128;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --accent2: #79c0ff;
+      --green: #3fb950;
+      --yellow: #d29922;
+      --red: #f85149;
+      --purple: #bc8cff;
+      --orange: #f0883e;
+      --teal: #2dd4bf;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --text-subtle: #6e7681;
+      --code-bg: #161b22;
+      --tag-bg: rgba(88,166,255,0.1);
+      --radius: 8px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* ── Layout ─────────────────────────────────────────── */
+    .layout { display: flex; min-height: 100vh; }
+
+    /* ── Sidebar ─────────────────────────────────────────── */
+    .sidebar {
+      width: 268px;
+      flex-shrink: 0;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 24px 0;
+    }
+    .sidebar-logo {
+      padding: 0 20px 16px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+    .sidebar-logo h1 { font-size: 18px; font-weight: 700; color: var(--accent); }
+    .sidebar-logo .version { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+    /* ── Language switcher ───────────────────────────────── */
+    .lang-switcher {
+      display: flex;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .lang-btn {
+      flex: 1;
+      padding: 5px 0;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+    }
+    .lang-btn:hover { background: var(--surface2); color: var(--text); }
+    .lang-btn.active {
+      background: var(--tag-bg);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── Nav ─────────────────────────────────────────────── */
+    .nav-section { padding: 4px 20px 12px; }
+    .nav-section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-subtle);
+      margin-bottom: 6px;
+    }
+    .nav-link {
+      display: block;
+      padding: 5px 10px;
+      border-radius: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-link:hover { background: var(--surface2); color: var(--text); }
+    .badge {
+      float: right;
+      font-size: 10px;
+      background: var(--surface2);
+      border-radius: 4px;
+      padding: 1px 6px;
+      color: var(--text-subtle);
+    }
+    .badge.get   { background: rgba(63,185,80,0.15);   color: var(--green); }
+    .badge.event { background: rgba(188,140,255,0.15); color: var(--purple); }
+
+    /* ── Main ─────────────────────────────────────────────── */
+    .main { flex: 1; max-width: 900px; padding: 48px 56px; }
+
+    /* ── Sections ─────────────────────────────────────────── */
+    section { margin-bottom: 72px; }
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 18px; font-weight: 700; color: var(--text); margin: 36px 0 12px; }
+    h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin: 24px 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    p { color: var(--text-muted); margin-bottom: 12px; }
+
+    /* ── Callout ─────────────────────────────────────────── */
+    .callout {
+      border-left: 3px solid var(--accent);
+      background: var(--tag-bg);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 12px 16px;
+      margin: 16px 0;
+      font-size: 13.5px;
+    }
+    .callout.warning { border-color: var(--yellow); background: rgba(210,153,34,0.08); }
+    .callout.danger  { border-color: var(--red);    background: rgba(248,81,73,0.08); }
+    .callout-title   { font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .callout p       { margin: 0; }
+
+    /* ── Architecture ─────────────────────────────────────── */
+    .arch-diagram {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 20px 0;
+      font-family: "SF Mono","Fira Code",monospace;
+      font-size: 13px;
+    }
+    .arch-row { display: flex; align-items: center; gap: 12px; margin: 8px 0; flex-wrap: wrap; }
+    .arch-box {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .arch-box.widget  { background: rgba(88,166,255,0.15);  border:1px solid rgba(88,166,255,0.4); color:var(--accent2); }
+    .arch-box.airaw   { background: rgba(63,185,80,0.12);   border:1px solid rgba(63,185,80,0.4); color:var(--green); }
+    .arch-box.ios     { background: rgba(188,140,255,0.12); border:1px solid rgba(188,140,255,0.4); color:var(--purple); }
+    .arch-arrow { color: var(--text-subtle); flex:1; text-align:center; font-size:16px; min-width:120px; }
+
+    /* ── Code ─────────────────────────────────────────────── */
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    code { font-family: "SF Mono","Fira Code","Cascadia Code",monospace; font-size: 0.9em; }
+    pre code { font-size:inherit; background:none; padding:0; border:none; }
+    :not(pre) > code {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 6px;
+      color: var(--orange);
+    }
+    .kw  { color: #ff7b72; }
+    .fn  { color: #d2a8ff; }
+    .str { color: #a5d6ff; }
+    .num { color: #79c0ff; }
+    .cmt { color: #8b949e; font-style: italic; }
+    .var { color: #ffa657; }
+    .key { color: #7ee787; }
+
+    /* ── Endpoint card ────────────────────────────────────── */
+    .endpoint-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin: 24px 0;
+      overflow: hidden;
+    }
+    .endpoint-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface2);
+      flex-wrap: wrap;
+    }
+    .method-badge {
+      font-size: 11px; font-weight: 800;
+      padding: 3px 10px; border-radius: 4px; letter-spacing: 0.06em;
+    }
+    .method-badge.trigger { background:rgba(63,185,80,0.2);  color:var(--green);  border:1px solid rgba(63,185,80,0.4); }
+    .method-badge.event   { background:rgba(188,140,255,0.2);color:var(--purple); border:1px solid rgba(188,140,255,0.4); }
+    .endpoint-name { font-family:"SF Mono","Fira Code",monospace; font-size:14px; color:var(--text); font-weight:600; }
+    .endpoint-desc { margin-left:auto; font-size:12px; color:var(--text-muted); }
+    .endpoint-body { padding: 20px; }
+
+    /* ── Table ─────────────────────────────────────────────── */
+    .param-table { width:100%; border-collapse:collapse; font-size:13.5px; margin:8px 0; }
+    .param-table th {
+      text-align:left; padding:8px 12px;
+      font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em;
+      color:var(--text-subtle); background:var(--surface2); border-bottom:1px solid var(--border);
+    }
+    .param-table td { padding:10px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+    .param-table tr:last-child td { border-bottom:none; }
+    .param-table tr:hover td { background:rgba(255,255,255,0.02); }
+    .param-name    { font-family:"SF Mono","Fira Code",monospace; color:var(--orange); font-weight:600; white-space:nowrap; }
+    .param-type    { font-family:"SF Mono","Fira Code",monospace; font-size:12px; color:var(--teal); white-space:nowrap; }
+    .param-desc    { color:var(--text-muted); }
+    .param-example { font-family:"SF Mono","Fira Code",monospace; font-size:12px; color:var(--text-subtle); }
+
+    /* ── Object tree ──────────────────────────────────────── */
+    .obj-tree {
+      background:var(--code-bg); border:1px solid var(--border);
+      border-radius:var(--radius); padding:16px 20px;
+      font-family:"SF Mono","Fira Code",monospace; font-size:13px; line-height:2;
+    }
+    .obj-key    { color:var(--key); }
+    .obj-type   { color:var(--teal); font-size:11px; }
+    .obj-desc   { color:var(--text-subtle); font-size:12px; margin-left:8px; }
+    .obj-indent { padding-left:24px; }
+
+    /* ── Condition code grid ──────────────────────────────── */
+    .cond-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:8px; margin:12px 0; }
+    .cond-item { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:8px 12px; font-size:12.5px; }
+    .cond-range { color:var(--accent2); font-family:monospace; font-weight:600; }
+    .cond-emoji { font-size:18px; }
+    .cond-label { color:var(--text-muted); }
+
+    /* ── i18n ─────────────────────────────────────────────── */
+    /* .ja elements hidden by default (English is default) */
+    .ja { display: none; }
+    html[data-lang="ja"] .en { display: none; }
+    html[data-lang="ja"] .ja { display: inline; }
+    /* Block-level ja/en */
+    .ja-block { display: none; }
+    html[data-lang="ja"] .en-block { display: none; }
+    html[data-lang="ja"] .ja-block { display: block; }
+    /* Table row variants */
+    .ja-row { display: none; }
+    html[data-lang="ja"] .en-row { display: none; }
+    html[data-lang="ja"] .ja-row { display: table-row; }
+
+    /* ── Footer ───────────────────────────────────────────── */
+    footer { margin-top:80px; padding-top:24px; border-top:1px solid var(--border); font-size:12px; color:var(--text-subtle); }
+
+    @media (max-width:768px) {
+      .sidebar { display:none; }
+      .main { padding:24px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+
+<!-- ══════════════ SIDEBAR ══════════════ -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <h1>Airaw API</h1>
+    <div class="version">Widget API Reference</div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn"        data-lang="ja" onclick="setLang('ja')">日本語</button>
+    </div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title"><span class="en">Getting Started</span><span class="ja">はじめに</span></div>
+    <a class="nav-link" href="#overview">  <span class="en">Overview</span>      <span class="ja">概要</span></a>
+    <a class="nav-link" href="#architecture"><span class="en">Architecture</span><span class="ja">アーキテクチャ</span></a>
+    <a class="nav-link" href="#quickstart"><span class="en">Quick Start</span>   <span class="ja">クイックスタート</span></a>
+    <a class="nav-link" href="#widget-options"><span class="en">Widget Options</span><span class="ja">ウィジェットオプション</span></a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title"><span class="en">Trigger API</span><span class="ja">トリガー API</span></div>
+    <a class="nav-link" href="#trigger-battery">  arcall_Battery   <span class="badge get">CALL</span></a>
+    <a class="nav-link" href="#trigger-statusbar">arcall_Statusbar <span class="badge get">CALL</span></a>
+    <a class="nav-link" href="#trigger-music">    arcall_Music     <span class="badge get">CALL</span></a>
+    <a class="nav-link" href="#trigger-weather">  arcall_Weather   <span class="badge get">CALL</span></a>
+    <a class="nav-link" href="#trigger-system">   arcall_System    <span class="badge get">CALL</span></a>
+    <a class="nav-link" href="#trigger-all">      arcall_all       <span class="badge get">CALL</span></a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title"><span class="en">Callbacks</span><span class="ja">コールバック</span></div>
+    <a class="nav-link" href="#cb-battery">  battery   <span class="badge event">EVENT</span></a>
+    <a class="nav-link" href="#cb-statusbar">statusbar <span class="badge event">EVENT</span></a>
+    <a class="nav-link" href="#cb-music">    music     <span class="badge event">EVENT</span></a>
+    <a class="nav-link" href="#cb-weather">  weather   <span class="badge event">EVENT</span></a>
+    <a class="nav-link" href="#cb-system">   system    <span class="badge event">EVENT</span></a>
+    <a class="nav-link" href="#cb-carplay">  CarPlay   <span class="badge event">EVENT</span></a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title"><span class="en">Reference</span><span class="ja">リファレンス</span></div>
+    <a class="nav-link" href="#condition-codes"><span class="en">Condition Codes</span><span class="ja">天気コード一覧</span></a>
+    <a class="nav-link" href="#artwork">        <span class="en">Artwork Image</span>   <span class="ja">アートワーク取得</span></a>
+    <a class="nav-link" href="#tips">           <span class="en">Best Practices</span>  <span class="ja">実装のヒント</span></a>
+  </div>
+</nav>
+
+<!-- ══════════════ MAIN ══════════════ -->
+<main class="main">
+
+<!-- ─── Overview ──────────────────────────────────────────── -->
+<section id="overview">
+  <span class="section-label">Introduction</span>
+  <h2>Airaw Widget API</h2>
+
+  <p class="en-block">
+    The Airaw Widget API is a JavaScript bridge that allows HTML widgets displayed on CarPlay
+    to retrieve real-time iOS system data — battery, network, music, weather, and more.
+  </p>
+  <p class="ja-block">
+    Airaw Widget API は、CarPlay 上に表示される HTML ウィジェットが
+    iOS システム情報（バッテリー・ネットワーク・音楽・天気など）を
+    リアルタイムで取得するための JavaScript ブリッジです。
+  </p>
+
+  <p class="en-block">
+    Communication is <strong>bidirectional</strong>. The widget requests data via
+    <code>WKScriptMessageHandler</code> (<code>airawAction</code>) — or the injected helper <code>airawRequest(method)</code> —
+    which avoids touching <code>window.location</code>. The legacy <code>arapi:</code> URL scheme is still supported for compatibility.
+    Airaw responds by injecting global variables and calling <code>mainUpdate(type)</code>.
+  </p>
+  <p class="ja-block">
+    通信は<strong>双方向</strong>です。データ要求は <code>WKScriptMessageHandler</code>（<code>airawAction</code>）、または注入済みの <code>airawRequest(method)</code> を推奨します（<code>window.location</code> を汚しません）。
+    互換のため従来の <code>arapi:</code> URL スキームも利用できます。
+    Airaw がグローバル変数を注入した上で <code>mainUpdate(type)</code> を呼び出します。
+  </p>
+
+  <div class="callout">
+    <div class="callout-title">💡 <span class="en">Platform Support</span><span class="ja">対応プラットフォーム</span></div>
+    <p class="en-block">iOS 14 / 15 / 16 / 17. Only active when CarPlay is connected.<br>
+    Designed for rootless jailbreak environments (Dopamine / palera1n).</p>
+    <p class="ja-block">iOS 14 / 15 / 16 / 17 対応（CarPlay 接続時のみ動作）。<br>
+    Rootless jailbreak（Dopamine / palera1n）環境下での動作を想定しています。</p>
+  </div>
+</section>
+
+<!-- ─── Architecture ──────────────────────────────────────── -->
+<section id="architecture">
+  <span class="section-label">Architecture</span>
+  <h2><span class="en">Architecture</span><span class="ja">アーキテクチャ</span></h2>
+
+  <p class="en-block">The data flow between the widget and Airaw is shown below.</p>
+  <p class="ja-block">Widget ↔ Airaw 間のデータフローを示します。</p>
+
+  <div class="arch-diagram">
+    <div class="arch-row">
+      <div class="arch-box widget">HTML Widget</div>
+      <div class="arch-arrow">── <code>airawRequest('arcall_Battery')</code> ──→</div>
+      <div class="arch-box airaw">Airaw Tweak</div>
+    </div>
+    <div class="arch-row">
+      <div class="arch-box widget">HTML Widget</div>
+      <div class="arch-arrow">←── JS injection + <code>mainUpdate('battery')</code> ────</div>
+      <div class="arch-box airaw">Airaw Tweak</div>
+    </div>
+    <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
+      <div class="arch-row">
+        <div class="arch-box airaw">Airaw Tweak</div>
+        <div class="arch-arrow">── private API hooks ──→</div>
+        <div class="arch-box ios">iOS SpringBoard</div>
+      </div>
+    </div>
+  </div>
+
+  <h3><span class="en">Communication Model</span><span class="ja">通信モデル</span></h3>
+  <table class="param-table">
+    <tr>
+      <th><span class="en">Direction</span><span class="ja">方向</span></th>
+      <th><span class="en">Mechanism</span><span class="ja">手段</span></th>
+      <th><span class="en">Description</span><span class="ja">説明</span></th>
+    </tr>
+    <tr>
+      <td><span class="param-type">Widget → Airaw</span></td>
+      <td><code>postMessage</code> / <code>airawRequest</code></td>
+      <td class="param-desc">
+        <span class="en"><strong>Recommended.</strong> <code>window.webkit.messageHandlers.airawAction.postMessage({ action: 'requestData', method: 'arcall_Battery' })</code>, or <code>airawRequest('arcall_Battery')</code> injected by Airaw (falls back to <code>arapi:</code> only when the handler is unavailable).</span>
+        <span class="ja"><strong>推奨。</strong> <code>window.webkit.messageHandlers.airawAction.postMessage({ action: 'requestData', method: 'arcall_Battery' })</code>、または Airaw が注入する <code>airawRequest('arcall_Battery')</code>（ハンドラが無い場合のみ <code>arapi:</code> にフォールバック）。</span>
+      </td>
+    </tr>
+    <tr>
+      <td><span class="param-type">Widget → Airaw</span></td>
+      <td><code>arapi:</code> URL scheme</td>
+      <td class="param-desc">
+        <span class="en"><strong>Legacy.</strong> Assign <code>window.location = 'arapi:arcall_Battery'</code>; Airaw intercepts navigation. Prefer <code>postMessage</code> to avoid history / SPA side-effects.</span>
+        <span class="ja"><strong>レガシー。</strong> <code>window.location = 'arapi:…'</code> でナビゲーションをインターセプト。履歴や SPA への影響を避けるなら <code>postMessage</code> を推奨。</span>
+      </td>
+    </tr>
+    <tr>
+      <td><span class="param-type">Airaw → Widget</span></td>
+      <td><span class="en">Direct JS evaluation</span><span class="ja">JS 文字列の直接評価</span></td>
+      <td class="param-desc">
+        <span class="en">Declares global variables with <code>var xxx = ...</code>, then calls <code>mainUpdate(type)</code>.</span>
+        <span class="ja">グローバル変数を <code>var xxx = ...</code> で宣言後、<code>mainUpdate(type)</code> を呼び出します。</span>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<!-- ─── Quick Start ────────────────────────────────────────── -->
+<section id="quickstart">
+  <span class="section-label">Quickstart</span>
+  <h2><span class="en">Quick Start</span><span class="ja">クイックスタート</span></h2>
+
+  <p class="en-block">Minimal widget implementation example.</p>
+  <p class="ja-block">最小構成のウィジェット実装例です。</p>
+
+<pre><code><span class="cmt">&lt;!-- Request all data on page load --&gt;</span>
+<span class="kw">&lt;script&gt;</span>
+<span class="fn">window</span>.addEventListener(<span class="str">'load'</span>, <span class="kw">function</span>() {
+  <span class="cmt">// Recommended: injected helper (uses postMessage internally)</span>
+  <span class="fn">airawRequest</span>(<span class="str">'arcall_all'</span>);
+  <span class="cmt">// Legacy: window.location = 'arapi:arcall_all';</span>
+});
+
+<span class="cmt">// Airaw calls this after injecting variables</span>
+<span class="kw">function</span> <span class="fn">mainUpdate</span>(<span class="var">type</span>) {
+  <span class="kw">if</span> (<span class="var">type</span> === <span class="str">'battery'</span>) {
+    document.getElementById(<span class="str">'bat'</span>).textContent = batteryPercent + <span class="str">'%'</span>;
+  }
+  <span class="kw">if</span> (<span class="var">type</span> === <span class="str">'weather'</span>) {
+    document.getElementById(<span class="str">'temp'</span>).textContent = weather.temperature + <span class="str">'°C'</span>;
+  }
+}
+<span class="kw">&lt;/script&gt;</span>
+</code></pre>
+
+  <div class="callout warning">
+    <div class="callout-title">⚠️ <span class="en">Do not rename <code>mainUpdate</code></span><span class="ja">関数名を変更しないこと</span></div>
+    <p class="en-block">The function name <code>mainUpdate</code> is hardcoded in Airaw. It cannot be renamed.</p>
+    <p class="ja-block"><code>mainUpdate</code> という関数名は Airaw が固定で呼び出します。この名前は変更できません。</p>
+  </div>
+</section>
+
+<!-- ─── Widget Options ─────────────────────────────────────── -->
+<section id="widget-options">
+  <span class="section-label">Configuration</span>
+  <h2><span class="en">Widget Options (<code>airaw-widget-schema.json</code>)</span><span class="ja">ウィジェットオプション（<code>airaw-widget-schema.json</code>）</span></h2>
+
+  <p class="en-block">
+    Place a schema file named <code>airaw-widget-schema.json</code> in the <strong>same folder</strong> as your widget HTML.
+    Airaw reads it to build a settings UI and injects the merged values into the WebView as <code>window.AIRAW_WIDGET_OPTIONS</code>.
+    User overrides are persisted under <code>/var/jb/Library/Airaw/WidgetOptions/</code> on rootless setups (path may vary by jailbreak).
+  </p>
+  <p class="ja-block">
+    ウィジェットの HTML と<strong>同じフォルダ</strong>に <code>airaw-widget-schema.json</code> を置きます。
+    Airaw がスキーマを読み取り設定画面を生成し、マージ結果を WebView に <code>window.AIRAW_WIDGET_OPTIONS</code> として注入します。
+    ユーザーが変更した値は rootless 環境では <code>/var/jb/Library/Airaw/WidgetOptions/</code> 以下に保存されます（JB により実パスは異なる場合があります）。
+  </p>
+
+  <h3><span class="en">Schema shape</span><span class="ja">スキーマの形</span></h3>
+  <p class="en-block">
+    Top-level keys such as <code>widgetId</code> / <code>version</code> are optional metadata for authors.
+    Airaw uses the <code>properties</code> object to generate prefs cells and defaults.
+  </p>
+  <p class="ja-block">
+    ルートの <code>widgetId</code> や <code>version</code> は作者向けメタデータとして任意です。
+    設定 UI と既定値には <code>properties</code> オブジェクトが使われます。
+  </p>
+
+  <table class="param-table">
+    <tr>
+      <th><span class="en">Field (per property)</span><span class="ja">各プロパティのフィールド</span></th>
+      <th><span class="en">Description</span><span class="ja">説明</span></th>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td class="param-desc">
+        <span class="en"><code>string</code>, <code>boolean</code>, <code>number</code>, or <code>integer</code>. Unknown types are ignored.</span>
+        <span class="ja"><code>string</code> / <code>boolean</code> / <code>number</code> / <code>integer</code>。それ以外は無視されます。</span>
+      </td>
+    </tr>
+    <tr>
+      <td><code>default</code></td>
+      <td class="param-desc">
+        <span class="en">Fallback when no user override exists.</span>
+        <span class="ja">ユーザー未設定時に使われる既定値。</span>
+      </td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td class="param-desc">
+        <span class="en">Shown in Settings; falls back to the property key.</span>
+        <span class="ja">設定画面のラベル。省略時はプロパティ名。</span>
+      </td>
+    </tr>
+    <tr>
+      <td><code>minimum</code> / <code>maximum</code></td>
+      <td class="param-desc">
+        <span class="en">Clamp for <code>number</code> and <code>integer</code> types.</span>
+        <span class="ja"><code>number</code> / <code>integer</code> の値をこの範囲に収めます。</span>
+      </td>
+    </tr>
+  </table>
+
+<pre><code>{
+  <span class="str">"widgetId"</span>: <span class="str">"com.example.mywidget"</span>,
+  <span class="str">"version"</span>: <span class="num">1</span>,
+  <span class="str">"properties"</span>: {
+    <span class="str">"accentColor"</span>: {
+      <span class="str">"type"</span>: <span class="str">"string"</span>,
+      <span class="str">"default"</span>: <span class="str">"#4fc3f7"</span>,
+      <span class="str">"label"</span>: <span class="str">"Accent color (#hex)"</span>
+    },
+    <span class="str">"compactCards"</span>: {
+      <span class="str">"type"</span>: <span class="str">"boolean"</span>,
+      <span class="str">"default"</span>: <span class="kw">false</span>,
+      <span class="str">"label"</span>: <span class="str">"Compact cards"</span>
+    }
+  }
+}</code></pre>
+
+  <h3><span class="en">Storage identifier (slug)</span><span class="ja">保存キー（スラッグ）</span></h3>
+  <p class="en-block">
+    Overrides are stored under <code>/Library/Airaw/WidgetOptions/</code> (rootless prefix applied by the jailbreak).
+    The plist basename starts from the HTML path’s folder names:
+    <code>xenhtml.&lt;parent&gt;.&lt;folder&gt;</code> (segments lowercased). Example:
+    <code>…/MyPack/widget/index.html</code> → <code>xenhtml.mypack.widget.plist</code>.
+    If your schema defines a non-empty <code>widgetId</code>, Airaw appends a sanitized segment so different widgets under the same folder path do not collide:
+    <code>xenhtml.mypack.widget.&lt;sanitized-widgetId&gt;.plist</code>.
+    When you add <code>widgetId</code> later, an existing legacy plist at the base-only filename is moved to the new name on first access so user settings are preserved.
+  </p>
+  <p class="ja-block">
+    保存先は（rootless ではプレフィックス付きの）<code>/Library/Airaw/WidgetOptions/</code> です。
+    ベース名は HTML のフォルダから <code>xenhtml.&lt;親&gt;.&lt;フォルダ&gt;</code>（小文字）。例:
+    <code>…/MyPack/widget/index.html</code> → <code>xenhtml.mypack.widget.plist</code>。
+    スキーマに空でない <code>widgetId</code> がある場合は衝突回避のため
+    <code>xenhtml.mypack.widget.&lt;sanitized-widgetId&gt;.plist</code> のように続けます。
+    後から <code>widgetId</code> を追加した場合、既存のレガシー plist は初回アクセス時に新ファイル名へ移動され、設定は引き継がれます。
+  </p>
+
+  <h3><span class="en">JavaScript API</span><span class="ja">JavaScript からの利用</span></h3>
+  <table class="param-table">
+    <tr>
+      <th><span class="en">Mechanism</span><span class="ja">手段</span></th>
+      <th><span class="en">Description</span><span class="ja">説明</span></th>
+    </tr>
+    <tr>
+      <td><code>window.AIRAW_WIDGET_OPTIONS</code></td>
+      <td class="param-desc">
+        <span class="en">Plain object of merged defaults + user overrides. Updated on load and when settings change.</span>
+        <span class="ja">既定値とユーザー値をマージしたオブジェクト。読み込み時および設定変更時に更新されます。</span>
+      </td>
+    </tr>
+    <tr>
+      <td><code>airawwidgetoptions</code></td>
+      <td class="param-desc">
+        <span class="en"><code>window</code> CustomEvent; <code>event.detail</code> is the options object (empty object when no keys).</span>
+        <span class="ja"><code>window</code> の CustomEvent。<code>detail</code> にオプションオブジェクト（キーが無い場合は空オブジェクト）。</span>
+      </td>
+    </tr>
+    <tr>
+      <td><code>window.onAirawWidgetOptions</code></td>
+      <td class="param-desc">
+        <span class="en">If defined as a function, Airaw calls it with the options object after each injection.</span>
+        <span class="ja">関数として定義されていれば、注入のたびにその関数がオプションオブジェクトで呼ばれます。</span>
+      </td>
+    </tr>
+  </table>
+
+<pre><code><span class="kw">function</span> <span class="fn">applyOptions</span>(<span class="var">o</span>) {
+  <span class="kw">if</span> (!<span class="var">o</span>) <span class="kw">return</span>;
+  document.documentElement.style.setProperty(<span class="str">'--accent'</span>, <span class="var">o</span>.accentColor || <span class="str">'#4fc3f7'</span>);
+  document.body.classList.toggle(<span class="str">'compact'</span>, !!<span class="var">o</span>.compactCards);
+}
+
+<span class="fn">window</span>.addEventListener(<span class="str">'airawwidgetoptions'</span>, <span class="kw">function</span>(<span class="var">e</span>) {
+  <span class="fn">applyOptions</span>(<span class="var">e</span>.detail);
+});
+
+<span class="fn">window</span>.onAirawWidgetOptions = <span class="fn">applyOptions</span>;
+
+<span class="cmt">// Initial paint if already injected before listeners ran</span>
+<span class="kw">if</span> (<span class="kw">typeof</span> <span class="fn">window</span>.AIRAW_WIDGET_OPTIONS !== <span class="str">'undefined'</span>) {
+  <span class="fn">applyOptions</span>(<span class="fn">window</span>.AIRAW_WIDGET_OPTIONS);
+}</code></pre>
+
+  <h3><span class="en">Settings UI</span><span class="ja">設定アプリでの操作</span></h3>
+  <p class="en-block">
+    Open Airaw’s screen where you configure <strong>CarPlay widget placement</strong> for your HTML widget.
+    When the schema file is present, a group titled <strong>HTML widget options</strong> lists switches, sliders, or text fields per property.
+    Tap <strong>Apply</strong> to push changes to CarPlay / refresh the WebView.
+  </p>
+  <p class="ja-block">
+    Airaw の<strong>CarPlay 上のウィジェット配置</strong>を編集する設定画面で、その HTML ウィジェットを開きます。
+    スキーマがある場合、<strong>HTMLウィジェットのオプション</strong>というグループにスイッチ・スライダー・テキストなどが現れます。
+    変更を反映するには <strong>Apply</strong> をタップしてください。
+  </p>
+
+  <div class="callout">
+    <div class="callout-title">📎 <span class="en">Sample files</span><span class="ja">サンプル</span></div>
+    <p class="en-block">
+      See <code>Samples/airaw-widget-schema.json</code> and <code>Samples/airaw-sample-widget.html</code> for a complete working example
+      (CSS variables, compact layout, and option listeners).
+    </p>
+    <p class="ja-block">
+      実装例はリポジトリの <code>Samples/airaw-widget-schema.json</code> と <code>Samples/airaw-sample-widget.html</code> を参照してください（CSS 変数・コンパクト表示・オプション連動）。
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════ TRIGGER APIs ══════════════ -->
+<section id="trigger-battery">
+  <span class="section-label">Trigger API</span>
+  <h2><span class="en">Trigger APIs</span><span class="ja">トリガー API</span></h2>
+  <p class="en-block">
+    Call Airaw from JavaScript to refresh widget data. Prefer <code>airawRequest(method)</code> or <code>postMessage</code> so the webview does not navigate.
+    The <code>arapi:</code> URL form remains supported as a legacy fallback.
+  </p>
+  <p class="ja-block">
+    JavaScript から Airaw にデータ取得を依頼します。<code>airawRequest(method)</code> または <code>postMessage</code> を推奨します（WebView がナビゲーションしないため）。
+    <code>arapi:</code> 形式はレガシー互換として残ります。
+  </p>
+
+  <div class="callout">
+    <div class="callout-title">📌 <span class="en">Recommended vs legacy</span><span class="ja">推奨とレガシー</span></div>
+    <p class="en-block">
+      <strong>Recommended:</strong> <code>airawRequest('arcall_Battery')</code> (injected at document start), or explicitly:
+      <code>window.webkit.messageHandlers.airawAction.postMessage({ action: 'requestData', method: 'arcall_Battery' })</code>.
+      The <code>method</code> string is always the same token that follows <code>arapi:</code> (e.g. <code>arcall_all</code>, <code>action_launchApp_com.apple.Music</code>).
+    </p>
+    <p class="ja-block">
+      <strong>推奨:</strong> ドキュメント開始時に注入される <code>airawRequest('arcall_Battery')</code>、または明示的に
+      <code>window.webkit.messageHandlers.airawAction.postMessage({ action: 'requestData', method: 'arcall_Battery' })</code>。
+      <code>method</code> は常に <code>arapi:</code> の後ろと同じ識別子です（例: <code>arcall_all</code>、<code>action_launchApp_com.apple.Music</code>）。
+    </p>
+    <p class="en-block">
+      <strong>Legacy:</strong> <code>window.location = 'arapi:' + method;</code> — Airaw cancels navigation and runs the same pipeline.
+    </p>
+    <p class="ja-block">
+      <strong>レガシー:</strong> <code>window.location = 'arapi:' + method;</code> — Airaw がナビゲーションをキャンセルし、同じ処理へ渡します。
+    </p>
+  </div>
+  <div class="endpoint-card">
+    <div class="endpoint-header">
+      <span class="method-badge trigger">CALL</span>
+      <span class="endpoint-name">arapi:arcall_Battery</span>
+      <span class="endpoint-desc"><span class="en">Request battery data</span><span class="ja">バッテリー情報を要求</span></span>
+    </div>
+    <div class="endpoint-body">
+<pre><code><span class="fn">airawRequest</span>(<span class="str">'arcall_Battery'</span>);
+<span class="cmt">// postMessage: window.webkit.messageHandlers.airawAction.postMessage({ action: 'requestData', method: 'arcall_Battery' });</span>
+<span class="cmt">// legacy: window.location = 'arapi:arcall_Battery';</span>
+</code></pre>
+      <p class="en-block">Airaw collects battery info and calls <code>mainUpdate('battery')</code>.</p>
+      <p class="ja-block">Airaw がバッテリー情報を収集し <code>mainUpdate('battery')</code> を実行します。</p>
+    </div>
+  </div>
+
+  <div class="endpoint-card" id="trigger-statusbar">
+    <div class="endpoint-header">
+      <span class="method-badge trigger">CALL</span>
+      <span class="endpoint-name">arapi:arcall_Statusbar</span>
+      <span class="endpoint-desc"><span class="en">Request network status</span><span class="ja">ステータスバー情報を要求</span></span>
+    </div>
+    <div class="endpoint-body">
+<pre><code><span class="fn">airawRequest</span>(<span class="str">'arcall_Statusbar'</span>);
+<span class="cmt">// postMessage … method: 'arcall_Statusbar'</span>
+<span class="cmt">// legacy: window.location = 'arapi:arcall_Statusbar';</span>
+</code></pre>
+    </div>
+  </div>
+
+  <div class="endpoint-card" id="trigger-music">
+    <div class="endpoint-header">
+      <span class="method-badge trigger">CALL</span>
+      <span class="endpoint-name">arapi:arcall_Music</span>
+      <span class="endpoint-desc"><span class="en">Request now-playing info</span><span class="ja">再生中の音楽情報を要求</span></span>
+    </div>
+    <div class="endpoint-body">
+<pre><code><span class="fn">airawRequest</span>(<span class="str">'arcall_Music'</span>);
+<span class="cmt">// postMessage … method: 'arcall_Music'</span>
+<span class="cmt">// legacy: window.location = 'arapi:arcall_Music';</span>
+</code></pre>
+      <div class="callout">
+        <div class="callout-title"><span class="en">Async delivery</span><span class="ja">非同期配信</span></div>
+        <p class="en-block">Music data is fetched asynchronously via the MediaRemote framework, so it may arrive
+        later than other categories. Airaw also fires <code>mainUpdate('music')</code> automatically whenever
+        the track changes — no explicit request needed.</p>
+        <p class="ja-block">音楽情報は MediaRemote フレームワーク経由で非同期取得されます。そのため他のカテゴリより
+        遅延が生じる場合があります。また、楽曲が変わると Airaw が自動的に <code>mainUpdate('music')</code>
+        を呼び出します（要求不要）。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="endpoint-card" id="trigger-weather">
+    <div class="endpoint-header">
+      <span class="method-badge trigger">CALL</span>
+      <span class="endpoint-name">arapi:arcall_Weather</span>
+      <span class="endpoint-desc"><span class="en">Request weather data</span><span class="ja">天気情報を要求</span></span>
+    </div>
+    <div class="endpoint-body">
+<pre><code><span class="fn">airawRequest</span>(<span class="str">'arcall_Weather'</span>);
+<span class="cmt">// postMessage … method: 'arcall_Weather'</span>
+<span class="cmt">// legacy: window.location = 'arapi:arcall_Weather';</span>
+</code></pre>
+      <div class="callout">
+        <p class="en-block">Data is sourced from the iOS Weather framework.
+        <strong>The "Weather API" option must be enabled in Airaw settings.</strong></p>
+        <p class="ja-block">iOS 標準の Weather フレームワークから取得します。
+        <strong>Airaw の設定で「Weather API」が有効になっている必要があります。</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="endpoint-card" id="trigger-system">
+    <div class="endpoint-header">
+      <span class="method-badge trigger">CALL</span>
+      <span class="endpoint-name">arapi:arcall_System</span>
+      <span class="endpoint-desc"><span class="en">Request device / RAM info</span><span class="ja">システム情報を要求</span></span>
+    </div>
+    <div class="endpoint-body">
+<pre><code><span class="fn">airawRequest</span>(<span class="str">'arcall_System'</span>);
+<span class="cmt">// postMessage … method: 'arcall_System'</span>
+<span class="cmt">// legacy: window.location = 'arapi:arcall_System';</span>
+</code></pre>
+    </div>
+  </div>
+
+  <div class="endpoint-card" id="trigger-all">
+    <div class="endpoint-header">
+      <span class="method-badge trigger">CALL</span>
+      <span class="endpoint-name">arapi:arcall_all</span>
+      <span class="endpoint-desc"><span class="en">Fetch all categories at once</span><span class="ja">全カテゴリを一括取得</span></span>
+    </div>
+    <div class="endpoint-body">
+<pre><code><span class="fn">airawRequest</span>(<span class="str">'arcall_all'</span>);
+<span class="cmt">// postMessage … method: 'arcall_all'</span>
+<span class="cmt">// legacy: window.location = 'arapi:arcall_all';</span>
+</code></pre>
+      <p class="en-block">Requests Battery, Statusbar, Music, Weather, and System together.
+      Recommended for use in <code>window.onload</code>.</p>
+      <p class="ja-block">Battery / Statusbar / Music / Weather / System をまとめて要求します。
+      初期化時（<code>window.onload</code>）での使用を推奨します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CALLBACKS ══════════════ -->
+<section id="cb-battery">
+  <span class="section-label">Callback</span>
+  <h2><span class="en">Callbacks — <code>mainUpdate(type)</code></span><span class="ja">コールバック — <code>mainUpdate(type)</code></span></h2>
+  <p class="en-block">
+    After collecting data, Airaw injects global variables and calls <code>mainUpdate(type)</code>.
+    Use <code>type</code> to identify the category and read the corresponding variables.
+  </p>
+  <p class="ja-block">
+    Airaw はデータ収集後、グローバル変数を注入してから <code>mainUpdate(type)</code> を呼び出します。
+    <code>type</code> で対象カテゴリを判別し、各変数を読み取ります。
+  </p>
+
+  <!-- Battery -->
+  <div class="endpoint-card">
+    <div class="endpoint-header">
+      <span class="method-badge event">EVENT</span>
+      <span class="endpoint-name">mainUpdate('battery')</span>
+      <span class="endpoint-desc"><span class="en">Battery information</span><span class="ja">バッテリー情報</span></span>
+    </div>
+    <div class="endpoint-body">
+      <h4><span class="en">Injected variables</span><span class="ja">注入される変数</span></h4>
+      <table class="param-table">
+        <tr>
+          <th><span class="en">Variable</span><span class="ja">変数名</span></th>
+          <th><span class="en">Type</span><span class="ja">型</span></th>
+          <th><span class="en">Description</span><span class="ja">説明</span></th>
+          <th><span class="en">Example</span><span class="ja">例</span></th>
+        </tr>
+        <tr>
+          <td class="param-name">batteryPercent</td>
+          <td class="param-type">number</td>
+          <td class="param-desc"><span class="en">Battery level (0–100)</span><span class="ja">バッテリー残量（0〜100）</span></td>
+          <td class="param-example">87</td>
+        </tr>
+        <tr>
+          <td class="param-name">batteryCharging</td>
+          <td class="param-type">number</td>
+          <td class="param-desc"><span class="en">Charging flag (1 = charging, 0 = not)</span><span class="ja">充電中フラグ（1=充電中, 0=未充電）</span></td>
+          <td class="param-example">1</td>
+        </tr>
+        <tr>
+          <td class="param-name">batteryLowPowerMode</td>
+          <td class="param-type">number</td>
+          <td class="param-desc"><span class="en">Low Power Mode (1 = ON)</span><span class="ja">省電力モード（1=ON, 0=OFF）</span></td>
+          <td class="param-example">0</td>
+        </tr>
+        <tr>
+          <td class="param-name">batteryCycles</td>
+          <td class="param-type">number</td>
+          <td class="param-desc"><span class="en">Charge cycle count</span><span class="ja">充放電サイクル数</span></td>
+          <td class="param-example">342</td>
+        </tr>
+        <tr>
+          <td class="param-name">batteryHealth</td>
+          <td class="param-type">number</td>
+          <td class="param-desc"><span class="en">Battery health (0.00–100.00)</span><span class="ja">バッテリー健全度（0.00〜100.00）</span></td>
+          <td class="param-example">94.32</td>
+        </tr>
+        <tr>
+          <td class="param-name">batteryVoltage</td>
+          <td class="param-type">number</td>
+          <td class="param-desc"><span class="en">Voltage (mV)</span><span class="ja">電圧（mV）</span></td>
+          <td class="param-example">4023</td>
+        </tr>
+        <tr>
+          <td class="param-name">batteryCelsius</td>
+          <td class="param-type">number</td>
+          <td class="param-desc"><span class="en">Battery temperature (°C)</span><span class="ja">バッテリー温度（℃）</span></td>
+          <td class="param-example">29.45</td>
+        </tr>
+        <tr>
+          <td class="param-name">bateryInfo</td>
+          <td class="param-type">object</td>
+          <td class="param-desc"><span class="en">Connected device battery info (AirPods, etc.). Contains a <code>devices</code> array.</span><span class="ja">接続デバイス（AirPods 等）のバッテリー情報。<code>devices</code> 配列を含む。</span></td>
+          <td class="param-example">{ devices: [...] }</td>
+        </tr>
+      </table>
+
+      <div class="callout warning">
+        <div class="callout-title">⚠️ <span class="en">Typo in variable name</span><span class="ja">変数名のタイポについて</span></div>
+        <p class="en-block"><code>bateryInfo</code> (one "t" missing) is a typo in the source code,
+        preserved for backward compatibility.</p>
+        <p class="ja-block"><code>bateryInfo</code>（"t" が1つ）はソースコード上のタイポですが、
+        互換性のためそのまま維持されています。</p>
+      </div>
+
+      <h4><span class="en">bateryInfo.devices[] structure</span><span class="ja">bateryInfo.devices[] の構造</span></h4>
+      <div class="obj-tree">
+<span class="obj-key">bateryInfo</span>: {<br>
+  <span class="obj-indent"><span class="obj-key">devices</span>: [{<br>
+    <span class="obj-indent">
+      <span class="obj-key">deviceName</span>: <span class="obj-type">string</span><span class="obj-desc">// "AirPods Pro"</span><br>
+      <span class="obj-key">batteryPercent</span>: <span class="obj-type">number</span><span class="obj-desc">// 0–100</span><br>
+      <span class="obj-key">machineName</span>: <span class="obj-type">string</span><span class="obj-desc">// display name</span><br>
+      <span class="obj-key">allmachineName</span>: <span class="obj-type">string</span><span class="obj-desc">// glyph asset name</span><br>
+      <span class="obj-key">deviceIdentifier</span>: <span class="obj-type">string</span><span class="obj-desc">// device identifier</span><br>
+      <span class="obj-key">deviceProductIdentifier</span>: <span class="obj-type">number</span><span class="obj-desc">// product identifier</span><br>
+    </span>
+  }]<br></span>
+}
+      </div>
+
+      <h4><span class="en">Example</span><span class="ja">実装例</span></h4>
+<pre><code><span class="kw">function</span> <span class="fn">mainUpdate</span>(<span class="var">type</span>) {
+  <span class="kw">if</span> (<span class="var">type</span> === <span class="str">'battery'</span>) {
+    <span class="kw">const</span> pct = <span class="kw">typeof</span> batteryPercent !== <span class="str">'undefined'</span> ? batteryPercent : <span class="num">0</span>;
+
+    document.getElementById(<span class="str">'pct'</span>).textContent  = pct + <span class="str">'%'</span>;
+    document.getElementById(<span class="str">'icon'</span>).style.display = batteryCharging ? <span class="str">'block'</span> : <span class="str">'none'</span>;
+
+    <span class="cmt">// Connected devices (AirPods, etc.)</span>
+    <span class="kw">if</span> (bateryInfo?.devices?.length) {
+      bateryInfo.devices.forEach(<span class="var">d</span> =&gt; console.log(d.deviceName, d.batteryPercent));
+    }
+  }
+}
+</code></pre>
+    </div>
+  </div>
+
+  <!-- Statusbar -->
+  <div class="endpoint-card" id="cb-statusbar">
+    <div class="endpoint-header">
+      <span class="method-badge event">EVENT</span>
+      <span class="endpoint-name">mainUpdate('statusbar')</span>
+      <span class="endpoint-desc"><span class="en">Network / carrier status</span><span class="ja">ステータスバー / ネットワーク情報</span></span>
+    </div>
+    <div class="endpoint-body">
+      <h4><span class="en">Injected variables</span><span class="ja">注入される変数</span></h4>
+      <table class="param-table">
+        <tr>
+          <th><span class="en">Variable</span><span class="ja">変数名</span></th>
+          <th><span class="en">Type</span><span class="ja">型</span></th>
+          <th><span class="en">Description</span><span class="ja">説明</span></th>
+          <th><span class="en">Example</span><span class="ja">例</span></th>
+        </tr>
+        <tr>
+          <td class="param-name">signalBars</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Cellular signal strength ('0'–'4')</span><span class="ja">セルラー電波強度（'0'〜'4'）</span></td>
+          <td class="param-example">'3'</td>
+        </tr>
+        <tr>
+          <td class="param-name">signalName</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Carrier name</span><span class="ja">キャリア名</span></td>
+          <td class="param-example">'Softbank'</td>
+        </tr>
+        <tr>
+          <td class="param-name">wifiBars</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Wi-Fi signal strength ('0'–'3')</span><span class="ja">Wi-Fi 電波強度（'0'〜'3'）</span></td>
+          <td class="param-example">'2'</td>
+        </tr>
+        <tr>
+          <td class="param-name">wifiName</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Connected SSID</span><span class="ja">接続中の SSID</span></td>
+          <td class="param-example">'HomeNetwork_5G'</td>
+        </tr>
+        <tr>
+          <td class="param-name">signalNetworkType</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Data network type</span><span class="ja">データ通信規格</span></td>
+          <td class="param-example">'5G' | 'LTE' | '4G' | '3G' | 'E'</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Music -->
+  <div class="endpoint-card" id="cb-music">
+    <div class="endpoint-header">
+      <span class="method-badge event">EVENT</span>
+      <span class="endpoint-name">mainUpdate('music')</span>
+      <span class="endpoint-desc"><span class="en">Now-playing info (auto-delivered)</span><span class="ja">再生中の音楽情報（自動配信）</span></span>
+    </div>
+    <div class="endpoint-body">
+      <div class="callout">
+        <p class="en-block">Airaw <strong>automatically fires this callback</strong> whenever the track or playback state changes.
+        You can also request it manually with <code>arcall_Music</code>.</p>
+        <p class="ja-block">楽曲変更・再生状態変化時に Airaw が<strong>自動で呼び出します</strong>。
+        <code>arcall_Music</code> で手動要求することも可能です。</p>
+      </div>
+      <h4><span class="en">Injected variables</span><span class="ja">注入される変数</span></h4>
+      <table class="param-table">
+        <tr>
+          <th><span class="en">Variable</span><span class="ja">変数名</span></th>
+          <th><span class="en">Type</span><span class="ja">型</span></th>
+          <th><span class="en">Description</span><span class="ja">説明</span></th>
+          <th><span class="en">Example</span><span class="ja">例</span></th>
+        </tr>
+        <tr>
+          <td class="param-name">title</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Track title</span><span class="ja">楽曲タイトル</span></td>
+          <td class="param-example">'Blinding Lights'</td>
+        </tr>
+        <tr>
+          <td class="param-name">artist</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Artist name</span><span class="ja">アーティスト名</span></td>
+          <td class="param-example">'The Weeknd'</td>
+        </tr>
+        <tr>
+          <td class="param-name">album</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Album name</span><span class="ja">アルバム名</span></td>
+          <td class="param-example">'After Hours'</td>
+        </tr>
+        <tr>
+          <td class="param-name">currentDuration</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Total track duration (seconds)</span><span class="ja">楽曲の総再生時間（秒）</span></td>
+          <td class="param-example">'200'</td>
+        </tr>
+        <tr>
+          <td class="param-name">currentElapsedTime</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Current playback position (seconds)</span><span class="ja">現在の再生位置（秒）</span></td>
+          <td class="param-example">'73'</td>
+        </tr>
+        <tr>
+          <td class="param-name">PlayingApplication</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Bundle ID of the playing app</span><span class="ja">再生アプリのバンドル ID</span></td>
+          <td class="param-example">'com.apple.Music'</td>
+        </tr>
+        <tr>
+          <td class="param-name">PlayingApplicationName</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Localized display name of the playing app</span><span class="ja">再生アプリの表示名</span></td>
+          <td class="param-example">'ミュージック'</td>
+        </tr>
+        <tr>
+          <td class="param-name">isplaying</td>
+          <td class="param-type">boolean / number</td>
+          <td class="param-desc"><span class="en">Whether playback is active (<code>1</code>/<code>0</code>)</span><span class="ja">再生中かどうか（<code>1</code>/<code>0</code>）</span></td>
+          <td class="param-example">1</td>
+        </tr>
+        <tr>
+          <td class="param-name">artworkUrl</td>
+          <td class="param-type">string</td>
+          <td class="param-desc">
+            <span class="en"><strong>iOS 16+</strong> HTTP URL for album art (recommended for CarPlay widgets). See <a href="#artwork">Artwork</a>.</span>
+            <span class="ja"><strong>iOS 16+</strong> アルバムアートの HTTP URL（CarPlay ウィジェット推奨）。<a href="#artwork">Artwork</a> 参照。</span>
+          </td>
+          <td class="param-example">'http://localhost:18765/AirawMedia/MusicArt.png?t=…'</td>
+        </tr>
+        <tr>
+          <td class="param-name">playingAppIconUrl</td>
+          <td class="param-type">string</td>
+          <td class="param-desc">
+            <span class="en"><strong>iOS 16+</strong> HTTP URL for the playing app’s icon (same HTTP daemon as artwork).</span>
+            <span class="ja"><strong>iOS 16+</strong> 再生アプリのアイコン HTTP URL（アートと同じ HTTP デーモン）。</span>
+          </td>
+          <td class="param-example">'http://localhost:18765/AirawMedia/PlayingAppIcon.png?t=…'</td>
+        </tr>
+      </table>
+
+      <h4><span class="en">Example</span><span class="ja">実装例</span></h4>
+<pre><code><span class="kw">function</span> <span class="fn">mainUpdate</span>(<span class="var">type</span>) {
+  <span class="kw">if</span> (<span class="var">type</span> === <span class="str">'music'</span>) {
+    <span class="kw">const</span> playing = <span class="kw">typeof</span> isplaying !== <span class="str">'undefined'</span> ? !!isplaying : (title !== <span class="str">''</span>);
+    <span class="kw">const</span> dur     = parseFloat(currentDuration)    || <span class="num">0</span>;
+    <span class="kw">const</span> elapsed = parseFloat(currentElapsedTime) || <span class="num">0</span>;
+    <span class="kw">const</span> pct     = dur &gt; <span class="num">0</span> ? (elapsed / dur) * <span class="num">100</span> : <span class="num">0</span>;
+
+    document.getElementById(<span class="str">'title'</span>).textContent  = playing ? title  : <span class="str">'Not Playing'</span>;
+    document.getElementById(<span class="str">'artist'</span>).textContent = playing ? artist : <span class="str">''</span>;
+    document.getElementById(<span class="str">'bar'</span>).style.width    = pct + <span class="str">'%'</span>;
+
+    <span class="cmt">// App name + icon (iOS 16+)</span>
+    <span class="kw">const</span> appLabel = <span class="kw">typeof</span> PlayingApplicationName !== <span class="str">'undefined'</span> &amp;&amp; PlayingApplicationName
+      ? PlayingApplicationName
+      : (PlayingApplication || <span class="str">''</span>);
+    <span class="kw">const</span> appNameEl = document.getElementById(<span class="str">'appName'</span>);
+    <span class="kw">if</span> (appNameEl) appNameEl.textContent = appLabel;
+
+    <span class="kw">const</span> appIcon = document.getElementById(<span class="str">'appIcon'</span>);
+    <span class="kw">if</span> (appIcon) {
+      <span class="kw">if</span> (<span class="kw">typeof</span> playingAppIconUrl !== <span class="str">'undefined'</span> &amp;&amp; playingAppIconUrl) {
+        appIcon.src = playingAppIconUrl;
+        appIcon.style.display = <span class="str">'block'</span>;
+      } <span class="kw">else</span> {
+        appIcon.style.display = <span class="str">'none'</span>;
+      }
+    }
+
+    <span class="cmt">// iOS 16+: use artworkUrl (HTTP). Do not rely on Documents path.</span>
+    <span class="kw">const</span> img = document.getElementById(<span class="str">'artwork'</span>);
+    <span class="kw">if</span> (img) {
+      <span class="kw">if</span> (playing &amp;&amp; <span class="kw">typeof</span> artworkUrl !== <span class="str">'undefined'</span> &amp;&amp; artworkUrl) {
+        img.src = artworkUrl;
+        img.style.display = <span class="str">'block'</span>;
+      } <span class="kw">else</span> {
+        img.style.display = <span class="str">'none'</span>;
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+  </div>
+
+  <!-- Weather -->
+  <div class="endpoint-card" id="cb-weather">
+    <div class="endpoint-header">
+      <span class="method-badge event">EVENT</span>
+      <span class="endpoint-name">mainUpdate('weather')</span>
+      <span class="endpoint-desc"><span class="en">Weather data (object format)</span><span class="ja">天気情報（オブジェクト形式）</span></span>
+    </div>
+    <div class="endpoint-body">
+      <div class="callout">
+        <p class="en-block">Weather data is provided as a single <strong><code>weather</code> object</strong>,
+        unlike other categories which inject flat variables.</p>
+        <p class="ja-block">天気データは単一の <strong><code>weather</code> オブジェクト</strong>として提供されます。
+        他のカテゴリとは異なりフラットな変数ではありません。</p>
+      </div>
+
+      <h4><span class="en">weather object structure</span><span class="ja">weather オブジェクト構造</span></h4>
+      <div class="obj-tree">
+<span class="obj-key">weather</span>: {<br>
+  <span class="obj-indent">
+    <span class="obj-key">city</span>: <span class="obj-type">string</span><span class="obj-desc">// "Tokyo"</span><br>
+    <span class="obj-key">countryISOCode</span>: <span class="obj-type">string</span><span class="obj-desc">// "JP"</span><br>
+    <span class="obj-key">temperature</span>: <span class="obj-type">number</span><span class="obj-desc">// current temp (unit follows <code>celsius</code>)</span><br>
+    <span class="obj-key">feelsLike</span>: <span class="obj-type">number</span><span class="obj-desc">// feels-like temperature</span><br>
+    <span class="obj-key">celsius</span>: <span class="obj-type">string</span><span class="obj-desc">// "C" or "F" (follows iOS setting)</span><br>
+    <span class="obj-key">condition</span>: <span class="obj-type">string</span><span class="obj-desc">// "Partly Cloudy"</span><br>
+    <span class="obj-key">conditionCode</span>: <span class="obj-type">number</span><span class="obj-desc">// see Condition Codes table</span><br>
+    <span class="obj-key">humidity</span>: <span class="obj-type">number</span><span class="obj-desc">// humidity (%)</span><br>
+    <span class="obj-key">windSpeed</span>: <span class="obj-type">number</span><span class="obj-desc">// wind speed (km/h)</span><br>
+    <span class="obj-key">windDirection</span>: <span class="obj-type">number</span><span class="obj-desc">// degrees</span><br>
+    <span class="obj-key">windChill</span>: <span class="obj-type">number</span><span class="obj-desc">// wind chill index</span><br>
+    <span class="obj-key">dewPoint</span>: <span class="obj-type">number</span><span class="obj-desc">// dew point</span><br>
+    <span class="obj-key">uvIndex</span>: <span class="obj-type">number</span><span class="obj-desc">// UV index (0–11+)</span><br>
+    <span class="obj-key">visibility</span>: <span class="obj-type">number</span><span class="obj-desc">// visibility (km)</span><br>
+    <span class="obj-key">pressure</span>: <span class="obj-type">number</span><span class="obj-desc">// pressure (hPa)</span><br>
+    <span class="obj-key">heatIndex</span>: <span class="obj-type">number</span><span class="obj-desc">// heat index</span><br>
+    <span class="obj-key">precipitationPast24Hours</span>: <span class="obj-type">number</span><span class="obj-desc">// 24h rainfall (mm)</span><br>
+    <span class="obj-key">chanceOfRain</span>: <span class="obj-type">number</span><span class="obj-desc">// precipitation probability (%)</span><br>
+    <span class="obj-key">moonPhase</span>: <span class="obj-type">number</span><span class="obj-desc">// moon phase (0.0–1.0)</span><br>
+    <span class="obj-key">high</span>: <span class="obj-type">number</span><span class="obj-desc">// today's high</span><br>
+    <span class="obj-key">low</span>: <span class="obj-type">number</span><span class="obj-desc">// today's low</span><br>
+    <span class="obj-key">sunrise</span>: <span class="obj-type">string</span><span class="obj-desc">// "6:24" (H:MM)</span><br>
+    <span class="obj-key">sunset</span>: <span class="obj-type">string</span><span class="obj-desc">// "18:45" (HH:MM)</span><br>
+    <span class="obj-key">updateTimeString</span>: <span class="obj-type">string</span><span class="obj-desc">// last update time</span><br>
+    <span class="obj-key">latlong</span>: <span class="obj-type">string</span><span class="obj-desc">// "35.6762,139.6503"</span><br>
+    <span class="obj-key">dayForecasts</span>: <span class="obj-type">DayForecast[]</span><span class="obj-desc">// up to 7 days</span><br>
+    <span class="obj-key">hourlyForecasts</span>: <span class="obj-type">HourlyForecast[]</span><span class="obj-desc">// hourly data</span><br>
+  </span>
+}
+      </div>
+
+      <h4>DayForecast[]</h4>
+      <div class="obj-tree">
+{<br>
+  <span class="obj-indent">
+    <span class="obj-key">dayNumber</span>: <span class="obj-type">number</span><span class="obj-desc">// sequential day number</span><br>
+    <span class="obj-key">dayOfWeek</span>: <span class="obj-type">number</span><span class="obj-desc">// 0=Sun, 1=Mon … 6=Sat</span><br>
+    <span class="obj-key">icon</span>: <span class="obj-type">number</span><span class="obj-desc">// condition code</span><br>
+    <span class="obj-key">high</span>: <span class="obj-type">number</span><span class="obj-desc">// high temp</span><br>
+    <span class="obj-key">low</span>: <span class="obj-type">number</span><span class="obj-desc">// low temp</span><br>
+  </span>
+}
+      </div>
+
+      <h4>HourlyForecast[]</h4>
+      <div class="obj-tree">
+{<br>
+  <span class="obj-indent">
+    <span class="obj-key">time</span>: <span class="obj-type">string</span><span class="obj-desc">// "14:00"</span><br>
+    <span class="obj-key">hourIndex</span>: <span class="obj-type">number</span><span class="obj-desc">// hour index</span><br>
+    <span class="obj-key">conditionCode</span>: <span class="obj-type">number</span><span class="obj-desc">// condition code</span><br>
+    <span class="obj-key">temperature</span>: <span class="obj-type">number</span><span class="obj-desc">// temperature</span><br>
+    <span class="obj-key">percentPrecipitation</span>: <span class="obj-type">number</span><span class="obj-desc">// precipitation probability (%)</span><br>
+    <span class="obj-key">detail</span>: <span class="obj-type">string</span><span class="obj-desc">// description text</span><br>
+  </span>
+}
+      </div>
+
+      <h4><span class="en">Example</span><span class="ja">実装例</span></h4>
+<pre><code><span class="kw">function</span> <span class="fn">mainUpdate</span>(<span class="var">type</span>) {
+  <span class="kw">if</span> (<span class="var">type</span> === <span class="str">'weather'</span>) {
+    <span class="kw">if</span> (<span class="kw">typeof</span> weather === <span class="str">'undefined'</span>) <span class="kw">return</span>;
+
+    <span class="kw">const</span> unit = weather.celsius === <span class="str">'C'</span> ? <span class="str">'°C'</span> : <span class="str">'°F'</span>;
+    document.getElementById(<span class="str">'temp'</span>).textContent = weather.temperature + unit;
+    document.getElementById(<span class="str">'city'</span>).textContent = weather.city;
+
+    <span class="cmt">// 7-day forecast</span>
+    <span class="kw">const</span> days = [<span class="str">'Sun'</span>,<span class="str">'Mon'</span>,<span class="str">'Tue'</span>,<span class="str">'Wed'</span>,<span class="str">'Thu'</span>,<span class="str">'Fri'</span>,<span class="str">'Sat'</span>];
+    weather.dayForecasts?.slice(<span class="num">0</span>, <span class="num">7</span>).forEach(<span class="var">f</span> =&gt; {
+      console.log(days[f.dayOfWeek], f.high + unit, f.low + unit);
+    });
+  }
+}
+</code></pre>
+    </div>
+  </div>
+
+  <!-- System -->
+  <div class="endpoint-card" id="cb-system">
+    <div class="endpoint-header">
+      <span class="method-badge event">EVENT</span>
+      <span class="endpoint-name">mainUpdate('system')</span>
+      <span class="endpoint-desc"><span class="en">Device &amp; memory info</span><span class="ja">デバイス / メモリ情報</span></span>
+    </div>
+    <div class="endpoint-body">
+      <h4><span class="en">Injected variables</span><span class="ja">注入される変数</span></h4>
+      <table class="param-table">
+        <tr>
+          <th><span class="en">Variable</span><span class="ja">変数名</span></th>
+          <th><span class="en">Type</span><span class="ja">型</span></th>
+          <th><span class="en">Description</span><span class="ja">説明</span></th>
+          <th><span class="en">Example</span><span class="ja">例</span></th>
+        </tr>
+        <tr>
+          <td class="param-name">deviceName</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Device display name (Settings → General → About)</span><span class="ja">デバイスの表示名（設定 → 一般 → 情報 と同じ）</span></td>
+          <td class="param-example">'iPhone'</td>
+        </tr>
+        <tr>
+          <td class="param-name">deviceType</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Platform / model identifier</span><span class="ja">機種識別子（プラットフォーム名）</span></td>
+          <td class="param-example">'iPhone16,1'</td>
+        </tr>
+        <tr>
+          <td class="param-name">systemVersion</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">iOS version</span><span class="ja">iOS バージョン</span></td>
+          <td class="param-example">'17.4.1'</td>
+        </tr>
+        <tr>
+          <td class="param-name">ipAddress</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Wi-Fi IPv4 address</span><span class="ja">Wi-Fi の IPv4 アドレス</span></td>
+          <td class="param-example">'192.168.1.5'</td>
+        </tr>
+        <tr>
+          <td class="param-name">ramFree</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Free RAM (MB)</span><span class="ja">空き RAM（MB）</span></td>
+          <td class="param-example">'1243'</td>
+        </tr>
+        <tr>
+          <td class="param-name">ramUsed</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Used RAM (MB)</span><span class="ja">使用中 RAM（MB）</span></td>
+          <td class="param-example">'2853'</td>
+        </tr>
+        <tr>
+          <td class="param-name">ramTotal</td>
+          <td class="param-type">string</td>
+          <td class="param-desc"><span class="en">Total installed RAM (MB)</span><span class="ja">搭載 RAM 合計（MB）</span></td>
+          <td class="param-example">'6144'</td>
+        </tr>
+      </table>
+      <div class="callout warning">
+        <p class="en-block">RAM values are provided as <code>string</code> type. Use <code>parseFloat()</code> before arithmetic operations.</p>
+        <p class="ja-block">RAM 系の値は文字列型（<code>string</code>）で提供されます。数値演算前に <code>parseFloat()</code> で変換してください。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CarPlay -->
+  <div class="endpoint-card" id="cb-carplay">
+    <div class="endpoint-header">
+      <span class="method-badge event">EVENT</span>
+      <span class="endpoint-name">mainUpdate('CarPlay')</span>
+      <span class="endpoint-desc"><span class="en">CarPlay page change notification</span><span class="ja">CarPlay ページ切り替え通知</span></span>
+    </div>
+    <div class="endpoint-body">
+      <p class="en-block">Called automatically when the user navigates between CarPlay dashboard pages.
+      Useful for controlling widget animations per page.</p>
+      <p class="ja-block">ユーザーが CarPlay のダッシュボードページを切り替えた際に自動で呼び出されます。
+      ウィジェットのアニメーション切り替えなどに利用できます。</p>
+
+      <h4><span class="en">Injected variables</span><span class="ja">注入される変数</span></h4>
+      <table class="param-table">
+        <tr>
+          <th><span class="en">Variable</span><span class="ja">変数名</span></th>
+          <th><span class="en">Type</span><span class="ja">型</span></th>
+          <th><span class="en">Description</span><span class="ja">説明</span></th>
+          <th><span class="en">Example</span><span class="ja">例</span></th>
+        </tr>
+        <tr>
+          <td class="param-name">pageIndex</td>
+          <td class="param-type">number</td>
+          <td class="param-desc">
+            <span class="en">Current page index (0-based). -1 = widget not visible.</span>
+            <span class="ja">現在表示中のページインデックス（0 始まり）。-1 = 非表示状態。</span>
+          </td>
+          <td class="param-example">0</td>
+        </tr>
+      </table>
+
+      <h4><span class="en">Example</span><span class="ja">実装例</span></h4>
+<pre><code><span class="kw">function</span> <span class="fn">mainUpdate</span>(<span class="var">type</span>) {
+  <span class="kw">if</span> (<span class="var">type</span> === <span class="str">'CarPlay'</span>) {
+    <span class="cmt">// Animate only when on page 0</span>
+    document.body.style.opacity = (pageIndex === <span class="num">0</span>) ? <span class="str">'1'</span> : <span class="str">'0.4'</span>;
+  }
+}
+</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Condition Codes ─────────────────────────────────────── -->
+<section id="condition-codes">
+  <span class="section-label">Reference</span>
+  <h2><span class="en">Condition Codes</span><span class="ja">天気コード（conditionCode）一覧</span></h2>
+
+  <p class="en-block">
+    Numeric codes used by <code>weather.conditionCode</code>,
+    <code>dayForecasts[].icon</code>, and <code>hourlyForecasts[].conditionCode</code>.
+    Follows the Apple Weather framework (formerly WeatherData) definition.
+  </p>
+  <p class="ja-block">
+    <code>weather.conditionCode</code> / <code>dayForecasts[].icon</code> /
+    <code>hourlyForecasts[].conditionCode</code> で使用される数値コードです。
+    Apple Weather フレームワーク（旧 WeatherData）の定義に従います。
+  </p>
+
+  <div class="cond-grid">
+    <div class="cond-item"><span class="cond-range">0–1</span> <span class="cond-emoji">🌪</span><div class="cond-label"><span class="en">Tornado / Tropical Storm</span><span class="ja">竜巻 / 熱帯暴風</span></div></div>
+    <div class="cond-item"><span class="cond-range">2–3</span> <span class="cond-emoji">⛈</span><div class="cond-label"><span class="en">Hurricane</span><span class="ja">ハリケーン</span></div></div>
+    <div class="cond-item"><span class="cond-range">4–12</span> <span class="cond-emoji">🌧</span><div class="cond-label"><span class="en">Thunderstorm / Rain</span><span class="ja">雷雨 / 雨</span></div></div>
+    <div class="cond-item"><span class="cond-range">13–17</span> <span class="cond-emoji">⛈</span><div class="cond-label"><span class="en">Snow / Sleet / Heavy Rain</span><span class="ja">雪 / みぞれ / 大雨</span></div></div>
+    <div class="cond-item"><span class="cond-range">19</span> <span class="cond-emoji">🌫</span><div class="cond-label"><span class="en">Dust / Haze</span><span class="ja">砂塵 / もや</span></div></div>
+    <div class="cond-item"><span class="cond-range">20–22</span> <span class="cond-emoji">💨</span><div class="cond-label"><span class="en">Foggy / Windy</span><span class="ja">霧 / 強風</span></div></div>
+    <div class="cond-item"><span class="cond-range">25–30</span> <span class="cond-emoji">🌨</span><div class="cond-label"><span class="en">Snow / Blizzard</span><span class="ja">雪 / 吹雪</span></div></div>
+    <div class="cond-item"><span class="cond-range">31 / 33</span> <span class="cond-emoji">🌙</span><div class="cond-label"><span class="en">Clear Night</span><span class="ja">夜間・快晴</span></div></div>
+    <div class="cond-item"><span class="cond-range">32 / 34</span> <span class="cond-emoji">☀️</span><div class="cond-label"><span class="en">Sunny / Mostly Sunny</span><span class="ja">晴れ / 概ね晴れ</span></div></div>
+    <div class="cond-item"><span class="cond-range">36</span> <span class="cond-emoji">🌡</span><div class="cond-label"><span class="en">Hot</span><span class="ja">酷暑</span></div></div>
+    <div class="cond-item"><span class="cond-range">37–40</span> <span class="cond-emoji">🌦</span><div class="cond-label"><span class="en">Scattered Storms</span><span class="ja">局地的雷雨</span></div></div>
+    <div class="cond-item"><span class="cond-range">41–43</span> <span class="cond-emoji">🌩</span><div class="cond-label"><span class="en">Heavy Snow / Blizzard</span><span class="ja">大雪 / 猛吹雪</span></div></div>
+    <div class="cond-item"><span class="cond-range">44</span> <span class="cond-emoji">⛅</span><div class="cond-label"><span class="en">Partly Cloudy</span><span class="ja">一部曇り</span></div></div>
+  </div>
+
+  <h4><span class="en">Emoji mapping function</span><span class="ja">絵文字マッピング関数の実装例</span></h4>
+<pre><code><span class="kw">function</span> <span class="fn">weatherEmoji</span>(<span class="var">code</span>) {
+  <span class="kw">const</span> c = parseInt(code, <span class="num">10</span>);
+  <span class="kw">if</span> (c &lt;= <span class="num">1</span>)  <span class="kw">return</span> <span class="str">'🌪'</span>;
+  <span class="kw">if</span> (c &lt;= <span class="num">3</span>)  <span class="kw">return</span> <span class="str">'⛈'</span>;
+  <span class="kw">if</span> (c &lt;= <span class="num">12</span>) <span class="kw">return</span> <span class="str">'🌧'</span>;
+  <span class="kw">if</span> (c &lt;= <span class="num">17</span>) <span class="kw">return</span> <span class="str">'⛈'</span>;
+  <span class="kw">if</span> (c === <span class="num">19</span>) <span class="kw">return</span> <span class="str">'🌫'</span>;
+  <span class="kw">if</span> (c &lt;= <span class="num">22</span>) <span class="kw">return</span> <span class="str">'💨'</span>;
+  <span class="kw">if</span> (c &lt;= <span class="num">30</span>) <span class="kw">return</span> <span class="str">'🌨'</span>;
+  <span class="kw">if</span> (c === <span class="num">31</span> || c === <span class="num">33</span>) <span class="kw">return</span> <span class="str">'🌙'</span>;
+  <span class="kw">if</span> (c === <span class="num">32</span> || c === <span class="num">34</span>) <span class="kw">return</span> <span class="str">'☀️'</span>;
+  <span class="kw">if</span> (c === <span class="num">36</span>) <span class="kw">return</span> <span class="str">'🌡'</span>;
+  <span class="kw">if</span> (c &lt;= <span class="num">40</span>) <span class="kw">return</span> <span class="str">'🌦'</span>;
+  <span class="kw">if</span> (c &lt;= <span class="num">43</span>) <span class="kw">return</span> <span class="str">'🌩'</span>;
+  <span class="kw">return</span> <span class="str">'⛅'</span>;
+}
+</code></pre>
+</section>
+
+<!-- ─── Artwork ─────────────────────────────────────────────── -->
+<section id="artwork">
+  <span class="section-label">Reference</span>
+  <h2><span class="en">Artwork Image</span><span class="ja">アートワーク画像の取得</span></h2>
+
+  <h3><span class="en">iOS 16+ (recommended) — <code>artworkUrl</code></span><span class="ja">iOS 16+（推奨）— <code>artworkUrl</code></span></h3>
+
+  <p class="en-block">
+    On iOS 16+, CarPlay widgets often run inside <strong>CarPlayWallpaper</strong>, which cannot read
+    <code>/var/mobile/Documents/</code> (sandbox). Airaw therefore serves artwork over a local HTTP server
+    on SpringBoard and injects an HTTP URL as <code>artworkUrl</code> when calling
+    <code>mainUpdate('music')</code>.
+  </p>
+  <p class="ja-block">
+    iOS 16 以降、CarPlay ウィジェットは多くの場合 <strong>CarPlayWallpaper</strong> 上で動作し、
+    サンドボックスのため <code>/var/mobile/Documents/</code> を直接読めません。
+    Airaw は SpringBoard 側のローカル HTTP でアートを配信し、
+    <code>mainUpdate('music')</code> 時に変数 <code>artworkUrl</code> として注入します。
+  </p>
+
+<pre><code><span class="cmt">// Injected example</span>
+artworkUrl = <span class="str">'http://localhost:18765/AirawMedia/MusicArt.png?t=1710000000000'</span>;
+</code></pre>
+
+  <table class="param-table">
+    <tr>
+      <th><span class="en">Item</span><span class="ja">項目</span></th>
+      <th><span class="en">Value</span><span class="ja">値</span></th>
+    </tr>
+    <tr>
+      <td class="param-name">Variable</td>
+      <td class="param-desc"><code>artworkUrl</code></td>
+    </tr>
+    <tr>
+      <td class="param-name">URL form</td>
+      <td class="param-desc"><code>http://localhost:18765/AirawMedia/MusicArt.png?t=&lt;version&gt;</code></td>
+    </tr>
+    <tr>
+      <td class="param-name">File on device</td>
+      <td class="param-desc"><code>/var/mobile/Library/Airaw/Media/MusicArt.png</code> (rootless-aware)</td>
+    </tr>
+    <tr>
+      <td class="param-name">App icon file</td>
+      <td class="param-desc"><code>/var/mobile/Library/Airaw/Media/PlayingAppIcon.png</code> → <code>playingAppIconUrl</code></td>
+    </tr>
+    <tr>
+      <td class="param-name"><code>t=</code> query</td>
+      <td class="param-desc">
+        <span class="en">Changes only when artwork bytes change (cache-friendly).</span>
+        <span class="ja">アートのバイト列が変わったときだけ更新（キャッシュしやすい）。</span>
+      </td>
+    </tr>
+  </table>
+
+<pre><code><span class="cmt">// Recommended (iOS 16+ CarPlay widget)</span>
+<span class="kw">function</span> <span class="fn">mainUpdate</span>(<span class="var">type</span>) {
+  <span class="kw">if</span> (<span class="var">type</span> !== <span class="str">'music'</span>) <span class="kw">return</span>;
+  <span class="kw">const</span> img = document.getElementById(<span class="str">'artwork'</span>);
+  <span class="kw">if</span> (!img) <span class="kw">return</span>;
+
+  <span class="kw">if</span> (<span class="kw">typeof</span> artworkUrl !== <span class="str">'undefined'</span> &amp;&amp; artworkUrl) {
+    img.onerror = <span class="kw">function</span>() { <span class="kw">this</span>.style.display = <span class="str">'none'</span>; };
+    img.onload  = <span class="kw">function</span>() { <span class="kw">this</span>.style.display = <span class="str">'block'</span>; };
+    img.src = artworkUrl;  <span class="cmt">// already includes ?t=</span>
+  } <span class="kw">else</span> {
+    img.style.display = <span class="str">'none'</span>;
+  }
+}
+</code></pre>
+
+  <div class="callout">
+    <p class="en-block">
+      Requires Airaw’s SpringBoard HTTP daemon (same localhost server used for SBHTML widgets).
+      If <code>artworkUrl</code> is empty, artwork data was unavailable for the current track.
+    </p>
+    <p class="ja-block">
+      SpringBoard 上の Airaw HTTP デーモンが必要です（SBHTML 配信と同じ localhost）。
+      <code>artworkUrl</code> が空の場合は、その曲のアートデータが取得できていません。
+    </p>
+  </div>
+
+  <h3><span class="en">Legacy path (not for iOS 16+ CarPlayWallpaper)</span><span class="ja">レガシー経路（iOS 16+ CarPlayWallpaper では非推奨）</span></h3>
+
+  <p class="en-block">
+    Airaw still writes a copy to the Documents path for older environments / Prefs preview.
+    Do <strong>not</strong> rely on this path inside iOS 16+ CarPlayWallpaper widgets — the file is not readable there.
+  </p>
+  <p class="ja-block">
+    互換のため Documents にもコピーしますが、
+    <strong>iOS 16+ の CarPlayWallpaper ウィジェットではこのパスに依存しないでください</strong>（読めません）。
+  </p>
+
+<pre><code>/var/mobile/Documents/MusicArt.png</code></pre>
+
+<pre><code><span class="cmt">// Legacy only (Prefs preview / older hosts that can read Documents)</span>
+<span class="kw">const</span> img = document.getElementById(<span class="str">'artwork'</span>);
+img.src = <span class="str">'/var/mobile/Documents/MusicArt.png?t='</span> + Date.now();
+img.onerror = <span class="kw">function</span>() { <span class="kw">this</span>.style.display = <span class="str">'none'</span>; };
+</code></pre>
+
+  <div class="callout">
+    <p class="en-block">On rootless jailbreaks (Dopamine, etc.), <code>/var/mobile/Documents/</code>
+    may map to <code>/var/jb/var/mobile/Documents/</code>.
+    Prefer <code>artworkUrl</code> so you do not need to resolve jbroot yourself.</p>
+    <p class="ja-block">Rootless 環境（Dopamine 等）では <code>/var/mobile/Documents/</code> のパスが
+    <code>/var/jb/var/mobile/Documents/</code> にマップされる場合があります。
+    <code>artworkUrl</code> を使えば jbroot を意識する必要はありません。</p>
+  </div>
+</section>
+
+<!-- ─── Best Practices ──────────────────────────────────────── -->
+<section id="tips">
+  <span class="section-label">Best Practices</span>
+  <h2><span class="en">Best Practices</span><span class="ja">実装のヒント</span></h2>
+
+  <h3><span class="en">1. Safe variable access</span><span class="ja">1. 安全な変数アクセス</span></h3>
+  <p class="en-block">
+    Airaw always injects variables before calling <code>mainUpdate</code>, but use
+    <code>typeof</code> checks for safety when opening the HTML file directly during development.
+  </p>
+  <p class="ja-block">
+    Airaw は変数を注入してから <code>mainUpdate</code> を呼びますが、開発・デバッグ時に
+    直接 HTML を開く場合に備え、<code>typeof</code> チェックを推奨します。
+  </p>
+<pre><code><span class="cmt">// Recommended pattern</span>
+<span class="kw">const</span> pct = <span class="kw">typeof</span> batteryPercent !== <span class="str">'undefined'</span> ? batteryPercent : <span class="num">0</span>;
+
+<span class="cmt">// Nullish coalescing (modern browsers)</span>
+<span class="kw">const</span> temp = weather?.temperature ?? <span class="str">'--'</span>;
+</code></pre>
+
+  <h3><span class="en">2. Periodic polling</span><span class="ja">2. 定期更新の実装</span></h3>
+  <p class="en-block">Airaw notifies automatically on changes, but you can also poll at a fixed interval.</p>
+  <p class="ja-block">Airaw は変化があった際に自動で通知しますが、一定間隔でポーリングすることもできます。</p>
+<pre><code><span class="cmt">// Refresh all data every 30 seconds</span>
+setInterval(<span class="kw">function</span>() {
+  <span class="kw">if</span> (<span class="kw">typeof</span> airawRequest === <span class="str">'function'</span>) {
+    <span class="fn">airawRequest</span>(<span class="str">'arcall_all'</span>);
+  } <span class="kw">else</span> {
+    <span class="fn">window</span>.location = <span class="str">'arapi:arcall_all'</span>;
+  }
+}, <span class="num">30000</span>);
+</code></pre>
+
+  <h3><span class="en">3. mainUpdate template</span><span class="ja">3. mainUpdate のテンプレート</span></h3>
+<pre><code><span class="kw">function</span> <span class="fn">mainUpdate</span>(<span class="var">type</span>) {
+  <span class="kw">switch</span> (<span class="var">type</span>) {
+    <span class="kw">case</span> <span class="str">'battery'</span>:
+      <span class="cmt">/* batteryPercent, batteryCharging, batteryLowPowerMode,
+         batteryCycles, batteryHealth, batteryVoltage,
+         batteryCelsius, bateryInfo */</span>
+      <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="str">'statusbar'</span>:
+      <span class="cmt">/* signalBars, signalName, wifiBars, wifiName,
+         signalNetworkType */</span>
+      <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="str">'music'</span>:
+      <span class="cmt">/* title, artist, album, currentDuration,
+         currentElapsedTime, PlayingApplication, PlayingApplicationName,
+         isplaying, artworkUrl, playingAppIconUrl (iOS 16+ HTTP) */</span>
+      <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="str">'weather'</span>:
+      <span class="cmt">/* weather.{ temperature, city, condition, humidity,
+         windSpeed, uvIndex, high, low, celsius,
+         dayForecasts[], hourlyForecasts[] ... } */</span>
+      <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="str">'system'</span>:
+      <span class="cmt">/* deviceName, deviceType, systemVersion, ipAddress,
+         ramFree, ramUsed, ramTotal */</span>
+      <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="str">'CarPlay'</span>:
+      <span class="cmt">/* pageIndex */</span>
+      <span class="kw">break</span>;
+  }
+}
+
+<span class="fn">window</span>.addEventListener(<span class="str">'load'</span>, <span class="kw">function</span>() {
+  <span class="kw">if</span> (<span class="kw">typeof</span> airawRequest === <span class="str">'function'</span>) {
+    <span class="fn">airawRequest</span>(<span class="str">'arcall_all'</span>);
+  } <span class="kw">else</span> {
+    <span class="fn">window</span>.location = <span class="str">'arapi:arcall_all'</span>;
+  }
+});
+</code></pre>
+
+  <h3><span class="en">4. Demo data for development</span><span class="ja">4. デバッグ用デモデータ</span></h3>
+  <p class="en-block">
+    To develop the UI without a real device, refer to the <code>fillRandom()</code> function
+    in <code>airaw-sample-widget.html</code>. It injects demo values into all fields without
+    making any API calls.
+  </p>
+  <p class="ja-block">
+    実デバイスなしで UI 開発を進める場合は、<code>airaw-sample-widget.html</code> の
+    <code>fillRandom()</code> 関数を参考にしてください。
+    API 呼び出しを一切せずにすべてのフィールドにデモ値を注入できます。
+  </p>
+
+  <h3><span class="en">5. Widget options alongside API data</span><span class="ja">5. API データと並行するウィジェットオプション</span></h3>
+  <p class="en-block">
+    User-configurable widget options (schema file + <code>window.AIRAW_WIDGET_OPTIONS</code>) are independent of
+    data triggers (<code>requestData</code> / <code>airawRequest</code> / legacy <code>arapi:</code>) and <code>mainUpdate</code>. You can read options inside <code>mainUpdate</code> or react via
+    <code>airawwidgetoptions</code> — see the <a href="#widget-options">Widget Options</a> section.
+  </p>
+  <p class="ja-block">
+    スキーマに基づくユーザー設定（<code>window.AIRAW_WIDGET_OPTIONS</code>）は、データ取得（<code>requestData</code> / <code>airawRequest</code> / レガシー <code>arapi:</code>）や <code>mainUpdate</code> とは別経路です。
+    <code>mainUpdate</code> 内で参照してもよいし、<code>airawwidgetoptions</code> で UI を更新しても構いません。詳細は<a href="#widget-options">ウィジェットオプション</a>を参照してください。
+  </p>
+</section>
+
+<footer>
+  <p class="en-block">Airaw Widget API Reference — Generated from source code analysis.</p>
+  <p class="ja-block">Airaw Widget API リファレンス — ソースコード解析に基づいて生成。</p>
+  <p style="margin-top:6px">
+    <a href="https://dcsyhi1998.github.io/airawapi" style="color:var(--accent)">dcsyhi1998.github.io/airawapi</a>
+  </p>
+</footer>
+
+</main>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════
+//  Language switcher
+//  Default: English (en)
+//  Persists selection in localStorage
+// ══════════════════════════════════════════════════════════
+function setLang(lang) {
+  // Update html attribute (CSS uses this for .en/.ja display)
+  document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.setAttribute('lang', lang);
+
+  // Update button active state
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  // Persist preference
+  try { localStorage.setItem('airaw-docs-lang', lang); } catch(e) {}
+}
+
+// Restore saved language (default = 'en')
+(function() {
+  var saved = 'en';
+  try { saved = localStorage.getItem('airaw-docs-lang') || 'en'; } catch(e) {}
+  if (saved !== 'en') setLang(saved);
+})();
+</script>
 </body>
 </html>
