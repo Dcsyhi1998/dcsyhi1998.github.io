@@ -143,6 +143,23 @@ Description: Airaw Widgets:Simple Digital clock widget,Requires Airaw ver 1.5!
 Author: Dcsyhi
 Name: ClockWidget
 
+Package: jp.dcsyhi.cylindercarplay
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1652
+Depends: firmware (>= 14.0), mobilesubstrate (>= 0.9.6011), preferenceloader
+Filename: ./debs/jp.dcsyhi.cylindercarplay_1.0.0_iphoneos-arm64.deb
+Size: 448026
+MD5sum: 8116613137ca220f457ea894f1bc49d4
+SHA1: 5391ab7933084fa35326dda7b98b166fedba053c
+SHA256: 17da72e7c593125a90cfc4244bb7f5968b0cee92521694b32dbea3e216d4b411
+Section: Tweaks
+Description: Cylinder icon page effects for CarPlay. Based on Cylinder Reborn (Ryan Nair) and original Cylinder (rweichler).
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png
+Name: Cylinder CarPlay
+
 Package: jp.dcsyhi.dashapp
 Version: 1.0
 Architecture: iphoneos-arm64
