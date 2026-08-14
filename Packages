@@ -127,22 +127,22 @@ Author: Dcsyhi
 Icon: https://dcsyhi1998.github.io/icons/ADKeyboard/ADKeyboard.png
 Name: ADKeyboard
 
-Package: jp.dcsyhi.carplaytheme
+Package: jp.dcsyhi.carglyph
 Version: 1.0.0
 Architecture: iphoneos-arm64
 Maintainer: Dcsyhi
 Installed-Size: 884
 Depends: firmware (>= 17.0), mobilesubstrate (>= 0.9.6011), preferenceloader
-Filename: ./debs/jp.dcsyhi.carplaytheme_1.0.0_iphoneos-arm64.deb
-Size: 388582
-MD5sum: d8af947e8b45fcbdbc17c788f2a9453d
-SHA1: 30aa29df8cec2cf539dd34d156454bcb0ef2d1a3
-SHA256: 498f4d57fa018817c4b135448ae0f280d2ef84a2841554e6f386f113a6d414e8
+Filename: ./debs/jp.dcsyhi.carglyph_1.0.0_iphoneos-arm64.deb
+Size: 388452
+MD5sum: 1927938d6cab52805b3c2011a139185a
+SHA1: 7a68e14ad1434f16f015a771b016e1d3a73fabb0
+SHA256: ba3ee56db12048e948a4656be32c2e19492d48fa6b9a1ce2f78bf3990d1e1eaf
 Section: Tweaks
-Description: Apply WinterBoard/Snowboard IconBundles themes to CarPlay home icons.
+Description: Apply IconBundles themes to CarPlay home and dock icons.
 Author: Dcsyhi
-Icon: https://dcsyhi1998.github.io/icons/CarPlay-Theme/CarPlay-Theme.png
-Name: CarPlay Theme
+Icon: https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png
+Name: CarGlyph
 
 Package: jp.dcsyhi.clockwidget
 Version: 1.0
