@@ -134,15 +134,17 @@ Maintainer: Dcsyhi
 Installed-Size: 884
 Depends: firmware (>= 17.0), mobilesubstrate (>= 0.9.6011), preferenceloader
 Filename: ./debs/jp.dcsyhi.carglyph_1.0.0_iphoneos-arm64.deb
-Size: 388452
-MD5sum: 1927938d6cab52805b3c2011a139185a
-SHA1: 7a68e14ad1434f16f015a771b016e1d3a73fabb0
-SHA256: ba3ee56db12048e948a4656be32c2e19492d48fa6b9a1ce2f78bf3990d1e1eaf
+Size: 388744
+MD5sum: 81c2b5787c454247b14d5605007d7056
+SHA1: 428f5c95b64dc838e629f7628f517ba3ade69b29
+SHA256: aaf4a3c3511150178de42c56b1d722b8aa3768b7421efa6f1ca4d4d94aa7b3d7
 Section: Tweaks
 Description: Apply IconBundles themes to CarPlay home and dock icons.
 Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/CarGlyph.html
 Icon: https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png
 Name: CarGlyph
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CarGlyph.json
 
 Package: jp.dcsyhi.clockwidget
 Version: 1.0
@@ -176,6 +178,25 @@ Description: Cylinder icon page effects for CarPlay. Based on Cylinder Reborn (R
 Author: Dcsyhi
 Icon: https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png
 Name: Cylinder CarPlay
+
+Package: jp.dcsyhi.cylindercarplay
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1704
+Depends: firmware (>= 15.0), mobilesubstrate (>= 0.9.6011), preferenceloader
+Filename: ./debs/jp.dcsyhi.cylindercarplay_1.0.1_iphoneos-arm64.deb
+Size: 469726
+MD5sum: aaf6729a0aeef6f418a610b13065cca9
+SHA1: 8e1a114a2139c3024afbf3efb89b2f933fe3c69d
+SHA256: bcf82fd9ae188aa21edada88075c92ed3d6e4402611badac3622d4515b7fa125
+Section: Tweaks
+Description: Cylinder icon page effects for CarPlay. Based on Cylinder Reborn (Ryan Nair) and original Cylinder (rweichler).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html
+Icon: https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png
+Name: Cylinder CarPlay
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CylinderCarPlay.json
 
 Package: jp.dcsyhi.dashapp
 Version: 1.0

@@ -1,0 +1,216 @@
+{
+  "class": "DepictionTabView",
+  "headerImage": "https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png",
+  "minVersion": "0.3",
+  "tintColor": "#4DB86A",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details",
+      "tintColor": "#4DB86A",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Description",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**CarGlyph** applies **IconBundles** themes to **CarPlay home and dock icons**. The iPhone SpringBoard is not modified.\n\nInstall theme packs under `/Library/Themes`, pick them in **Settings → CarGlyph**, then reconnect CarPlay (or tap **Reload CarPlay**).\n\nIf you like CarGlyph, donations via [PayPal](https://www.paypal.me/DevDcsyhi) and follows on [X](https://twitter.com/intent/follow?screen_name=linux_n1) are appreciated.",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Preview",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 10,
+          "itemSize": "{360, 203}",
+          "screenshots": [
+            {
+              "accessibilityText": "CarGlyph on CarPlay",
+              "url": "https://dcsyhi1998.github.io/icons/CarGlyph/preview.png"
+            }
+          ]
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Features",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Theme CarPlay home-screen icons\n- Theme CarPlay dock icons\n- Select multiple IconBundles packs (higher entries win)\n- Enable / disable without uninstalling\n- Japanese and English settings UI\n- Does **not** theme SpringBoard",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "More CarPlay tweaks",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw — customize CarPlay",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarCast — add apps to CarPlay",
+          "action": "https://chariz.com/buy/CarCast",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Cylinder CarPlay",
+          "action": "https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Information",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Dcsyhi (@linux_n1)"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Compatibility",
+          "text": "iOS 17.0+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Architecture",
+          "text": "arm64, arm64e / rootless"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Dependency",
+          "text": "mobilesubstrate, preferenceloader"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Find me on X (@linux_n1)",
+          "action": "https://twitter.com/intent/follow?screen_name=linux_n1",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Send me an email",
+          "action": "mailto:dcsyhi1998@gmail.com?subject=CarGlyph",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Buy me a 🍺 via PayPal",
+          "action": "https://www.paypal.me/DevDcsyhi",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 40
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://dcsyhi1998.github.io/CydiaIcon.png",
+          "width": 45,
+          "height": 45,
+          "cornerRadius": 0,
+          "alignment": 1
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "日本語",
+      "tintColor": "#4DB86A",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "説明",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**CarGlyph** は **IconBundles** テーマを **CarPlay のホーム／ドックアイコン**に適用します。iPhone の SpringBoard は変更しません。\n\nテーマを `/Library/Themes` に入れ、**設定 → CarGlyph** で選び、CarPlay を再接続（または **CarPlayを再読み込み**）してください。",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "できること",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- CarPlay ホーム／ドックのアイコンをテーマ化\n- 複数テーマを選択（上にあるパックほど優先）\n- アンインストールせずにオン／オフ\n- 日本語／英語の設定画面\n- SpringBoard は対象外",
+          "useRawFormat": true
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "Changelog",
+      "tintColor": "#4DB86A",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "1.0.0",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Initial release.\n\n- CarPlay home and dock IconBundles theming\n- Multi-theme priority\n- Settings in Japanese and English",
+          "useRawFormat": true
+        }
+      ]
+    }
+  ]
+}

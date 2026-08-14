@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CarGlyph</title>
+  <link rel="icon" href="https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png">
+  <style>
+    :root {
+      --leaf: #4DB86A;
+      --mint: #8FD98A;
+      --forest: #1B5E38;
+      --ink: #07180f;
+      --card: rgba(255,255,255,.06);
+      --line: rgba(255,255,255,.1);
+      --text: #f4f7f4;
+      --muted: rgba(244,247,244,.68);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+      background:
+        radial-gradient(1200px 420px at 50% -80px, rgba(77,184,106,.35), transparent 60%),
+        linear-gradient(180deg, #0c2216 0%, var(--ink) 42%, #050c08 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    body.en [data-i18n="ja"],
+    body.ja [data-i18n="en"] { display: none; }
+
+    .page {
+      max-width: 430px;
+      margin: 0 auto;
+      padding: 22px 16px calc(28px + env(safe-area-inset-bottom));
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(77,184,106,.18), rgba(255,255,255,.03));
+      border-radius: 28px;
+      padding: 28px 20px 22px;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -40% -20%;
+      height: 140px;
+      background: radial-gradient(circle, rgba(143,217,138,.22), transparent 70%);
+      pointer-events: none;
+    }
+    .icon {
+      width: 84px;
+      height: 84px;
+      border-radius: 22px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.12);
+      object-fit: cover;
+    }
+    .kicker {
+      margin: 16px 0 6px;
+      color: var(--mint);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: -.04em;
+      font-weight: 800;
+    }
+    .lede {
+      margin: 10px auto 0;
+      max-width: 34em;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.22);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .lang {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: flex;
+      padding: 3px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.28);
+      border: 1px solid var(--line);
+      z-index: 1;
+    }
+    .lang button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 9px;
+      border-radius: 999px;
+    }
+    body.ja .lang [data-set="ja"],
+    body.en .lang [data-set="en"] {
+      background: var(--leaf);
+      color: #073018;
+    }
+
+    .section { margin-top: 22px; }
+    .label {
+      margin: 0 4px 10px;
+      color: var(--mint);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .copy {
+      padding: 16px 16px 4px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .copy strong { color: var(--text); font-weight: 700; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .feature {
+      padding: 14px 14px 16px;
+    }
+    .feature b {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .feature span {
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--leaf);
+      box-shadow: 0 0 12px var(--leaf);
+      margin-bottom: 10px;
+    }
+
+    .steps { padding: 6px 4px; }
+    .step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 14px;
+    }
+    .step + .step { border-top: 1px solid var(--line); }
+    .num {
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      background: rgba(77,184,106,.18);
+      color: var(--mint);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .step p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .step b { font-size: 14px; }
+
+    details.faq {
+      padding: 0 16px;
+    }
+    details.faq + details.faq { border-top: 1px solid var(--line); }
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 0;
+      font-size: 14px;
+      font-weight: 650;
+    }
+    summary::-webkit-details-marker { display: none; }
+    details.faq p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .tweak {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      color: inherit;
+      text-decoration: none;
+    }
+    .tweak + .tweak { border-top: 1px solid var(--line); }
+    .tweak img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 18px rgba(0,0,0,.28);
+    }
+    .tweak .meta { flex: 1; min-width: 0; }
+    .tweak .name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 750;
+    }
+    .tweak .desc { margin-top: 2px; color: var(--muted); font-size: 12.5px; }
+    .now {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(77,184,106,.2);
+      color: var(--mint);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .chev {
+      color: rgba(255,255,255,.28);
+      font-size: 20px;
+      font-weight: 300;
+    }
+    .tweak.current { pointer-events: none; }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .stat { padding: 14px; }
+    .stat small { color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .stat b { display: block; margin-top: 4px; font-size: 15px; }
+
+    .actions { display: grid; gap: 8px; }
+    .btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 13px 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #073018;
+      background: linear-gradient(180deg, var(--mint), var(--leaf));
+    }
+    .btn.ghost {
+      color: var(--text);
+      background: transparent;
+      border: 1px solid var(--line);
+    }
+
+    .preview {
+      overflow: hidden;
+      padding: 0;
+    }
+    .preview a { display: block; }
+    .preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: center 42%;
+    }
+    .preview .caption {
+      padding: 11px 14px 13px;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    footer {
+      margin-top: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body class="en">
+  <main class="page">
+    <header class="hero">
+      <div class="lang">
+        <button type="button" data-set="ja">JA</button>
+        <button type="button" data-set="en">EN</button>
+      </div>
+      <img class="icon" src="https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png" alt="CarGlyph">
+      <div class="kicker">CarPlay Theme</div>
+      <h1>CarGlyph</h1>
+      <p class="lede" data-i18n="ja">IconBundles テーマを、CarPlay のホームとドックだけに。iPhone のホーム画面はそのままです。</p>
+      <p class="lede" data-i18n="en">IconBundles themes for CarPlay home and dock icons only. SpringBoard stays stock.</p>
+      <div class="pills">
+        <span class="pill">iOS 17+</span>
+        <span class="pill">arm64 / arm64e</span>
+        <span class="pill">rootless</span>
+        <span class="pill">IconBundles</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">プレビュー</p>
+      <p class="label" data-i18n="en">Preview</p>
+      <figure class="card preview">
+        <a href="../icons/CarGlyph/preview.png">
+          <img src="../icons/CarGlyph/preview.png" alt="CarGlyph on CarPlay">
+        </a>
+        <figcaption class="caption" data-i18n="ja">CarPlay ホームとドックのアイコンを、IconBundles テーマで差し替えた例です。</figcaption>
+        <figcaption class="caption" data-i18n="en">CarPlay home and dock icons themed with an IconBundles pack.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">できること</p>
+      <p class="label" data-i18n="en">Features</p>
+      <div class="card copy">
+        <p data-i18n="ja"><strong>設定 → CarGlyph</strong> でテーマを選び、CarPlay を再接続するだけ。WinterBoard / Snowboard と同じ IconBundles パックが使えます。</p>
+        <p data-i18n="en">Pick packs in <strong>Settings → CarGlyph</strong>, then reconnect CarPlay. Uses the same IconBundles packs as WinterBoard / Snowboard.</p>
+      </div>
+      <div class="grid" style="margin-top:10px">
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">ホーム＆ドック</b><b data-i18n="en">Home & dock</b><span data-i18n="ja">CarPlay のアイコンだけを差し替えます。</span><span data-i18n="en">Only CarPlay glyphs are replaced.</span></article>
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">複数テーマ</b><b data-i18n="en">Multi packs</b><span data-i18n="ja">上にあるパックほど優先されます。</span><span data-i18n="en">Higher list entries win.</span></article>
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">純正フォールバック</b><b data-i18n="en">Stock fallback</b><span data-i18n="ja">画像が無いアプリは純正のまま。</span><span data-i18n="en">Missing glyphs stay stock.</span></article>
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">日英の設定</b><b data-i18n="en">JA / EN prefs</b><span data-i18n="ja">端末の言語に合わせて表示。</span><span data-i18n="en">Follows the device language.</span></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">使い方</p>
+      <p class="label" data-i18n="en">How to use</p>
+      <div class="card steps">
+        <div class="step"><span class="num">1</span><div><b data-i18n="ja">テーマを入れる</b><b data-i18n="en">Install a pack</b><p data-i18n="ja">IconBundles 対応テーマを /Library/Themes へ。</p><p data-i18n="en">Put IconBundles themes in /Library/Themes.</p></div></div>
+        <div class="step"><span class="num">2</span><div><b data-i18n="ja">CarGlyph を有効化</b><b data-i18n="en">Enable CarGlyph</b><p data-i18n="ja">設定からオンにして、テーマを選択。</p><p data-i18n="en">Turn it on in Settings and pick themes.</p></div></div>
+        <div class="step"><span class="num">3</span><div><b data-i18n="ja">CarPlay を再読み込み</b><b data-i18n="en">Reload CarPlay</b><p data-i18n="ja">再接続するか、設定の再読み込みをタップ。</p><p data-i18n="en">Reconnect, or tap Reload CarPlay.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">よくある質問</p>
+      <p class="label" data-i18n="en">FAQ</p>
+      <div class="card">
+        <details class="faq" open>
+          <summary>
+            <span data-i18n="ja">iPhone のホームも変わりますか？</span>
+            <span data-i18n="en">Does this theme SpringBoard?</span>
+          </summary>
+          <p data-i18n="ja">変わりません。CarPlay 専用です。iPhone 側は Snowboard などを使ってください。</p>
+          <p data-i18n="en">No. CarGlyph is CarPlay-only. Use Snowboard (or similar) for the iPhone home screen.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">テーマを選んでも純正のままです</span>
+            <span data-i18n="en">Icons stay stock after selecting a theme</span>
+          </summary>
+          <p data-i18n="ja">CarPlay を再接続するか「CarPlayを再読み込み」を試してください。そのアプリ用の IconBundles 画像がパックに含まれているかも確認してください。</p>
+          <p data-i18n="en">Reconnect CarPlay or tap Reload CarPlay. Also check that the pack includes IconBundles images for those apps.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">複数テーマは使えますか？</span>
+            <span data-i18n="en">Can I use several packs?</span>
+          </summary>
+          <p data-i18n="ja">はい。一覧の上にあるテーマほど優先されます。</p>
+          <p data-i18n="en">Yes. Packs higher in the list take priority.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">他の CarPlay Tweak</p>
+      <p class="label" data-i18n="en">More CarPlay tweaks</p>
+      <div class="card">
+        <a class="tweak current" href="#">
+          <img src="https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png" alt="">
+          <div class="meta">
+            <div class="name">CarGlyph <span class="now" data-i18n="ja">このページ</span><span class="now" data-i18n="en">This page</span></div>
+            <div class="desc" data-i18n="ja">CarPlay アイコンをテーマ化</div>
+            <div class="desc" data-i18n="en">Theme CarPlay icons</div>
+          </div>
+        </a>
+        <a class="tweak" href="https://chariz.com/buy/airaw">
+          <img src="https://dcsyhi1998.github.io/icons/Airaw/Airaw.png" alt="">
+          <div class="meta">
+            <div class="name">Airaw</div>
+            <div class="desc" data-i18n="ja">壁紙・レイアウト・ウィジェットで CarPlay を拡張</div>
+            <div class="desc" data-i18n="en">Wallpaper, layout, widgets for CarPlay</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://chariz.com/buy/CarCast">
+          <img src="https://dcsyhi1998.github.io/icons/CarCast/CarCast.png" alt="">
+          <div class="meta">
+            <div class="name">CarCast</div>
+            <div class="desc" data-i18n="ja">非対応アプリを CarPlay ホームに追加</div>
+            <div class="desc" data-i18n="en">Pin non-CarPlay apps to the dashboard</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html">
+          <img src="https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png" alt="">
+          <div class="meta">
+            <div class="name">Cylinder CarPlay</div>
+            <div class="desc" data-i18n="ja">CarPlay ホームのページめくりエフェクト</div>
+            <div class="desc" data-i18n="en">Cylinder page effects on CarPlay</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">対応</p>
+      <p class="label" data-i18n="en">Compatibility</p>
+      <div class="meta-row">
+        <div class="card stat"><small>iOS</small><b>17.0+</b></div>
+        <div class="card stat"><small>Jailbreak</small><b>rootless</b></div>
+        <div class="card stat"><small>ARCHS</small><b>arm64 / arm64e</b></div>
+      </div>
+    </section>
+
+    <section class="section actions">
+      <a class="btn" href="https://www.paypal.me/DevDcsyhi">PayPal</a>
+      <a class="btn ghost" href="https://x.com/linux_n1">X @linux_n1</a>
+      <a class="btn ghost" href="mailto:dcsyhi1998@gmail.com?subject=CarGlyph">Email</a>
+    </section>
+
+    <footer>
+      <span data-i18n="ja">不具合報告には iOS・機種・JB 環境・テーマ名を添えてください。<br>CarGlyph by Dcsyhi</span>
+      <span data-i18n="en">When reporting bugs, include iOS, device, jailbreak, and theme pack name.<br>CarGlyph by Dcsyhi</span>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      var body = document.body;
+      var saved = null;
+      try { saved = localStorage.getItem("carglyph-lang"); } catch (e) {}
+      var lang = saved || ((navigator.language || "").toLowerCase().indexOf("ja") === 0 ? "ja" : "en");
+      body.className = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll(".lang button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          body.className = btn.getAttribute("data-set");
+          document.documentElement.lang = body.className;
+          try { localStorage.setItem("carglyph-lang", body.className); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
