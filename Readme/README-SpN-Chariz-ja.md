@@ -14,7 +14,10 @@
 
 ## デモ画像:
 
-:carousel:
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;display:flex;gap:12px;padding-bottom:8px;">
+    <img src="https://dcsyhi1998.github.io/icons/SpNative/preview1.png" alt="preview1" style="height:260px;width:auto;max-width:none;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;">
+    <img src="https://dcsyhi1998.github.io/icons/SpNative/preview2.png" alt="preview2" style="height:260px;width:auto;max-width:none;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;">
+</div>
 
 ---
 
@@ -86,13 +89,13 @@ A. 端末の言語設定に合わせて表示されます。**英語**と**日�
 
 ## **📱 互換性**
 
-|                    |                                     |
-| ------------------ | ----------------------------------- |
+|                    |                                      |
+| ------------------ | ------------------------------------ |
 | **最低対応 OS**    | **iOS 16.0**（`firmware (>= 16.0)`） |
-| **非対応**         | iOS 14、iOS 15                      |
-| **アーキテクチャ** | arm64e（rootless）                  |
+| **非対応**         | iOS 14、iOS 15                       |
+| **アーキテクチャ** | arm64e（rootless）                   |
 | **必須**           | Airaw（>= 1.7.0）、ElleKit/substrate |
-| **競合**           | 特に宣言なし                        |
+| **競合**           | 特に宣言なし                         |
 
 ### **動作確認環境**
 
