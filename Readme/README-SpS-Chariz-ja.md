@@ -16,24 +16,6 @@
 
 ## デモ画像:
 
-# **Airaw Split Standard**
-
-## _非純正 CarPlay アプリ向けスプリットビュー — CarCast / CarBridge_
-
-**Airaw Split Standard** は、**CarCast** または **CarBridge** 経由の **非純正** CarPlay アプリ向け **スプリットビュー** を有効にするアドオンです（Airaw / ホストシーン連携を含む）。
-
-本パッケージをインストールし、**Airaw → スプリットビュー（標準）** を開いて、対象アプリを選んでください。
-
-> **iOS 16.0 以降が必要です。** iOS 14 / iOS 15 では動作しません。購入前に **設定 → 一般 → 情報** で OS バージョンを確認してください。**非対応 OS での購入は返金対象外です。**
-
-> **[Airaw](https://chariz.com/buy/airaw) 1.7.0 以降が必要です。** Airaw の **アドオン** です。設定は **Airaw からのみ** 開けます（設定アプリ一覧に単独項目は出ません）。iOS 15 以前の Airaw では、本機能が使えないため Split View 設定は表示されません。
-
-> **パッケージのインストールがライセンスになります。** アプリ内課金はありません。Chariz で購入・導入すれば利用できます。
-
-> 対象アプリ一覧には **CarCast** または **CarBridge** も必要です。CarCast と CarBridge は **同時に入れないでください**。
-
-## デモ画像:
-
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;display:flex;gap:12px;padding-bottom:8px;">
     <img src="https://dcsyhi1998.github.io/icons/SpStandard/preview1.png" alt="preview1" style="height:260px;width:auto;max-width:none;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;">
     <img src="https://dcsyhi1998.github.io/icons/SpStandard/preview2.png" alt="preview2" style="height:260px;width:auto;max-width:none;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;">
