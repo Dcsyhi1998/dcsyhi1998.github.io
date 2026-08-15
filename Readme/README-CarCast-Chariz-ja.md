@@ -14,7 +14,11 @@
 
 ## デモ画像:
 
-:carousel:
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;display:flex;gap:12px;padding-bottom:8px;">
+<img src="https://dcsyhi1998.github.io/icons/CarCast/preview1.png" alt="preview1" style="height:260px;width:auto;max-width:none;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;">
+<img src="https://dcsyhi1998.github.io/icons/CarCast/preview2.png" alt="preview2" style="height:260px;width:auto;max-width:none;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;">
+<img src="https://dcsyhi1998.github.io/icons/CarCast/preview3.png" alt="preview3" style="height:260px;width:auto;max-width:none;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;">
+</div>
 
 ---
 
