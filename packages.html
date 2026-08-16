@@ -1,63 +1,374 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-    <title>Packages</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./assets/global.css">
-    <link rel="stylesheet" type="text/css" href="./assets/packages.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Packages — Airaw, CarCast, Split View, Cylinder CarPlay, CarGlyph</title>
+  <meta name="description" content="Packages in Dcsyhi Repo: Airaw, CarCast, Split Native, Split Standard, Cylinder CarPlay, CarGlyph, widgets, Zetsu, and more." />
+  <meta name="author" content="Dcsyhi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://dcsyhi1998.github.io/packages.html" />
+  <link rel="icon" href="https://dcsyhi1998.github.io/depiction/assets/icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dcsyhi Repo" />
+  <meta property="og:url" content="https://dcsyhi1998.github.io/packages.html" />
+  <meta property="og:title" content="Packages — Airaw and CarPlay tweaks" />
+  <meta property="og:description" content="Airaw, CarCast, Split View, Cylinder CarPlay, CarGlyph, widgets, and other jailbreak packages." />
+  <meta property="og:image" content="https://dcsyhi1998.github.io/depiction/assets/hero-split.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@linux_n1" />
+  <meta name="twitter:title" content="Packages — Airaw and CarPlay tweaks" />
+  <meta name="twitter:description" content="Airaw, CarCast, Split View, Cylinder CarPlay, CarGlyph, widgets, and other jailbreak packages." />
+  <meta name="twitter:image" content="https://dcsyhi1998.github.io/depiction/assets/hero-split.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/repo.css" />
 </head>
-<body id="darkMode">
-    <div class="navbar">
-        <div class="navbarContainer">
-        <a href="index" class="navbarLogo">&#62; nm ~</a>
-        <div class="logoCursor"></div>
-            <div class="rightNavContainer">
-                <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://dcsyhi1998.github.io">Add Repo</a>
-            </div>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="./">
+        <img src="depiction/assets/icon.png" alt="" />
+        Dcsyhi
+      </a>
+      <div class="nav-links">
+        <a class="keep" href="packages.html"><span data-ja>パッケージ</span><span data-en>Packages</span></a>
+        <a href="depiction/Airaw.html">Airaw</a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-set="ja">JA</button>
+          <button type="button" data-set="en">EN</button>
         </div>
+        <a class="buy" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://dcsyhi1998.github.io">
+          <span data-ja>リポジトリを追加</span><span data-en>Add Repo</span>
+        </a>
+      </div>
     </div>
-    <div class="wrapper">
-        <h1>Projects</h1>
-        <!-- 作成してあるTweak -->
-        <span id="Packages">
-            <script type="text/javascript">
-                //パッケージの遷移先
-                var Packages = [
-                    "depiction/zetsu",
-                    "depiction/Airaw"
-                ];
-                //パッケージのタイトル
-                var Packages_title = [
-                    "Zetsu",
-                    "Airaw"
-                ];
-                //パッケージの詳細
-                var Packages_details = [
-                    "<em>Zetsu</em> is a Tweak that allows the app to Multitask.How to start: Select <em>Zetsu</em> from 3D Touch shortcuts for the app you want to multitask.",
-                    "<em>Airaw</em> is a Tweak to give extensions to CarPlay !<br>How to start: Just apply from the setting screen."
-                ];
-                //バーナ画像
-                var Packages_Banners = [
-                    "ZetsuBaner.png",
-                    "AirawBanner.png"
-                ];
-                for(var i = 0;i < Packages.length;i++){
-                    document.writeln("<a href="+ Packages[i] + ">");
-                        document.write('<div class="packageWrapper" style="background-image: url(./Banners/' + Packages_Banners[i] +');animation-delay: 0s">');
-                            document.write('<img class="bannerImage" src="./Banners/' + Packages_Banners[i] +'" onerror="removeBanner(this)">');
-                            document.write('<div class="packageLowerInfo">');
-                                document.write('<p class="packageTitle">' + Packages_title[i] + "</p>");
-                                document.write('<p>');
-                                    document.write('<p>');
-                                        document.write(Packages_details[i]);
-                                    document.write('</p>');
-                                document.write('</p>');
-                            document.write('</div>');
-                        document.write('</div>');
-                    document.writeln('</a>');
-                }
-            </script>
-        </span>
+  </nav>
+
+  <header class="wrap hero">
+    <div class="kicker">Catalog</div>
+    <h1 class="display">
+      <span data-ja>公開パッケージ</span>
+      <span data-en>Packages</span>
+    </h1>
+    <p class="lede">
+      <span data-ja>CarPlay 向けが中心です。Airaw 本体と有料アドオンは Chariz。Cylinder CarPlay と CarGlyph はこのリポジトリから導入できます。</span>
+      <span data-en>Built around CarPlay. Airaw and paid add-ons are on Chariz. Cylinder CarPlay and CarGlyph install from this repo.</span>
+    </p>
+    <div class="filters" role="tablist" aria-label="Filter packages">
+      <button type="button" class="is-on" data-filter="all"><span data-ja>すべて</span><span data-en>All</span></button>
+      <button type="button" data-filter="carplay">CarPlay</button>
+      <button type="button" data-filter="widgets"><span data-ja>ウィジェット</span><span data-en>Widgets</span></button>
+      <button type="button" data-filter="other"><span data-ja>その他</span><span data-en>Other</span></button>
     </div>
+  </header>
+
+  <main class="wrap section">
+    <div data-section="carplay">
+      <div class="row-head">
+        <h2 class="display">CarPlay</h2>
+        <p class="sub">
+          <span data-ja>Airaw が基盤。アプリ追加・Split View・見た目は別パッケージです。</span>
+          <span data-en>Airaw is the platform. Apps, Split View, and visuals ship as separate packages.</span>
+        </p>
+      </div>
+      <p class="note">
+        <span data-ja>CarCast と CarBridge は同時にインストールしないでください。どちらか一方だけを使ってください。</span>
+        <span data-en>Do not install CarCast and CarBridge together. Use one or the other.</span>
+      </p>
+      <div class="grid">
+        <article class="card wide" data-cat="carplay">
+          <img class="shot" src="depiction/assets/hero-split.png" alt="Airaw Split View" />
+          <div class="card-top">
+            <img class="icon" src="https://dcsyhi1998.github.io/icons/Airaw/Airaw.png" alt="" />
+            <div>
+              <h3>Airaw</h3>
+              <div class="meta">
+                <span class="pill">iOS 14–26</span>
+                <span class="pill">Chariz</span>
+                <span class="pill">jp.dcsyhi.airaw</span>
+              </div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>CarPlay のレイアウト、壁紙、ステータスバー、ウィジェット、フルスクリーンアプリ。Split View は iOS 16+ の有料アドオンです。モジュールウィジェットは iOS 14–26。HTML ウィジェットは iOS 14–15 のみ。</span>
+            <span data-en>Customize CarPlay layout, wallpaper, status bar, widgets, and fullscreen apps. Split View is a paid iOS 16+ add-on. Module widgets work on iOS 14–26. HTML widgets work on iOS 14–15 only.</span>
+          </p>
+          <div class="links">
+            <a href="depiction/Airaw.html"><span data-ja>製品ページ</span><span data-en>Product page</span></a>
+            <a href="https://chariz.com/buy/airaw">Chariz</a>
+          </div>
+        </article>
+
+        <article class="card" data-cat="carplay">
+          <img class="shot" src="https://dcsyhi1998.github.io/icons/CarCast/preview1.png" alt="CarCast preview" />
+          <div class="card-top">
+            <span class="badge">C</span>
+            <div>
+              <h3>CarCast</h3>
+              <div class="meta">
+                <span class="pill">iOS 17 / 26</span>
+                <span class="pill">Airaw required</span>
+              </div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>CarPlay 非対応の iPhone アプリをダッシュボードに追加します。動作確認は iOS 17 と iOS 26。iOS 16 以前は非対応。iOS 18 は未検証です。CarBridge と競合します。</span>
+            <span data-en>Pin non-CarPlay iPhone apps to the dashboard. Verified on iOS 17 and iOS 26. Not for iOS 16 or earlier. iOS 18 is untested. Conflicts with CarBridge.</span>
+          </p>
+          <div class="links">
+            <a href="https://chariz.com/buy/carcast">Chariz</a>
+          </div>
+        </article>
+
+        <article class="card" data-cat="carplay">
+          <img class="shot" src="https://dcsyhi1998.github.io/icons/SpNative/preview1.png" alt="Split Native preview" />
+          <div class="card-top">
+            <span class="badge">N</span>
+            <div>
+              <h3>Airaw Split Native</h3>
+              <div class="meta">
+                <span class="pill">iOS 16+</span>
+                <span class="pill">Airaw 1.7.0+</span>
+              </div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>Maps、Music、Podcasts、電話、メッセージなど純正 CarPlay アプリ向けの Split View。設定は Airaw 内の「スプリットビュー（純正）」から。</span>
+            <span data-en>Split View for native CarPlay apps such as Maps, Music, Podcasts, Phone, and Messages. Configure it inside Airaw → Split View (Native).</span>
+          </p>
+          <div class="links">
+            <a href="https://chariz.com/buy/airaw-split-native">Chariz</a>
+          </div>
+        </article>
+
+        <article class="card" data-cat="carplay">
+          <img class="shot" src="https://dcsyhi1998.github.io/icons/SpStandard/preview1.png" alt="Split Standard preview" />
+          <div class="card-top">
+            <span class="badge">S</span>
+            <div>
+              <h3>Airaw Split Standard</h3>
+              <div class="meta">
+                <span class="pill">iOS 16+</span>
+                <span class="pill">Airaw 1.7.0+</span>
+              </div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>CarCast または CarBridge 経由の非純正アプリ向け Split View。設定は Airaw 内の「スプリットビュー（標準）」から。</span>
+            <span data-en>Split View for non-native apps added through CarCast or CarBridge. Configure it inside Airaw → Split View (Standard).</span>
+          </p>
+          <div class="links">
+            <a href="https://chariz.com/buy/airaw-split-standard">Chariz</a>
+          </div>
+        </article>
+
+        <article class="card" data-cat="carplay">
+          <div class="card-top">
+            <img class="icon" src="https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png" alt="" />
+            <div>
+              <h3>Cylinder CarPlay</h3>
+              <div class="meta">
+                <span class="pill">iOS 15+</span>
+                <span class="pill">jp.dcsyhi.cylindercarplay</span>
+              </div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>CarPlay ホーム画面のページめくり演出。Cylinder Reborn / オリジナル Cylinder をベースにしています。このリポジトリから導入できます。</span>
+            <span data-en>Page-turn effects for the CarPlay home screen. Based on Cylinder Reborn and the original Cylinder. Install from this repo.</span>
+          </p>
+          <div class="links">
+            <a href="depiction/CylinderCarPlay.html"><span data-ja>詳細</span><span data-en>Details</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-cat="carplay">
+          <div class="card-top">
+            <img class="icon" src="https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png" alt="" />
+            <div>
+              <h3>CarGlyph</h3>
+              <div class="meta">
+                <span class="pill">iOS 17+</span>
+                <span class="pill">jp.dcsyhi.carglyph</span>
+              </div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>IconBundles テーマを CarPlay のホームとドックのアイコンに適用します。このリポジトリから導入できます。</span>
+            <span data-en>Apply IconBundles themes to CarPlay home and dock icons. Install from this repo.</span>
+          </p>
+          <div class="links">
+            <a href="depiction/CarGlyph.html"><span data-ja>詳細</span><span data-en>Details</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div data-section="widgets">
+      <div class="row-head">
+        <h2 class="display">
+          <span data-ja>Airaw ウィジェット</span>
+          <span data-en>Airaw widgets</span>
+        </h2>
+        <p class="sub">
+          <span data-ja>本体のアドオンです。Airaw 1.5 以降が必要です。</span>
+          <span data-en>Add-ons for Airaw. Require Airaw 1.5 or later.</span>
+        </p>
+      </div>
+      <div class="grid">
+        <article class="card" data-cat="widgets">
+          <div class="card-top">
+            <span class="badge">W</span>
+            <div>
+              <h3>ClockWidget</h3>
+              <div class="meta"><span class="pill">jp.dcsyhi.clockwidget</span></div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>シンプルなデジタル時計ウィジェット。</span>
+            <span data-en>A simple digital clock widget.</span>
+          </p>
+        </article>
+        <article class="card" data-cat="widgets">
+          <div class="card-top">
+            <span class="badge">W</span>
+            <div>
+              <h3>MusicControl</h3>
+              <div class="meta"><span class="pill">jp.dcsyhi.musiccontrol</span></div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>シンプルな再生コントロール。</span>
+            <span data-en>Simple playback controls.</span>
+          </p>
+        </article>
+        <article class="card" data-cat="widgets">
+          <div class="card-top">
+            <span class="badge">W</span>
+            <div>
+              <h3>TwiWidget</h3>
+              <div class="meta"><span class="pill">jp.dcsyhi.twiwidget</span></div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>Twitter アカウント情報を表示。</span>
+            <span data-en>Shows Twitter account information.</span>
+          </p>
+        </article>
+        <article class="card" data-cat="widgets">
+          <div class="card-top">
+            <span class="badge">W</span>
+            <div>
+              <h3>SUMusicWidget</h3>
+              <div class="meta"><span class="pill">com.sugiuta.sumusicwidget</span><span class="pill">sugiuta</span></div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>sugiuta 作の Airaw ミュージックウィジェット拡張。</span>
+            <span data-en>An Airaw music-widget extension by sugiuta.</span>
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div data-section="other">
+      <div class="row-head">
+        <h2 class="display">
+          <span data-ja>その他</span>
+          <span data-en>Other</span>
+        </h2>
+        <p class="sub">
+          <span data-ja>CarPlay 以外の Tweak です。</span>
+          <span data-en>Tweaks outside the CarPlay family.</span>
+        </p>
+      </div>
+      <div class="grid">
+        <article class="card" data-cat="other">
+          <div class="card-top">
+            <img class="icon" src="https://dcsyhi1998.github.io/icons/zetsu/zetsu.png" alt="" />
+            <div>
+              <h3>Zetsu</h3>
+              <div class="meta"><span class="pill">iOS 14</span><span class="pill">jp.dcsyhi.zetsu</span></div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>iOS 14 向けマルチタスク。対象アプリの 3D Touch ショートカットから起動します。</span>
+            <span data-en>Multitasking on iOS 14. Start it from a 3D Touch shortcut on the app you want to split.</span>
+          </p>
+          <div class="links">
+            <a href="depiction/zetsu.html"><span data-ja>詳細</span><span data-en>Details</span></a>
+          </div>
+        </article>
+        <article class="card" data-cat="other">
+          <div class="card-top">
+            <img class="icon" src="https://dcsyhi1998.github.io/icons/ADKeyboard/ADKeyboard.png" alt="" />
+            <div>
+              <h3>ADKeyboard</h3>
+              <div class="meta"><span class="pill">jp.dcsyhi.adkeyboard</span></div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>キーボードの色を、前面アプリの色に合わせます。</span>
+            <span data-en>Makes the keyboard color adapt to the frontmost app.</span>
+          </p>
+        </article>
+        <article class="card" data-cat="other">
+          <div class="card-top">
+            <span class="badge">D</span>
+            <div>
+              <h3>DashApp</h3>
+              <div class="meta"><span class="pill">jp.dcsyhi.dashapp</span><span class="pill">rootless</span></div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>ロック画面のカメラショートカットを、好きなアプリに差し替えます。</span>
+            <span data-en>Replace the lock-screen camera shortcut with an app of your choice.</span>
+          </p>
+        </article>
+        <article class="card" data-cat="other">
+          <div class="card-top">
+            <img class="icon" src="https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png" alt="" />
+            <div>
+              <h3>KBApp</h3>
+              <div class="meta"><span class="pill">jp.dcsyhi.kbappdock</span></div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>キーボードのドックにアプリを並べられます。</span>
+            <span data-en>Arrange apps on the keyboard dock.</span>
+          </p>
+        </article>
+        <article class="card" data-cat="other">
+          <div class="card-top">
+            <span class="badge">L</span>
+            <div>
+              <h3>L0gs</h3>
+              <div class="meta"><span class="pill">jp.dcsyhi.logs</span><span class="pill">Dev</span></div>
+            </div>
+          </div>
+          <p>
+            <span data-ja>端末上で NSLog を見やすくするデバッグ用 Tweak。</span>
+            <span data-en>A debugging tweak to inspect NSLog on-device.</span>
+          </p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© Dcsyhi · https://dcsyhi1998.github.io</span>
+      <span>
+        <a href="https://x.com/linux_n1">X</a>
+        ·
+        <a href="https://github.com/Dcsyhi1998">GitHub</a>
+        ·
+        <a href="https://www.paypal.me/DevDcsyhi">PayPal</a>
+      </span>
+    </div>
+  </footer>
+  <script src="assets/repo.js"></script>
 </body>
 </html>

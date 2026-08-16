@@ -3,9 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Airaw — The CarPlay Platform</title>
-  <meta name="description" content="Airaw is the CarPlay platform for iOS 14–26. Layout, wallpaper, status bar, widgets, fullscreen apps, Split View, and CarCast." />
-  <link rel="icon" href="assets/icon.png" />
+  <title>Airaw — CarPlay tweak for iOS 14–26 | Split View, widgets, layout</title>
+  <meta name="description" content="Airaw is a jailbreak tweak that customizes Apple CarPlay on iOS 14 through iOS 26. Change the icon layout, wallpaper, and status bar, add widgets, run fullscreen apps, and use Split View with CarCast." />
+  <meta name="author" content="Dcsyhi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://dcsyhi1998.github.io/depiction/Airaw.html" />
+  <link rel="icon" href="https://dcsyhi1998.github.io/depiction/assets/icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Airaw" />
+  <meta property="og:url" content="https://dcsyhi1998.github.io/depiction/Airaw.html" />
+  <meta property="og:title" content="Airaw — Customize CarPlay on iOS 14–26" />
+  <meta property="og:description" content="Jailbreak tweak for Apple CarPlay: layout, wallpaper, widgets, fullscreen apps, Split View, and CarCast." />
+  <meta property="og:image" content="https://dcsyhi1998.github.io/depiction/assets/hero-split.png" />
+  <meta property="og:image:alt" content="Airaw Split View on a car display — two apps on one CarPlay screen" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@linux_n1" />
+  <meta name="twitter:creator" content="@linux_n1" />
+  <meta name="twitter:title" content="Airaw — Customize CarPlay on iOS 14–26" />
+  <meta name="twitter:description" content="Jailbreak tweak for Apple CarPlay: layout, wallpaper, widgets, fullscreen apps, Split View, and CarCast." />
+  <meta name="twitter:image" content="https://dcsyhi1998.github.io/depiction/assets/hero-split.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Airaw",
+    "alternateName": "Airaw CarPlay",
+    "description": "A jailbreak tweak that customizes Apple CarPlay on iOS 14 through iOS 26, with layout, wallpaper, widgets, fullscreen apps, Split View, and CarCast.",
+    "url": "https://dcsyhi1998.github.io/depiction/Airaw.html",
+    "image": "https://dcsyhi1998.github.io/depiction/assets/hero-split.png",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "iOS 14.0 or later",
+    "author": {
+      "@type": "Person",
+      "name": "Dcsyhi",
+      "url": "https://x.com/linux_n1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://chariz.com/buy/airaw",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -165,10 +205,19 @@
     .dots i:nth-child(n+8) { background: rgba(243,246,251,0.18); }
     h1 {
       font-size: clamp(1.6rem, 3vw, 2.2rem);
-      margin: 0 0 0.7rem;
+      margin: 0 0 0.35rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+    }
+    .tagline {
+      margin: 0 0 0.9rem;
+      font-family: Montserrat, "Noto Sans JP", sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blue);
     }
     .lede {
       max-width: 40rem;
@@ -428,6 +477,7 @@
         <a href="#platform"><span data-ja>機能</span><span data-en>Platform</span></a>
         <a href="#gallery"><span data-ja>ギャラリー</span><span data-en>Gallery</span></a>
         <a href="#ecosystem"><span data-ja>製品群</span><span data-en>Ecosystem</span></a>
+        <a href="https://dcsyhi1998.github.io/packages.html"><span data-ja>リポジトリ</span><span data-en>Repo</span></a>
         <div class="lang" role="group" aria-label="Language">
           <button type="button" data-set="ja">JA</button>
           <button type="button" data-set="en">EN</button>
@@ -438,7 +488,7 @@
   </nav>
 
   <header class="hero-bleed" id="top">
-    <img src="assets/hero-split.png" alt="AIRAW — Two apps. One screen." />
+    <img src="assets/hero-split.png" alt="Airaw Split View on a car display — two apps on one CarPlay screen" />
   </header>
 
   <main class="wrap">
@@ -449,12 +499,16 @@
           <span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
         </div>
         <h1 class="display">
+          <span data-ja>Airaw — CarPlay をカスタマイズ</span>
+          <span data-en>Airaw — Customize CarPlay</span>
+        </h1>
+        <p class="tagline">
           <span data-ja>2つのアプリ。1つの画面。</span>
           <span data-en>Two apps. One screen.</span>
-        </h1>
+        </p>
         <p class="lede">
-          <span data-ja>Airaw は iOS 14 から iOS 26 の CarPlay を拡張するプラットフォームです。レイアウト、壁紙、ウィジェット、フルスクリーン、そして Split View。</span>
-          <span data-en>Airaw extends CarPlay on iOS 14 through iOS 26 — layout, wallpaper, widgets, fullscreen apps, and Split View.</span>
+          <span data-ja>Airaw は iOS 14 から iOS 26 の Apple CarPlay を拡張するジェイルブレイク Tweak です。レイアウト、壁紙、ウィジェット、フルスクリーン、Split View に対応します。</span>
+          <span data-en>Airaw is a jailbreak tweak that customizes Apple CarPlay on iOS 14 through iOS 26 — layout, wallpaper, widgets, fullscreen apps, and Split View.</span>
         </p>
         <div class="hero-actions">
           <a class="buy" href="https://chariz.com/buy/airaw">
@@ -533,8 +587,8 @@
 
     <section class="section" id="gallery">
       <h2 class="display">
-        <span data-ja>車の中で、こう見える。</span>
-        <span data-en>This is how it looks in the car.</span>
+          <span data-ja>CarPlay 上の Airaw</span>
+          <span data-en>How Airaw looks on CarPlay</span>
       </h2>
       <p class="sub">
         <span data-ja>Split View と、ウィジェット付きの CarPlay ホーム。画面を切り替えて見てください。</span>
@@ -543,19 +597,19 @@
       <div class="gallery" data-gallery>
         <div class="gallery-stage">
           <figure class="is-active" data-caption-en="Split View — drag the divider." data-caption-ja="Split View。セパレータをドラッグして画面を分ける。">
-            <img src="assets/mockup-split.png" alt="Split View with Google Maps and YouTube" />
+            <img src="assets/mockup-split.png" alt="Airaw Split View on CarPlay with Google Maps and YouTube" />
           </figure>
           <figure data-caption-en="Airaw running on a production head unit." data-caption-ja="実車のディスプレイで動く Airaw。">
-            <img src="assets/widget-incar.png" alt="Airaw on a car display" />
+            <img src="assets/widget-incar.png" alt="Airaw CarPlay widgets on a production car display" />
           </figure>
           <figure data-caption-en="Widgets on the CarPlay home screen." data-caption-ja="CarPlay ホームにウィジェットを配置。">
-            <img src="assets/widget-1.png" alt="Airaw widgets on CarPlay" />
+            <img src="assets/widget-1.png" alt="Airaw custom CarPlay home screen with widgets" />
           </figure>
           <figure data-caption-en="Custom wallpaper, music widget, and status." data-caption-ja="壁紙、ミュージックウィジェット、ステータス。">
-            <img src="assets/widget-2.png" alt="Night wallpaper with Airaw widgets" />
+            <img src="assets/widget-2.png" alt="Airaw CarPlay wallpaper, music widget, and status bar" />
           </figure>
           <figure data-caption-en="Another widget layout on the dashboard." data-caption-ja="別レイアウトのウィジェットホーム。">
-            <img src="assets/widget-3.png" alt="Airaw widget dashboard" />
+            <img src="assets/widget-3.png" alt="Airaw CarPlay dashboard widget layout" />
           </figure>
           <button class="gallery-btn prev" type="button" aria-label="Previous">‹</button>
           <button class="gallery-btn next" type="button" aria-label="Next">›</button>
