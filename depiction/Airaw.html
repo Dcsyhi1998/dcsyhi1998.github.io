@@ -454,7 +454,11 @@
     @media (max-width: 900px) {
       .hero-follow, .eco, .features, .compat, .cta-band { grid-template-columns: 1fr; }
       .nav-links a:not(.buy) { display: none; }
-      .hero-bleed img { height: min(56vh, 520px); }
+      .hero-bleed img {
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+      }
       .stats, .compat { grid-template-columns: 1fr 1fr; }
       .thumbs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
       .thumbs button img { height: 44px; }
