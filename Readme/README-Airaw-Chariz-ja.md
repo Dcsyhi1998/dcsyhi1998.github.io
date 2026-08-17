@@ -40,8 +40,8 @@ X のフォローもとても励みになります。
 Airaw が本体です。アプリ追加・Split View・見た目は別パッケージです。
 
 - **[CarCast](https://chariz.com/buy/carcast)** — **純正非対応**アプリをダッシュボードに追加。動作確認は iOS 17 と iOS 26。CarBridge の代替。
-- **[Airaw Split Native](https://chariz.com/buy/airawnative)** — **純正** CarPlay アプリ向け Split View。**iOS 16+。** 有料アドオン。Airaw 1.7.0 以降が必要。
-- **[Airaw Split Standard](https://chariz.com/buy/airawstandard)** — **Airaw / CarCast / Hosted Scene** 向け Split View。**iOS 16+。** 有料アドオン。Airaw 1.7.0 以降が必要。
+- **[Airaw Split Native](https://chariz.com/buy/airaw-native)** — **純正** CarPlay アプリ向け Split View。**iOS 16+。** 有料アドオン。Airaw 1.7.0 以降が必要。
+- **[Airaw Split Standard](https://chariz.com/buy/airaw-standard)** — **Airaw / CarCast / Hosted Scene** 向け Split View。**iOS 16+。** 有料アドオン。Airaw 1.7.0 以降が必要。
 - **[Cylinder CarPlay](https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html)** — CarPlay ホームのページめくり演出。
 - **[CarGlyph](https://dcsyhi1998.github.io/depiction/CarGlyph.html)** — CarPlay アイコンのテーマ。
 
