@@ -1,6 +1,5 @@
 {
   "class": "DepictionTabView",
-  "headerImage": "https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png",
   "minVersion": "0.3",
   "tintColor": "#47B65C",
   "tabs": [
@@ -10,60 +9,153 @@
       "tintColor": "#47B65C",
       "views": [
         {
-          "class": "DepictionSubheaderView",
-          "title": "Description",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Page effects on CarPlay",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**Cylinder CarPlay** brings Cylinder page-swipe effects to the **CarPlay home screen**. SpringBoard is not modified, so you can keep original Cylinder on the iPhone.\n\nPick effects in **Settings → Cylinder CarPlay**, then reconnect CarPlay (or tap **Reload CarPlay**).",
+          "markdown": "<p>Brings Cylinder page-swipe effects to the <strong>CarPlay home screen</strong>. SpringBoard is not modified, so original Cylinder can stay on the iPhone.</p><p>Pick effects in Settings → Cylinder CarPlay, then reconnect CarPlay.</p>",
           "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
         },
         {
           "class": "DepictionSeparatorView"
         },
         {
-          "class": "DepictionSubheaderView",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Features",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- CarPlay home page-swipe effects\n- Combine multiple Lua effects or randomize\n- Same scripts as Cylinder (`/Library/CylinderCarPlay`)\n- Also reads `/Library/Cylinder` if present\n- Coexists with Cylinder on SpringBoard\n- Japanese and English settings UI",
+          "markdown": "<ul><li>CarPlay home page-swipe effects</li><li>Combine multiple Lua effects or randomize</li><li>Same scripts as Cylinder (<code>/Library/CylinderCarPlay</code>)</li><li>Also reads <code>/Library/Cylinder</code> if present</li><li>Coexists with Cylinder on SpringBoard</li><li>Japanese and English settings</li></ul>",
           "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
         },
         {
           "class": "DepictionSeparatorView"
         },
         {
-          "class": "DepictionSubheaderView",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "How to use",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>Turn on Settings → Cylinder CarPlay</li><li>Choose Cube and other page effects</li><li>Reconnect CarPlay, or tap Reload CarPlay</li></ol>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Information",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Dcsyhi"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Based on",
+          "text": "Cylinder, Cylinder Reborn"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.1"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS",
+          "text": "14.0+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Architecture",
+          "text": "arm64 / arm64e"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "License",
+          "text": "MIT"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "More CarPlay tweaks",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "CarScrub — scrub Now Playing",
+          "title": "CarScrub",
           "action": "https://dcsyhi1998.github.io/depiction/CarScrub.html",
           "openExternal": true
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "CarGlyph — theme CarPlay icons",
+          "title": "CarGlyph",
           "action": "https://dcsyhi1998.github.io/depiction/CarGlyph.html",
           "openExternal": true
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "Airaw — customize CarPlay",
+          "title": "Airaw",
           "action": "https://chariz.com/buy/airaw",
           "openExternal": true
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "CarCast — add apps to CarPlay",
+          "title": "CarCast",
           "action": "https://chariz.com/buy/carcast",
           "openExternal": true
         },
@@ -80,49 +172,6 @@
           "openExternal": true
         },
         {
-          "class": "DepictionSeparatorView"
-        },
-        {
-          "class": "DepictionHeaderView",
-          "title": "Information",
-          "useBoldText": true,
-          "useBottomMargin": false
-        },
-        {
-          "class": "DepictionSpacerView",
-          "spacing": 8
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "Author",
-          "text": "Dcsyhi (@linux_n1)"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "Based on",
-          "text": "Cylinder (rweichler), Cylinder Reborn (Ryan Nair)"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "Version",
-          "text": "1.0.1"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "Compatibility",
-          "text": "iOS 14.0+"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "Architecture",
-          "text": "arm64, arm64e"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "License",
-          "text": "MIT"
-        },
-        {
           "class": "DepictionSpacerView",
           "spacing": 16
         },
@@ -131,25 +180,29 @@
         },
         {
           "class": "DepictionSpacerView",
-          "spacing": 16
+          "spacing": 12
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "Find me on X (@linux_n1)",
-          "action": "https://twitter.com/intent/follow?screen_name=linux_n1",
+          "title": "X @linux_n1",
+          "action": "https://x.com/linux_n1",
           "openExternal": true
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "Send me an email",
-          "action": "mailto:dcsyhi1998@gmail.com?subject=Cylinder%20CarPlay",
+          "title": "Email",
+          "action": "mailto:dcsyhi1998@gmail.com",
           "openExternal": true
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "Buy me a 🍺 via PayPal",
+          "title": "PayPal",
           "action": "https://www.paypal.me/DevDcsyhi",
           "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
         }
       ]
     },
@@ -159,15 +212,120 @@
       "tintColor": "#47B65C",
       "views": [
         {
-          "class": "DepictionSubheaderView",
-          "title": "説明",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "CarPlay ホームのページめくり",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**Cylinder CarPlay** は Cylinder のページめくりエフェクトを **CarPlay ホーム画面**に適用します。iPhone の SpringBoard は変更しないので、元の Cylinder と共存できます。\n\n**設定 → Cylinder CarPlay** でエフェクトを選び、CarPlay を再接続（または **CarPlayを再読み込み**）してください。",
+          "markdown": "<p>Cylinder のページめくりエフェクトを <strong>CarPlay ホーム画面</strong>に適用します。iPhone の SpringBoard は変更しないので、元の Cylinder と共存できます。</p><p>設定 → Cylinder CarPlay でエフェクトを選び、CarPlay を再接続してください。</p>",
           "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "できること",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>CarPlay ホームのページめくり演出</li><li>複数の Lua エフェクトを組み合わせ、またはランダム</li><li>Cylinder と同じスクリプトが使える</li><li>SpringBoard 用 Cylinder と共存</li><li>日本語／英語の設定画面</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "使い方",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>設定 → Cylinder CarPlay をオン</li><li>Cube など、好きなページめくりを選択</li><li>CarPlay を再接続、または再読み込み</li></ol>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "他の CarPlay Tweak",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarScrub",
+          "action": "https://dcsyhi1998.github.io/depiction/CarScrub.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarGlyph",
+          "action": "https://dcsyhi1998.github.io/depiction/CarGlyph.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarCast",
+          "action": "https://chariz.com/buy/carcast",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw Split Native",
+          "action": "https://chariz.com/buy/airaw-native",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw Split Standard",
+          "action": "https://chariz.com/buy/airaw-standard",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
         }
       ]
     },
@@ -177,26 +335,38 @@
       "tintColor": "#47B65C",
       "views": [
         {
-          "class": "DepictionSubheaderView",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "1.0.1",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Themed settings UI (JA / EN)\n- About screen and Reload CarPlay\n- Depiction page",
+          "markdown": "<ul><li>Themed settings UI (JA / EN)</li><li>About screen and Reload CarPlay</li><li>Depiction page</li></ul>",
           "useRawFormat": true
         },
         {
-          "class": "DepictionSubheaderView",
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "1.0.0",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Initial CarPlay port of Cylinder Reborn.",
+          "markdown": "<ul><li>Initial CarPlay port of Cylinder Reborn</li></ul>",
           "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
         }
       ]
     }
