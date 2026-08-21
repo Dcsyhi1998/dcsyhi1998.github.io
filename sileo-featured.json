@@ -10,12 +10,6 @@
          "hideShadow":false
       },
       {
-         "url":"https://dcsyhi1998.github.io/Banners/ZetsuBaner.png",
-         "title":"Zetsu",
-         "package":"jp.dcsyhi.zetsurootless15",
-         "hideShadow":false
-      },
-      {
          "url":"https://dcsyhi1998.github.io/Banners/CarCastBanner.png",
          "title":"CarCast",
          "package":"jp.dcsyhi.carcast",
@@ -31,6 +25,12 @@
          "url":"https://dcsyhi1998.github.io/Banners/StandardBanner.png",
          "title":"Standard",
          "package":"jp.dcsyhi.airaw.splitstandard",
+         "hideShadow":false
+      },
+      {
+         "url":"https://dcsyhi1998.github.io/Banners/ZetsuBaner.png",
+         "title":"Zetsu",
+         "package":"jp.dcsyhi.zetsurootless15",
          "hideShadow":false
       }
    ]
