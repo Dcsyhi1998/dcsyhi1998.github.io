@@ -146,6 +146,44 @@ Icon: https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png
 Name: CarGlyph
 Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CarGlyph.json
 
+Package: jp.dcsyhi.carscrub
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 172
+Depends: ellekit | mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/jp.dcsyhi.carscrub_1.0_iphoneos-arm64.deb
+Size: 13370
+MD5sum: d012c1c848944775d35a4f9464642be2
+SHA1: 13eb8c34703b30a9971781c868131055b9f0ffb5
+SHA256: 71bd97a08953a54a69b546cf98d751a1a434b55033b1d5677023503ba89457a2
+Section: Tweaks
+Description: Makes the CarPlay Now Playing progress bar scrubbable.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/CarScrub.html
+Icon: https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png
+Name: CarScrub
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CarScrub.json
+
+Package: jp.dcsyhi.carscrub
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 172
+Depends: ellekit | mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/jp.dcsyhi.carscrub_1.0_iphoneos-arm.deb
+Size: 13278
+MD5sum: e8fc5b435d7f8bb54f51feb4333d792c
+SHA1: 8605936c043d8b73165ca6246250e149c8e86c3d
+SHA256: ff6164138c7706d8bc2101da4bb0572ee1994ce9c75a060408446caf911ca1ec
+Section: Tweaks
+Description: Makes the CarPlay Now Playing progress bar scrubbable.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/CarScrub.html
+Icon: https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png
+Name: CarScrub
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CarScrub.json
+
 Package: jp.dcsyhi.clockwidget
 Version: 1.0
 Architecture: iphoneos-arm
