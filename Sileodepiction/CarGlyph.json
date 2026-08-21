@@ -65,6 +65,12 @@
         },
         {
           "class": "DepictionTableButtonView",
+          "title": "CarScrub — scrub Now Playing",
+          "action": "https://dcsyhi1998.github.io/depiction/CarScrub.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
           "title": "Airaw — customize CarPlay",
           "action": "https://chariz.com/buy/airaw",
           "openExternal": true
@@ -72,7 +78,19 @@
         {
           "class": "DepictionTableButtonView",
           "title": "CarCast — add apps to CarPlay",
-          "action": "https://chariz.com/buy/CarCast",
+          "action": "https://chariz.com/buy/carcast",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw Split Native",
+          "action": "https://chariz.com/buy/airaw-native",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw Split Standard",
+          "action": "https://chariz.com/buy/airaw-standard",
           "openExternal": true
         },
         {

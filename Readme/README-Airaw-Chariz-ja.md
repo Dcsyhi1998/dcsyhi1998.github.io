@@ -44,6 +44,7 @@ Airaw が本体です。アプリ追加・Split View・見た目は別パッケ�
 - **[Airaw Split Standard](https://chariz.com/buy/airaw-standard)** — **Airaw / CarCast / Hosted Scene** 向け Split View。**iOS 16+。** 有料アドオン。Airaw 1.7.0 以降が必要。
 - **[Cylinder CarPlay](https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html)** — CarPlay ホームのページめくり演出。
 - **[CarGlyph](https://dcsyhi1998.github.io/depiction/CarGlyph.html)** — CarPlay アイコンのテーマ。
+- **[CarScrub](https://dcsyhi1998.github.io/depiction/CarScrub.html)** — CarPlay の再生バーをスクラブ可能に。設定画面なし。
 
 すでに **CarBridge** を使っている場合も Airaw と併用できます。**CarCast と同時には入れないでください。**
 

@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>CarGlyph</title>
-  <link rel="icon" href="https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png">
+  <title>CarScrub</title>
+  <link rel="icon" href="https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png">
   <style>
     :root {
-      --leaf: #4DB86A;
-      --mint: #8FD98A;
-      --forest: #1B5E38;
-      --ink: #07180f;
+      --leaf: #E84A9A;
+      --mint: #FF8EC4;
+      --forest: #6B1F4A;
+      --ink: #14060d;
       --card: rgba(255,255,255,.06);
       --line: rgba(255,255,255,.1);
-      --text: #f4f7f4;
-      --muted: rgba(244,247,244,.68);
+      --text: #f7f2f5;
+      --muted: rgba(247,242,245,.68);
       --radius: 18px;
     }
     * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -22,8 +22,8 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
       background:
-        radial-gradient(1200px 420px at 50% -80px, rgba(77,184,106,.35), transparent 60%),
-        linear-gradient(180deg, #0c2216 0%, var(--ink) 42%, #050c08 100%);
+        radial-gradient(1200px 420px at 50% -80px, rgba(232,74,154,.38), transparent 60%),
+        linear-gradient(180deg, #2a0d1c 0%, var(--ink) 42%, #090308 100%);
       color: var(--text);
       min-height: 100vh;
     }
@@ -40,7 +40,7 @@
       position: relative;
       overflow: hidden;
       border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(77,184,106,.18), rgba(255,255,255,.03));
+      background: linear-gradient(180deg, rgba(232,74,154,.2), rgba(255,255,255,.03));
       border-radius: 28px;
       padding: 28px 20px 22px;
       text-align: center;
@@ -50,7 +50,7 @@
       position: absolute;
       inset: auto -20% -40% -20%;
       height: 140px;
-      background: radial-gradient(circle, rgba(143,217,138,.22), transparent 70%);
+      background: radial-gradient(circle, rgba(255,142,196,.22), transparent 70%);
       pointer-events: none;
     }
     .icon {
@@ -122,7 +122,7 @@
     body.ja .lang [data-set="ja"],
     body.en .lang [data-set="en"] {
       background: var(--leaf);
-      color: #073018;
+      color: #3a071c;
     }
 
     .section { margin-top: 22px; }
@@ -154,14 +154,8 @@
       grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
-    .feature {
-      padding: 14px 14px 16px;
-    }
-    .feature b {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 14px;
-    }
+    .feature { padding: 14px 14px 16px; }
+    .feature b { display: block; margin-bottom: 6px; font-size: 14px; }
     .feature span {
       color: var(--muted);
       font-size: 12.5px;
@@ -191,7 +185,7 @@
       border-radius: 9px;
       display: grid;
       place-items: center;
-      background: rgba(77,184,106,.18);
+      background: rgba(232,74,154,.18);
       color: var(--mint);
       font-size: 13px;
       font-weight: 800;
@@ -199,9 +193,7 @@
     .step p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
     .step b { font-size: 14px; }
 
-    details.faq {
-      padding: 0 16px;
-    }
+    details.faq { padding: 0 16px; }
     details.faq + details.faq { border-top: 1px solid var(--line); }
     summary {
       list-style: none;
@@ -246,17 +238,13 @@
     .now {
       padding: 2px 7px;
       border-radius: 999px;
-      background: rgba(77,184,106,.2);
+      background: rgba(232,74,154,.2);
       color: var(--mint);
       font-size: 10px;
       font-weight: 800;
       letter-spacing: .04em;
     }
-    .chev {
-      color: rgba(255,255,255,.28);
-      font-size: 20px;
-      font-weight: 300;
-    }
+    .chev { color: rgba(255,255,255,.28); font-size: 20px; font-weight: 300; }
     .tweak.current { pointer-events: none; }
 
     .meta-row {
@@ -277,7 +265,7 @@
       border-radius: 14px;
       font-size: 14px;
       font-weight: 700;
-      color: #073018;
+      color: #3a071c;
       background: linear-gradient(180deg, var(--mint), var(--leaf));
     }
     .btn.ghost {
@@ -286,21 +274,64 @@
       border: 1px solid var(--line);
     }
 
-    .preview {
-      overflow: hidden;
-      padding: 0;
+    .preview { overflow: hidden; padding: 18px 16px 0; }
+    .np {
+      background: linear-gradient(180deg, #2a2430, #161018);
+      border-radius: 16px;
+      padding: 18px 16px 16px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
     }
-    .preview a { display: block; }
-    .preview img {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      object-position: center 42%;
+    .np-head {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .np-art {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.55), transparent 42%),
+        linear-gradient(135deg, #ff8ec4, #e84a9a 55%, #8a1f55);
+      box-shadow: 0 8px 16px rgba(0,0,0,.35);
+    }
+    .np-title { font-size: 15px; font-weight: 750; }
+    .np-sub { margin-top: 3px; color: var(--muted); font-size: 12px; }
+    .np-bar {
+      position: relative;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.18);
+      margin: 8px 8px 0;
+    }
+    .np-fill {
+      width: 42%;
+      height: 100%;
+      border-radius: inherit;
+      background: #fff;
+    }
+    .np-thumb {
+      position: absolute;
+      top: 50%;
+      left: 42%;
+      width: 16px;
+      height: 16px;
+      margin: -8px 0 0 -8px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,.4);
+    }
+    .np-times {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
     }
     .preview .caption {
-      padding: 11px 14px 13px;
+      padding: 11px 0 13px;
       color: var(--muted);
       font-size: 12.5px;
       line-height: 1.45;
@@ -322,16 +353,16 @@
         <button type="button" data-set="ja">JA</button>
         <button type="button" data-set="en">EN</button>
       </div>
-      <img class="icon" src="https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png" alt="CarGlyph">
-      <div class="kicker">CarPlay Theme</div>
-      <h1>CarGlyph</h1>
-      <p class="lede" data-i18n="ja">IconBundles テーマを、CarPlay のホームとドックだけに。iPhone のホーム画面はそのままです。</p>
-      <p class="lede" data-i18n="en">IconBundles themes for CarPlay home and dock icons only. SpringBoard stays stock.</p>
+      <img class="icon" src="https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png" alt="CarScrub">
+      <div class="kicker">CarPlay Now Playing</div>
+      <h1>CarScrub</h1>
+      <p class="lede" data-i18n="ja">CarPlay の再生バーを、ドラッグしてシークできるようにします。設定画面はありません。</p>
+      <p class="lede" data-i18n="en">Makes the CarPlay Now Playing bar scrubbable. No settings pane.</p>
       <div class="pills">
-        <span class="pill">iOS 17+</span>
+        <span class="pill">iOS 16+</span>
         <span class="pill">arm64 / arm64e</span>
         <span class="pill">rootless</span>
-        <span class="pill">IconBundles</span>
+        <span class="pill">No prefs</span>
       </div>
     </header>
 
@@ -339,11 +370,23 @@
       <p class="label" data-i18n="ja">プレビュー</p>
       <p class="label" data-i18n="en">Preview</p>
       <figure class="card preview">
-        <a href="../icons/CarGlyph/preview.png">
-          <img src="../icons/CarGlyph/preview.png" alt="CarGlyph on CarPlay">
-        </a>
-        <figcaption class="caption" data-i18n="ja">CarPlay ホームとドックのアイコンを、IconBundles テーマで差し替えた例です。</figcaption>
-        <figcaption class="caption" data-i18n="en">CarPlay home and dock icons themed with an IconBundles pack.</figcaption>
+        <div class="np" aria-hidden="true">
+          <div class="np-head">
+            <div class="np-art"></div>
+            <div>
+              <div class="np-title">Now Playing</div>
+              <div class="np-sub" data-i18n="ja">白いノブを掴んで移動</div>
+              <div class="np-sub" data-i18n="en">Grab the white thumb to seek</div>
+            </div>
+          </div>
+          <div class="np-times"><span>1:23</span><span>−3:32</span></div>
+          <div class="np-bar">
+            <div class="np-fill"></div>
+            <div class="np-thumb"></div>
+          </div>
+        </div>
+        <figcaption class="caption" data-i18n="ja">YouTube など、アプリ側がスクラブを切っている再生バーでもドラッグできます。</figcaption>
+        <figcaption class="caption" data-i18n="en">Works even when an app (YouTube and others) disables native scrubbing.</figcaption>
       </figure>
     </section>
 
@@ -351,14 +394,14 @@
       <p class="label" data-i18n="ja">できること</p>
       <p class="label" data-i18n="en">Features</p>
       <div class="card copy">
-        <p data-i18n="ja"><strong>設定 → CarGlyph</strong> でテーマを選び、CarPlay を再接続するだけ。WinterBoard / Snowboard と同じ IconBundles パックが使えます。</p>
-        <p data-i18n="en">Pick packs in <strong>Settings → CarGlyph</strong>, then reconnect CarPlay. Uses the same IconBundles packs as WinterBoard / Snowboard.</p>
+        <p data-i18n="ja">インストールして CarPlay を再接続するだけ。<strong>設定アプリは使いません。</strong> Now Playing のバーに白いノブが付き、離した位置へシークします。</p>
+        <p data-i18n="en">Install, then reconnect CarPlay. <strong>There is no Settings pane.</strong> A white thumb appears on the Now Playing bar and seeking happens when you release it.</p>
       </div>
       <div class="grid" style="margin-top:10px">
-        <article class="card feature"><div class="dot"></div><b data-i18n="ja">ホーム＆ドック</b><b data-i18n="en">Home & dock</b><span data-i18n="ja">CarPlay のアイコンだけを差し替えます。</span><span data-i18n="en">Only CarPlay glyphs are replaced.</span></article>
-        <article class="card feature"><div class="dot"></div><b data-i18n="ja">複数テーマ</b><b data-i18n="en">Multi packs</b><span data-i18n="ja">上にあるパックほど優先されます。</span><span data-i18n="en">Higher list entries win.</span></article>
-        <article class="card feature"><div class="dot"></div><b data-i18n="ja">純正フォールバック</b><b data-i18n="en">Stock fallback</b><span data-i18n="ja">画像が無いアプリは純正のまま。</span><span data-i18n="en">Missing glyphs stay stock.</span></article>
-        <article class="card feature"><div class="dot"></div><b data-i18n="ja">日英の設定</b><b data-i18n="en">JA / EN prefs</b><span data-i18n="ja">端末の言語に合わせて表示。</span><span data-i18n="en">Follows the device language.</span></article>
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">白いノブ</b><b data-i18n="en">White thumb</b><span data-i18n="ja">再生バーの上に掴める丸を足します。</span><span data-i18n="en">Adds a draggable knob on the progress bar.</span></article>
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">シーク強制</b><b data-i18n="en">Force scrub</b><span data-i18n="ja">アプリがスクラブを拒否していてもドラッグできます。</span><span data-i18n="en">Drag even when the app turns scrubbing off.</span></article>
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">設定なし</b><b data-i18n="en">No prefs</b><span data-i18n="ja">オンオフも項目もありません。入れたら動きます。</span><span data-i18n="en">Nothing to configure. It just works after install.</span></article>
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">CarPlay 専用</b><b data-i18n="en">CarPlay only</b><span data-i18n="ja">車の Now Playing だけが対象です。</span><span data-i18n="en">Only the car Now Playing UI is changed.</span></article>
       </div>
     </section>
 
@@ -366,9 +409,9 @@
       <p class="label" data-i18n="ja">使い方</p>
       <p class="label" data-i18n="en">How to use</p>
       <div class="card steps">
-        <div class="step"><span class="num">1</span><div><b data-i18n="ja">テーマを入れる</b><b data-i18n="en">Install a pack</b><p data-i18n="ja">IconBundles 対応テーマを /Library/Themes へ。</p><p data-i18n="en">Put IconBundles themes in /Library/Themes.</p></div></div>
-        <div class="step"><span class="num">2</span><div><b data-i18n="ja">CarGlyph を有効化</b><b data-i18n="en">Enable CarGlyph</b><p data-i18n="ja">設定からオンにして、テーマを選択。</p><p data-i18n="en">Turn it on in Settings and pick themes.</p></div></div>
-        <div class="step"><span class="num">3</span><div><b data-i18n="ja">CarPlay を再読み込み</b><b data-i18n="en">Reload CarPlay</b><p data-i18n="ja">再接続するか、設定の再読み込みをタップ。</p><p data-i18n="en">Reconnect, or tap Reload CarPlay.</p></div></div>
+        <div class="step"><span class="num">1</span><div><b data-i18n="ja">CarScrub を入れる</b><b data-i18n="en">Install CarScrub</b><p data-i18n="ja">パッケージマネージャからインストールします。</p><p data-i18n="en">Install it from your package manager.</p></div></div>
+        <div class="step"><span class="num">2</span><div><b data-i18n="ja">CarPlay を再接続</b><b data-i18n="en">Reconnect CarPlay</b><p data-i18n="ja">ケーブルまたは無線で一度切り、つなぎ直します。</p><p data-i18n="en">Disconnect and reconnect wired or wireless CarPlay.</p></div></div>
+        <div class="step"><span class="num">3</span><div><b data-i18n="ja">バーをドラッグ</b><b data-i18n="en">Drag the bar</b><p data-i18n="ja">Now Playing を開き、白いノブまたはバーを掴んで離します。</p><p data-i18n="en">Open Now Playing, grab the white thumb or the bar, then release.</p></div></div>
       </div>
     </section>
 
@@ -378,27 +421,35 @@
       <div class="card">
         <details class="faq" open>
           <summary>
-            <span data-i18n="ja">iPhone のホームも変わりますか？</span>
-            <span data-i18n="en">Does this theme SpringBoard?</span>
+            <span data-i18n="ja">設定画面はありますか？</span>
+            <span data-i18n="en">Is there a Settings pane?</span>
           </summary>
-          <p data-i18n="ja">変わりません。CarPlay 専用です。iPhone 側は Snowboard などを使ってください。</p>
-          <p data-i18n="en">No. CarGlyph is CarPlay-only. Use Snowboard (or similar) for the iPhone home screen.</p>
+          <p data-i18n="ja">ありません。インストールした時点で有効です。</p>
+          <p data-i18n="en">No. It is enabled as soon as it is installed.</p>
         </details>
         <details class="faq">
           <summary>
-            <span data-i18n="ja">テーマを選んでも純正のままです</span>
-            <span data-i18n="en">Icons stay stock after selecting a theme</span>
+            <span data-i18n="ja">YouTube でも動きますか？</span>
+            <span data-i18n="en">Does it work with YouTube?</span>
           </summary>
-          <p data-i18n="ja">CarPlay を再接続するか「CarPlayを再読み込み」を試してください。そのアプリ用の IconBundles 画像がパックに含まれているかも確認してください。</p>
-          <p data-i18n="en">Reconnect CarPlay or tap Reload CarPlay. Also check that the pack includes IconBundles images for those apps.</p>
+          <p data-i18n="ja">はい。アプリ側がスクラブを切っていても、バーをドラッグしてシークできます。</p>
+          <p data-i18n="en">Yes. You can still drag the bar even when the app disables native scrubbing.</p>
         </details>
         <details class="faq">
           <summary>
-            <span data-i18n="ja">複数テーマは使えますか？</span>
-            <span data-i18n="en">Can I use several packs?</span>
+            <span data-i18n="ja">Apple Music は？</span>
+            <span data-i18n="en">What about Apple Music?</span>
           </summary>
-          <p data-i18n="ja">はい。一覧の上にあるテーマほど優先されます。</p>
-          <p data-i18n="en">Yes. Packs higher in the list take priority.</p>
+          <p data-i18n="ja">純正でも白いノブが付き、同じ操作でシークできます。</p>
+          <p data-i18n="en">The white thumb is added there too, and seeking works the same way.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">Airaw は必要ですか？</span>
+            <span data-i18n="en">Do I need Airaw?</span>
+          </summary>
+          <p data-i18n="ja">不要です。CarScrub 単体で動きます。</p>
+          <p data-i18n="en">No. CarScrub works on its own.</p>
         </details>
       </div>
     </section>
@@ -408,12 +459,21 @@
       <p class="label" data-i18n="en">More CarPlay tweaks</p>
       <div class="card">
         <a class="tweak current" href="#">
+          <img src="https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png" alt="">
+          <div class="meta">
+            <div class="name">CarScrub <span class="now" data-i18n="ja">このページ</span><span class="now" data-i18n="en">This page</span></div>
+            <div class="desc" data-i18n="ja">Now Playing バーをスクラブ可能に</div>
+            <div class="desc" data-i18n="en">Make the Now Playing bar scrubbable</div>
+          </div>
+        </a>
+        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/CarGlyph.html">
           <img src="https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png" alt="">
           <div class="meta">
-            <div class="name">CarGlyph <span class="now" data-i18n="ja">このページ</span><span class="now" data-i18n="en">This page</span></div>
+            <div class="name">CarGlyph</div>
             <div class="desc" data-i18n="ja">CarPlay アイコンをテーマ化</div>
             <div class="desc" data-i18n="en">Theme CarPlay icons</div>
           </div>
+          <span class="chev">›</span>
         </a>
         <a class="tweak" href="https://chariz.com/buy/airaw">
           <img src="https://dcsyhi1998.github.io/icons/Airaw/Airaw.png" alt="">
@@ -451,15 +511,6 @@
           </div>
           <span class="chev">›</span>
         </a>
-        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/CarScrub.html">
-          <img src="https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png" alt="">
-          <div class="meta">
-            <div class="name">CarScrub</div>
-            <div class="desc" data-i18n="ja">Now Playing バーをスクラブ可能に</div>
-            <div class="desc" data-i18n="en">Make the Now Playing bar scrubbable</div>
-          </div>
-          <span class="chev">›</span>
-        </a>
         <a class="tweak" href="https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html">
           <img src="https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png" alt="">
           <div class="meta">
@@ -476,7 +527,7 @@
       <p class="label" data-i18n="ja">対応</p>
       <p class="label" data-i18n="en">Compatibility</p>
       <div class="meta-row">
-        <div class="card stat"><small>iOS</small><b>17.0+</b></div>
+        <div class="card stat"><small>iOS</small><b>16.0+</b></div>
         <div class="card stat"><small>Jailbreak</small><b>rootless</b></div>
         <div class="card stat"><small>ARCHS</small><b>arm64 / arm64e</b></div>
       </div>
@@ -485,19 +536,19 @@
     <section class="section actions">
       <a class="btn" href="https://www.paypal.me/DevDcsyhi">PayPal</a>
       <a class="btn ghost" href="https://x.com/linux_n1">X @linux_n1</a>
-      <a class="btn ghost" href="mailto:dcsyhi1998@gmail.com?subject=CarGlyph">Email</a>
+      <a class="btn ghost" href="mailto:dcsyhi1998@gmail.com?subject=CarScrub">Email</a>
     </section>
 
     <footer>
-      <span data-i18n="ja">不具合報告には iOS・機種・JB 環境・テーマ名を添えてください。<br>CarGlyph by Dcsyhi</span>
-      <span data-i18n="en">When reporting bugs, include iOS, device, jailbreak, and theme pack name.<br>CarGlyph by Dcsyhi</span>
+      <span data-i18n="ja">不具合報告には iOS・機種・JB 環境・再生中のアプリ名を添えてください。<br>CarScrub by Dcsyhi</span>
+      <span data-i18n="en">When reporting bugs, include iOS, device, jailbreak, and the playing app.<br>CarScrub by Dcsyhi</span>
     </footer>
   </main>
   <script>
     (function () {
       var body = document.body;
       var saved = null;
-      try { saved = localStorage.getItem("carglyph-lang"); } catch (e) {}
+      try { saved = localStorage.getItem("carscrub-lang"); } catch (e) {}
       var lang = saved || ((navigator.language || "").toLowerCase().indexOf("ja") === 0 ? "ja" : "en");
       body.className = lang;
       document.documentElement.lang = lang;
@@ -505,7 +556,7 @@
         btn.addEventListener("click", function () {
           body.className = btn.getAttribute("data-set");
           document.documentElement.lang = body.className;
-          try { localStorage.setItem("carglyph-lang", body.className); } catch (e) {}
+          try { localStorage.setItem("carscrub-lang", body.className); } catch (e) {}
         });
       });
     })();

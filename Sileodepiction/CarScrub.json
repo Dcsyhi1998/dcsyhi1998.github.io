@@ -1,13 +1,13 @@
 {
   "class": "DepictionTabView",
-  "headerImage": "https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png",
+  "headerImage": "https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png",
   "minVersion": "0.3",
-  "tintColor": "#47B65C",
+  "tintColor": "#E84A9A",
   "tabs": [
     {
       "class": "DepictionStackView",
       "tabname": "Details",
-      "tintColor": "#47B65C",
+      "tintColor": "#E84A9A",
       "views": [
         {
           "class": "DepictionSubheaderView",
@@ -17,7 +17,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**Cylinder CarPlay** brings Cylinder page-swipe effects to the **CarPlay home screen**. SpringBoard is not modified, so you can keep original Cylinder on the iPhone.\n\nPick effects in **Settings → Cylinder CarPlay**, then reconnect CarPlay (or tap **Reload CarPlay**).",
+          "markdown": "**CarScrub** makes the **CarPlay Now Playing** progress bar **scrubbable**. There is **no Settings pane** — install it and reconnect CarPlay.\n\nA white thumb appears on the bar. Drag and release to seek, even when an app (YouTube and others) disables native scrubbing.\n\nIf you like CarScrub, donations via [PayPal](https://www.paypal.me/DevDcsyhi) and follows on [X](https://twitter.com/intent/follow?screen_name=linux_n1) are appreciated.",
           "useRawFormat": true
         },
         {
@@ -31,7 +31,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- CarPlay home page-swipe effects\n- Combine multiple Lua effects or randomize\n- Same scripts as Cylinder (`/Library/CylinderCarPlay`)\n- Also reads `/Library/Cylinder` if present\n- Coexists with Cylinder on SpringBoard\n- Japanese and English settings UI",
+          "markdown": "- White thumb on the Now Playing bar\n- Seek by dragging, even when the app turns scrubbing off\n- No preferences pane\n- CarPlay only — the iPhone Music app is unchanged",
           "useRawFormat": true
         },
         {
@@ -42,18 +42,6 @@
           "title": "More CarPlay tweaks",
           "useBoldText": true,
           "useBottomMargin": false
-        },
-        {
-          "class": "DepictionTableButtonView",
-          "title": "CarScrub — scrub Now Playing",
-          "action": "https://dcsyhi1998.github.io/depiction/CarScrub.html",
-          "openExternal": true
-        },
-        {
-          "class": "DepictionTableButtonView",
-          "title": "CarGlyph — theme CarPlay icons",
-          "action": "https://dcsyhi1998.github.io/depiction/CarGlyph.html",
-          "openExternal": true
         },
         {
           "class": "DepictionTableButtonView",
@@ -80,6 +68,18 @@
           "openExternal": true
         },
         {
+          "class": "DepictionTableButtonView",
+          "title": "CarGlyph — theme CarPlay icons",
+          "action": "https://dcsyhi1998.github.io/depiction/CarGlyph.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Cylinder CarPlay",
+          "action": "https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html",
+          "openExternal": true
+        },
+        {
           "class": "DepictionSeparatorView"
         },
         {
@@ -99,28 +99,23 @@
         },
         {
           "class": "DepictionTableTextView",
-          "title": "Based on",
-          "text": "Cylinder (rweichler), Cylinder Reborn (Ryan Nair)"
-        },
-        {
-          "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "1.0.1"
+          "text": "1.0"
         },
         {
           "class": "DepictionTableTextView",
           "title": "Compatibility",
-          "text": "iOS 14.0+"
+          "text": "iOS 16.0+"
         },
         {
           "class": "DepictionTableTextView",
           "title": "Architecture",
-          "text": "arm64, arm64e"
+          "text": "arm64, arm64e / rootless"
         },
         {
           "class": "DepictionTableTextView",
-          "title": "License",
-          "text": "MIT"
+          "title": "Dependency",
+          "text": "ellekit | mobilesubstrate"
         },
         {
           "class": "DepictionSpacerView",
@@ -142,7 +137,7 @@
         {
           "class": "DepictionTableButtonView",
           "title": "Send me an email",
-          "action": "mailto:dcsyhi1998@gmail.com?subject=Cylinder%20CarPlay",
+          "action": "mailto:dcsyhi1998@gmail.com?subject=CarScrub",
           "openExternal": true
         },
         {
@@ -150,13 +145,25 @@
           "title": "Buy me a 🍺 via PayPal",
           "action": "https://www.paypal.me/DevDcsyhi",
           "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 40
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://dcsyhi1998.github.io/CydiaIcon.png",
+          "width": 45,
+          "height": 45,
+          "cornerRadius": 0,
+          "alignment": 1
         }
       ]
     },
     {
       "class": "DepictionStackView",
       "tabname": "日本語",
-      "tintColor": "#47B65C",
+      "tintColor": "#E84A9A",
       "views": [
         {
           "class": "DepictionSubheaderView",
@@ -166,7 +173,21 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**Cylinder CarPlay** は Cylinder のページめくりエフェクトを **CarPlay ホーム画面**に適用します。iPhone の SpringBoard は変更しないので、元の Cylinder と共存できます。\n\n**設定 → Cylinder CarPlay** でエフェクトを選び、CarPlay を再接続（または **CarPlayを再読み込み**）してください。",
+          "markdown": "**CarScrub** は **CarPlay の Now Playing** 再生バーを **ドラッグしてシーク**できるようにします。**設定画面はありません。** 入れて CarPlay を再接続するだけです。\n\nバーに白いノブが付きます。YouTube など、アプリ側がスクラブを切っている場合でもドラッグできます。",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "できること",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 再生バーに白いノブを追加\n- アプリがスクラブを拒否していてもシークできる\n- 設定画面なし\n- CarPlay 専用（iPhone のミュージックアプリは対象外）",
           "useRawFormat": true
         }
       ]
@@ -174,28 +195,17 @@
     {
       "class": "DepictionStackView",
       "tabname": "Changelog",
-      "tintColor": "#47B65C",
+      "tintColor": "#E84A9A",
       "views": [
         {
           "class": "DepictionSubheaderView",
-          "title": "1.0.1",
+          "title": "1.0",
           "useBoldText": true,
           "useBottomMargin": false
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Themed settings UI (JA / EN)\n- About screen and Reload CarPlay\n- Depiction page",
-          "useRawFormat": true
-        },
-        {
-          "class": "DepictionSubheaderView",
-          "title": "1.0.0",
-          "useBoldText": true,
-          "useBottomMargin": false
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "Initial CarPlay port of Cylinder Reborn.",
+          "markdown": "Initial release.\n\n- Scrubbable CarPlay Now Playing bar\n- White thumb\n- No settings pane",
           "useRawFormat": true
         }
       ]
