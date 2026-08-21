@@ -1,6 +1,5 @@
 {
   "class": "DepictionTabView",
-  "headerImage": "https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png",
   "minVersion": "0.3",
   "tintColor": "#E84A9A",
   "tabs": [
@@ -10,48 +9,141 @@
       "tintColor": "#E84A9A",
       "views": [
         {
-          "class": "DepictionSubheaderView",
-          "title": "Description",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Scrub the Now Playing bar",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**CarScrub** makes the **CarPlay Now Playing** progress bar **scrubbable**. There is **no Settings pane** — install it and reconnect CarPlay.\n\nA white thumb appears on the bar. Drag and release to seek, even when an app (YouTube and others) disables native scrubbing.\n\nIf you like CarScrub, donations via [PayPal](https://www.paypal.me/DevDcsyhi) and follows on [X](https://twitter.com/intent/follow?screen_name=linux_n1) are appreciated.",
+          "markdown": "<p>Makes the <strong>CarPlay Now Playing</strong> progress bar draggable. There is <strong>no Settings pane</strong> — install it and reconnect CarPlay.</p><p>A white thumb appears on the bar. Drag and release to seek, even when an app (YouTube and others) disables native scrubbing.</p>",
           "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
         },
         {
           "class": "DepictionSeparatorView"
         },
         {
-          "class": "DepictionSubheaderView",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Features",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- White thumb on the Now Playing bar\n- Seek by dragging, even when the app turns scrubbing off\n- No preferences pane\n- CarPlay only — the iPhone Music app is unchanged",
+          "markdown": "<ul><li>White thumb on the Now Playing bar</li><li>Seek by dragging, even when the app turns scrubbing off</li><li>No preferences pane</li><li>CarPlay only — the iPhone Music app is unchanged</li></ul>",
           "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
         },
         {
           "class": "DepictionSeparatorView"
         },
         {
-          "class": "DepictionSubheaderView",
-          "title": "More CarPlay tweaks",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "How to use",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>Install CarScrub</li><li>Reconnect CarPlay</li><li>Open Now Playing and drag the white thumb</li></ol>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Information",
           "useBoldText": true,
           "useBottomMargin": false
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Dcsyhi"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS",
+          "text": "16.0+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "rootless"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Architecture",
+          "text": "arm64 / arm64e"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Depends",
+          "text": "ElleKit or Substrate"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "More CarPlay tweaks",
+          "useBoldText": true,
+          "useBottomMargin": true
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "Airaw — customize CarPlay",
+          "title": "Airaw",
           "action": "https://chariz.com/buy/airaw",
           "openExternal": true
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "CarCast — add apps to CarPlay",
+          "title": "CarCast",
           "action": "https://chariz.com/buy/carcast",
           "openExternal": true
         },
@@ -69,7 +161,7 @@
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "CarGlyph — theme CarPlay icons",
+          "title": "CarGlyph",
           "action": "https://dcsyhi1998.github.io/depiction/CarGlyph.html",
           "openExternal": true
         },
@@ -80,44 +172,6 @@
           "openExternal": true
         },
         {
-          "class": "DepictionSeparatorView"
-        },
-        {
-          "class": "DepictionHeaderView",
-          "title": "Information",
-          "useBoldText": true,
-          "useBottomMargin": false
-        },
-        {
-          "class": "DepictionSpacerView",
-          "spacing": 8
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "Author",
-          "text": "Dcsyhi (@linux_n1)"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "Version",
-          "text": "1.0"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "Compatibility",
-          "text": "iOS 16.0+"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "Architecture",
-          "text": "arm64, arm64e / rootless"
-        },
-        {
-          "class": "DepictionTableTextView",
-          "title": "Dependency",
-          "text": "ellekit | mobilesubstrate"
-        },
-        {
           "class": "DepictionSpacerView",
           "spacing": 16
         },
@@ -126,37 +180,29 @@
         },
         {
           "class": "DepictionSpacerView",
-          "spacing": 16
+          "spacing": 12
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "Find me on X (@linux_n1)",
-          "action": "https://twitter.com/intent/follow?screen_name=linux_n1",
+          "title": "X @linux_n1",
+          "action": "https://x.com/linux_n1",
           "openExternal": true
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "Send me an email",
+          "title": "Email",
           "action": "mailto:dcsyhi1998@gmail.com?subject=CarScrub",
           "openExternal": true
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "Buy me a 🍺 via PayPal",
+          "title": "PayPal",
           "action": "https://www.paypal.me/DevDcsyhi",
           "openExternal": true
         },
         {
           "class": "DepictionSpacerView",
-          "spacing": 40
-        },
-        {
-          "class": "DepictionImageView",
-          "URL": "https://dcsyhi1998.github.io/CydiaIcon.png",
-          "width": 45,
-          "height": 45,
-          "cornerRadius": 0,
-          "alignment": 1
+          "spacing": 32
         }
       ]
     },
@@ -166,29 +212,120 @@
       "tintColor": "#E84A9A",
       "views": [
         {
-          "class": "DepictionSubheaderView",
-          "title": "説明",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "再生バーをドラッグしてシーク",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**CarScrub** は **CarPlay の Now Playing** 再生バーを **ドラッグしてシーク**できるようにします。**設定画面はありません。** 入れて CarPlay を再接続するだけです。\n\nバーに白いノブが付きます。YouTube など、アプリ側がスクラブを切っている場合でもドラッグできます。",
+          "markdown": "<p><strong>CarPlay の Now Playing</strong> 再生バーをドラッグできるようにします。<strong>設定画面はありません。</strong> 入れて CarPlay を再接続するだけです。</p><p>バーに白いノブが付きます。YouTube など、アプリ側がスクラブを切っている場合でもシークできます。</p>",
           "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
         },
         {
           "class": "DepictionSeparatorView"
         },
         {
-          "class": "DepictionSubheaderView",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "できること",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- 再生バーに白いノブを追加\n- アプリがスクラブを拒否していてもシークできる\n- 設定画面なし\n- CarPlay 専用（iPhone のミュージックアプリは対象外）",
+          "markdown": "<ul><li>再生バーに白いノブを追加</li><li>アプリがスクラブを拒否していてもシークできる</li><li>設定画面なし</li><li>CarPlay 専用（iPhone のミュージックは対象外）</li></ul>",
           "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "使い方",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>CarScrub をインストール</li><li>CarPlay を再接続</li><li>Now Playing を開き、白いノブをドラッグ</li></ol>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "他の CarPlay Tweak",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarCast",
+          "action": "https://chariz.com/buy/carcast",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw Split Native",
+          "action": "https://chariz.com/buy/airaw-native",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw Split Standard",
+          "action": "https://chariz.com/buy/airaw-standard",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarGlyph",
+          "action": "https://dcsyhi1998.github.io/depiction/CarGlyph.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Cylinder CarPlay",
+          "action": "https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
         }
       ]
     },
@@ -198,15 +335,23 @@
       "tintColor": "#E84A9A",
       "views": [
         {
-          "class": "DepictionSubheaderView",
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "1.0",
           "useBoldText": true,
-          "useBottomMargin": false
+          "useBottomMargin": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Initial release.\n\n- Scrubbable CarPlay Now Playing bar\n- White thumb\n- No settings pane",
+          "markdown": "<ul><li>Initial release</li><li>Scrubbable CarPlay Now Playing bar</li><li>White thumb</li><li>No settings pane</li></ul>",
           "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
         }
       ]
     }
