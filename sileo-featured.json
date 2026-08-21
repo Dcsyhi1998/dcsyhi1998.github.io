@@ -16,9 +16,21 @@
          "hideShadow":false
       },
       {
-         "url":"https://dcsyhi1998.github.io/Banners/FastAppLSBanner.png",
-         "title":"FastApp LS",
-         "package":"com.twickd.dcsyhi.fastappls",
+         "url":"https://dcsyhi1998.github.io/Banners/CarCastBanner.png",
+         "title":"CarCast",
+         "package":"jp.dcsyhi.carcast",
+         "hideShadow":false
+      },
+      {
+         "url":"https://dcsyhi1998.github.io/Banners/NativeBanner.png",
+         "title":"Native",
+         "package":"jp.dcsyhi.airaw.splitnative",
+         "hideShadow":false
+      },
+      {
+         "url":"https://dcsyhi1998.github.io/Banners/StandardBanner.png",
+         "title":"Standard",
+         "package":"jp.dcsyhi.airaw.splitstandard",
          "hideShadow":false
       }
    ]
