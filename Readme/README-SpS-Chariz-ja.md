@@ -1,18 +1,8 @@
-# **Airaw Split Standard**
+# Airaw Split Standard
 
-## _非純正 CarPlay アプリ向けスプリットビュー — CarCast / CarBridge_
+CarPlay非対応アプリをAirawのスプリットビューで表示できます。
 
-**Airaw Split Standard** は、**CarCast** または **CarBridge** 経由の **非純正** CarPlay アプリ向け **スプリットビュー** を有効にするアドオンです（Airaw / ホストシーン連携を含む）。
-
-本パッケージをインストールし、**Airaw → スプリットビュー（標準）** を開いて、対象アプリを選んでください。
-
-> **iOS 16.0 以降が必要です。** iOS 14 / iOS 15 では動作しません。購入前に **設定 → 一般 → 情報** で OS バージョンを確認してください。**非対応 OS での購入は返金対象外です。**
-
-> **[Airaw](https://chariz.com/buy/airaw) 1.7.0 以降が必要です。** Airaw の **アドオン** です。設定は **Airaw からのみ** 開けます（設定アプリ一覧に単独項目は出ません）。iOS 15 以前の Airaw では、本機能が使えないため Split View 設定は表示されません。
-
-> **パッケージのインストールがライセンスになります。** アプリ内課金はありません。Chariz で購入・導入すれば利用できます。
-
-> 対象アプリ一覧には **CarCast** または **CarBridge** も必要です。CarCast と CarBridge は **同時に入れないでください**。
+Airaw Split Standardを使用すると、CarCastまたはCarBridgeから追加した対応アプリをスプリットビューで表示できます。
 
 ## デモ画像:
 
@@ -20,122 +10,101 @@
     <img src="https://dcsyhi1998.github.io/icons/SpStandard/preview1.png" alt="preview1" style="height:260px;width:auto;max-width:none;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;">
     <img src="https://dcsyhi1998.github.io/icons/SpStandard/preview2.png" alt="preview2" style="height:260px;width:auto;max-width:none;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;">
 </div>
----
 
-## **💰 開発支援**
+## 動作要件
 
-**Airaw Split Standard** を気に入っていただけたら、[PayPal](https://www.paypal.me/DevDcsyhi) からの寄付を歓迎しています。
+購入前に、以下の内容をご確認ください。
 
-X のフォローもとても励みになります。
+- iOS 16.0以降が必要
+- iOS 14およびiOS 15は非対応
+- [Airaw](https://chariz.com/buy/airaw) 1.7.0以降が必要
+- CarCastまたはCarBridgeが必要
+- Rootless脱獄環境が必要
+- Airaw Split Standardは単体では動作しません
 
-👉 **X:** [@linux_n1](https://x.com/linux_n1)
+対象アプリをAiraw Split Standardに表示するには、CarCastまたはCarBridgeのどちらかをインストールしてください。
 
----
+CarCastとCarBridgeは競合するため、同時にインストールしないでください。
 
-## **📌 機能**
+本製品はAiraw用のアドオンです。設定アプリのトップ画面に、Airaw Split Standardの個別項目は表示されません。
 
-### **📐 標準スプリットビュー**
+設定は「設定 → Airaw → スプリットビュー（Standard）」から開きます。
 
-- **CarCast** または **CarBridge** に登録されたアプリでスプリットを有効化
-- 対象アプリごとにオン／オフ（個別設定ではなく、ここで管理）
-- 設定は Airaw と同じデータファイル（`airawData.plist`）に保存
+## 主な機能
 
-### **🎚️ デフォルト**
+- CarPlay非対応アプリをスプリットビューで表示
+- CarCastまたはCarBridgeから追加したアプリに対応
+- アプリごとにスプリットビューの有効・無効を設定
+- スプリットビューの初期比率を調整
+- アプリごとに選択した比率を記憶
 
-- 初期 Split 比率
-- アプリごとに比率を記憶
+## 使用方法
 
-### **🔗 設定の開き方**
+1. デバイスがiOS 16.0以降であることを確認します。
+2. Airaw 1.7.0以降をインストールします。
+3. CarCastまたはCarBridgeのどちらかをインストールします。
+4. 使用するブリッジ機能から、スプリットビューで使用したいアプリを追加または有効にします。
+5. Airaw Split Standardをインストールします。
+6. 「設定 → Airaw」を開きます。
+7. 「スプリットビュー（Standard）」を選択します。
+8. スプリットビューで使用するアプリを有効にします。
 
-1. 端末が **iOS 16.0 以降** であることを確認
-2. **Airaw**、ブリッジ（**CarCast** または **CarBridge**）、**Airaw Split Standard** をインストール
-3. **設定 → Airaw** を開く
-4. **スプリットビュー（標準）** をタップ
-5. 未インストール時は、Airaw が説明を表示し Chariz を開けます
+一覧にアプリが表示されない場合は、CarCastまたはCarBridgeから対象アプリが追加されていることを確認し、Airaw Split Standardの設定画面を開き直してください。
 
----
+## Airaw Split Nativeとの違い
 
-## **❓ よくある質問**
+Airaw Split Standardは、CarCastまたはCarBridgeから追加したCarPlay非対応アプリをスプリットビューで使用するためのアドオンです。
 
-**Q. Airaw は必要ですか？**
-A. **はい。** `jp.dcsyhi.airaw`（1.7.0 以降）に依存します。Airaw の代替ではありません。
+マップやミュージックなどのCarPlay対応アプリをスプリットビューで使用する場合は、Airaw Split Nativeが必要です。
 
-**Q. iOS 14 や iOS 15 で使えますか？**
-A. **使えません。** Split View（Native / Standard）は **iOS 16 以降専用** の拡張です。パッケージは `firmware (>= 16.0)` に依存します。iOS 15 以前の Airaw には Split View 設定が出ません。**それらの端末向けに購入しないでください。**
+StandardとNativeは別々のアドオンです。使用したいアプリの種類に応じて選択してください。どちらもiOS 16以降が必要です。
 
-**Q. CarCast または CarBridge は必要ですか？**
-A. **どちらか一方が必要です。** 対象アプリ一覧は CarCast の選択アプリ、または CarBridge の bridged アプリから取得します。**両方同時インストールは不可**です。
+## 互換性と制限事項
 
-**Q. 設定画面はどこですか？**
-A. **iOS 16 以降** で **Airaw → スプリットビュー（標準）** です。設定アプリのトップ一覧には **出ません**。
+- 対応OS：iOS 16.0以降
+- 非対応OS：iOS 14、iOS 15
+- 必須パッケージ：Airaw 1.7.0以降
+- 追加要件：CarCastまたはCarBridge
+- 対応環境：Rootless脱獄環境
+- アーキテクチャ：arm64e
+- 設定場所：Airaw → スプリットビュー（Standard）
 
-**Q. Airaw 内で追加課金がありますか？**
-A. **ありません。** Chariz で本パッケージを入れることがライセンスです。
+Airaw Split Standardの動作は、AirawのCarPlay実行機能に依存します。Airawも最新バージョンへ更新してください。
 
-**Q. Airaw Split Native も必要ですか？**
-A. **純正** CarPlay アプリ（Maps、Music など）のスプリットが必要な場合のみです。Native と Standard は別アドオンで、どちらも **iOS 16 以降** が必要です。
+Airaw Split Standardで使用するアプリは、本来CarPlay向けに設計されていません。そのため、アプリによって互換性や動作が異なる場合があります。
 
-**Q. iOS 15 の端末で誤って購入しました。返金できますか？**
-A. **できません。** 非対応 OS での購入は購入者の確認不足であり、**返金ポリシーの対象外**です。購入前に iOS バージョンを確認してください。
+アプリによっては、以下の問題が発生する可能性があります。
 
-**Q. 一覧にアプリが出ません。**
-A. **CarCast**（または CarBridge）でアプリを追加してから、**スプリットビュー（標準）** を開き直してください。端末にアプリがインストールされているかも確認してください。
+- 画面レイアウトが正しく表示されない
+- タッチ操作が通常と異なる
+- アプリがクラッシュする、または起動しない
+- DRMで保護された動画が黒い画面になる
 
-**Q. 設定画面は英語ですか？**
-A. 端末の言語設定に合わせて表示されます。**英語**と**日本語**に対応しています。
+Airaw Split Standardは、DRMの制限を回避するものではありません。
 
----
+## 重要事項
 
-## **📱 互換性**
+購入前に、「設定 → 一般 → 情報」からiOSのバージョンをご確認ください。本製品はiOS 16.0以降専用です。
 
-|                    |                                                                    |
-| ------------------ | ------------------------------------------------------------------ |
-| **最低対応 OS**    | **iOS 16.0**（`firmware (>= 16.0)`）                               |
-| **非対応**         | iOS 14、iOS 15                                                     |
-| **アーキテクチャ** | arm64e（rootless）                                                 |
-| **必須**           | Airaw（>= 1.7.0）、ElleKit/substrate、CarCast **または** CarBridge |
-| **競合**           | CarCast と CarBridge は互いに競合                                  |
+CarCastとCarBridgeを同じデバイスへ同時にインストールしないでください。両方のパッケージは競合するため、アプリが正常に動作しなくなる可能性があります。
 
-### **動作確認環境**
+本製品は非公式のCarPlay拡張機能です。運転中にアプリを操作せず、お住まいの地域の交通法規に従って安全に使用してください。
 
-- rootless ジェイルブレイク（Dopamine など）
-- **Airaw** と **CarCast**（または CarBridge）を併用した CarPlay
-- **iOS 16 以降のみ**
+返金依頼については、[Charizの返金ポリシー](https://docs.chariz.com/policies/refund-policy)に従って対応します。
 
----
+## サポート
 
-## **⚠️ 注意事項**
+問題が発生した場合は、以下の連絡先までお問い合わせください。
 
-- **購入前に必ず iOS バージョンを確認してください。** 本アドオンは **iOS 16.0 以降専用**です。
-- iOS 14 / iOS 15（または記載の互換性を満たさない端末）での購入は **購入者の責任**です。その誤りによる返金は受け付けません。
-- 本ソフトは **非公式** の拡張です。運転中の安全な利用は利用者自身の責任で行ってください。
-- 非純正アプリは CarPlay 上でクラッシュしたり挙動が不安定になることがあります。想定内の動作です。
-- 標準 Split の挙動は Airaw の CarPlay 実行系に依存します。Airaw も最新にしてください。
-- CarCast と CarBridge を同一端末に入れないでください。
+- メール：[dcsyhi1998@gmail.com](mailto:dcsyhi1998@gmail.com)
+- X：[@linux_n1](https://x.com/linux_n1)
 
----
+不具合をご報告いただく際は、以下の情報をお知らせください。
 
-## **💰 返金ポリシー**
-
-- 購入から **24 時間以内** で、正当な理由がある場合に返金を受け付けます。
-- **対象外:** **iOS 15 以前**の端末、または上記 **互換性** を満たさない端末での購入。これは不具合ではなく購入ミスです。
-- 暴言やハラスメントを含む不適切な要求はお断りします。
-- クラッシュや不具合の報告には、再現手順と iOS / 越獄環境を含めてください。
-
----
-
-## **📩 フィードバック・不具合報告**
-
-📧 **メール:** dcsyhi1998@gmail.com
-🐦 **X:** [@linux_n1](https://x.com/linux_n1)
-
-報告の際は、以下があると助かります。
-
-- iOS バージョンと機種
-- ジェイルブレイク環境（rootless / rootful）
-- Airaw のバージョン
-- Airaw Split Standard のバージョン
-- **CarCast** と **CarBridge** のどちらを使っているか
-- 問題のあるアプリの Bundle ID（例: `com.google.ios.youtube`）
-
----
+- iOSのバージョンとデバイスのモデル
+- 使用している脱獄ツールとバージョン
+- Airawのバージョン
+- Airaw Split Standardのバージョン
+- CarCastまたはCarBridgeのどちらを使用しているか
+- 問題が発生するアプリの名前またはBundle ID
+- 問題の発生手順と具体的な症状
