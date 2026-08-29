@@ -25,7 +25,7 @@ CarCastを使用すると、SafariやYouTubeなどの対応するiPhoneアプリ
 
 CarCastで追加したアプリをCarPlay上で起動するには、Airawが必要です。
 
-CarCastはアプリをCarPlayのホーム画面に追加し、Airawは各アプリの起動方法や動作を変更します。
+CarCastはアプリをCarPlayのホーム画面に追加し、Airawは各アプリの起動処理の部分を担当しています。
 
 ## 主な機能
 
