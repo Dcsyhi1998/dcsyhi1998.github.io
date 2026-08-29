@@ -2,7 +2,7 @@
 
 CarPlayのホーム画面に、CarPlay非対応のiPhoneアプリを追加できます。
 
-CarCastを使用すると、SafariやYouTubeなどの対応するiPhoneアプリをCarPlayのホーム画面に追加できます。アプリの追加、削除、並べ替えは「設定 → CarCast」から行えます。
+CarCastを使用すると、SafariやYouTubeなどの対応するiPhoneアプリをCarPlayのホーム画面に追加できます。
 [English description](https://chariz.com/buy/carcast)
 
 ## デモ画像:
@@ -25,7 +25,7 @@ CarCastを使用すると、SafariやYouTubeなどの対応するiPhoneアプリ
 
 CarCastで追加したアプリをCarPlay上で起動するには、Airawが必要です。
 
-CarCastはアプリをCarPlayのホーム画面に追加し、Airawは各アプリの起動方法や動作を管理します。
+CarCastはアプリをCarPlayのホーム画面に追加し、Airawは各アプリの起動方法や動作を変更します。
 
 ## 主な機能
 
@@ -33,7 +33,6 @@ CarCastはアプリをCarPlayのホーム画面に追加し、Airawは各アプ�
 - CarCastで追加したアプリを削除
 - 追加したアプリの並べ替え
 - CarPlay接続中に変更内容を反映
-- CarCastの設定画面からCarPlayを再起動
 
 CarCastが管理するのは、CarCastから追加したアプリのみです。マップ、ミュージック、メッセージなど、CarPlayの標準アプリは変更しません。
 
@@ -45,7 +44,7 @@ CarCastが管理するのは、CarCastから追加したアプリのみです。
 4. CarPlayへ接続するか、CarPlayを再起動します。
 5. CarPlayのホーム画面から追加したアプリを起動します。
 
-アプリの起動方法を変更する場合は、「Airaw → アプリ」から対象のアプリを選択してください。
+※アプリはCarPlayに追加されるが、起動しない場合は追加したアプリを一度CarCastの画面から削除をして、再度追加してください。そのあと、SpringBoardを再起動してください。
 
 ## 互換性と制限事項
 
@@ -58,19 +57,18 @@ CarCastは、本来CarPlay向けに設計されていないアプリをCarPlay�
 - アプリがクラッシュする、または起動しない
 - DRMで保護された動画が黒い画面になる
 
-Netflix、Prime Video、Disney+などのFairPlayで保護された動画は表示できません。CarCastはDRMの制限を回避するものではありません。
+Netflix、Prime Video、Disney+などのFairPlayで保護された動画は表示できません。CarCastはDRMの制限を回避はできません。
 
 YouTubeとSafariは、通常のブラウジングや動画再生に使用できますが、一部の保護されたコンテンツは再生できない場合があります。
 
-追加したアプリがCarPlayに表示されない場合は、CarCastの設定画面からCarPlayを再起動してください。改善しない場合は、CarPlayの再接続またはデバイスのRespringもお試しください。
+追加したアプリがCarPlayに表示されない場合は、CarCastの設定画面からCarPlayを再起動してください。改善しない場合は、CarPlayの再接続またはデバイスの再起動をお試しください。
 
 ## 動作確認環境
 
-- iOS 17のCarPlay環境
-- iOS 18のCarPlay環境
-- iOS 26のCarPlay環境
+- iOS 17のCarPlay環境(Dopamine,NathanLR)
+- iOS 18のCarPlay環境(Dopamine)
+- iOS 26のCarPlay環境(Dopamine)
 - Rootless脱獄環境
-- Airawがインストールされ、有効になっている環境
 
 iOS 18での動作確認には、[@ciaowes93](https://x.com/ciaowes93)さんにご協力いただきました。
 
