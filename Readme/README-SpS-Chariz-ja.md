@@ -52,7 +52,7 @@ Airaw Split Standardは、CarCastまたはCarBridgeから追加したCarPlay非�
 
 マップやミュージックなどのCarPlay対応アプリをスプリットビューで使用する場合は、Airaw Split Nativeが必要です。
 
-StandardとNativeは別々のアドオンです。使用したいアプリの種類に応じて選択してください。どちらもiOS 16以降が必要です。
+StandardとNativeは別々のアドオンです。使用したいアプリの種類に応じて選択してください。
 
 ## 互換性と制限事項
 
@@ -74,8 +74,6 @@ Airaw Split Standardで使用するアプリは、本来CarPlay向けに設計�
 - タッチ操作が通常と異なる
 - アプリがクラッシュする、または起動しない
 - DRMで保護された動画が黒い画面になる
-
-Airaw Split Standardは、DRMの制限を回避するものではありません。
 
 ## 重要事項
 
