@@ -1,8 +1,8 @@
 # Airaw
 
-CarPlayの外観と動作をカスタマイズできます。
+CarPlayのホーム画面やステータスバーなど外見をカスタマイズできるTweakになります。
+iOS14からiOS26までサポートをしています。
 
-Airawは、iOS 14からiOS 26までのCarPlayに、レイアウト、壁紙、ステータスバー、ウィジェット、アプリのフルスクリーン表示などのカスタマイズ機能を追加します。
 [English description](https://chariz.com/buy/airaw)
 
 ## デモ画像:
