@@ -1,8 +1,7 @@
 # Airaw Split Standard
 
-CarPlay非対応アプリをAirawのスプリットビューで表示できます。
-
-Airaw Split Standardを使用すると、CarCastまたはCarBridgeから追加した対応アプリをスプリットビューで表示できます。
+CarPlay非対応アプリをスプリットビューで表示するためのAirawアドオンです。
+Airaw Split Standardを使用すると、CarCastまたはCarBridgeから追加したアプリをスプリットビューで表示できます。
 
 ## デモ画像:
 
@@ -22,9 +21,7 @@ Airaw Split Standardを使用すると、CarCastまたはCarBridgeから追加�
 - Rootless脱獄環境が必要
 - Airaw Split Standardは単体では動作しません
 
-対象アプリをAiraw Split Standardに表示するには、CarCastまたはCarBridgeのどちらかをインストールしてください。
-
-CarCastとCarBridgeは競合するため、同時にインストールしないでください。
+対象アプリをAiraw Split Standardに表示するには、CarCastまたはCarBridgeのどちらかをインストールしてCarPlayにアプリを追加してから設定をしてください。
 
 本製品はAiraw用のアドオンです。設定アプリのトップ画面に、Airaw Split Standardの個別項目は表示されません。
 
@@ -36,18 +33,16 @@ CarCastとCarBridgeは競合するため、同時にインストールしない�
 - CarCastまたはCarBridgeから追加したアプリに対応
 - アプリごとにスプリットビューの有効・無効を設定
 - スプリットビューの初期比率を調整
-- アプリごとに選択した比率を記憶
+- アプリごとに選択した比率を記憶できる設定があります。
 
 ## 使用方法
 
-1. デバイスがiOS 16.0以降であることを確認します。
-2. Airaw 1.7.0以降をインストールします。
-3. CarCastまたはCarBridgeのどちらかをインストールします。
-4. 使用するブリッジ機能から、スプリットビューで使用したいアプリを追加または有効にします。
-5. Airaw Split Standardをインストールします。
-6. 「設定 → Airaw」を開きます。
-7. 「スプリットビュー（Standard）」を選択します。
-8. スプリットビューで使用するアプリを有効にします。
+1. CarCastまたはCarBridgeのどちらかをインストールします。
+2. 使用するブリッジ機能から、スプリットビューで使用したいアプリを追加または有効にします。
+3. Airaw Split Standardをインストールします。
+4. 「設定 → Airaw」を開きます。
+5. 「スプリットビュー（Standard）」を選択します。
+6. スプリットビューで使用するアプリを有効にします。
 
 一覧にアプリが表示されない場合は、CarCastまたはCarBridgeから対象アプリが追加されていることを確認し、Airaw Split Standardの設定画面を開き直してください。
 
@@ -66,7 +61,7 @@ StandardとNativeは別々のアドオンです。使用したいアプリの種
 - 必須パッケージ：Airaw 1.7.0以降
 - 追加要件：CarCastまたはCarBridge
 - 対応環境：Rootless脱獄環境
-- アーキテクチャ：arm64e
+- アーキテクチャ：arm64 arm64e
 - 設定場所：Airaw → スプリットビュー（Standard）
 
 Airaw Split Standardの動作は、AirawのCarPlay実行機能に依存します。Airawも最新バージョンへ更新してください。
