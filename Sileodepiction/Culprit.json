@@ -114,7 +114,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "<p>Colored log presentation was informed by <a href=\"https://github.com/EthanArbuckle/slog\">slog</a> by Ethan Arbuckle. slog has no published license. This is attribution of reference only.</p>",
+          "markdown": "<p>Colored log presentation was informed by <a href=\"https://github.com/EthanArbuckle/slog\">slog</a> by Ethan Arbuckle.</p>",
           "useRawFormat": true
         },
         {
@@ -355,7 +355,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "<p>色付きログの見せ方を <a href=\"https://github.com/EthanArbuckle/slog\">slog</a>（Ethan Arbuckle）のソースを参考にしました。slog に公開ライセンスはありません。これは参考の明記です。</p>",
+          "markdown": "<p>色付きログの見せ方を <a href=\"https://github.com/EthanArbuckle/slog\">slog</a>（Ethan Arbuckle）のソースを参考にしました。</p>",
           "useRawFormat": true
         },
         {
