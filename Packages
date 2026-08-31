@@ -200,6 +200,44 @@ Description: Airaw Widgets:Simple Digital clock widget,Requires Airaw ver 1.5!
 Author: Dcsyhi
 Name: ClockWidget
 
+Package: jp.dcsyhi.culprit
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1164
+Depends: firmware (>=15.0)
+Filename: ./debs/jp.dcsyhi.culprit_1.0.0_iphoneos-arm64.deb
+Size: 702698
+MD5sum: 3bab77d03f728c62ae88e3da22ede68c
+SHA1: a0dfc42a226f6edebb5453fbf23eec2bc2d5a4ef
+SHA256: 0bcb9072b62603a69f8016318b33bb8081518ba75d006f616930a782488fd8d0
+Section: Utilities
+Description: Crash reports grouped by process. Colored presentation informed by slog (Ethan Arbuckle, https://github.com/EthanArbuckle/slog).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/Culprit.html
+Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
+Name: Culprit
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
+
+Package: jp.dcsyhi.culprit
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1164
+Depends: firmware (>=15.0)
+Filename: ./debs/jp.dcsyhi.culprit_1.0.0_iphoneos-arm.deb
+Size: 702626
+MD5sum: baefae579465ea62fec2fbc8d6857496
+SHA1: 3c8b4de6426b70623065c043ad3eb176ea4857c6
+SHA256: b7b49a22373d282531861af74dee926446dab83b53289106aeed814818882a67
+Section: Utilities
+Description: Crash reports grouped by process. Colored presentation informed by slog (Ethan Arbuckle, https://github.com/EthanArbuckle/slog).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/Culprit.html
+Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
+Name: Culprit
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
+
 Package: jp.dcsyhi.cylindercarplay
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -403,23 +441,6 @@ Description: You can arrange apps on the dock of keyboard ⌨️.
 Author: Dcsyhi
 Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
 Name: KBApp
-
-Package: jp.dcsyhi.logs
-Version: 1.0
-Architecture: iphoneos-arm
-Maintainer: Dcsyhi
-Installed-Size: 1000
-Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0)
-Filename: ./debs/jp.dcsyhi.logs_1.0_iphoneos-arm.deb
-Size: 604826
-MD5sum: 62b7ed16c7a2383704c5ed90a974c59f
-SHA1: 0cd90d903e437b77a9b2b62100b6efd27d685f57
-SHA256: e3ee496ec955a2a0e1a2c81129bf1c001c3a5e0b3b9963d8e368cd8ab0e1fc1a
-Section: Development
-Description: This Tweek is to make it easy to view NSLog from your mobile phone.Tweak for debugging on the device.
-Author: Dcsyhi
-Icon: file:///Library/PreferenceBundles/L0gs.bundle/icon.png
-Name: L0gs
 
 Package: jp.dcsyhi.musiccontrol
 Version: 1.0
