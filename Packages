@@ -238,6 +238,44 @@ Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
 Name: Culprit
 Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
 
+Package: jp.dcsyhi.culprit
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 500
+Depends: firmware (>=15.0)
+Filename: ./debs/jp.dcsyhi.culprit_1.0.1_iphoneos-arm64.deb
+Size: 159304
+MD5sum: 177036e1a874be5e20dc781f6844de66
+SHA1: 2e0a371bf825721301837793b8c0eafcc886c3a0
+SHA256: 556c52e72d59f5360f01c637e6d1e5abf7da8e0ab9ba1e9b43bdb3c74ea842ee
+Section: Utilities
+Description: Crash reports grouped by process. Colored presentation informed by slog (Ethan Arbuckle, https://github.com/EthanArbuckle/slog).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/Culprit.html
+Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
+Name: Culprit
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
+
+Package: jp.dcsyhi.culprit
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 500
+Depends: firmware (>=15.0)
+Filename: ./debs/jp.dcsyhi.culprit_1.0.1_iphoneos-arm.deb
+Size: 159240
+MD5sum: b48e6aee210d19260fcac33b1783c1dc
+SHA1: f24734d8e5fda8f4c89b7b97908ef38fd1ee91fd
+SHA256: d3a2f4270cafb7431f5e0d363042868c3fcbb20f8d1ac8d580e64ab4218ea9fe
+Section: Utilities
+Description: Crash reports grouped by process. Colored presentation informed by slog (Ethan Arbuckle, https://github.com/EthanArbuckle/slog).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/Culprit.html
+Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
+Name: Culprit
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
+
 Package: jp.dcsyhi.cylindercarplay
 Version: 1.0.0
 Architecture: iphoneos-arm64
