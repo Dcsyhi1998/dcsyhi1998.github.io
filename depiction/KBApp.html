@@ -17,23 +17,28 @@
   <meta name="twitter:site" content="@linux_n1">
   <style>
     :root {
-      --leaf: #40C8DC;
-      --mint: #7EE4F2;
-      --forest: #0E3A44;
-      --ink: #071116;
-      --card: rgba(255,255,255,.06);
-      --line: rgba(255,255,255,.1);
-      --text: #EAF4F7;
-      --muted: rgba(234,244,247,.68);
+      --cyan: #5EC8FF;
+      --violet: #8B6BFF;
+      --magenta: #E85CFF;
+      --leaf: #8B6BFF;
+      --mint: #C9B6FF;
+      --ink: #07060f;
+      --card: rgba(255,255,255,.055);
+      --line: rgba(180,160,255,.16);
+      --text: #F4F0FF;
+      --muted: rgba(226,220,255,.68);
       --radius: 18px;
+      --neon: linear-gradient(115deg, #5EC8FF, #8B6BFF 52%, #E85CFF);
     }
     * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
     html, body { margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
       background:
-        radial-gradient(1200px 420px at 50% -80px, rgba(64,200,220,.34), transparent 60%),
-        linear-gradient(180deg, #12242a 0%, var(--ink) 42%, #05090c 100%);
+        radial-gradient(720px 320px at 12% -6%, rgba(94,200,255,.28), transparent 58%),
+        radial-gradient(680px 300px at 92% 4%, rgba(232,92,255,.22), transparent 55%),
+        radial-gradient(900px 380px at 50% 100%, rgba(139,107,255,.12), transparent 60%),
+        linear-gradient(180deg, #16122a 0%, var(--ink) 46%, #04030a 100%);
       color: var(--text);
       min-height: 100vh;
     }
@@ -49,30 +54,53 @@
     .hero {
       position: relative;
       overflow: hidden;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(64,200,220,.18), rgba(255,255,255,.03));
+      border: 1px solid transparent;
+      background:
+        linear-gradient(180deg, rgba(22,18,48,.88), rgba(10,8,22,.94)) padding-box,
+        var(--neon) border-box;
       border-radius: 28px;
       padding: 28px 20px 22px;
       text-align: center;
+      box-shadow: 0 18px 50px rgba(88,40,140,.22);
     }
     .hero::after {
       content: "";
       position: absolute;
-      inset: auto -20% -40% -20%;
-      height: 140px;
-      background: radial-gradient(circle, rgba(126,228,242,.22), transparent 70%);
+      inset: auto -20% -42% -20%;
+      height: 150px;
+      background:
+        radial-gradient(circle at 30% 40%, rgba(94,200,255,.2), transparent 55%),
+        radial-gradient(circle at 70% 50%, rgba(232,92,255,.18), transparent 55%);
       pointer-events: none;
     }
     .icon {
       width: 84px;
       height: 84px;
       border-radius: 22px;
-      box-shadow: 0 18px 40px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.12);
+      box-shadow:
+        0 0 0 1px rgba(94,200,255,.28),
+        0 10px 28px rgba(232,92,255,.22),
+        0 0 22px rgba(94,200,255,.2);
       object-fit: cover;
     }
+    .neon-dashes {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin: 12px 0 2px;
+    }
+    .neon-dashes i {
+      width: 3px;
+      height: 10px;
+      border-radius: 99px;
+      display: block;
+    }
+    .neon-dashes i:nth-child(1) { background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
+    .neon-dashes i:nth-child(2) { background: var(--violet); box-shadow: 0 0 10px var(--violet); }
+    .neon-dashes i:nth-child(3) { background: var(--magenta); box-shadow: 0 0 10px var(--magenta); }
     .kicker {
-      margin: 16px 0 6px;
-      color: var(--mint);
+      margin: 10px 0 6px;
+      color: var(--cyan);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: .14em;
@@ -131,14 +159,14 @@
     }
     body.ja .lang [data-set="ja"],
     body.en .lang [data-set="en"] {
-      background: var(--leaf);
-      color: #071116;
+      background: var(--neon);
+      color: #fff;
     }
 
     .section { margin-top: 22px; }
     .label {
       margin: 0 4px 10px;
-      color: var(--mint);
+      color: var(--cyan);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: .12em;
@@ -175,10 +203,12 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--leaf);
-      box-shadow: 0 0 12px var(--leaf);
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan);
       margin-bottom: 10px;
     }
+    .feature:nth-child(3n+2) .dot { background: var(--violet); box-shadow: 0 0 12px var(--violet); }
+    .feature:nth-child(3n) .dot { background: var(--magenta); box-shadow: 0 0 12px var(--magenta); }
 
     .steps { padding: 6px 4px; }
     .step {
@@ -195,8 +225,8 @@
       border-radius: 9px;
       display: grid;
       place-items: center;
-      background: rgba(64,200,220,.18);
-      color: var(--mint);
+      background: rgba(139,107,255,.2);
+      color: var(--cyan);
       font-size: 13px;
       font-weight: 800;
     }
@@ -264,8 +294,8 @@
     .now {
       padding: 2px 7px;
       border-radius: 999px;
-      background: rgba(64,200,220,.2);
-      color: var(--mint);
+      background: rgba(232,92,255,.18);
+      color: var(--magenta);
       font-size: 10px;
       font-weight: 800;
       letter-spacing: .04em;
@@ -291,8 +321,9 @@
       border-radius: 14px;
       font-size: 14px;
       font-weight: 700;
-      color: #071116;
-      background: linear-gradient(180deg, var(--mint), var(--leaf));
+      color: #fff;
+      background: var(--neon);
+      box-shadow: 0 10px 24px rgba(139,107,255,.28);
     }
     .btn.ghost {
       color: var(--text);
@@ -317,6 +348,7 @@
         <button type="button" data-set="en">EN</button>
       </div>
       <img class="icon" src="https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png" alt="KBApp">
+      <div class="neon-dashes" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="kicker">Keyboard dock</div>
       <h1>KBApp</h1>
       <p class="lede" data-i18n="ja">キーボードのドックに、アプリとモジュールを並べます。起動、編集、翻訳、クリップボードまで、入力したまま手が届きます。</p>
