@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>HomerRun — A character that runs on your status bar</title>
+  <meta name="description" content="HomerRun runs an animated character across the iOS status bar and speeds it up with CPU load or network traffic. Long press for CPU, memory, battery, storage and network details.">
+  <meta name="author" content="Dcsyhi">
+  <link rel="canonical" href="https://dcsyhi1998.github.io/depiction/HomerRun.html">
+  <link rel="icon" href="https://dcsyhi1998.github.io/icons/homerorun/icon-large.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HomerRun — A character that runs on your status bar">
+  <meta property="og:description" content="An animated runner on the status bar. It speeds up with CPU load or network traffic. Rootless, iOS 14+.">
+  <meta property="og:url" content="https://dcsyhi1998.github.io/depiction/HomerRun.html">
+  <meta property="og:image" content="https://dcsyhi1998.github.io/Banners/HomerBanner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@linux_n1">
+  <style>
+    :root {
+      --sun: #FCDB00;
+      --amber: #F2A03D;
+      --coral: #E85D6B;
+      --sky: #5EC8FF;
+      --ink: #0d0a04;
+      --card: rgba(255,255,255,.055);
+      --line: rgba(252,219,0,.16);
+      --text: #FFF9E6;
+      --muted: rgba(255,246,214,.68);
+      --radius: 18px;
+      --neon: linear-gradient(115deg, #FCDB00, #F2A03D 52%, #E85D6B);
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+      background:
+        radial-gradient(720px 320px at 12% -6%, rgba(252,219,0,.26), transparent 58%),
+        radial-gradient(680px 300px at 92% 4%, rgba(232,93,107,.2), transparent 55%),
+        radial-gradient(900px 380px at 50% 100%, rgba(242,160,61,.12), transparent 60%),
+        linear-gradient(180deg, #241c05 0%, var(--ink) 46%, #060400 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    body.en [data-i18n="ja"],
+    body.ja [data-i18n="en"] { display: none; }
+
+    .page {
+      max-width: 430px;
+      margin: 0 auto;
+      padding: 22px 16px calc(28px + env(safe-area-inset-bottom));
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid transparent;
+      background:
+        linear-gradient(180deg, rgba(46,34,6,.88), rgba(14,10,2,.94)) padding-box,
+        var(--neon) border-box;
+      border-radius: 28px;
+      padding: 0 0 22px;
+      text-align: center;
+      box-shadow: 0 18px 50px rgba(140,96,10,.24);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -42% -20%;
+      height: 150px;
+      background:
+        radial-gradient(circle at 30% 40%, rgba(252,219,0,.2), transparent 55%),
+        radial-gradient(circle at 70% 50%, rgba(232,93,107,.16), transparent 55%);
+      pointer-events: none;
+    }
+    .banner-wrap { position: relative; }
+    .banner {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 28px 28px 0 0;
+    }
+    .banner-wrap::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 -1px 0;
+      height: 82px;
+      background: linear-gradient(180deg, rgba(46,34,6,0), rgba(46,34,6,.72) 62%, rgba(46,34,6,.94));
+      pointer-events: none;
+    }
+    .hero .inner { position: relative; padding: 0 20px; z-index: 1; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .icon {
+      width: 76px;
+      height: 76px;
+      margin-top: -38px;
+      border-radius: 20px;
+      background: #0d0a04;
+      box-shadow:
+        0 0 0 1px rgba(252,219,0,.3),
+        0 10px 28px rgba(232,93,107,.2),
+        0 0 22px rgba(252,219,0,.2);
+      object-fit: cover;
+    }
+    .neon-dashes {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin: 12px 0 2px;
+    }
+    .neon-dashes i {
+      width: 3px;
+      height: 10px;
+      border-radius: 99px;
+      display: block;
+    }
+    .neon-dashes i:nth-child(1) { background: var(--sun); box-shadow: 0 0 10px var(--sun); }
+    .neon-dashes i:nth-child(2) { background: var(--amber); box-shadow: 0 0 10px var(--amber); }
+    .neon-dashes i:nth-child(3) { background: var(--coral); box-shadow: 0 0 10px var(--coral); }
+    .kicker {
+      margin: 10px 0 6px;
+      color: var(--sun);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .lede {
+      margin: 4px auto 0;
+      max-width: 34em;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.28);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .lang {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: flex;
+      padding: 3px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.6);
+      border: 1px solid rgba(252,219,0,.34);
+      z-index: 2;
+    }
+    .lang button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: rgba(255,246,214,.8);
+      font: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 9px;
+      border-radius: 999px;
+    }
+    body.ja .lang [data-set="ja"],
+    body.en .lang [data-set="en"] {
+      background: var(--neon);
+      color: #201700;
+    }
+
+    .section { margin-top: 22px; }
+    .label {
+      margin: 0 4px 10px;
+      color: var(--sun);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .copy {
+      padding: 16px 16px 4px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .copy strong { color: var(--text); font-weight: 700; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .feature { padding: 14px 14px 16px; }
+    .feature b { display: block; margin-bottom: 6px; font-size: 14px; }
+    .feature span {
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--sun);
+      box-shadow: 0 0 12px var(--sun);
+      margin-bottom: 10px;
+    }
+    .feature:nth-child(3n+2) .dot { background: var(--amber); box-shadow: 0 0 12px var(--amber); }
+    .feature:nth-child(3n) .dot { background: var(--coral); box-shadow: 0 0 12px var(--coral); }
+
+    .modes { display: grid; gap: 10px; }
+    .mode { padding: 15px 15px 16px; }
+    .mode .head {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 15px;
+      font-weight: 750;
+    }
+    .mode .tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      background: rgba(252,219,0,.16);
+      color: var(--sun);
+    }
+    .mode p { margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+
+    .steps { padding: 6px 4px; }
+    .step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 14px;
+    }
+    .step + .step { border-top: 1px solid var(--line); }
+    .num {
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      background: rgba(242,160,61,.2);
+      color: var(--sun);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .step p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .step b { font-size: 14px; }
+
+    .mods {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 14px;
+    }
+    .mods span {
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.22);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12.5px;
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: rgba(0,0,0,.35);
+      color: var(--sun);
+      word-break: break-all;
+    }
+
+    details.faq { padding: 0 16px; }
+    details.faq + details.faq { border-top: 1px solid var(--line); }
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 0;
+      font-size: 14px;
+      font-weight: 650;
+    }
+    summary::-webkit-details-marker { display: none; }
+    details.faq p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .tweak {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      color: inherit;
+      text-decoration: none;
+    }
+    .tweak + .tweak { border-top: 1px solid var(--line); }
+    .tweak img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 18px rgba(0,0,0,.28);
+    }
+    .tweak .meta { flex: 1; min-width: 0; }
+    .tweak .name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 750;
+    }
+    .tweak .desc { margin-top: 2px; color: var(--muted); font-size: 12.5px; }
+    .now {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(232,93,107,.2);
+      color: var(--coral);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .chev { color: rgba(255,255,255,.28); font-size: 20px; font-weight: 300; }
+    .tweak.current { pointer-events: none; }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .stat { padding: 14px; }
+    .stat small { color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .stat b { display: block; margin-top: 4px; font-size: 15px; }
+
+    .actions { display: grid; gap: 8px; }
+    .btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 13px 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #201700;
+      background: var(--neon);
+      box-shadow: 0 10px 24px rgba(242,160,61,.26);
+    }
+    .btn.ghost {
+      color: var(--text);
+      background: transparent;
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    footer {
+      margin-top: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body class="en">
+  <main class="page">
+    <header class="hero">
+      <div class="lang">
+        <button type="button" data-set="ja">JA</button>
+        <button type="button" data-set="en">EN</button>
+      </div>
+      <div class="banner-wrap">
+        <img class="banner" src="https://dcsyhi1998.github.io/Banners/HomerBanner.png" alt="HomerRun">
+      </div>
+      <div class="inner">
+        <h1 class="sr-only">HomerRun</h1>
+        <img class="icon" src="https://dcsyhi1998.github.io/icons/homerorun/icon-large.png" alt="">
+        <div class="neon-dashes" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="kicker" data-i18n="ja">ステータスバーのモニター</div>
+        <div class="kicker" data-i18n="en">Status bar monitor</div>
+        <p class="lede" data-i18n="ja">ステータスバーをキャラクターが走ります。CPU の使用率、または通信量に合わせて走る速さが変わるので、端末の忙しさが目の端で分かります。</p>
+        <p class="lede" data-i18n="en">A character runs across your status bar. It speeds up with CPU load or network traffic, so you can feel how busy the device is out of the corner of your eye.</p>
+        <div class="pills">
+          <span class="pill">iOS 14+</span>
+          <span class="pill">arm64 / arm64e</span>
+          <span class="pill">rootless</span>
+          <span class="pill">v1.1</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">走る速さ</p>
+      <p class="label" data-i18n="en">Run speed</p>
+      <div class="card copy">
+        <p data-i18n="ja">アニメーションは <strong>1 コマずつ</strong> 負荷に応じた間隔で進みます。ゆっくり歩くくらいから全力疾走まで、値の変化がそのまま速さになります。</p>
+        <p data-i18n="en">Frames advance <strong>one at a time</strong> at an interval derived from the current load, so the value maps straight onto how fast the character moves — from a slow walk to a full sprint.</p>
+      </div>
+      <div class="modes" style="margin-top:10px">
+        <article class="card mode">
+          <div class="head">
+            <span data-i18n="ja">CPU</span><span data-i18n="en">CPU</span>
+            <span class="tag" data-i18n="ja">初期値</span><span class="tag" data-i18n="en">DEFAULT</span>
+          </div>
+          <p data-i18n="ja">プロセッサの負荷に追従します。ラベルには使用率が出ます。</p>
+          <p data-i18n="en">Follows the processor load. The label shows the usage percentage.</p>
+        </article>
+        <article class="card mode">
+          <div class="head">
+            <span data-i18n="ja">ネットワーク</span><span data-i18n="en">Network</span>
+          </div>
+          <p data-i18n="ja">通信量が増えるほど速く走ります。ラベルには転送レートが出ます。</p>
+          <p data-i18n="en">Runs faster as traffic increases. The label shows the transfer rate.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">できること</p>
+      <p class="label" data-i18n="en">Features</p>
+      <div class="grid">
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">長押しで端末情報</b>
+          <b data-i18n="en">Long press for details</b>
+          <span data-i18n="ja">CPU、メモリ、バッテリー、ストレージ、ネットワークをまとめて表示。</span>
+          <span data-i18n="en">CPU, memory, battery, storage, and network in one panel.</span>
+        </article>
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">キャラクターを差し替え</b>
+          <b data-i18n="en">Swap the character</b>
+          <span data-i18n="ja">コマ画像を入れたフォルダを置くだけで一覧に並びます。</span>
+          <span data-i18n="en">Drop a folder of frames in and it appears in the list.</span>
+        </article>
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">位置とサイズ</b>
+          <b data-i18n="en">Position and size</b>
+          <span data-i18n="ja">画面左上を基準に、置きたい場所と大きさを決められます。</span>
+          <span data-i18n="en">Place it anywhere, measured from the top left of the screen.</span>
+        </article>
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">ラベル</b>
+          <b data-i18n="en">Label</b>
+          <span data-i18n="ja">表示のオン／オフ、文字サイズ、文字色、フォント名。</span>
+          <span data-i18n="en">Show or hide it, then set size, color, and font name.</span>
+        </article>
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">横画面では隠れる</b>
+          <b data-i18n="en">Hidden in landscape</b>
+          <span data-i18n="ja">横向きのときは自動で消え、アニメーションも止まります。</span>
+          <span data-i18n="en">It disappears in landscape and the animation stops.</span>
+        </article>
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">日本語と英語</b>
+          <b data-i18n="en">English and Japanese</b>
+          <span data-i18n="ja">設定画面も情報パネルも端末の言語に合わせて表示。</span>
+          <span data-i18n="en">Settings and the info panel follow the device language.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">情報パネル</p>
+      <p class="label" data-i18n="en">Info panel</p>
+      <div class="card copy">
+        <p data-i18n="ja">走っているキャラクターを長押しすると、その場にパネルが開きます。</p>
+        <p data-i18n="en">Long press the running character and a panel opens in place.</p>
+      </div>
+      <div class="card mods" style="margin-top:10px">
+        <span data-i18n="ja">CPU 使用率</span><span data-i18n="en">CPU usage</span>
+        <span data-i18n="ja">System / User / Idle</span><span data-i18n="en">System / User / Idle</span>
+        <span data-i18n="ja">メモリ使用率</span><span data-i18n="en">Memory usage</span>
+        <span data-i18n="ja">Active / Wired / 圧縮</span><span data-i18n="en">Active / Wired / Compressed</span>
+        <span data-i18n="ja">バッテリー残量</span><span data-i18n="en">Battery level</span>
+        <span data-i18n="ja">充電状態</span><span data-i18n="en">Power source</span>
+        <span data-i18n="ja">バッテリー健全性</span><span data-i18n="en">Battery health</span>
+        <span data-i18n="ja">充放電回数</span><span data-i18n="en">Cycle count</span>
+        <span data-i18n="ja">バッテリー温度</span><span data-i18n="en">Temperature</span>
+        <span data-i18n="ja">ストレージ使用量</span><span data-i18n="en">Storage used</span>
+        <span data-i18n="ja">空き容量</span><span data-i18n="en">Free space</span>
+        <span data-i18n="ja">Wi-Fi / モバイル通信</span><span data-i18n="en">Wi-Fi / Cellular</span>
+        <span data-i18n="ja">ローカル IP</span><span data-i18n="en">Local IP</span>
+        <span data-i18n="ja">上り / 下り</span><span data-i18n="en">Upload / Download</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">使い方</p>
+      <p class="label" data-i18n="en">How to use</p>
+      <div class="card steps">
+        <div class="step">
+          <span class="num">1</span>
+          <div>
+            <b data-i18n="ja">HomerRun を入れる</b>
+            <b data-i18n="en">Install HomerRun</b>
+            <p data-i18n="ja">このリポジトリからインストールし、リスプリングします。</p>
+            <p data-i18n="en">Install it from this repo, then respring.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <div>
+            <b data-i18n="ja">有効にする</b>
+            <b data-i18n="en">Turn it on</b>
+            <p data-i18n="ja">設定 → HomerRun でスイッチをオンにします。</p>
+            <p data-i18n="en">Open Settings → HomerRun and enable the switch.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <div>
+            <b data-i18n="ja">走る速さを選ぶ</b>
+            <b data-i18n="en">Pick the run speed</b>
+            <p data-i18n="ja">Run speed で CPU かネットワークを選びます。初期値は CPU です。</p>
+            <p data-i18n="en">Choose CPU or Network under Run speed. The default is CPU.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">4</span>
+          <div>
+            <b data-i18n="ja">見た目を整える</b>
+            <b data-i18n="en">Tune the look</b>
+            <p data-i18n="ja">キャラクター、位置、サイズ、ラベルを好みに合わせます。</p>
+            <p data-i18n="en">Set the character, position, size, and label to taste.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">自分の画像を使う</p>
+      <p class="label" data-i18n="en">Use your own frames</p>
+      <div class="card copy">
+        <p data-i18n="ja">下のフォルダに「コマ画像を入れたフォルダ」を作ると、Select image の一覧に出てきます。ファイル名の順に再生されます。</p>
+        <p data-i18n="en">Create a folder of frame images inside the directory below and it shows up in the Select image list. Frames play in filename order.</p>
+        <p><code>/var/jb/Library/PreferenceBundles/Homero.bundle/Gifs</code></p>
+        <p data-i18n="ja">設定画面の <strong>Open images folder</strong> から Filza で直接開けます。追加したあとはリスプリングしてください。</p>
+        <p data-i18n="en">Tap <strong>Open images folder</strong> in settings to jump there in Filza. Respring after adding frames.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label">Changelog</p>
+      <div class="card copy">
+        <p><strong>1.1</strong></p>
+        <p data-i18n="ja">iOS 14 – iOS 26 に対応。走る速さを CPU と通信量から選べるようになり、1 コマごとに負荷を反映する方式へ変更（初期値は CPU）。長押しで CPU・メモリ・バッテリー・ストレージ・ネットワークを見られる情報パネルを追加。日本語と英語に対応。横画面では非表示に。Cephei と libcolorpicker への依存をやめ、色は標準のカラーピッカーで選ぶようになりました。iOS 26 で画像選択画面が開かない問題と、テキストカラーが反応しない問題を修正。</p>
+        <p data-i18n="en">Support iOS 14 – iOS 26. Run speed can now follow CPU load or network traffic, mapped per frame instead of a fixed loop (CPU is the default). Added a long press info panel with CPU, memory, battery, storage, and network. English and Japanese. Hidden in landscape. Dropped the Cephei and libcolorpicker dependencies — colors now use the system color picker. Fixed the image picker not opening and the text color row not responding on iOS 26.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">よくある質問</p>
+      <p class="label" data-i18n="en">FAQ</p>
+      <div class="card">
+        <details class="faq" open>
+          <summary>
+            <span data-i18n="ja">キャラクターが見えません</span>
+            <span data-i18n="en">The character does not appear</span>
+          </summary>
+          <p data-i18n="ja">設定でオンになっているか確認し、リスプリングしてください。横画面では表示されません。位置が画面外になっている場合は Position の値を戻してください。</p>
+          <p data-i18n="en">Confirm it is enabled, then respring. It never shows in landscape. If the position moved off screen, reset the Position values.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">タップが下のアプリに届きません</span>
+            <span data-i18n="en">Taps do not reach the app underneath</span>
+          </summary>
+          <p data-i18n="ja">Device info の「長押しで詳細」がオンのとき、キャラクターが覆っている範囲だけタップを受け取ります。気になる場合はこのスイッチをオフにしてください。</p>
+          <p data-i18n="en">While Device info → Long press for details is on, the small area covered by the character receives taps. Turn that switch off if it gets in the way.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">バッテリー情報が出ません</span>
+            <span data-i18n="en">Battery details are missing</span>
+          </summary>
+          <p data-i18n="ja">健全性や充放電回数は端末から読めないことがあります。読めない項目は行ごと省略されます。</p>
+          <p data-i18n="en">Health and cycle count are not always readable. Any value that cannot be read is left out of the panel.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">バッテリーは減りますか？</span>
+            <span data-i18n="en">Does it drain the battery?</span>
+          </summary>
+          <p data-i18n="ja">横画面や非表示のときはアニメーションとタイマーを止めています。表示中も 1 コマ単位の軽い更新だけです。</p>
+          <p data-i18n="en">The animation and its timer stop while hidden or in landscape. While visible it only does light per-frame updates.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">フォント名はどう調べますか？</span>
+            <span data-i18n="en">How do I find a font name?</span>
+          </summary>
+          <p data-i18n="ja">Label の「Browse font names」で一覧が出ます。名前をタップするとコピーされるので、Font name に貼り付けてください。空欄なら MarkerFelt-Thin になります。</p>
+          <p data-i18n="en">Label → Browse font names lists them. Tap a name to copy it, then paste it into Font name. Leave it empty for MarkerFelt-Thin.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">rootful は？</span>
+            <span data-i18n="en">Is rootful supported?</span>
+          </summary>
+          <p data-i18n="ja">現行は rootless 向けです。arm64 / arm64e、iOS 14 以降。</p>
+          <p data-i18n="en">The current build is rootless. arm64 / arm64e, iOS 14 and later.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">他のパッケージ</p>
+      <p class="label" data-i18n="en">Other packages</p>
+      <div class="card">
+        <a class="tweak current" href="#">
+          <img src="https://dcsyhi1998.github.io/icons/homerorun/icon-large.png" alt="">
+          <div class="meta">
+            <div class="name">HomerRun <span class="now" data-i18n="ja">このページ</span><span class="now" data-i18n="en">This page</span></div>
+            <div class="desc" data-i18n="ja">ステータスバーを走るモニター</div>
+            <div class="desc" data-i18n="en">A runner that monitors your status bar</div>
+          </div>
+        </a>
+        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/KBApp.html">
+          <img src="https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png" alt="">
+          <div class="meta">
+            <div class="name">KBApp</div>
+            <div class="desc" data-i18n="ja">キーボードドックにアプリとモジュール</div>
+            <div class="desc" data-i18n="en">Apps and modules on the keyboard dock</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/zetsu.html">
+          <img src="https://dcsyhi1998.github.io/icons/zetsu/zetsu.png" alt="">
+          <div class="meta">
+            <div class="name">Zetsu</div>
+            <div class="desc" data-i18n="ja">iPhone のマルチタスク</div>
+            <div class="desc" data-i18n="en">Multitasking on iPhone</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/Culprit.html">
+          <img src="https://dcsyhi1998.github.io/icons/Culprit/Culprit.png" alt="">
+          <div class="meta">
+            <div class="name">Culprit</div>
+            <div class="desc" data-i18n="ja">クラッシュ報告をプロセス別に表示</div>
+            <div class="desc" data-i18n="en">Crash reports grouped by process</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://chariz.com/buy/airaw">
+          <img src="https://dcsyhi1998.github.io/icons/Airaw/Airaw.png" alt="">
+          <div class="meta">
+            <div class="name">Airaw</div>
+            <div class="desc" data-i18n="ja">壁紙・レイアウト・ウィジェットで CarPlay を拡張</div>
+            <div class="desc" data-i18n="en">Wallpaper, layout, widgets for CarPlay</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">対応</p>
+      <p class="label" data-i18n="en">Compatibility</p>
+      <div class="meta-row">
+        <div class="card stat"><small>iOS</small><b>14.0+</b></div>
+        <div class="card stat"><small>Jailbreak</small><b>rootless</b></div>
+        <div class="card stat"><small>ARCHS</small><b>arm64 / arm64e</b></div>
+      </div>
+    </section>
+
+    <section class="section actions">
+      <a class="btn" href="https://www.paypal.me/DevDcsyhi">PayPal</a>
+      <a class="btn ghost" href="https://x.com/linux_n1">X @linux_n1</a>
+      <a class="btn ghost" href="mailto:dcsyhi1998@gmail.com?subject=HomerRun">Email</a>
+    </section>
+
+    <footer>
+      <span data-i18n="ja">不具合報告には iOS・機種・JB 環境を添えてください。<br>© Dcsyhi 2021 – 2026 · HomerRun · jp.dcsyhi.homerorun</span>
+      <span data-i18n="en">When reporting bugs, include iOS, device, and jailbreak.<br>© Dcsyhi 2021 – 2026 · HomerRun · jp.dcsyhi.homerorun</span>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      var body = document.body;
+      var saved = null;
+      try { saved = localStorage.getItem("homerorun-lang"); } catch (e) {}
+      var lang = saved || ((navigator.language || "").toLowerCase().indexOf("ja") === 0 ? "ja" : "en");
+      body.className = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll(".lang button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          body.className = btn.getAttribute("data-set");
+          document.documentElement.lang = body.className;
+          try { localStorage.setItem("homerorun-lang", body.className); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

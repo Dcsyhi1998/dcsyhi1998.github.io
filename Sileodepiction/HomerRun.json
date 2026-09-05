@@ -1,0 +1,458 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.3",
+  "tintColor": "#FCDB00",
+  "headerImage": "https://dcsyhi1998.github.io/Banners/HomerBanner.png",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details",
+      "tintColor": "#FCDB00",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "A character that runs on your status bar",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p>A small animated character runs across your status bar and speeds up as the device gets busier. Frames advance <strong>one at a time</strong> at an interval derived from the current load, so the value maps straight onto how fast it moves.</p><p>Turn it on in <strong>Settings → HomerRun</strong>.</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Run speed",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li><strong>CPU</strong> (default) — follows the processor load; the label shows the usage percentage</li><li><strong>Network</strong> — runs faster as traffic increases; the label shows the transfer rate</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Long press for details — CPU, memory, battery, storage, and network in one panel</li><li>Swap the character: drop a folder of frames in and it appears in the list</li><li>Position and size, measured from the top left of the screen</li><li>Label — show or hide it, then set size, color, and font name</li><li>Hidden in landscape; the animation stops while hidden</li><li>English and Japanese, following the device language</li><li>No Cephei and no libcolorpicker — colors use the system color picker</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Info panel",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p>Long press the running character and a panel opens in place.</p><ul><li>CPU usage with System / User / Idle</li><li>Memory usage with Active / Wired / Compressed</li><li>Battery level, power source, health, cycle count, temperature</li><li>Storage used and free space</li><li>Wi-Fi or Cellular, local IP, upload and download</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "How to use",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>Install HomerRun from this repo, then respring</li><li>Open Settings → HomerRun and enable the switch</li><li>Choose CPU or Network under Run speed</li><li>Set the character, position, size, and label to taste</li></ol><p>To use your own frames, create a folder of frame images inside <code>/var/jb/Library/PreferenceBundles/Homero.bundle/Gifs</code> and respring. Frames play in filename order, and <strong>Open images folder</strong> jumps there in Filza.</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Information",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Dcsyhi"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.1"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS",
+          "text": "14.0+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "rootless"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Architecture",
+          "text": "arm64 / arm64e"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Package",
+          "text": "jp.dcsyhi.homerorun"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Other packages",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "KBApp",
+          "action": "https://dcsyhi1998.github.io/depiction/KBApp.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Zetsu",
+          "action": "https://dcsyhi1998.github.io/depiction/zetsu.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Culprit",
+          "action": "https://dcsyhi1998.github.io/depiction/Culprit.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "HTML page",
+          "action": "https://dcsyhi1998.github.io/depiction/HomerRun.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "X @linux_n1",
+          "action": "https://x.com/linux_n1",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Email",
+          "action": "mailto:dcsyhi1998@gmail.com?subject=HomerRun",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "PayPal",
+          "action": "https://www.paypal.me/DevDcsyhi",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "日本語",
+      "tintColor": "#FCDB00",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "ステータスバーをキャラクターが走る",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p>ステータスバーをキャラクターが走り、端末が忙しくなるほど速くなります。アニメーションは <strong>1 コマずつ</strong> 負荷に応じた間隔で進むので、値の変化がそのまま速さになります。</p><p><strong>設定 → HomerRun</strong> で有効にしてください。</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "走る速さ",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li><strong>CPU</strong>（初期値）— プロセッサの負荷に追従。ラベルには使用率が出ます</li><li><strong>ネットワーク</strong> — 通信量が増えるほど速く走ります。ラベルには転送レートが出ます</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "できること",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>長押しで端末情報 — CPU、メモリ、バッテリー、ストレージ、ネットワークをまとめて表示</li><li>キャラクターの差し替え — コマ画像を入れたフォルダを置くだけで一覧に並びます</li><li>位置とサイズ — 画面左上を基準に指定できます</li><li>ラベル — 表示のオン／オフ、文字サイズ、文字色、フォント名</li><li>横画面では非表示。隠れている間はアニメーションも止まります</li><li>日本語と英語に対応（端末の言語に追従）</li><li>Cephei と libcolorpicker に依存しません。色は標準のカラーピッカーで選びます</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "情報パネル",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p>走っているキャラクターを長押しすると、その場にパネルが開きます。</p><ul><li>CPU 使用率（System / User / Idle）</li><li>メモリ使用率（Active / Wired / 圧縮）</li><li>バッテリー残量、充電状態、健全性、充放電回数、温度</li><li>ストレージ使用量と空き容量</li><li>Wi-Fi / モバイル通信、ローカル IP、上り・下り</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "使い方",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>このリポジトリから HomerRun を入れ、リスプリング</li><li>設定 → HomerRun でスイッチをオンにする</li><li>Run speed で CPU かネットワークを選ぶ</li><li>キャラクター、位置、サイズ、ラベルを好みに合わせる</li></ol><p>自分の画像を使うときは <code>/var/jb/Library/PreferenceBundles/Homero.bundle/Gifs</code> の中にコマ画像を入れたフォルダを作り、リスプリングしてください。ファイル名の順に再生されます。<strong>Open images folder</strong> から Filza で直接開けます。</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "よくある質問",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p><strong>キャラクターが見えません</strong><br>設定でオンになっているか確認し、リスプリングしてください。横画面では表示されません。位置が画面外になっている場合は Position の値を戻してください。</p><p><strong>タップが下のアプリに届きません</strong><br>Device info の「長押しで詳細」がオンのとき、キャラクターが覆っている範囲だけタップを受け取ります。気になる場合はこのスイッチをオフにしてください。</p><p><strong>バッテリー情報が出ません</strong><br>健全性や充放電回数は端末から読めないことがあります。読めない項目は行ごと省略されます。</p><p><strong>フォント名はどう調べますか？</strong><br>Label の「Browse font names」で一覧が出ます。名前をタップするとコピーされるので Font name に貼り付けてください。空欄なら MarkerFelt-Thin になります。</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "他のパッケージ",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "KBApp",
+          "action": "https://dcsyhi1998.github.io/depiction/KBApp.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Zetsu",
+          "action": "https://dcsyhi1998.github.io/depiction/zetsu.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Culprit",
+          "action": "https://dcsyhi1998.github.io/depiction/Culprit.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "HTML ページ",
+          "action": "https://dcsyhi1998.github.io/depiction/HomerRun.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "Changelog",
+      "tintColor": "#FCDB00",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.1",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Support iOS 14 – iOS 26</li><li>Run speed can follow CPU load or network traffic, mapped per frame instead of a fixed loop — CPU is the default</li><li>Long press info panel: CPU, memory, battery, storage, and network</li><li>English and Japanese localization</li><li>Hidden in landscape; the animation stops while hidden</li><li>Dropped the Cephei and libcolorpicker dependencies — colors use the system color picker</li><li>Rebuilt settings UI; fixed the image picker not opening and the text color row not responding on iOS 26</li><li>iOS 14 – iOS 26 に対応</li><li>走る速さを CPU と通信量から選択でき、1 コマごとに負荷を反映する方式へ変更（初期値は CPU）</li><li>長押しの情報パネル: CPU、メモリ、バッテリー、ストレージ、ネットワーク</li><li>日本語と英語に対応</li><li>横画面では非表示。隠れている間はアニメーションも停止</li><li>Cephei と libcolorpicker への依存をやめ、色は標準のカラーピッカーへ</li><li>設定画面を作り直し、iOS 26 で画像選択が開かない問題とテキストカラーが反応しない問題を修正</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    }
+  ]
+}
