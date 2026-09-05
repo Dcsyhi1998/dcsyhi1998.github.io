@@ -146,7 +146,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "1.0.1"
+          "text": "1.0.2"
         },
         {
           "class": "DepictionTableTextView",
@@ -410,6 +410,21 @@
       "tabname": "Changelog",
       "tintColor": "#3DDC97",
       "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.0.2",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Fixed crashes on some devices</li><li>一部のデバイスでクラッシュを修正</li></ul>",
+          "useRawFormat": true
+        },
         {
           "class": "DepictionSpacerView",
           "spacing": 12
