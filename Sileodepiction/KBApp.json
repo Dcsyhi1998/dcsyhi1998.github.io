@@ -322,7 +322,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "<ul><li>Support iOS 16 – iOS 26</li><li>Groups — one dock icon; tap to open the apps and modules inside</li><li>Group templates: Editing Group / Translation Group</li><li>Favorite words, translation presets, clipboard history</li><li>iOS 26 settings cell layout</li><li>iOS 16 – iOS 26 に対応</li><li>グループ機能 — ドック上は1アイコン、タップで中のアプリ／モジュールを選択</li><li>テンプレート: 編集グループ / 翻訳グループ</li><li>お気に入り・翻訳プリセット・クリップボード履歴</li><li>iOS 26 の設定セル表示を修正</li></ul>",
+          "markdown": "<ul><li>Support iOS 16 – iOS 26</li><li>Groups — one dock icon; tap to open the apps and modules inside</li><li>Group templates: Editing Group / Translation Group</li><li>Clipboard history — review copied text and insert from the dock</li><li>Favorite words and translation presets</li><li>iOS 26 settings cell layout</li><li>iOS 16 – iOS 26 に対応</li><li>グループ機能 — ドック上は1アイコン、タップで中のアプリ／モジュールを選択</li><li>テンプレート: 編集グループ / 翻訳グループ</li><li>クリップボード履歴 — コピーしたテキストを見返し、ドックから挿入</li><li>お気に入り・翻訳プリセット</li><li>iOS 26 の設定セル表示を修正</li></ul>",
           "useRawFormat": true
         },
         {
