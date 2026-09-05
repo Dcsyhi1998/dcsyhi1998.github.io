@@ -382,6 +382,44 @@ Description: DashApp😎Change the lock screen camera to your favorite app.⚡�
 Author: Dcsyhi
 Name: DashApp (Rootless)
 
+Package: jp.dcsyhi.homerorun
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1324
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.homerorun_1.1_iphoneos-arm64.deb
+Size: 775808
+MD5sum: 6edfe083f3d7c9d8801611f8a6ca589a
+SHA1: e3fa609d34e01b3ae206ffe832d60ab30d230ecd
+SHA256: 768b0cdebfe2a7cd358eb561320955da0fd0f747e3a4cffcf65dee992a74e427
+Section: Tweaks
+Description: A character runs on your status bar and speeds up with CPU load or network traffic 🏃
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/HomerRun.html
+Icon: https://dcsyhi1998.github.io/icons/homerorun/icon-large.png
+Name: HomerRun
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/HomerRun.json
+
+Package: jp.dcsyhi.homerorun
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1324
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.homerorun_1.1_iphoneos-arm.deb
+Size: 775882
+MD5sum: 772271b2618fc2f1d5f67a7633545afe
+SHA1: c069f7cf809a6529acb7be09842292317e318515
+SHA256: ba0dc8d14f2bc510b6c79bc4a425655e508ad220baa7adf23403b10b43b6f283
+Section: Tweaks
+Description: A character runs on your status bar and speeds up with CPU load or network traffic 🏃
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/HomerRun.html
+Icon: https://dcsyhi1998.github.io/icons/homerorun/icon-large.png
+Name: HomerRun
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/HomerRun.json
+
 Package: jp.dcsyhi.kbappdock
 Version: 1.0
 Architecture: iphoneos-arm64
