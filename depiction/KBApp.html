@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KBApp — Keyboard dock for apps and modules</title>
+  <meta name="description" content="KBApp adds a customizable dock to the iOS keyboard. Pin apps, keyboard modules, translation, clipboard history, and favorite words.">
+  <meta name="author" content="Dcsyhi">
+  <link rel="canonical" href="https://dcsyhi1998.github.io/depiction/KBApp.html">
+  <link rel="icon" href="https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KBApp — Keyboard dock for apps and modules">
+  <meta property="og:description" content="Pin apps and keyboard modules to the iOS keyboard dock. Rootless, iOS 14+.">
+  <meta property="og:url" content="https://dcsyhi1998.github.io/depiction/KBApp.html">
+  <meta property="og:image" content="https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@linux_n1">
+  <style>
+    :root {
+      --leaf: #40C8DC;
+      --mint: #7EE4F2;
+      --forest: #0E3A44;
+      --ink: #071116;
+      --card: rgba(255,255,255,.06);
+      --line: rgba(255,255,255,.1);
+      --text: #EAF4F7;
+      --muted: rgba(234,244,247,.68);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+      background:
+        radial-gradient(1200px 420px at 50% -80px, rgba(64,200,220,.34), transparent 60%),
+        linear-gradient(180deg, #12242a 0%, var(--ink) 42%, #05090c 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    body.en [data-i18n="ja"],
+    body.ja [data-i18n="en"] { display: none; }
+
+    .page {
+      max-width: 430px;
+      margin: 0 auto;
+      padding: 22px 16px calc(28px + env(safe-area-inset-bottom));
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(64,200,220,.18), rgba(255,255,255,.03));
+      border-radius: 28px;
+      padding: 28px 20px 22px;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -40% -20%;
+      height: 140px;
+      background: radial-gradient(circle, rgba(126,228,242,.22), transparent 70%);
+      pointer-events: none;
+    }
+    .icon {
+      width: 84px;
+      height: 84px;
+      border-radius: 22px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.12);
+      object-fit: cover;
+    }
+    .kicker {
+      margin: 16px 0 6px;
+      color: var(--mint);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: -.04em;
+      font-weight: 800;
+    }
+    .lede {
+      margin: 10px auto 0;
+      max-width: 34em;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.22);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .lang {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: flex;
+      padding: 3px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.28);
+      border: 1px solid var(--line);
+      z-index: 1;
+    }
+    .lang button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 9px;
+      border-radius: 999px;
+    }
+    body.ja .lang [data-set="ja"],
+    body.en .lang [data-set="en"] {
+      background: var(--leaf);
+      color: #071116;
+    }
+
+    .section { margin-top: 22px; }
+    .label {
+      margin: 0 4px 10px;
+      color: var(--mint);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .copy {
+      padding: 16px 16px 4px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .copy strong { color: var(--text); font-weight: 700; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .feature { padding: 14px 14px 16px; }
+    .feature b { display: block; margin-bottom: 6px; font-size: 14px; }
+    .feature span {
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--leaf);
+      box-shadow: 0 0 12px var(--leaf);
+      margin-bottom: 10px;
+    }
+
+    .steps { padding: 6px 4px; }
+    .step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 14px;
+    }
+    .step + .step { border-top: 1px solid var(--line); }
+    .num {
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      background: rgba(64,200,220,.18);
+      color: var(--mint);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .step p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .step b { font-size: 14px; }
+
+    .mods {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 14px;
+    }
+    .mods span {
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    details.faq { padding: 0 16px; }
+    details.faq + details.faq { border-top: 1px solid var(--line); }
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 0;
+      font-size: 14px;
+      font-weight: 650;
+    }
+    summary::-webkit-details-marker { display: none; }
+    details.faq p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .tweak {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      color: inherit;
+      text-decoration: none;
+    }
+    .tweak + .tweak { border-top: 1px solid var(--line); }
+    .tweak img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 18px rgba(0,0,0,.28);
+    }
+    .tweak .meta { flex: 1; min-width: 0; }
+    .tweak .name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 750;
+    }
+    .tweak .desc { margin-top: 2px; color: var(--muted); font-size: 12.5px; }
+    .now {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(64,200,220,.2);
+      color: var(--mint);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .chev { color: rgba(255,255,255,.28); font-size: 20px; font-weight: 300; }
+    .tweak.current { pointer-events: none; }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .stat { padding: 14px; }
+    .stat small { color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .stat b { display: block; margin-top: 4px; font-size: 15px; }
+
+    .actions { display: grid; gap: 8px; }
+    .btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 13px 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #071116;
+      background: linear-gradient(180deg, var(--mint), var(--leaf));
+    }
+    .btn.ghost {
+      color: var(--text);
+      background: transparent;
+      border: 1px solid var(--line);
+    }
+
+    footer {
+      margin-top: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body class="en">
+  <main class="page">
+    <header class="hero">
+      <div class="lang">
+        <button type="button" data-set="ja">JA</button>
+        <button type="button" data-set="en">EN</button>
+      </div>
+      <img class="icon" src="https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png" alt="KBApp">
+      <div class="kicker">Keyboard dock</div>
+      <h1>KBApp</h1>
+      <p class="lede" data-i18n="ja">キーボードのドックに、アプリとモジュールを並べます。起動、編集、翻訳、クリップボードまで、入力したまま手が届きます。</p>
+      <p class="lede" data-i18n="en">A dock on the iOS keyboard for apps and modules. Launch, edit, translate, and paste without leaving the keyboard.</p>
+      <div class="pills">
+        <span class="pill">iOS 14+</span>
+        <span class="pill">arm64 / arm64e</span>
+        <span class="pill">rootless</span>
+        <span class="pill">v1.7</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">できること</p>
+      <p class="label" data-i18n="en">Features</p>
+      <div class="card copy">
+        <p data-i18n="ja"><strong>設定 → KBApp</strong> で有効にすると、キーボード下部にドックが現れます。アプリ起動、編集モジュール、グループ、翻訳プリセットを自由に並べ替えられます。</p>
+        <p data-i18n="en">Turn it on in <strong>Settings → KBApp</strong>. A dock appears at the bottom of the keyboard. Pin apps, editor modules, groups, and translation presets, then reorder them.</p>
+      </div>
+      <div class="grid" style="margin-top:10px">
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">アプリ起動</b>
+          <b data-i18n="en">Launch apps</b>
+          <span data-i18n="ja">よく使うアプリをドックからすぐ開けます。</span>
+          <span data-i18n="en">Open frequent apps straight from the dock.</span>
+        </article>
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">編集モジュール</b>
+          <b data-i18n="en">Editor modules</b>
+          <span data-i18n="ja">コピー、カット、ペースト、選択、Undo / Redo、カーソル移動。</span>
+          <span data-i18n="en">Copy, cut, paste, select, undo / redo, and cursor moves.</span>
+        </article>
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">翻訳</b>
+          <b data-i18n="en">Translate</b>
+          <span data-i18n="ja">選択範囲または全文を翻訳。プリセットを追加できます。</span>
+          <span data-i18n="en">Translate the selection or the whole field. Add presets.</span>
+        </article>
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">定型文</b>
+          <b data-i18n="en">Favorites</b>
+          <span data-i18n="ja">よく使う単語を保存して、ワンタップで挿入。</span>
+          <span data-i18n="en">Save frequent words and insert them in one tap.</span>
+        </article>
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">クリップボード</b>
+          <b data-i18n="en">Clipboard</b>
+          <span data-i18n="ja">履歴を見返し、不要な項目を削除できます。</span>
+          <span data-i18n="en">Review copied text and swipe to delete items.</span>
+        </article>
+        <article class="card feature">
+          <div class="dot"></div>
+          <b data-i18n="ja">レイアウト</b>
+          <b data-i18n="en">Layout</b>
+          <span data-i18n="ja">間隔、アイコンサイズ、下端からの距離を調整。</span>
+          <span data-i18n="en">Spacing, icon size, and distance from the bottom.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">モジュール</p>
+      <p class="label" data-i18n="en">Modules</p>
+      <div class="card mods">
+        <span data-i18n="ja">コピー</span><span data-i18n="en">Copy</span>
+        <span data-i18n="ja">カット</span><span data-i18n="en">Cut</span>
+        <span data-i18n="ja">ペースト</span><span data-i18n="en">Paste</span>
+        <span data-i18n="ja">全選択</span><span data-i18n="en">Select all</span>
+        <span data-i18n="ja">Undo / Redo</span><span data-i18n="en">Undo / Redo</span>
+        <span data-i18n="ja">カーソル移動</span><span data-i18n="en">Move cursor</span>
+        <span data-i18n="ja">削除</span><span data-i18n="en">Delete</span>
+        <span data-i18n="ja">キーボードを閉じる</span><span data-i18n="en">Dismiss keyboard</span>
+        <span data-i18n="ja">翻訳</span><span data-i18n="en">Translate</span>
+        <span data-i18n="ja">お気に入り</span><span data-i18n="en">Favorite words</span>
+        <span data-i18n="ja">クリップボード履歴</span><span data-i18n="en">Clipboard history</span>
+        <span data-i18n="ja">グループ / カスタム</span><span data-i18n="en">Groups / custom</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">使い方</p>
+      <p class="label" data-i18n="en">How to use</p>
+      <div class="card steps">
+        <div class="step">
+          <span class="num">1</span>
+          <div>
+            <b data-i18n="ja">KBApp を入れる</b>
+            <b data-i18n="en">Install KBApp</b>
+            <p data-i18n="ja">このリポジトリからインストールし、リスプリングします。</p>
+            <p data-i18n="en">Install it from this repo, then respring.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <div>
+            <b data-i18n="ja">有効にする</b>
+            <b data-i18n="en">Turn it on</b>
+            <p data-i18n="ja">設定 → KBApp でスイッチをオンにします。</p>
+            <p data-i18n="en">Open Settings → KBApp and enable the switch.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <div>
+            <b data-i18n="ja">ドックを組む</b>
+            <b data-i18n="en">Build the dock</b>
+            <p data-i18n="ja">Dock → アプリまたはモジュールから追加・並べ替えします。</p>
+            <p data-i18n="en">Add and reorder items in Dock → Apps or Modules.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">よくある質問</p>
+      <p class="label" data-i18n="en">FAQ</p>
+      <div class="card">
+        <details class="faq" open>
+          <summary>
+            <span data-i18n="ja">ドックが見えません</span>
+            <span data-i18n="en">The dock does not appear</span>
+          </summary>
+          <p data-i18n="ja">設定で有効になっているか確認し、キーボードを出し直してください。位置がずれているときは Layout の「下端からの距離」を調整するか、Debug でドックの範囲を確認できます。</p>
+          <p data-i18n="en">Confirm it is enabled, then dismiss and show the keyboard again. If the position is off, use Layout → Distance from bottom, or Debug to see the dock bounds.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">モジュールの色は変えられますか？</span>
+            <span data-i18n="en">Can I change module colors?</span>
+          </summary>
+          <p data-i18n="ja">Dock の Appearance で、カスタムカラー / システムカラー / 画像の色を保持、を選べます。</p>
+          <p data-i18n="en">Yes. Dock → Appearance: custom color, system color, or keep the image color.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">設定を初期化できますか？</span>
+            <span data-i18n="en">Can I reset settings?</span>
+          </summary>
+          <p data-i18n="ja">設定画面右上のハートメニューから Reset Settings を選ぶと、設定を消してリスプリングします。</p>
+          <p data-i18n="en">Yes. The heart menu at the top right has Reset Settings. It clears prefs and resprings.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">rootful は？</span>
+            <span data-i18n="en">Is rootful supported?</span>
+          </summary>
+          <p data-i18n="ja">現行は rootless 向けです。arm64 / arm64e、iOS 14 以降。</p>
+          <p data-i18n="en">The current build is rootless. arm64 / arm64e, iOS 14 and later.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">他のパッケージ</p>
+      <p class="label" data-i18n="en">Other packages</p>
+      <div class="card">
+        <a class="tweak current" href="#">
+          <img src="https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png" alt="">
+          <div class="meta">
+            <div class="name">KBApp <span class="now" data-i18n="ja">このページ</span><span class="now" data-i18n="en">This page</span></div>
+            <div class="desc" data-i18n="ja">キーボードドックにアプリとモジュール</div>
+            <div class="desc" data-i18n="en">Apps and modules on the keyboard dock</div>
+          </div>
+        </a>
+        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/zetsu.html">
+          <img src="https://dcsyhi1998.github.io/icons/zetsu/zetsu.png" alt="">
+          <div class="meta">
+            <div class="name">Zetsu</div>
+            <div class="desc" data-i18n="ja">iPhone のマルチタスク</div>
+            <div class="desc" data-i18n="en">Multitasking on iPhone</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/Culprit.html">
+          <img src="https://dcsyhi1998.github.io/icons/Culprit/Culprit.png" alt="">
+          <div class="meta">
+            <div class="name">Culprit</div>
+            <div class="desc" data-i18n="ja">クラッシュ報告をプロセス別に表示</div>
+            <div class="desc" data-i18n="en">Crash reports grouped by process</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://chariz.com/buy/airaw">
+          <img src="https://dcsyhi1998.github.io/icons/Airaw/Airaw.png" alt="">
+          <div class="meta">
+            <div class="name">Airaw</div>
+            <div class="desc" data-i18n="ja">壁紙・レイアウト・ウィジェットで CarPlay を拡張</div>
+            <div class="desc" data-i18n="en">Wallpaper, layout, widgets for CarPlay</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">対応</p>
+      <p class="label" data-i18n="en">Compatibility</p>
+      <div class="meta-row">
+        <div class="card stat"><small>iOS</small><b>14.0+</b></div>
+        <div class="card stat"><small>Jailbreak</small><b>rootless</b></div>
+        <div class="card stat"><small>ARCHS</small><b>arm64 / arm64e</b></div>
+      </div>
+    </section>
+
+    <section class="section actions">
+      <a class="btn" href="https://www.paypal.me/DevDcsyhi">PayPal</a>
+      <a class="btn ghost" href="https://x.com/linux_n1">X @linux_n1</a>
+      <a class="btn ghost" href="mailto:dcsyhi1998@gmail.com?subject=KBApp">Email</a>
+    </section>
+
+    <footer>
+      <span data-i18n="ja">不具合報告には iOS・機種・JB 環境を添えてください。<br>© Dcsyhi 2021 – 2026 · KBApp · jp.dcsyhi.kbappdock</span>
+      <span data-i18n="en">When reporting bugs, include iOS, device, and jailbreak.<br>© Dcsyhi 2021 – 2026 · KBApp · jp.dcsyhi.kbappdock</span>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      var body = document.body;
+      var saved = null;
+      try { saved = localStorage.getItem("kbapp-lang"); } catch (e) {}
+      var lang = saved || ((navigator.language || "").toLowerCase().indexOf("ja") === 0 ? "ja" : "en");
+      body.className = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll(".lang button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          body.className = btn.getAttribute("data-set");
+          document.documentElement.lang = body.className;
+          try { localStorage.setItem("kbapp-lang", body.className); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
