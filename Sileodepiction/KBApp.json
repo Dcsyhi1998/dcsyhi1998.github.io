@@ -1,0 +1,335 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.3",
+  "tintColor": "#8B6BFF",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details",
+      "tintColor": "#8B6BFF",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Keyboard dock for apps and modules",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p>A dock on the iOS keyboard. Pin <strong>apps</strong>, <strong>editor modules</strong>, groups, and translation presets, then launch or edit without leaving the keyboard.</p><p>Turn it on in <strong>Settings → KBApp</strong>.</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Launch apps from the keyboard dock</li><li>Copy, cut, paste, select all, undo / redo</li><li>Cursor moves, delete, dismiss keyboard</li><li>Translate the selection or the whole field</li><li>Favorite words — insert in one tap</li><li>Clipboard history</li><li>Groups and custom buttons</li><li>Spacing, icon size, and distance from the bottom</li><li>Custom / system / keep-image module colors</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "How to use",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>Install KBApp from this repo, then respring</li><li>Open Settings → KBApp and enable it</li><li>Add and reorder items in Dock → Apps or Modules</li></ol>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Information",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Dcsyhi"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.7"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS",
+          "text": "14.0+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "rootless"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Architecture",
+          "text": "arm64 / arm64e"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Package",
+          "text": "jp.dcsyhi.kbappdock"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Other packages",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Zetsu",
+          "action": "https://dcsyhi1998.github.io/depiction/zetsu.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Culprit",
+          "action": "https://dcsyhi1998.github.io/depiction/Culprit.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "HTML page",
+          "action": "https://dcsyhi1998.github.io/depiction/KBApp.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "X @linux_n1",
+          "action": "https://x.com/linux_n1",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Email",
+          "action": "mailto:dcsyhi1998@gmail.com?subject=KBApp",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "PayPal",
+          "action": "https://www.paypal.me/DevDcsyhi",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "日本語",
+      "tintColor": "#8B6BFF",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "キーボードドックにアプリとモジュール",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p>キーボード下部にドックを出します。<strong>アプリ</strong>、<strong>編集モジュール</strong>、グループ、翻訳プリセットを並べて、入力したまま起動や編集ができます。</p><p><strong>設定 → KBApp</strong> で有効にしてください。</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "できること",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>ドックからアプリを起動</li><li>コピー、カット、ペースト、全選択、Undo / Redo</li><li>カーソル移動、削除、キーボードを閉じる</li><li>選択範囲または全文を翻訳</li><li>お気に入り単語をワンタップ挿入</li><li>クリップボード履歴</li><li>グループとカスタムボタン</li><li>間隔、アイコンサイズ、下端からの距離</li><li>モジュール色（カスタム / システム / 画像の色を保持）</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "使い方",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>このリポジトリから KBApp を入れ、リスプリング</li><li>設定 → KBApp で有効化</li><li>Dock → アプリまたはモジュールで追加・並べ替え</li></ol>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "他のパッケージ",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Zetsu",
+          "action": "https://dcsyhi1998.github.io/depiction/zetsu.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Culprit",
+          "action": "https://dcsyhi1998.github.io/depiction/Culprit.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "HTML ページ",
+          "action": "https://dcsyhi1998.github.io/depiction/KBApp.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "Changelog",
+      "tintColor": "#8B6BFF",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.7",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Favorite words, translation presets, clipboard history</li><li>Reset Settings from the heart menu</li><li>iOS 26 settings cell layout</li><li>お気に入り・翻訳プリセット・クリップボード履歴</li><li>ハートメニューから設定リセット</li><li>iOS 26 の設定セル表示を修正</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    }
+  ]
+}
