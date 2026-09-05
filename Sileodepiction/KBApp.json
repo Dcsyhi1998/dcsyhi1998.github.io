@@ -42,7 +42,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "<ul><li>Launch apps from the keyboard dock</li><li>Copy, cut, paste, select all, undo / redo</li><li>Cursor moves, delete, dismiss keyboard</li><li>Translate the selection or the whole field</li><li>Favorite words — insert in one tap</li><li>Clipboard history</li><li>Groups and custom buttons</li><li>Spacing, icon size, and distance from the bottom</li><li>Custom / system / keep-image module colors</li></ul>",
+          "markdown": "<ul><li>Launch apps from the keyboard dock</li><li>Groups — one dock icon; tap to open apps and modules inside</li><li>Group templates: Editing Group / Translation Group</li><li>Copy, cut, paste, select all, undo / redo</li><li>Cursor moves, delete, dismiss keyboard</li><li>Translate the selection or the whole field</li><li>Favorite words — insert in one tap</li><li>Clipboard history</li><li>Spacing, icon size, and distance from the bottom</li><li>Custom / system / keep-image module colors</li></ul>",
           "useRawFormat": true
         },
         {
@@ -233,7 +233,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "<ul><li>ドックからアプリを起動</li><li>コピー、カット、ペースト、全選択、Undo / Redo</li><li>カーソル移動、削除、キーボードを閉じる</li><li>選択範囲または全文を翻訳</li><li>お気に入り単語をワンタップ挿入</li><li>クリップボード履歴</li><li>グループとカスタムボタン</li><li>間隔、アイコンサイズ、下端からの距離</li><li>モジュール色（カスタム / システム / 画像の色を保持）</li></ul>",
+          "markdown": "<ul><li>ドックからアプリを起動</li><li>グループ — ドック上は1アイコン、タップで中のアプリ／モジュールを選択</li><li>テンプレート: 編集グループ / 翻訳グループ</li><li>コピー、カット、ペースト、全選択、Undo / Redo</li><li>カーソル移動、削除、キーボードを閉じる</li><li>選択範囲または全文を翻訳</li><li>お気に入り単語をワンタップ挿入</li><li>クリップボード履歴</li><li>間隔、アイコンサイズ、下端からの距離</li><li>モジュール色（カスタム / システム / 画像の色を保持）</li></ul>",
           "useRawFormat": true
         },
         {
@@ -322,7 +322,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "<ul><li>Favorite words, translation presets, clipboard history</li><li>Reset Settings from the heart menu</li><li>iOS 26 settings cell layout</li><li>お気に入り・翻訳プリセット・クリップボード履歴</li><li>ハートメニューから設定リセット</li><li>iOS 26 の設定セル表示を修正</li></ul>",
+          "markdown": "<ul><li>Support iOS 16 – iOS 26</li><li>Groups — one dock icon; tap to open the apps and modules inside</li><li>Group templates: Editing Group / Translation Group</li><li>Favorite words, translation presets, clipboard history</li><li>iOS 26 settings cell layout</li><li>iOS 16 – iOS 26 に対応</li><li>グループ機能 — ドック上は1アイコン、タップで中のアプリ／モジュールを選択</li><li>テンプレート: 編集グループ / 翻訳グループ</li><li>お気に入り・翻訳プリセット・クリップボード履歴</li><li>iOS 26 の設定セル表示を修正</li></ul>",
           "useRawFormat": true
         },
         {
