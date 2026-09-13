@@ -1,0 +1,37 @@
+{
+   "class":"FeaturedBannersView",
+   "itemSize":"{296, 148}",
+   "itemCornerRadius":10,
+   "banners":[
+      {
+         "url":"https://dcsyhi1998.github.io/Banners/AirawBanner.png",
+         "title":"Airaw",
+         "package":"jp.dcsyhi.airaw",
+         "hideShadow":false
+      },
+      {
+         "url":"https://dcsyhi1998.github.io/Banners/CarCastBanner.png",
+         "title":"CarCast",
+         "package":"jp.dcsyhi.carcast",
+         "hideShadow":false
+      },
+      {
+         "url":"https://dcsyhi1998.github.io/Banners/NativeBanner.png",
+         "title":"Native",
+         "package":"jp.dcsyhi.airaw.splitnative",
+         "hideShadow":false
+      },
+      {
+         "url":"https://dcsyhi1998.github.io/Banners/StandardBanner.png",
+         "title":"Standard",
+         "package":"jp.dcsyhi.airaw.splitstandard",
+         "hideShadow":false
+      },
+      {
+         "url":"https://dcsyhi1998.github.io/Banners/ZetsuBaner.png",
+         "title":"Zetsu",
+         "package":"jp.dcsyhi.zetsurootless15",
+         "hideShadow":false
+      }
+   ]
+}

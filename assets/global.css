@@ -1,0 +1,153 @@
+/*Main Content*/
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    letter-spacing:.06em;
+    font-family:inter ui,-apple-system,BlinkMacSystemFont,roboto,segoe ui,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.54;
+    transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+}
+a {
+    color: var(--text-color);
+}
+h1 {
+    font-size: 2.625rem;
+    margin: .67em 0;
+}
+.wrapper {
+    overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(90vw - 40px);
+    max-width: 560px;
+    padding: 20px;
+}
+
+/*Navbar*/
+.navbar {
+    width: calc(100% - 40px);
+    background-color: var(--navbar-bg-color);
+    padding: 20px;
+    margin-bottom: 70px;
+}
+.navbar * {
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+.navbarContainer {
+    height: 1.54;
+    line-height: 1.54;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 760px;
+    position: relative;
+}
+.navbarLogo {
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+.logoCursor {
+    vertical-align: middle;
+    display: inline-block;
+    width: 10px;
+    height: 1rem;
+    background: #ebc034;
+    margin-left: 5px;
+    border-radius: 1px;
+    animation: blink 1s infinite;
+    -webkit-animation: blink 1s infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.rightNavContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.rightNavContainer a {
+    text-decoration: none;
+    padding-right: 20px;
+}
+.rightNavContainer a:hover {
+    text-decoration: underline;
+}
+.themeToggle {
+    cursor: pointer;
+    fill: var(--text-color);
+    border-left: solid var(--text-color) 1px;
+    padding-left: 18px;
+    vertical-align: middle;
+    display: inline-block;
+}
+/*Reduce Spacing on Navbar links on mobile*/
+@media screen and (max-width: 900px) {
+    .rightNavContainer a {
+        padding-right: 10px;
+    }
+    .themeToggle {
+        padding-left: 13px;
+    }
+}
+
+/*Dark Mode*/
+#darkMode {
+    --bg-color: #292a2d;
+    --text-color: #a9a9b3;
+    --navbar-bg-color: #252627;
+    --hover-bg-color: #4a4c4e;
+}
+
+/*Light Mode*/
+#lightMode {
+    --bg-color: #fff;
+    --text-color: #222;
+    --navbar-bg-color: #ededed;
+    --hover-bg-color: #dddbdb;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--navbar-bg-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--hover-bg-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color);
+}
+::-webkit-scrollbar-thumb:active {
+    background: #ebc034;
+}
+/*Scrollbar for Firefox*/
+.screenshotWrapper {
+    scrollbar-color: var(--hover-bg-color) var(--navbar-bg-color);
+    scrollbar-width: thin;
+}

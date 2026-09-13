@@ -1,0 +1,1065 @@
+Package: com.sugiuta.sumusicwidget
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: sugiuta
+Installed-Size: 424
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.sugiuta.sumusicwidget_1.0_iphoneos-arm.deb
+Size: 81468
+MD5sum: 500ff8273046bab9bcb4c65fafa0dcd2
+SHA1: c4498915d3fe0c6f4190aef85c587e3785669da0
+SHA256: 4b1cbc4d1b06d9c93f4ab9d33a7ae53c8faeb3d8b300972b7f5be37adf74815a
+Section: Addons
+Description: An awesome Airaw Widgets extension!
+Author: sugiuta
+Name: SUMusicWidget
+
+Package: com.sugiuta.sumusicwidget
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: sugiuta
+Installed-Size: 280
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.sugiuta.sumusicwidget_1.1_iphoneos-arm64.deb
+Size: 32404
+MD5sum: f0440701c48f44c14b701e368eb05af2
+SHA1: 71d485185a468ab606de4ec62608d5dfd8938657
+SHA256: d9c0370db0aebe94bec5d0717e6e7a71525b48edc7b78b1613bb9bb07f19a8ce
+Section: Addons
+Description: An awesome Airaw Widgets extension!
+Author: sugiuta
+Name: SUMusicWidget
+
+Package: com.sugiuta.sumusicwidget
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: sugiuta
+Installed-Size: 280
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.sugiuta.sumusicwidget_1.1_iphoneos-arm.deb
+Size: 32560
+MD5sum: 8e3bd6937f60262cc7c023c845b2d1fe
+SHA1: e3818a9a177952db6b6d5a77cb7a26684338bd80
+SHA256: 5717cf8dc78da1184e2c0969c0d091b46bf07870a9ce61b7134d3a7ed7a9bd52
+Section: Addons
+Description: An awesome Airaw Widgets extension!
+Author: sugiuta
+Name: SUMusicWidget
+
+Package: jp.dcsyhi.adkeyboard
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 624
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.adkeyboard_1.0_iphoneos-arm64.deb
+Size: 279712
+MD5sum: edf083e85ce840ab4d8cd07fcd36a25e
+SHA1: 3f855f7a248024e1838bee4157984b6e7240370b
+SHA256: 382d9760b237fa50a3d71b83726f98b488d610f04ded280fc477150fed354a6d
+Section: Tweaks
+Description: Make keyboard color adaptive to app color.
+Author: Dcsyhi
+Name: ADKeyboard
+
+Package: jp.dcsyhi.adkeyboard
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 624
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.adkeyboard_1.1_iphoneos-arm64.deb
+Size: 280574
+MD5sum: 8f00debaede09d1b40ed45be756d5baf
+SHA1: a95d6acb58986acd4fd95aaf97eea0207bcd6b5a
+SHA256: 539d2d57bec63f9ce1277b586c10b8e47a17a071852577f36161685103dd5c11
+Section: Tweaks
+Description: Make keyboard color adaptive to app color.
+Author: Dcsyhi
+Name: ADKeyboard
+
+Package: jp.dcsyhi.adkeyboard
+Version: 1.2
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 624
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.adkeyboard_1.2_iphoneos-arm64.deb
+Size: 282106
+MD5sum: 79a38a148bab0659c5cf515ad4965720
+SHA1: d55bf4cd795389950cadb6173a00ddff8f2a2002
+SHA256: 81ba965d8b03fecd775f282a6d38b7c3c114283ef207df98eaf26329c418f240
+Section: Tweaks
+Description: Make keyboard color adaptive to app color.
+Author: Dcsyhi
+Name: ADKeyboard
+
+Package: jp.dcsyhi.adkeyboard
+Version: 1.3
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 628
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.adkeyboard_1.3_iphoneos-arm64.deb
+Size: 290602
+MD5sum: a2dd6cea0faa8a5f293595dbf2d9174d
+SHA1: ceb5c29df572a85c14c889a5c5d385de572e64ce
+SHA256: 368523c86c11893e628c5f64ddfc2f09f1fd3915ddbe848129ceaad3d115114d
+Section: Tweaks
+Description: Make keyboard color adaptive to app color.
+Author: Dcsyhi
+Name: ADKeyboard
+
+Package: jp.dcsyhi.adkeyboard
+Version: 1.4
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 812
+Depends: mobilesubstrate,preferenceloader
+Filename: ./debs/jp.dcsyhi.adkeyboard_1.4_iphoneos-arm64.deb
+Size: 380420
+MD5sum: 6031cbea44dcbe95ba050fa29febfe7e
+SHA1: e594151449b0d587a2fc4c2c7b3faaf1af2ca640
+SHA256: de5366dbbd8a200cdf6c8ba2b204d313a48641748cf2001056ff38a7a6982940
+Section: Tweaks
+Description: Make keyboard color adaptive to app color.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/ADKeyboard/ADKeyboard.png
+Name: ADKeyboard
+
+Package: jp.dcsyhi.carglyph
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 884
+Depends: firmware (>= 17.0), mobilesubstrate (>= 0.9.6011), preferenceloader
+Filename: ./debs/jp.dcsyhi.carglyph_1.0.0_iphoneos-arm64.deb
+Size: 388744
+MD5sum: 81c2b5787c454247b14d5605007d7056
+SHA1: 428f5c95b64dc838e629f7628f517ba3ade69b29
+SHA256: aaf4a3c3511150178de42c56b1d722b8aa3768b7421efa6f1ca4d4d94aa7b3d7
+Section: Tweaks
+Description: Apply IconBundles themes to CarPlay home and dock icons.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/CarGlyph.html
+Icon: https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png
+Name: CarGlyph
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CarGlyph.json
+
+Package: jp.dcsyhi.carscrub
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 172
+Depends: ellekit | mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/jp.dcsyhi.carscrub_1.0_iphoneos-arm64.deb
+Size: 13370
+MD5sum: d012c1c848944775d35a4f9464642be2
+SHA1: 13eb8c34703b30a9971781c868131055b9f0ffb5
+SHA256: 71bd97a08953a54a69b546cf98d751a1a434b55033b1d5677023503ba89457a2
+Section: Tweaks
+Description: Makes the CarPlay Now Playing progress bar scrubbable.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/CarScrub.html
+Icon: https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png
+Name: CarScrub
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CarScrub.json
+
+Package: jp.dcsyhi.carscrub
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 172
+Depends: ellekit | mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/jp.dcsyhi.carscrub_1.0_iphoneos-arm.deb
+Size: 13278
+MD5sum: e8fc5b435d7f8bb54f51feb4333d792c
+SHA1: 8605936c043d8b73165ca6246250e149c8e86c3d
+SHA256: ff6164138c7706d8bc2101da4bb0572ee1994ce9c75a060408446caf911ca1ec
+Section: Tweaks
+Description: Makes the CarPlay Now Playing progress bar scrubbable.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/CarScrub.html
+Icon: https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png
+Name: CarScrub
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CarScrub.json
+
+Package: jp.dcsyhi.clockwidget
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 148
+Depends: mobilesubstrate, preferenceloader,jp.dcsyhi.airaw
+Filename: ./debs/jp.dcsyhi.clockwidget_1.0_iphoneos-arm.deb
+Size: 16642
+MD5sum: e356091d7000c1bac4a3440ac11dc8b8
+SHA1: 65756c59f20b1a3975cdcb69593746f900acdad4
+SHA256: 42535ebb8b6d992d522fb29e1996b86445cf8cc2e7deb2ec50e6d92ad9d6379f
+Section: Addons
+Description: Airaw Widgets:Simple Digital clock widget,Requires Airaw ver 1.5!
+Author: Dcsyhi
+Name: ClockWidget
+
+Package: jp.dcsyhi.culprit
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1164
+Depends: firmware (>=15.0)
+Filename: ./debs/jp.dcsyhi.culprit_1.0.0_iphoneos-arm64.deb
+Size: 702698
+MD5sum: 3bab77d03f728c62ae88e3da22ede68c
+SHA1: a0dfc42a226f6edebb5453fbf23eec2bc2d5a4ef
+SHA256: 0bcb9072b62603a69f8016318b33bb8081518ba75d006f616930a782488fd8d0
+Section: Utilities
+Description: Crash reports grouped by process. Colored presentation informed by slog (Ethan Arbuckle, https://github.com/EthanArbuckle/slog).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/Culprit.html
+Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
+Name: Culprit
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
+
+Package: jp.dcsyhi.culprit
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1164
+Depends: firmware (>=15.0)
+Filename: ./debs/jp.dcsyhi.culprit_1.0.0_iphoneos-arm.deb
+Size: 702626
+MD5sum: baefae579465ea62fec2fbc8d6857496
+SHA1: 3c8b4de6426b70623065c043ad3eb176ea4857c6
+SHA256: b7b49a22373d282531861af74dee926446dab83b53289106aeed814818882a67
+Section: Utilities
+Description: Crash reports grouped by process. Colored presentation informed by slog (Ethan Arbuckle, https://github.com/EthanArbuckle/slog).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/Culprit.html
+Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
+Name: Culprit
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
+
+Package: jp.dcsyhi.culprit
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 500
+Depends: firmware (>=15.0)
+Filename: ./debs/jp.dcsyhi.culprit_1.0.1_iphoneos-arm64.deb
+Size: 159304
+MD5sum: 177036e1a874be5e20dc781f6844de66
+SHA1: 2e0a371bf825721301837793b8c0eafcc886c3a0
+SHA256: 556c52e72d59f5360f01c637e6d1e5abf7da8e0ab9ba1e9b43bdb3c74ea842ee
+Section: Utilities
+Description: Crash reports grouped by process. Colored presentation informed by slog (Ethan Arbuckle, https://github.com/EthanArbuckle/slog).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/Culprit.html
+Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
+Name: Culprit
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
+
+Package: jp.dcsyhi.culprit
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 500
+Depends: firmware (>=15.0)
+Filename: ./debs/jp.dcsyhi.culprit_1.0.1_iphoneos-arm.deb
+Size: 159240
+MD5sum: b48e6aee210d19260fcac33b1783c1dc
+SHA1: f24734d8e5fda8f4c89b7b97908ef38fd1ee91fd
+SHA256: d3a2f4270cafb7431f5e0d363042868c3fcbb20f8d1ac8d580e64ab4218ea9fe
+Section: Utilities
+Description: Crash reports grouped by process. Colored presentation informed by slog (Ethan Arbuckle, https://github.com/EthanArbuckle/slog).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/Culprit.html
+Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
+Name: Culprit
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
+
+Package: jp.dcsyhi.culprit
+Version: 1.0.2
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 500
+Depends: firmware (>=15.0)
+Filename: ./debs/jp.dcsyhi.culprit_1.0.2_iphoneos-arm64.deb
+Size: 160672
+MD5sum: 195078ed6ea85d610fc7f33354cf862b
+SHA1: 0924c0efe24591235576dab08dc282c57d3d3d54
+SHA256: 1942343556e475bb2fc1079b8acbde4d4c4dbe475f012c9da075d58cd4c10a4d
+Section: Utilities
+Description: Crash reports grouped by process. Colored presentation informed by slog (Ethan Arbuckle, https://github.com/EthanArbuckle/slog).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/Culprit.html
+Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
+Name: Culprit
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
+
+Package: jp.dcsyhi.culprit
+Version: 1.0.2
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 500
+Depends: firmware (>=15.0)
+Filename: ./debs/jp.dcsyhi.culprit_1.0.2_iphoneos-arm.deb
+Size: 160604
+MD5sum: fb402a015aaf9c9a79dd2324a036b77d
+SHA1: 4c5cb3c25d01b0948ed68353e1d2495784aa98cd
+SHA256: ebab062e1aa91b60382d02e8c883e9772a20a7d1166e109106d1dccbd26c1d8a
+Section: Utilities
+Description: Crash reports grouped by process. Colored presentation informed by slog (Ethan Arbuckle, https://github.com/EthanArbuckle/slog).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/Culprit.html
+Icon: https://dcsyhi1998.github.io/icons/Culprit/Culprit.png
+Name: Culprit
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/Culprit.json
+
+Package: jp.dcsyhi.cylindercarplay
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1652
+Depends: firmware (>= 14.0), mobilesubstrate (>= 0.9.6011), preferenceloader
+Filename: ./debs/jp.dcsyhi.cylindercarplay_1.0.0_iphoneos-arm64.deb
+Size: 448026
+MD5sum: 8116613137ca220f457ea894f1bc49d4
+SHA1: 5391ab7933084fa35326dda7b98b166fedba053c
+SHA256: 17da72e7c593125a90cfc4244bb7f5968b0cee92521694b32dbea3e216d4b411
+Section: Tweaks
+Description: Cylinder icon page effects for CarPlay. Based on Cylinder Reborn (Ryan Nair) and original Cylinder (rweichler).
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png
+Name: Cylinder CarPlay
+
+Package: jp.dcsyhi.cylindercarplay
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1704
+Depends: firmware (>= 15.0), mobilesubstrate (>= 0.9.6011), preferenceloader
+Filename: ./debs/jp.dcsyhi.cylindercarplay_1.0.1_iphoneos-arm64.deb
+Size: 469726
+MD5sum: aaf6729a0aeef6f418a610b13065cca9
+SHA1: 8e1a114a2139c3024afbf3efb89b2f933fe3c69d
+SHA256: bcf82fd9ae188aa21edada88075c92ed3d6e4402611badac3622d4515b7fa125
+Section: Tweaks
+Description: Cylinder icon page effects for CarPlay. Based on Cylinder Reborn (Ryan Nair) and original Cylinder (rweichler).
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html
+Icon: https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png
+Name: Cylinder CarPlay
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CylinderCarPlay.json
+
+Package: jp.dcsyhi.dashapp
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1256
+Depends: mobilesubstrate,preferenceloader
+Filename: ./debs/jp.dcsyhi.dashapp_1.0_iphoneos-arm64.deb
+Size: 900246
+MD5sum: 15477171852062d92d235ed8405a267f
+SHA1: 6809f30a322ba0c47178653930b83159797d634a
+SHA256: a5b675ef18d6aa8d0867f1967a8aab8b099c6b06b8b14813835bdd5a0865ad46
+Section: Tweaks
+Description: DashApp😎Change the lock screen camera to your favorite app.⚡️
+Author: Dcsyhi
+Name: DashApp (Rootless)
+
+Package: jp.dcsyhi.dashapp
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1256
+Depends: mobilesubstrate,preferenceloader
+Filename: ./debs/jp.dcsyhi.dashapp_1.1_iphoneos-arm64.deb
+Size: 900314
+MD5sum: 34b38377095421cfa6e81103ba97ddda
+SHA1: a0c5c17d160e9fb0896350626ba869233d82dac8
+SHA256: 32844daf38d3dcf4394a7a8832f7164593b52e0f50dddca73bc7f744b4ec1c37
+Section: Tweaks
+Description: DashApp😎Change the lock screen camera to your favorite app.⚡️
+Author: Dcsyhi
+Name: DashApp (Rootless)
+
+Package: jp.dcsyhi.homerorun
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1324
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.homerorun_1.1_iphoneos-arm64.deb
+Size: 775808
+MD5sum: 6edfe083f3d7c9d8801611f8a6ca589a
+SHA1: e3fa609d34e01b3ae206ffe832d60ab30d230ecd
+SHA256: 768b0cdebfe2a7cd358eb561320955da0fd0f747e3a4cffcf65dee992a74e427
+Section: Tweaks
+Description: A character runs on your status bar and speeds up with CPU load or network traffic 🏃
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/HomerRun.html
+Icon: https://dcsyhi1998.github.io/icons/homerorun/icon-large.png
+Name: HomerRun
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/HomerRun.json
+
+Package: jp.dcsyhi.homerorun
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1324
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.homerorun_1.1_iphoneos-arm.deb
+Size: 775882
+MD5sum: 772271b2618fc2f1d5f67a7633545afe
+SHA1: c069f7cf809a6529acb7be09842292317e318515
+SHA256: ba0dc8d14f2bc510b6c79bc4a425655e508ad220baa7adf23403b10b43b6f283
+Section: Tweaks
+Description: A character runs on your status bar and speeds up with CPU load or network traffic 🏃
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/HomerRun.html
+Icon: https://dcsyhi1998.github.io/icons/homerorun/icon-large.png
+Name: HomerRun
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/HomerRun.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1276
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.0_iphoneos-arm64.deb
+Size: 790868
+MD5sum: 0e9006b6e222bfcea7ddeacb8a074575
+SHA1: 3c2abdc8eb5a5fb520fbddec9dde032ba175d4ec
+SHA256: 3d20f138471fd8f394dcfc373f661b4132d3a07cac649e6163d6c7846140c7aa
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1276
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.1_iphoneos-arm64.deb
+Size: 791098
+MD5sum: 1bc76eedf16d4ce3c2606014e98cebe8
+SHA1: 63f19bb4a65168db8fcbf994c4f6e51573ea4682
+SHA256: e655e77edafc922d690028cb525717f57aea470292d9a71d57ee44cb95a10d06
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.2
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1276
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.2_iphoneos-arm64.deb
+Size: 792520
+MD5sum: 5abb5b265f26bd7f759055537ff0a980
+SHA1: 641cc77300ad6f987de5eae7fbf87ce709c58b4a
+SHA256: 471563c9ab79315a66e65df6b649aaf2eb92b37925bb23c1a0fbafeaf73defb9
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.3
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1312
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.3_iphoneos-arm64.deb
+Size: 798854
+MD5sum: d338399caf2a854d096551ab9cf10f39
+SHA1: df852b822f919cbd24a0e1debd684e2d196e954a
+SHA256: 629852e3153e1e3fd157a48e4b7d50027369ff1be85852f9ef9ceac0c87eb96c
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.3
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1312
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.3_iphoneos-arm.deb
+Size: 797896
+MD5sum: 5553ec8e767a8d9a4796ab2da871101a
+SHA1: 791cd990bde171a61690e79c25850e82d89c65a6
+SHA256: 32681d9563b212152dbbbb2613dd97854d28689bdd202e39b8d0b63b84245a71
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.4
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1316
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.4_iphoneos-arm64.deb
+Size: 803230
+MD5sum: c51b72c0614757c68791f8ca9898fa81
+SHA1: f522508fbf0428c82db519b6b51d2d2f24933b9f
+SHA256: 06a964623c08887e99d6017a0e9be6673a3c527b4faae818bb525e821eec3ec3
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.4
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1252
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.4_iphoneos-arm.deb
+Size: 793746
+MD5sum: 4441895960f3f5a17f4d335fdddcf033
+SHA1: cf01faa5c1c9e8ba9a11919371a978c5493dd2bd
+SHA256: d0814870cf4c1bd7b5a57ead818d325c981e53fcec395f9584497680824cc451
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.5
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1364
+Depends: mobilesubstrate
+Filename: ./debs/jp.dcsyhi.kbappdock_1.5_iphoneos-arm64.deb
+Size: 814362
+MD5sum: 143eebeb012807c1206528f5c12156dc
+SHA1: c85bb326be05ecab63285f1ab79ba5c3d4f9c8c1
+SHA256: 878c3bb588252b5efe20ab83bebb45dd2e0caee1622c334b86692e762b56a017
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon@2x.png
+Name: KBApp
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.7
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1880
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.7_iphoneos-arm64.deb
+Size: 981198
+MD5sum: b3cb0312291fdc240c228dffc4be94d5
+SHA1: b7bf158692993e54d4871cb8c3dc964f4cf869b3
+SHA256: 7d8ada15b8fbf7da7804f3a9589e002342e6ca770bcb12e9b949ec8e0baac557
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.7
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1880
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.7_iphoneos-arm.deb
+Size: 981298
+MD5sum: 1533af8e1fe0c93f57226adf5b74d51a
+SHA1: 8425031a4b7d6c78c1d68b6150a019fa7ddd2986
+SHA256: 9a9d938015fdfc728ef67a261f5bd4fdaf46308a180bd09cb54b650bb23e87bc
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.7.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1884
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.7.1_iphoneos-arm64.deb
+Size: 981372
+MD5sum: b2c8004807dc84fc9bcc2e87eabdbe28
+SHA1: 5ed0c93cabcaf7bffe553fb738580ae1de9f4145
+SHA256: 21de7b7014977625fdfc56e36208674dab706facbde87339cad42aec297a6145
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.7.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1884
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.7.1_iphoneos-arm.deb
+Size: 981748
+MD5sum: 39031f0bf24fedf02c8ea75142803039
+SHA1: 942c688928eb32cbc66502c0603915e73157d6bc
+SHA256: ae389153c267df43c5a1f40c6b201ba64612fb5e4ed57b21c5b2aa720dadd7aa
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.8
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1936
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.8_iphoneos-arm.deb
+Size: 999082
+MD5sum: ea355bb42ad6e5d74f4c9fa603ea6254
+SHA1: 80a5440650f6360d03e9f01aac382dff9c03949c
+SHA256: 0a4ee9781da48d3563cbc5fa799cc6bb4ef9e46e43fedfde1b54348db73099e9
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.8
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1936
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.8_iphoneos-arm64.deb
+Size: 999564
+MD5sum: 258dfd6e2697db487ed89522a424e723
+SHA1: d44cb88ed2a5eec49f90ca7e4a1d6c8ef09ceac2
+SHA256: 7cc81e10bd0d3a0631c35951901b981fab53bfd2b705a7fbf1a08fd1262d3edb
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.8.1
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 1936
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.8.1_iphoneos-arm64.deb
+Size: 1000652
+MD5sum: 8992ef4cf4e5cf6b33bc9808a457527f
+SHA1: 9ddd3a343c02ed05052dd0063ce35f306de667c5
+SHA256: 37ed7b1c78395cd2dde10cfcd7f8c1d763e23742305e191a31f0f2140fa885ba
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.8.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1936
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.8.1_iphoneos-arm.deb
+Size: 1000642
+MD5sum: 0a28d56b9d9bf71707b1935747b15bde
+SHA1: f5219d55a2427e4fb37dda7f4c3b1d8588c33e69
+SHA256: bde8557ff5a1c6d08504d8779666dcc427b449605d4fdf9978cb8d2caf0bd932
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.8.2
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 2120
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.8.2_iphoneos-arm64.deb
+Size: 1040956
+MD5sum: 318d0cc6ac74dc711854c72a4aa0c905
+SHA1: 7ecc2e07e3b90b3462376b1bbfe888d37348f51d
+SHA256: 48c0cf530c7bbcaa5ed18f2a17bfb61b4544c207c9475a9753f40515cf154add
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.8.2
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 2120
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.8.2_iphoneos-arm.deb
+Size: 1040786
+MD5sum: feced27992c84361fc1a452188613437
+SHA1: cc2979afc2a0458e13b10a9404f4dcb32a4f3828
+SHA256: a17a65e7fe5534e50e0aa4e8c2e2ec6244a987f999ceb74d183f64e90006006f
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.8.3
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 2088
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.8.3_iphoneos-arm64.deb
+Size: 1040848
+MD5sum: bf3525f75c9463f98ca22bd461372105
+SHA1: 53c49464baf4a822c84e406f55a351824e28565b
+SHA256: 753e3c15ca9177852497eb328accb692fd89097ab57830a3274c680592473e4a
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.kbappdock
+Version: 1.8.3
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 2088
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/jp.dcsyhi.kbappdock_1.8.3_iphoneos-arm.deb
+Size: 1040244
+MD5sum: e07fcf954f09598c3a95a6ae01fd96ac
+SHA1: 391ba3243a712463cc917283bbb7a1dd8eaa0100
+SHA256: 6a1a15e34c689efe2b9bd9095ba2a2eb309515c993e3c6a2e89893e892f183fa
+Section: Tweaks
+Description: You can arrange apps on the dock of keyboard ⌨️.
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/KBApp.html
+Icon: https://dcsyhi1998.github.io/icons/kbappdock/icon-large.png
+Name: KBApp
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/KBApp.json
+
+Package: jp.dcsyhi.musiccontrol
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 216
+Depends: mobilesubstrate, preferenceloader,jp.dcsyhi.airaw
+Filename: ./debs/jp.dcsyhi.musiccontrol_1.0_iphoneos-arm.deb
+Size: 42180
+MD5sum: f3e889f76c55dc7eaddbc194de7eb3a2
+SHA1: 835c543260374e2143a5235c92d8cd73a5d8c06c
+SHA256: e0cb5791d52f67c3086f6047d87fe6c760c65ca2390539a395630f3208b16195
+Section: Addons
+Description: Airaw Widgets:Simple music control,Requires Airaw ver 1.5!
+Author: Dcsyhi
+Name: MusicControl
+
+Package: jp.dcsyhi.musiccontrol
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 216
+Depends: mobilesubstrate, preferenceloader,jp.dcsyhi.airaw
+Filename: ./debs/jp.dcsyhi.musiccontrol_1.1_iphoneos-arm.deb
+Size: 42310
+MD5sum: 36fac76cbf224d5313efc81488178768
+SHA1: 22ed07d1eb2b03ae51f0cc781ae49c57de1a5d06
+SHA256: a9bf017734f7bb9c63c6cab6fbdd8dede3b2e7f0e914be8426903ff486f773c4
+Section: Addons
+Description: Airaw Widgets:Simple music control,Requires < Airaw ver 1.5!
+Author: Dcsyhi
+Name: MusicControl
+
+Package: jp.dcsyhi.twiwidget
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 156
+Depends: mobilesubstrate, preferenceloader,jp.dcsyhi.airaw
+Filename: ./debs/jp.dcsyhi.twiwidget_1.0_iphoneos-arm.deb
+Size: 18830
+MD5sum: affcaba8da8d94c08032744649781aca
+SHA1: 61cb91eba130ca2cf37b0d9432b5f9f55f02639f
+SHA256: 6939f9f72d6359d7ead6354a5fdb2561de89a2a40ec0fc43e6e3d64acffaf19e
+Section: Addons
+Description: An awesome Airaw Widgets extension!Display your Twitter account information😎
+Author: Dcsyhi
+Name: TwiWidget
+
+Package: jp.dcsyhi.twiwidget
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 156
+Depends: mobilesubstrate, preferenceloader,jp.dcsyhi.airaw
+Filename: ./debs/jp.dcsyhi.twiwidget_1.0.1_iphoneos-arm.deb
+Size: 18740
+MD5sum: f0d3165e2e01e9070304769195d53ebe
+SHA1: 9877b739ef0b7cd9995f55e21d3bf012e741fe45
+SHA256: 7dd5d03b9b1010d7c51fdbd360084e4a2a58d224774753eec1954c4bc69d3d89
+Section: Addons
+Description: An awesome Airaw Widgets extension!Display your Twitter account information😎
+Author: Dcsyhi
+Name: TwiWidget
+
+Package: jp.dcsyhi.zetsu
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1032
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0),applist
+Filename: ./debs/jp.dcsyhi.zetsu_1.0_iphoneos-arm.deb
+Size: 487546
+MD5sum: ee148386a3b50aa4132bf240b7659690
+SHA1: 83266a9e51fa48e81365fea47587661157d6f375
+SHA256: 1915efeaa7f0772a2d498a77250faa2fd7a3bc31e71e563fc7046ee22c01ed3a
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1036
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0),applist
+Filename: ./debs/jp.dcsyhi.zetsu_1.1_iphoneos-arm.deb
+Size: 484176
+MD5sum: 7d6143291ea56179d4b56ee54e35f374
+SHA1: 32966b7ee43cdc25a726d5bd861d70608bd28c98
+SHA256: 1dd7cca9813f7f44dc0eb2d3fba1cd2f68f5a812c7ed9ff3b53beac3921ba42f
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.1.2
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1036
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0),applist
+Filename: ./debs/jp.dcsyhi.zetsu_1.1.2_iphoneos-arm.deb
+Size: 486952
+MD5sum: c23544b97051921335155923b1b5e802
+SHA1: 7832ce36682fea09dbf0fb6388ce3325518ee81c
+SHA256: 3301b20f3e9216fd295fd4398b61cf7971302c88b67cd1b0c007a0dc30397807
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.1.3
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1036
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0),applist
+Filename: ./debs/jp.dcsyhi.zetsu_1.1.3_iphoneos-arm.deb
+Size: 485878
+MD5sum: 1ab857d831076f3f57d3a3a8da737772
+SHA1: b920591de8a0c5d0b2dbadf5246236383be35799
+SHA256: 0995a481aa1a762e20fee97979b84c0feb371fcf4b3237fd459fadc88eca44b2
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.1.4
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 1068
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=13.0),applist
+Filename: ./debs/jp.dcsyhi.zetsu_1.1.4_iphoneos-arm.deb
+Size: 492798
+MD5sum: 9c633e530f95a7b1a40676dc9961437e
+SHA1: 79f6264dee87fa9b325c184fff8324bc98346112
+SHA256: 43938a960f0d05f68fe5fe90a670a58824f9136ea70c16d48c44e10fe6263ba8
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 2148
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=14.0),com.lacertosusrepo.libdeusprefs (>= 1.0)
+Filename: ./debs/jp.dcsyhi.zetsu_1.2_iphoneos-arm.deb
+Size: 1626514
+MD5sum: 96af37f5f12dc891f942442e35627ab7
+SHA1: 06266f0a5038e5bdf06a3fa5ca63bc03b22bd2d5
+SHA256: e7b48756d972d429dc1d689ff85e8e8916509cadfd6b4769a6b3a61aa2dd2112
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.2.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 2144
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=14.0),com.lacertosusrepo.libdeusprefs (>= 1.0)
+Filename: ./debs/jp.dcsyhi.zetsu_1.2.1_iphoneos-arm.deb
+Size: 1631008
+MD5sum: 28799d0ebd2197edf5bc100c0451b1d7
+SHA1: 164ab3c3f2f3d44801cc347b77070528eda57edc
+SHA256: 3497009f53bfd965ead4d82abce0381b19007eb20900ffc5463f557849a30879
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.2.2
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 2180
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=14.0),com.lacertosusrepo.libdeusprefs (>= 1.0)
+Filename: ./debs/jp.dcsyhi.zetsu_1.2.2_iphoneos-arm.deb
+Size: 1633096
+MD5sum: d3b40e89f12980ffe805644d53aabe97
+SHA1: f026490db6dd106f67ec58599cae49932a8545a7
+SHA256: 1460b4e558bf0ca38d431860e293e8ee66cfda522bc63e76dcdc4bee2b158b6f
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.3
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 2228
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=14.0),com.lacertosusrepo.libdeusprefs (>= 1.0)
+Filename: ./debs/jp.dcsyhi.zetsu_1.3_iphoneos-arm.deb
+Size: 1645892
+MD5sum: d2933ca1904fb81bc7254bb1b7620a02
+SHA1: f82f81e4d3bf39e30b052a3c789a2936ca9d3be8
+SHA256: 5eb00642efc9e37c05dfb5ddbcda1e5ff1936dde8d6f4551ec4c6c40676a2ec6
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.3.0.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 2228
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=14.0),com.lacertosusrepo.libdeusprefs (>= 1.0),libactivator
+Filename: ./debs/jp.dcsyhi.zetsu_1.3.0.1_iphoneos-arm.deb
+Size: 1645934
+MD5sum: 7ece12c876b3ab0782b560504280b8bf
+SHA1: c66bdc9f5adc70c171f0b9dff5bfc69abdea7444
+SHA256: 85974267dfdcc2eac656742144015b6c45a19b746526bbcd045d8f0ca0cc533b
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.4
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 2276
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=14.0) ,com.lacertosusrepo.libdeusprefs (>= 1.0)
+Filename: ./debs/jp.dcsyhi.zetsu_1.4_iphoneos-arm.deb
+Size: 1636432
+MD5sum: 09370075a5b46adf0508a5a4df07bde5
+SHA1: dbc49a6f3eb73ac8b9427ac175153ff8aa5b6f98
+SHA256: 8be35a5aa074119acc7d217b96e04dc9dd066c1c2379864600cc0300d3b1df51
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+
+Package: jp.dcsyhi.zetsu
+Version: 1.4.1
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 2308
+Depends: mobilesubstrate,preferenceloader,ws.hbang.common,com.rpetrich.rocketbootstrap,firmware (>=14.0) ,com.lacertosusrepo.libdeusprefs (>= 1.0)
+Filename: ./debs/jp.dcsyhi.zetsu_1.4.1_iphoneos-arm.deb
+Size: 1639034
+MD5sum: e0c7cdca05db861c7ed9d6f99c7aa3ef
+SHA1: 35e880aaf410610e901e19027fe1be90582c2ce0
+SHA256: 618f434252a3621629cb46991271482c599398215d7b92ce554b56959cb06d28
+Section: Tweaks
+Description: Multitasking on iOS14.x
+Author: Dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/zetsu.html
+Icon: https://dcsyhi1998.github.io/icons/zetsu/zetsu.png
+Name: Zetsu
+

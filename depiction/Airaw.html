@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airaw — CarPlay tweak for iOS 14–26 | Split View, widgets, layout</title>
+  <meta name="description" content="Airaw is a jailbreak tweak that customizes Apple CarPlay on iOS 14 through iOS 26. Change the icon layout, wallpaper, and status bar, add widgets, run fullscreen apps, and use Split View with CarCast." />
+  <meta name="author" content="Dcsyhi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://dcsyhi1998.github.io/depiction/Airaw.html" />
+  <link rel="icon" href="https://dcsyhi1998.github.io/depiction/assets/icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Airaw" />
+  <meta property="og:url" content="https://dcsyhi1998.github.io/depiction/Airaw.html" />
+  <meta property="og:title" content="Airaw — Customize CarPlay on iOS 14–26" />
+  <meta property="og:description" content="Jailbreak tweak for Apple CarPlay: layout, wallpaper, widgets, fullscreen apps, Split View, and CarCast." />
+  <meta property="og:image" content="https://dcsyhi1998.github.io/depiction/assets/hero-split.png" />
+  <meta property="og:image:alt" content="Airaw Split View on a car display — two apps on one CarPlay screen" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@linux_n1" />
+  <meta name="twitter:creator" content="@linux_n1" />
+  <meta name="twitter:title" content="Airaw — Customize CarPlay on iOS 14–26" />
+  <meta name="twitter:description" content="Jailbreak tweak for Apple CarPlay: layout, wallpaper, widgets, fullscreen apps, Split View, and CarCast." />
+  <meta name="twitter:image" content="https://dcsyhi1998.github.io/depiction/assets/hero-split.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Airaw",
+    "alternateName": "Airaw CarPlay",
+    "description": "A jailbreak tweak that customizes Apple CarPlay on iOS 14 through iOS 26, with layout, wallpaper, widgets, fullscreen apps, Split View, and CarCast.",
+    "url": "https://dcsyhi1998.github.io/depiction/Airaw.html",
+    "image": "https://dcsyhi1998.github.io/depiction/assets/hero-split.png",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "iOS 14.0 or later",
+    "author": {
+      "@type": "Person",
+      "name": "Dcsyhi",
+      "url": "https://x.com/linux_n1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://chariz.com/buy/airaw",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #05070c;
+      --bg-2: #0b1018;
+      --panel: rgba(14, 18, 28, 0.72);
+      --ink: #f3f6fb;
+      --muted: #8b97ab;
+      --line: rgba(243, 246, 251, 0.1);
+      --orange: #e26512;
+      --orange-hot: #ff8a1e;
+      --blue: #4aa3ff;
+      --green: #3dcc6a;
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1000px 420px at 70% -8%, rgba(74, 163, 255, 0.12), transparent 55%),
+        var(--bg);
+      font-family: "Instrument Sans", "Noto Sans JP", sans-serif;
+      letter-spacing: 0;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+    .wrap { width: min(var(--max), calc(100% - 2.5rem)); margin-inline: auto; }
+    .display {
+      font-family: Montserrat, "Noto Sans JP", sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+    }
+    [data-en] { display: none; }
+    html[lang="en"] [data-ja] { display: none !important; }
+    html[lang="en"] span[data-en] { display: inline; }
+    html[lang="en"] p[data-en],
+    html[lang="en"] small[data-en] { display: block; }
+    html[lang="ja"] [data-en] { display: none !important; }
+    html[lang="ja"] span[data-ja] { display: inline; }
+    html[lang="ja"] p[data-ja],
+    html[lang="ja"] small[data-ja] { display: block; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(5, 7, 12, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 72px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .lang {
+      display: flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .lang button {
+      padding: 0.35rem 0.7rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    html[lang="ja"] .lang [data-set="ja"],
+    html[lang="en"] .lang [data-set="en"] {
+      background: var(--orange);
+      color: #fff;
+    }
+    .buy {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.7rem 1.1rem;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--orange-hot), var(--orange));
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(226, 101, 18, 0.28);
+    }
+
+    hero, section { display: block; }
+    .hero-bleed {
+      position: relative;
+      margin: 0 calc(50% - 50vw);
+      width: 100vw;
+      background: #000;
+    }
+    .hero-bleed img {
+      width: 100%;
+      height: min(78vh, 820px);
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-follow {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 2rem;
+      align-items: end;
+      padding: 1.8rem 0 0.4rem;
+    }
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--blue);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+    }
+    .dots { display: flex; gap: 4px; }
+    .dots i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      display: block;
+    }
+    .dots i:nth-child(n+8) { background: rgba(243,246,251,0.18); }
+    h1 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin: 0 0 0.35rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .tagline {
+      margin: 0 0 0.9rem;
+      font-family: Montserrat, "Noto Sans JP", sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .lede {
+      max-width: 40rem;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin: 0 0 1.3rem;
+    }
+    .hero-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .ghost {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.7rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 0;
+    }
+    .stat {
+      border-top: 1px solid var(--line);
+      padding-top: 0.85rem;
+    }
+    .stat b {
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      font-size: 1.45rem;
+    }
+    .stat span { color: var(--muted); font-size: 0.8rem; }
+
+    .gallery {
+      display: grid;
+      gap: 0.9rem;
+    }
+    .gallery-stage {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: #000;
+      aspect-ratio: 16 / 9;
+    }
+    .gallery-stage figure {
+      position: absolute;
+      inset: 0;
+      margin: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s ease;
+    }
+    .gallery-stage figure.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .gallery-stage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-btn {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      width: 44px;
+      height: 44px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(5, 7, 12, 0.55);
+      color: #fff;
+      font-size: 1.4rem;
+      line-height: 1;
+      backdrop-filter: blur(10px);
+    }
+    .gallery-btn.prev { left: 14px; }
+    .gallery-btn.next { right: 14px; }
+    .gallery-btn:hover { background: rgba(5, 7, 12, 0.82); }
+    .caption {
+      min-height: 1.4em;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.55rem;
+    }
+    .thumbs button {
+      padding: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      opacity: 0.45;
+    }
+    .thumbs button img {
+      width: 100%;
+      height: 64px;
+      object-fit: cover;
+      display: block;
+    }
+    .thumbs button.is-active {
+      opacity: 1;
+      border-color: var(--blue);
+    }
+    .section { padding: 5rem 0; }
+    .section h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin: 0 0 0.6rem;
+    }
+    .section .sub {
+      color: var(--muted);
+      max-width: 36rem;
+      line-height: 1.7;
+      margin: 0 0 2.2rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.25rem 1.2rem;
+      backdrop-filter: blur(12px);
+    }
+    .card .mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: rgba(226, 101, 18, 0.16);
+      color: var(--orange-hot);
+      margin-bottom: 0.9rem;
+      font-family: "Instrument Sans", sans-serif;
+      font-weight: 600;
+    }
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.65; }
+    .note {
+      margin-top: 1rem;
+      padding: 1.2rem 1.3rem;
+      border-radius: 18px;
+      border: 1px solid rgba(74, 163, 255, 0.28);
+      background: rgba(74, 163, 255, 0.08);
+    }
+    .note h3 { margin: 0 0 0.45rem; font-size: 0.95rem; }
+    .note p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+
+    .eco {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1rem;
+    }
+    .product {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .product a {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0.9rem;
+      align-items: center;
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .product a:hover { border-color: rgba(226,101,18,0.45); }
+    .badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-family: "Instrument Sans", sans-serif;
+      font-weight: 600;
+      background: #1b1511;
+    }
+    .product small { color: var(--muted); display: block; font-size: 0.8rem; }
+    .arrow { color: var(--orange-hot); }
+
+    .compat {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+    }
+    .compat div {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem;
+    }
+    .compat b { display: block; font-family: "Instrument Sans", sans-serif; font-weight: 600; font-size: 1.2rem; margin-bottom: 0.2rem; }
+    .compat span { color: var(--muted); font-size: 0.82rem; }
+
+    .cta-band {
+      margin: 1rem 0 0;
+      padding: 2.2rem;
+      border-radius: 28px;
+      background:
+        linear-gradient(120deg, rgba(226,101,18,0.22), rgba(8,7,6,0.2) 45%),
+        #16110e;
+      border: 1px solid rgba(226,101,18,0.28);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .cta-band h2 { margin: 0 0 0.4rem; }
+    .cta-band p { margin: 0; color: var(--muted); }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    footer a:hover { color: var(--ink); }
+
+    @media (max-width: 900px) {
+      .hero-follow, .eco, .features, .compat, .cta-band { grid-template-columns: 1fr; }
+      .nav-links a:not(.buy) { display: none; }
+      .hero-bleed img {
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+      }
+      .stats, .compat { grid-template-columns: 1fr 1fr; }
+      .thumbs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .thumbs button img { height: 44px; }
+      .cta-band { flex-direction: column; align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .gallery-stage figure { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <img src="assets/icon.png" alt="Airaw" />
+        Airaw
+      </a>
+      <div class="nav-links">
+        <a href="#platform"><span data-ja>機能</span><span data-en>Platform</span></a>
+        <a href="#gallery"><span data-ja>ギャラリー</span><span data-en>Gallery</span></a>
+        <a href="#ecosystem"><span data-ja>製品群</span><span data-en>Ecosystem</span></a>
+        <a href="https://dcsyhi1998.github.io/packages.html"><span data-ja>リポジトリ</span><span data-en>Repo</span></a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-set="ja">JA</button>
+          <button type="button" data-set="en">EN</button>
+        </div>
+        <a class="buy" href="https://chariz.com/buy/airaw">Chariz</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-bleed" id="top">
+    <img src="assets/hero-split.png" alt="Airaw Split View on a car display — two apps on one CarPlay screen" />
+  </header>
+
+  <main class="wrap">
+    <div class="hero-follow">
+      <div>
+        <div class="kicker">
+          <span>CarPlay Platform</span>
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        </div>
+        <h1 class="display">
+          <span data-ja>Airaw — CarPlay をカスタマイズ</span>
+          <span data-en>Airaw — Customize CarPlay</span>
+        </h1>
+        <p class="tagline">
+          <span data-ja>2つのアプリ。1つの画面。</span>
+          <span data-en>Two apps. One screen.</span>
+        </p>
+        <p class="lede">
+          <span data-ja>Airaw は iOS 14 から iOS 26 の Apple CarPlay を拡張するジェイルブレイク Tweak です。レイアウト、壁紙、ウィジェット、フルスクリーン、Split View に対応します。</span>
+          <span data-en>Airaw is a jailbreak tweak that customizes Apple CarPlay on iOS 14 through iOS 26 — layout, wallpaper, widgets, fullscreen apps, and Split View.</span>
+        </p>
+        <div class="hero-actions">
+          <a class="buy" href="https://chariz.com/buy/airaw">
+            <span data-ja>Chariz で入手</span>
+            <span data-en>Get it on Chariz</span>
+          </a>
+          <a class="ghost" href="#ecosystem">
+            <span data-ja>製品群を見る</span>
+            <span data-en>See the ecosystem</span>
+          </a>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>14–26</b><span>iOS</span></div>
+        <div class="stat"><b>1.7.0</b><span data-ja>現行リリース</span><span data-en>Current release</span></div>
+        <div class="stat"><b>5+</b><span data-ja>関連パッケージ</span><span data-en>Related packages</span></div>
+      </div>
+    </div>
+
+    <section class="section" id="platform">
+      <h2 class="display">
+        <span data-ja>純正の格子を、ダッシュボードに。</span>
+        <span data-en>From a grid to a dashboard.</span>
+      </h2>
+      <p class="sub">
+        <span data-ja>2×4 のアイコンでは足りない。Airaw は CarPlay のホームを、情報とアプリが同居する画面に変えます。</span>
+        <span data-en>Stock CarPlay is a small icon grid. Airaw turns the home screen into a place for information, wallpaper, and the apps you actually use.</span>
+      </p>
+      <div class="features">
+        <article class="card">
+          <div class="mark">01</div>
+          <h3><span data-ja>レイアウト</span><span data-en>Layout</span></h3>
+          <p data-ja>行・列、サイズ、余白、ラベル、バッジ。ダッシュボードの格子を自分の車に合わせます。</p>
+          <p data-en>Rows, columns, size, padding, labels, and badges. Fit the grid to the car, not the other way around.</p>
+        </article>
+        <article class="card">
+          <div class="mark">02</div>
+          <h3><span data-ja>壁紙</span><span data-en>Wallpaper</span></h3>
+          <p data-ja>静止画、スライドショー、GIF。CarPlay の画面に合わせてフィットできます。</p>
+          <p data-en>Stills, slideshows, GIFs. Fit the image to the CarPlay screen.</p>
+        </article>
+        <article class="card">
+          <div class="mark">03</div>
+          <h3><span data-ja>ステータスバー</span><span data-en>Status bar</span></h3>
+          <p data-ja>時刻、天気、バッテリー、位置。運転席側に合わせて、上・下・左・右へ置けます。</p>
+          <p data-en>Time, weather, battery, position. Put it top, bottom, left, or right for the driving side.</p>
+        </article>
+        <article class="card">
+          <div class="mark">04</div>
+          <h3><span data-ja>アプリ起動</span><span data-en>App launch</span></h3>
+          <p data-ja>Airaw ホスト、Hosted Scene（iOS 16+）、CarBridge。ノッチ処理とフルスクリーンをアプリごとに。</p>
+          <p data-en>Airaw host, Hosted Scene (iOS 16+), or CarBridge. Notch handling and fullscreen, per app.</p>
+        </article>
+        <article class="card">
+          <div class="mark">05</div>
+          <h3>Split View</h3>
+          <p data-ja>iOS 16+ の有料アドオン。純正アプリは Native、Airaw / CarCast は Standard。</p>
+          <p data-en>Paid add-ons on iOS 16+. Native for official CarPlay apps, Standard for Airaw and CarCast.</p>
+        </article>
+        <article class="card">
+          <div class="mark">06</div>
+          <h3><span data-ja>ウィジェット</span><span data-en>Widgets</span></h3>
+          <p data-ja>モジュールは iOS 14 以降で使えます。HTML は iOS 14–15。iOS 16 以降の HTML は未導入です。</p>
+          <p data-en>Module widgets work on iOS 14+. HTML works on iOS 14–15. HTML is not available on iOS 16+ yet.</p>
+        </article>
+      </div>
+      <aside class="note">
+        <h3>
+          <span data-ja>HTML ウィジェットについて</span>
+          <span data-en>About HTML widgets</span>
+        </h3>
+        <p data-ja>モジュール形式（.bundle / Controls）は iOS 14 以降、どの対応バージョンでも使えます。HTML ウィジェットは iOS 14 と 15 でそのまま使えます。iOS 16 以降でも HTML の追加自体はできますが、CarPlay 上では正常に動きません。現時点では HTML の導入はできていないと考え、モジュールを使ってください。</p>
+        <p data-en>Module widgets (.bundle / Controls) work on iOS 14 and later — every supported version. HTML widgets work on iOS 14 and 15. On iOS 16 and later you can still add HTML files, but they do not run correctly on CarPlay. Treat HTML as unavailable for now and use modules.</p>
+      </aside>
+    </section>
+
+    <section class="section" id="gallery">
+      <h2 class="display">
+          <span data-ja>CarPlay 上の Airaw</span>
+          <span data-en>How Airaw looks on CarPlay</span>
+      </h2>
+      <p class="sub">
+        <span data-ja>Split View と、ウィジェット付きの CarPlay ホーム。画面を切り替えて見てください。</span>
+        <span data-en>Split View and widget home screens. Switch between them.</span>
+      </p>
+      <div class="gallery" data-gallery>
+        <div class="gallery-stage">
+          <figure class="is-active" data-caption-en="Split View — drag the divider." data-caption-ja="Split View。セパレータをドラッグして画面を分ける。">
+            <img src="assets/mockup-split.png" alt="Airaw Split View on CarPlay with Google Maps and YouTube" />
+          </figure>
+          <figure data-caption-en="Airaw running on a production head unit." data-caption-ja="実車のディスプレイで動く Airaw。">
+            <img src="assets/widget-incar.png" alt="Airaw CarPlay widgets on a production car display" />
+          </figure>
+          <figure data-caption-en="Widgets on the CarPlay home screen." data-caption-ja="CarPlay ホームにウィジェットを配置。">
+            <img src="assets/widget-1.png" alt="Airaw custom CarPlay home screen with widgets" />
+          </figure>
+          <figure data-caption-en="Custom wallpaper, music widget, and status." data-caption-ja="壁紙、ミュージックウィジェット、ステータス。">
+            <img src="assets/widget-2.png" alt="Airaw CarPlay wallpaper, music widget, and status bar" />
+          </figure>
+          <figure data-caption-en="Another widget layout on the dashboard." data-caption-ja="別レイアウトのウィジェットホーム。">
+            <img src="assets/widget-3.png" alt="Airaw CarPlay dashboard widget layout" />
+          </figure>
+          <button class="gallery-btn prev" type="button" aria-label="Previous">‹</button>
+          <button class="gallery-btn next" type="button" aria-label="Next">›</button>
+        </div>
+        <p class="caption" data-gallery-caption>Split View — drag the divider.</p>
+        <div class="thumbs" data-gallery-thumbs>
+          <button type="button" class="is-active"><img src="assets/mockup-split.png" alt="" /></button>
+          <button type="button"><img src="assets/widget-incar.png" alt="" /></button>
+          <button type="button"><img src="assets/widget-1.png" alt="" /></button>
+          <button type="button"><img src="assets/widget-2.png" alt="" /></button>
+          <button type="button"><img src="assets/widget-3.png" alt="" /></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ecosystem">
+      <h2 class="display">
+        <span data-ja>Airaw は、単独の Tweak ではない。</span>
+        <span data-en>Airaw is no longer a single tweak.</span>
+      </h2>
+      <p class="sub">
+        <span data-ja>本体が基盤。アプリ追加、Split View、見た目は別パッケージです。CarCast と CarBridge は同時に入れないでください。</span>
+        <span data-en>The core is the foundation. Apps, Split View, and visuals ship as separate packages. Do not install CarCast and CarBridge together.</span>
+      </p>
+      <div class="eco">
+        <div class="product">
+          <a href="https://chariz.com/buy/airaw">
+            <span class="badge">A</span>
+            <span>
+              <strong>Airaw</strong>
+              <small data-ja>CarPlay プラットフォーム · iOS 14+</small>
+              <small data-en>The CarPlay platform · iOS 14+</small>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="https://chariz.com/buy/carcast">
+            <span class="badge">C</span>
+            <span>
+              <strong>CarCast</strong>
+              <small data-ja>非対応アプリをダッシュボードへ · iOS 17 / 26</small>
+              <small data-en>Pin non-CarPlay apps · iOS 17 & 26</small>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="https://chariz.com/buy/airaw-native">
+            <span class="badge">N</span>
+            <span>
+              <strong>Split Native</strong>
+              <small data-ja>純正 CarPlay アプリの Split View · iOS 16+</small>
+              <small data-en>Split View for native CarPlay apps · iOS 16+</small>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="https://chariz.com/buy/airaw-standard">
+            <span class="badge">S</span>
+            <span>
+              <strong>Split Standard</strong>
+              <small data-ja>Airaw / CarCast / Hosted Scene 向け · iOS 16+</small>
+              <small data-en>Split View for Airaw, CarCast, Hosted Scene · iOS 16+</small>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="product">
+          <a href="https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html">
+            <span class="badge">Y</span>
+            <span>
+              <strong>Cylinder CarPlay</strong>
+              <small data-ja>ホームのページめくり演出</small>
+              <small data-en>Page-turn effects on the home screen</small>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="https://dcsyhi1998.github.io/depiction/CarGlyph.html">
+            <span class="badge">G</span>
+            <span>
+              <strong>CarGlyph</strong>
+              <small data-ja>CarPlay アイコンのテーマ</small>
+              <small data-en>Theme CarPlay app icons</small>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="https://dcsyhi1998.github.io/depiction/CarScrub.html">
+            <span class="badge">R</span>
+            <span>
+              <strong>CarScrub</strong>
+              <small data-ja>Now Playing バーをスクラブ可能に</small>
+              <small data-en>Scrub the Now Playing bar</small>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+          <div class="card">
+            <h3><span data-ja>レビュー</span><span data-en>Press</span></h3>
+            <p>
+              <a href="https://www.idownloadblog.com/2021/06/11/airaw/">iDownloadBlog</a>
+              ·
+              <a href="https://onejailbreak.com/blog/airaw-tweak/">ONE jailbreak</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="display">
+        <span data-ja>対応</span>
+        <span data-en>Compatibility</span>
+      </h2>
+      <div class="compat">
+        <div><b>iOS 14.0+</b><span data-ja>Airaw 本体</span><span data-en>Airaw core</span></div>
+        <div><b>iOS 16+</b><span>Hosted Scene / Split View</span></div>
+        <div><b>HTML</b><span data-ja>ウィジェット · iOS 14–15</span><span data-en>Widgets · iOS 14–15</span></div>
+        <div><b>Module</b><span data-ja>ウィジェット · iOS 14+</span><span data-en>Widgets · iOS 14+</span></div>
+        <div><b>arm64e</b><span data-ja>rootless / rootful</span><span data-en>rootless & rootful</span></div>
+        <div><b>Chariz</b><span data-ja>購入とライセンス</span><span data-en>Purchase & license</span></div>
+      </div>
+      <div class="cta-band">
+        <div>
+          <h2 class="display">
+            <span data-ja>次の CarPlay は、もう純正のままではない。</span>
+            <span data-en>CarPlay does not have to stay stock.</span>
+          </h2>
+          <p>
+            <span data-ja>Airaw 1.7.0。iOS 26 対応。セットアップから製品群まで、一本のブランドです。</span>
+            <span data-en>Airaw 1.7.0. iOS 26 support. One brand from first-run setup to the add-on family.</span>
+          </p>
+        </div>
+        <a class="buy" href="https://chariz.com/buy/airaw">
+          <span data-ja>Airaw を入手</span>
+          <span data-en>Get Airaw</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© Dcsyhi · Airaw</span>
+      <span>
+        <a href="https://x.com/linux_n1">X</a>
+        ·
+        <a href="https://www.paypal.me/DevDcsyhi">PayPal</a>
+        ·
+        <a href="https://github.com/Dcsyhi1998/Airaw-Translations/issues">GitHub</a>
+        ·
+        <a href="README-Chariz.md">EN</a>
+        /
+        <a href="README-Chariz-ja.md">JA</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const saved = localStorage.getItem("airaw-homepage-lang");
+    root.lang = saved === "ja" ? "ja" : "en";
+
+    const refreshCaptions = [];
+    document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+      const slides = [...gallery.querySelectorAll(".gallery-stage figure")];
+      const thumbs = [...gallery.querySelectorAll("[data-gallery-thumbs] button")];
+      const caption = gallery.querySelector("[data-gallery-caption]");
+      const total = slides.length;
+      let index = 0;
+
+      const show = (next) => {
+        index = (next + total) % total;
+        slides.forEach((slide, i) => slide.classList.toggle("is-active", i === index));
+        thumbs.forEach((thumb, i) => thumb.classList.toggle("is-active", i === index));
+        const key = root.lang === "ja" ? "captionJa" : "captionEn";
+        if (caption) caption.textContent = slides[index].dataset[key];
+      };
+
+      gallery.querySelector(".prev").addEventListener("click", () => show(index - 1));
+      gallery.querySelector(".next").addEventListener("click", () => show(index + 1));
+      thumbs.forEach((thumb, i) => thumb.addEventListener("click", () => show(i)));
+      document.addEventListener("keydown", (event) => {
+        if (!gallery.matches(":hover, :focus-within")) return;
+        if (event.key === "ArrowLeft") show(index - 1);
+        if (event.key === "ArrowRight") show(index + 1);
+      });
+      refreshCaptions.push(() => show(index));
+      show(0);
+    });
+
+    document.querySelectorAll(".lang button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        root.lang = btn.dataset.set;
+        localStorage.setItem("airaw-homepage-lang", root.lang);
+        refreshCaptions.forEach((fn) => fn());
+      });
+    });
+  </script>
+</body>
+</html>

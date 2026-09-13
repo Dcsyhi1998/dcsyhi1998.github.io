@@ -1,0 +1,995 @@
+openapi: 3.0.0
+info:
+  description: |
+    # Introduction
+    **Airaw API** serves to facilitate the creation of widgets for CarPlay.
+    It can be used within HTML or JavaScript.If you have a request, please contact us on Twitter:[Dcsyhi(@linux_n1)](https://twitter.com/linux_n1).
+
+    **Airaw API** provides the following information:
+      - CarPlay Information
+      - Battery Information
+      - Statusbar Information
+      - System Information
+      - Music Information
+      - Weather Information
+      - Calling from widget
+
+
+    I am very grateful for the source code of [XenInfo](http://www.junesiphone.com/xeninfo/).
+    Airaw API would have been difficult to implement.
+    I am very grateful to the developer [@JunesiPhone](https://twitter.com/junesiphone).
+
+    Airaw API author [Dcsyhi(@linux_n1)](https://twitter.com/linux_n1)
+
+    # Function types
+
+    **Airaw API** will call the mainUpdate merge when the device information is updated.
+    The argument of mainUpdate is type.The type argument provides the following information.
+
+    - if (type == "CarPlay")
+    - if (type == "battery")
+    - if (type == "statusbar")
+    - if (type == "system")
+    - if (type == "music")
+    - if (type == "weather")
+
+    <SecurityDefinitions />
+  version: 1.6.6
+  title: Airaw API
+  contact:
+    name: API Support
+    email: dcsyhi1998@gmail.com
+    url: https://chariz.com/buy/airaw
+  x-logo:
+    altText: Airaw API
+x-tagGroups:
+  - name: Information
+    tags:
+      - CarPlay Information
+      - Battery Information
+      - Statusbar Information
+      - System Information
+      - Music Information
+      - Weather Information
+      - Calling from widget
+paths:
+  #CarPlayの情報取得
+  /CarPlay:
+    get:
+      tags:
+        - CarPlay Information
+      summary: How to get CarPlay information
+      description: How to use acquired variables.
+      parameters:
+        - name: pageIndex
+          in: query
+          description: After scrolling on the CarPlay screen, the page number is returned.
+          required: false
+          style: form
+          schema:
+            type: integer
+            items:
+              type: string
+              default: available
+      x-codeSamples:
+        - lang: "pageIndex"
+          source: |
+            function mainUpdate(type){
+              if(type == "CarPlay"){
+                //page number
+                if(pageIndex == 1){
+                  //widget animation
+                }
+              }
+            }
+  #バッテリー情報
+  /Battery:
+    get:
+      tags:
+        - Battery Information
+      summary: How to get battery information
+      description: How to use acquired variables.
+      parameters:
+        - name: batteryPercent
+          in: query
+          description: Returns the device current percentage.(0~100)
+          required: false
+          style: form
+          schema:
+            type: integer
+            items:
+              type: string
+              default: available
+        - name: batteryCharging
+          in: query
+          description: Returns whether the device is charging.true/false
+          required: false
+          style: form
+          schema:
+            type: boolean
+            items:
+              type: string
+              default: available
+        - name: batteryLowPowerMode
+          in: query
+          description: Returns whether the device is in low power mode.true/false
+          required: false
+          style: form
+          schema:
+            type: boolean
+            items:
+              type: string
+              default: available
+        - name: batteryCycles
+          in: query
+          description: Returns the number of times the smartphone has been charged.
+          required: false
+          style: form
+          schema:
+            type: integer
+            items:
+              type: string
+              default: available
+        - name: batteryHealth
+          in: query
+          description: Returns the current battery status.
+          required: false
+          style: form
+          schema:
+            type: float
+            items:
+              type: string
+              default: available
+        - name: batteryVoltage
+          in: query
+          description: Returns the output voltage of the battery.
+          required: false
+          style: form
+          schema:
+            type: integer
+            items:
+              type: string
+              default: available
+        - name: batteryCelsius
+          in: query
+          description: Returns the current temperature of the battery.
+          required: false
+          style: form
+          schema:
+            type: float
+            items:
+              type: string
+              default: available
+        - name: bateryInfo.devices
+          in: query
+          description: Returns information about devices connected via Bluetooth.
+          required: false
+          style: form
+          schema:
+            type: json
+            enum:
+              - deviceName
+              - batteryPercent
+              - machineName
+              - deviceIdentifier
+              - deviceProductIdentifier
+            items:
+              type: string
+              default: available
+      x-codeSamples:
+        - lang: "Percent"
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryPercent;
+              }
+            }
+        - lang: "Charging"
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryCharging;
+              }
+            }
+        - lang: "LowPowerMode"
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryLowPowerMode;
+              }
+            }
+        - lang: "Cycles"
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryCycles;
+              }
+            }
+        - lang: "Health"
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryHealth + "%";
+              }
+            }
+        - lang: "Voltage"
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryVoltage + "mV";
+              }
+            }
+        - lang: "Celsius"
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                myElement.innerHTML = batteryCelsius + "°C";
+              }
+            }
+        - lang: "bateryInfo.devices"
+          source: |
+            function mainUpdate(type){
+              if(type == "battery"){
+                var batteryArray = bateryInfo.devices;
+                for (var i = 0; i < dayArray.length; i++) {
+                  document.getElementById('deviceName' + i).innerHTML = batteryArray[i].deviceName;
+                  document.getElementById('batteryPercent' + i).innerHTML = batteryArray[i].batteryPercent;
+                  document.getElementById('machineName' + i).innerHTML = batteryArray[i].machineName;
+                  document.getElementById('deviceIdentifier' + i).innerHTML = batteryArray[i].deviceIdentifier;
+                  document.getElementById('deviceProductIdentifier' + i).innerHTML = batteryArray[i].deviceProductIdentifier;
+                }
+              }
+            }
+  #ステータスバー情報
+  /Statusbar:
+    get:
+      tags:
+        - Statusbar Information
+      summary: How to get statusbar information
+      description: How to use acquired variables.
+      parameters:
+        - name: signalBars
+          in: query
+          description: Returns amount of signal bars.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: signalName
+          in: query
+          description: Returns operator name.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: wifiBars
+          in: query
+          description: Returns amount of wifi bars.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: wifiName
+          in: query
+          description: Returns current wifi name.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: signalNetworkType
+          in: query
+          description: Returns 5G, LTE, 3G, 2G, etc..
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+      x-codeSamples:
+        - lang: "signalBars"
+          source: |
+            function mainUpdate(type){
+              if(type == "statusbar"){
+                myElement.innerHTML = signalBars;
+              }
+            }
+        - lang: "signalName"
+          source: |
+            function mainUpdate(type){
+              if(type == "statusbar"){
+                myElement.innerHTML = signalName;
+              }
+            }
+        - lang: "wifiBars"
+          source: |
+            function mainUpdate(type){
+              if(type == "statusbar"){
+                myElement.innerHTML = wifiBars;
+              }
+            }
+        - lang: "wifiName"
+          source: |
+            function mainUpdate(type){
+              if(type == "statusbar"){
+                myElement.innerHTML = wifiName;
+              }
+            }
+        - lang: "signalNetworkType"
+          source: |
+            function mainUpdate(type){
+              if(type == "statusbar"){
+                myElement.innerHTML = signalNetworkType;
+              }
+            }
+  #システム情報
+  /System:
+    get:
+      tags:
+        - System Information
+      summary: How to get system information
+      description: How to use acquired variables.
+      parameters:
+        - name: deviceName
+          in: query
+          description: Returns name set in General/About
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: deviceType
+          in: query
+          description: Returns the type of device Example (iPhone X)
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: systemVersion
+          in: query
+          description: Returns firmware version
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: ipAddress
+          in: query
+          description: Returns device local ip
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: ramFree
+          in: query
+          description: Returns free ram
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: ramUsed
+          in: query
+          description: Returns current ram used
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: ramTotal
+          in: query
+          description: Returns current ram total
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+      x-codeSamples:
+        - lang: "deviceName"
+          source: |
+            function mainUpdate(type){
+              if(type == "system"){
+                myElement.innerHTML = deviceName;
+              }
+            }
+        - lang: "deviceType"
+          source: |
+            function mainUpdate(type){
+              if(type == "system"){
+                myElement.innerHTML = deviceType;
+              }
+            }
+        - lang: "systemVersion"
+          source: |
+            function mainUpdate(type){
+              if(type == "system"){
+                myElement.innerHTML = systemVersion;
+              }
+            }
+        - lang: "ipAddress"
+          source: |
+            function mainUpdate(type){
+              if(type == "system"){
+                myElement.innerHTML = ipAddress;
+              }
+            }
+        - lang: "ramFree"
+          source: |
+            function mainUpdate(type){
+              if(type == "system"){
+                myElement.innerHTML = ramFree;
+              }
+            }
+        - lang: "ramUsed"
+          source: |
+            function mainUpdate(type){
+              if(type == "system"){
+                myElement.innerHTML = ramUsed;
+              }
+            }
+        - lang: "ramTotal"
+          source: |
+            function mainUpdate(type){
+              if(type == "system"){
+                myElement.innerHTML = ramTotal;
+              }
+            }
+  #天気の情報
+  /Weather:
+    get:
+      tags:
+        - Weather Information
+      summary: How to get weather information
+      description: How to use acquired variables.to get the weather information use libPDDokdo. To get the information correctly you need to have the native weather app installed.
+      parameters:
+        - name: weather.city
+          in: query
+          description: Returns current city name.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.temperature
+          in: query
+          description: Returns current temperature.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.feelsLike
+          in: query
+          description: Returns current feelsLike.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.condition
+          in: query
+          description: Returns current weather condition.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.location
+          in: query
+          description: Returns current weather location.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.conditioncode
+          in: query
+          description: Returns current condition code.[Reference source](https://github.com/schneelittchen/Nita/blob/e5504a411f493f71d38945597ad1b5d843cc1d26/Tweak/Nita.x#L63)
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.high
+          in: query
+          description: Returns current high temperature.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.low
+          in: query
+          description: Returns current low temperature.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.sunrise
+          in: query
+          description: Returns current sunrise.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.sunset
+          in: query
+          description: Returns current sunset.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.celsius
+          in: query
+          description: Returns current celsius (Celsius or Fahrenheit).
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.humidity
+          in: query
+          description: Returns current humidity.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.visibility
+          in: query
+          description: Returns current visibility.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.pressure
+          in: query
+          description: Returns current pressure.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.heatIndex
+          in: query
+          description: Returns current heatIndex.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.uvIndex
+          in: query
+          description: Returns current uvIndex.
+          required: false
+          style: form
+          schema:
+            type: string
+            items:
+              type: string
+              default: available
+        - name: weather.dayForecasts
+          in: query
+          description: Returns the weekly weather information.
+          required: false
+          style: form
+          schema:
+            type: json
+            enum:
+              - dayNumber
+              - dayOfWeek
+              - icon
+              - high
+              - low
+        - name: weather.hourlyForecasts
+          in: query
+          description: Returns hourly weather information throughout the day.
+          required: false
+          style: form
+          type: json
+          schema:
+            type: json
+            enum:
+              - time
+              - conditionCode
+              - temperature
+              - percentPrecipitation
+              - detail
+              - hourIndex
+      x-codeSamples:
+        - lang: "temperature"
+          source: |
+            function mainUpdate(type){
+              if(type == "weather"){
+                myElement.innerHTML = weather.temperature;
+              }
+            }
+        - lang: "condition"
+          source: |
+            function mainUpdate(type){
+              if(type == "weather"){
+                myElement.innerHTML = weather.conditions;
+              }
+            }
+        - lang: "location"
+          source: |
+            function mainUpdate(type){
+              if(type == "weather"){
+                myElement.innerHTML = weather.location;
+              }
+            }
+        - lang: "Duration"
+          source: |
+            function mainUpdate(type){
+              if(type == "weather"){
+                myElement.innerHTML = weather.currentDuration;
+              }
+            }
+        - lang: "conditioncode"
+          source: |
+            function mainUpdate(type){
+              var weatherString;
+              if(type == "weather"){
+                if (weather.conditioncode <= 2)
+                  weatherString = @"🌪";
+                else if (weather.conditioncode <= 4)
+                  weatherString = @"⛈";
+                else if (weather.conditioncode <= 8)
+                  weatherString = @"🌨";
+                else if (weather.conditioncode == 9)
+                  weatherString = @"🌧";
+                else if (weather.conditioncode == 10)
+                  weatherString = @"🌨";
+                else if (weather.conditioncode <= 12)
+                  weatherString = @"🌧";
+                else if (weather.conditioncode <= 18)
+                  weatherString = @"🌨";
+                else if (weather.conditioncode <= 22)
+                  weatherString = @"🌫";
+                else if (weather.conditioncode <= 24)
+                  weatherString = @"💨";
+                else if (weather.conditioncode == 25)
+                  weatherString = @"❄️";
+                else if (weather.conditioncode == 26)
+                  weatherString = @"☁️";
+                else if (weather.conditioncode <= 28)
+                  weatherString = @"🌥";
+                else if (weather.conditioncode <= 30)
+                  weatherString = @"⛅️";
+                else if (weather.conditioncode <= 32 && (hour >= 18 || hour <= 6))
+                  weatherString = @"🌙";
+                else if (weather.conditioncode <= 32)
+                  weatherString = @"☀️";
+                else if (weather.conditioncode <= 34)
+                  weatherString = @"🌤";
+                else if (weather.conditioncode == 35)
+                  weatherString = @"🌧";
+                else if (weather.conditioncode == 36)
+                  weatherString = @"🔥";
+                else if (weather.conditioncode <= 38)
+                  weatherString = @"🌩";
+                else if (weather.conditioncode == 39)
+                  weatherString = @"🌦";
+                else if (weather.conditioncode == 40)
+                  weatherString = @"🌧";
+                else if (weather.conditioncode <= 43)
+                  weatherString = @"🌨";
+                else
+                  weatherString = @"N/A";
+                myElement.innerHTML = weatherString;
+              }
+            }
+        - lang: "hightemperature"
+          source: |
+            function mainUpdate(type){
+              if(type == "weather"){
+                myElement.innerHTML = weather.hightemperature;
+              }
+            }
+        - lang: "lowtemperature"
+          source: |
+            function mainUpdate(type){
+              if(type == "weather"){
+                myElement.innerHTML = weather.lowtemperature;
+              }
+            }
+        - lang: "sunrise"
+          source: |
+            function mainUpdate(type){
+              if(type == "weather"){
+                myElement.innerHTML = weather.sunrise;
+              }
+            }
+        - lang: "sunset"
+          source: |
+            function mainUpdate(type){
+              if(type == "weather"){
+                myElement.innerHTML = weather.sunset;
+              }
+            }
+  #再生中の音楽情報情報
+  /Music:
+    get:
+      tags:
+        - Music Information
+      summary: How to get Music information
+      description: How to use acquired variables.
+      parameters:
+        - name: artist
+          in: query
+          description: Returns current artist
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: album
+          in: query
+          description: Returns current album.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: title
+          in: query
+          description: Returns current title
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: currentDuration
+          in: query
+          description: Returns the playback time.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: currentElapsedTime
+          in: query
+          description: Returns the elapsed time.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: isplaying
+          in: query
+          description: Returns true/false
+          required: false
+          style: form
+          schema:
+            type: boolean
+            items:
+              type: string
+              default: available
+        - name: Artwork
+          in: query
+          description: The music image can be obtained in the following path '/var/mobile/Documents/MusicArt.png'
+          required: false
+          style: form
+          schema:
+            type: path
+            items:
+              type: string
+              default: available
+        - name: VideoArtwork
+
+          in: query
+          description: Music videos(spotify only) can be obtained with the following path '/var/mobile/Documents/VideoMusicArt.mp4'
+          required: false
+          style: form
+          schema:
+            type: path
+            items:
+              type: string
+              default: available
+      x-codeSamples:
+        - lang: "artist"
+          source: |
+            function mainUpdate(type){
+              if(type == "music"){
+                myElement.innerHTML = artist;
+              }
+            }
+        - lang: "album"
+          source: |
+            function mainUpdate(type){
+              if(type == "music"){
+                myElement.innerHTML = album;
+              }
+            }
+        - lang: "title"
+          source: |
+            function mainUpdate(type){
+              if(type == "music"){
+                myElement.innerHTML = title;
+              }
+            }
+        - lang: "Duration"
+          source: |
+            function mainUpdate(type){
+              if(type == "music"){
+                myElement.innerHTML = currentDuration;
+              }
+            }
+        - lang: "ElapsedTime"
+          source: |
+            function mainUpdate(type){
+              if(type == "music"){
+                myElement.innerHTML = currentElapsedTime;
+              }
+            }
+        - lang: "isplaying"
+          source: |
+            function mainUpdate(type){
+              if(type == "music"){
+                myElement.innerHTML = isplaying;
+              }
+            }
+        - lang: "Artwork"
+          source: |
+            function mainUpdate(type){
+              if(type == "music"){
+                myElement.src = "/var/mobile/Documents/MusicArt.png?"+ (new Date()).getTime();
+              }
+            }
+        - lang: "VideoArtwork"
+          source: |
+            function mainUpdate(type){
+              if(type == "music"){
+                videoElement.src = "/var/mobile/Documents/VideoMusicArt.mp4?"+ (new Date()).getTime();
+              }
+            }
+  /Calling:
+    get:
+      tags:
+        - Calling from widget
+      summary: How to Calling from widget information
+      description: How to use acquired variables.
+      parameters:
+        - name: window.location = 'arapi:arcall_Battery';
+          in: query
+          description: Update battery information from widget.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: window.location = 'arapi:arcall_Statusbar';
+          in: query
+          description: Update status bar information from widget.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: window.location = 'arapi:arcall_System';
+          in: query
+          description: Update system information from widget.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: window.location = 'arapi:arcall_Weather';
+          in: query
+          description: Update weather information from widget.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: window.location = 'arapi:arcall_Music';
+          in: query
+          description: Update music information from widget.
+          required: false
+          style: form
+          schema:
+            type: strings
+            items:
+              type: string
+              default: available
+        - name: window.location = 'arapi:arcall_all';
+          in: query
+          description: Update all information from widget.
+          required: false
+          style: form
+          schema:
+            type: boolean
+            items:
+              type: string
+              default: available
+      x-codeSamples:
+        - lang: "Calling"
+          source: |
+            <script>
+                //window.location = 'arapi:arcall_Battery';
+                //window.location = 'arapi:arcall_Statusbar';
+                //window.location = 'arapi:arcall_System';
+                //window.location = 'arapi:arcall_Weather';
+                //window.location = 'arapi:arcall_Music';
+                //window.location = 'arapi:arcall_all';
+            </script>

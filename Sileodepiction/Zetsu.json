@@ -1,0 +1,313 @@
+{
+    "class": "DepictionTabView",
+    "headerImage": "https://dcsyhi1998.github.io/Banners/ZetsuBaner.png",
+    "minVersion": "0.3",
+    "tabs": [
+    {
+        "class": "DepictionStackView",
+        "tabname": "Details",
+        "tintColor": "#c1c1c2",
+        "views": [
+            {
+                "class": "DepictionSubheaderView",
+                "title": "Description",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<p>Zetsu is a Tweak that allows the app to Multitask.How to start: Select Zetsu from 3D Touch shortcuts for the app you want to multitask.<br>Zetsu is the best multitasking tweak that supports horizontal screen.</p>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "License",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<p>Zetsu was made using the source of <a href=\"https://github.com/nicho1asdev/Konban\">konban13</a>. Without this source, Zetsu would have been difficult to implement.I am very grateful to the developers Eva (Nepeta) and nicho1asdev.<br><br>Click here to check the <a href=\"https://github.com/nicho1asdev/Konban/blob/master/LICENSE\">License</a></p>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSeparatorView"
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "Screenshots",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionScreenshotsView",
+                "itemCornerRadius": 8,
+                "itemSize": "{360, 250}",
+                "screenshots": [
+                    {
+                        "accessibilityText": "Screenshot",
+                        "url": "https://dcsyhi1998.github.io/icons/zetsu/zetsu_demo1.png"
+                    },
+                    {
+                        "accessibilityText": "Screenshot",
+                        "url": "https://dcsyhi1998.github.io/icons/zetsu/zetsu_demo2.png"
+                    },
+                    {
+                        "accessibilityText": "Screenshot",
+                        "url": "https://dcsyhi1998.github.io/icons/zetsu/zetsu_demo3.png"
+                    },
+                    {
+                        "accessibilityText": "Screenshot",
+                        "url": "https://dcsyhi1998.github.io/icons/zetsu/zetsu_demo4.png"
+                    }
+                ]
+            },
+            {
+                "class": "DepictionSeparatorView"
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<p>If you like how Zetsu works, make me a donation through <a href=\"https://www.paypal.me/DevDcsyhi\">PayPal</a>.<br><br>That will motivate me to update the tweak and put more functions on it. or support me by following me on <a href=\"https://twitter.com/intent/follow?screen_name=linux_n1\">Twitter</a>.</p>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSeparatorView"
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "Multitaskin Mode:",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<ul>\n<li>Toolbar Mode or Menu Mode</li><li>Menu bar height change</li><li>Action button position customization</li><li>Action Button Image Customization</li><li>Feeling of space between buttons</li><li>Enable/disable the setting of the screen size as the area within which the Window can be moved.</li></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "Scaling Modes:",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<ul>\n<li>Selection of applications for scaling.</li><li>Keyboard display position.</li></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "ControlCenter:",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<ul>\n<li>Display Windows can be hidden or displayed at once.</li></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "Note:",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<ul>\n<li>If you are using Bootstrap and Serotonin's Semi-Jailbreak, you have to enable the target application in Bootstrap to have the scaling mode and application rotation.</li><li>Regarding support for iOS14, I plan to release a full version in the near future. Until then, please use the Zetsu version in my repository.<a href=\"https://dcsyhi1998.github.io/\">Repo</a></li><li>The camera application cannot be used with Zetsu.</li><li>The latest version of Zetsu does not support Rootfull. This is because we have not been able to test it and the supported parts are not functioning properly.</li></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "Future Functions:",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<ol>\n<li>Change button position.</li><li>Add Window UI, in response to users wishes.</li><li>Creation of split-view functionality.</li><li>iOS14 full Support.</li></ol>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "Tested devices:",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<ul>\n<li>iPhone Xs iOS15.0 (Dopamine)</li><li>iPhone 13 iOS16.3 (Bootstrap & Serotonin)</li><li>iPhone 14 Pro Max iOS16.0 (Bootstrap & Serotonin)</li></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "Special thanks:",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown":"<ul>\n<li>Thanks to <a href=\"https://twitter.com/sugiutadev\">Sugiuta</a> for creating the banner and for checking and testing the operation of Zetsu.</li></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSpacerView",
+                "spacing": 16
+            },
+            {
+                "class": "DepictionSeparatorView"
+            },
+            {
+                "class": "DepictionSpacerView",
+                "spacing": 16
+            },
+            {
+                "class": "DepictionHeaderView",
+                "title": "Information",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionSpacerView",
+                "spacing": 8
+            },
+            {
+                "class": "DepictionTableTextView",
+                "text": "Dcsyhi (@linux_n1)",
+                "title": "Author"
+            },
+            {
+                "class": "DepictionTableTextView",
+                "text": "1.5",
+                "title": "Version"
+            },
+            {
+                "class": "DepictionTableTextView",
+                "text": "iOS15-iOS16",
+                "title": "Compatibility"
+            },
+            {
+                "class": "DepictionTableTextView",
+                "text": "PreferenceLoader",
+                "title": "Dependency"
+            },
+            {
+                "class": "DepictionSpacerView",
+                "spacing": 16
+            },
+            {
+                "class": "DepictionSeparatorView"
+            },
+            {
+                "class": "DepictionSpacerView",
+                "spacing": 16
+            },
+            {
+                "action": "https://twitter.com/intent/follow?screen_name=linux_n1",
+                "class": "DepictionTableButtonView",
+                "title": "Find me on Twitter (@linux_n1)",
+                "openExternal": true
+            },
+            {
+                "action": "mailto:dcsyhi1998@gmail.com",
+                "class": "DepictionTableButtonView",
+                "title": "Send me an email"
+            },
+            {
+                "action": "https://www.paypal.me/DevDcsyhi",
+                "class": "DepictionTableButtonView",
+                "title": "Buy me a 🍺 via PayPal"
+            },
+            {
+                "class": "DepictionSpacerView",
+                "spacing": 40
+            },
+            {
+                "URL": "https://dcsyhi1998.github.io/CydiaIcon.png",
+                "alignment": 1,
+                "class": "DepictionImageView",
+                "cornerRadius": 0,
+                "height": 45,
+                "width": 45
+            },
+            {
+                "class": "DepictionSpacerView",
+                "spacing": 16
+            },
+            {
+                "class": "DepictionReviewView",
+                "title": "Amazing tweak",
+                "author": "M2",
+                "markdown":"Best Multitasking Tweak.",
+                "rating": 5
+            },
+            {
+                "class": "DepictionReviewView",
+                "title": "Best",
+                "author": "ㄇㄉㄈㄎ",
+                "markdown":"Zetsu, the best multitasking tweak.",
+                "rating": 5
+            },
+            {
+                "class": "DepictionReviewView",
+                "title": "cool",
+                "author": "无贼",
+                "markdown":"awesome work bro 🤩",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "class": "DepictionStackView",
+        "tabname": "Changelog",
+        "tintColor": "#c1c1c2",
+        "views": [
+            {
+                "class": "DepictionSubheaderView",
+                "title": "v1.5",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown": "<ul>\n<li>iOS16 Support(Bootstrap & Serotonin)</li></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "v1.2",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown": "<ul>\n<li>Fixed Zetsu settings not being set correctly.</li></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "v1.1",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown": "<ul>\n<li>Correction of horizontal screen.</li>\n<li>Crash fix at screen shot.</li><li>Crash fix when receiving a call</li><li>Fix crash when Face ID authentication.</li><li>Crash fix when connecting to bluetooth</li></ul>",
+                "useRawFormat": true
+            },
+            {
+                "class": "DepictionSubheaderView",
+                "title": "v1.0",
+                "useBoldText": true,
+                "useBottomMargin": false
+            },
+            {
+                "class": "DepictionMarkdownView",
+                "markdown": "<ul>\n<li>Initial Release (iOS15 Support)</li>\n</ul>",
+                "useRawFormat": true
+            }
+        ]
+    }
+    ],
+    "tintColor": "#c1c1c2"
+}

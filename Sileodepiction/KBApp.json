@@ -1,0 +1,395 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.3",
+  "tintColor": "#8B6BFF",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details",
+      "tintColor": "#8B6BFF",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Keyboard dock for apps and modules",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p>A dock on the iOS keyboard. Pin <strong>apps</strong>, <strong>editor modules</strong>, groups, and translation presets, then launch or edit without leaving the keyboard.</p><p>Turn it on in <strong>Settings → KBApp</strong>.</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Launch apps from the keyboard dock</li><li>Groups — one dock icon; tap to open apps and modules inside</li><li>Group templates: Editing Group / Translation Group</li><li>Copy, cut, paste, select all, undo / redo</li><li>Cursor moves, delete, dismiss keyboard</li><li>Translate the selection or the whole field</li><li>Favorite words — insert in one tap</li><li>Clipboard history</li><li>Text labels instead of icons — Settings → Dock → Display Style</li><li>Keyboard click sound — Settings → Features; add your own (1 second or shorter)</li><li>Haptic feedback (off by default) — Settings → Features</li><li>Side inset, spread, spacing, icon size, and distance from the bottom</li><li>Custom / system / keep-image module colors</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "How to use",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>Install KBApp from this repo, then respring</li><li>Open Settings → KBApp and enable it</li><li>Add and reorder items in Dock → Apps or Modules</li></ol>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Information",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Dcsyhi"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.8.3"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS",
+          "text": "14.0+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "rootless"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Architecture",
+          "text": "arm64 / arm64e"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Package",
+          "text": "jp.dcsyhi.kbappdock"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Other packages",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Zetsu",
+          "action": "https://dcsyhi1998.github.io/depiction/zetsu.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Culprit",
+          "action": "https://dcsyhi1998.github.io/depiction/Culprit.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "HTML page",
+          "action": "https://dcsyhi1998.github.io/depiction/KBApp.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "X @linux_n1",
+          "action": "https://x.com/linux_n1",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Email",
+          "action": "mailto:dcsyhi1998@gmail.com?subject=KBApp",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "PayPal",
+          "action": "https://www.paypal.me/DevDcsyhi",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "日本語",
+      "tintColor": "#8B6BFF",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "キーボードドックにアプリとモジュール",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p>キーボード下部にドックを出します。<strong>アプリ</strong>、<strong>編集モジュール</strong>、グループ、翻訳プリセットを並べて、入力したまま起動や編集ができます。</p><p><strong>設定 → KBApp</strong> で有効にしてください。</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "できること",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>ドックからアプリを起動</li><li>グループ — ドック上は1アイコン、タップで中のアプリ／モジュールを選択</li><li>テンプレート: 編集グループ / 翻訳グループ</li><li>コピー、カット、ペースト、全選択、Undo / Redo</li><li>カーソル移動、削除、キーボードを閉じる</li><li>選択範囲または全文を翻訳</li><li>お気に入り単語をワンタップ挿入</li><li>クリップボード履歴</li><li>アイコンの代わりに文字表示 — 設定 → ドック → 表示</li><li>キーボード音の変更 — 設定 → 機能。独自サウンドは1秒以下</li><li>感触（初期値はオフ）— 設定 → 機能</li><li>左右の余白、広がり、間隔、アイコンサイズ、下端からの距離</li><li>モジュール色（カスタム / システム / 画像の色を保持）</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "使い方",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>このリポジトリから KBApp を入れ、リスプリング</li><li>設定 → KBApp で有効化</li><li>Dock → アプリまたはモジュールで追加・並べ替え</li></ol>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "他のパッケージ",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Zetsu",
+          "action": "https://dcsyhi1998.github.io/depiction/zetsu.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Culprit",
+          "action": "https://dcsyhi1998.github.io/depiction/Culprit.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "HTML ページ",
+          "action": "https://dcsyhi1998.github.io/depiction/KBApp.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "Changelog",
+      "tintColor": "#8B6BFF",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.8.3",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Fixed the Settings screen not displaying correctly on iOS 26</li><li>iOS 26 で設定画面が正しく表示されない問題を修正</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.8.2",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Group menu now uses a frosted (UIBlurEffect) card and supports light / dark mode</li><li>Added side-inset and spread sliders to Layout</li><li>Locally added images now match SF Symbol size</li><li>グループメニューをすりガラス（UIBlurEffect）カードに変更し、ライト／ダークに対応</li><li>レイアウトに左右の余白と広がりのスライダーを追加。</li><li>ローカル追加画像を SF Symbol と同じ大きさに揃えた</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.8.1",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Joke modules: convert text to binary or hexadecimal (UTF-8, space-separated)</li><li>ネタ枠: 入力を2進数／16進数に変換（UTF-8、スペース区切り）</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.8",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Text labels on the dock instead of icons — Settings → Dock → Display Style</li><li>Keyboard click sound picker — Settings → Features</li><li>Add your own sounds (1 second or shorter). The folder is shown in Settings</li><li>ドックをアイコンの代わりに文字ボタンで表示 — 設定 → ドック → 表示</li><li>キーボード音を変更可能 — 設定 → 機能</li><li>独自サウンドを追加可能（1秒以下）。保存先は設定画面に表示</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.7",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Support iOS 16 – iOS 26</li><li>Groups — one dock icon; tap to open the apps and modules inside</li><li>Group templates: Editing Group / Translation Group</li><li>Clipboard history — review copied text and insert from the dock</li><li>Haptic feedback toggle — Settings → Features, off by default</li><li>Favorite words and translation presets</li><li>iOS 26 settings cell layout</li><li>iOS 16 – iOS 26 に対応</li><li>グループ機能 — ドック上は1アイコン、タップで中のアプリ／モジュールを選択</li><li>テンプレート: 編集グループ / 翻訳グループ</li><li>クリップボード履歴 — コピーしたテキストを見返し、ドックから挿入</li><li>感触のオン／オフ — 設定 → 機能、初期値はオフ</li><li>お気に入り・翻訳プリセット</li><li>iOS 26 の設定セル表示を修正</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    }
+  ]
+}
