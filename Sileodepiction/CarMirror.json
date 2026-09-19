@@ -1,0 +1,365 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.3",
+  "headerImage": "https://dcsyhi1998.github.io/icons/CarMirror/preview-home.png",
+  "tintColor": "#3B82F6",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details",
+      "tintColor": "#3B82F6",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Mirror iPhone to CarPlay",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p>Streams the iPhone screen to CarPlay with <strong>ReplayKit</strong>, then lets you control the phone by touch. Includes a software <strong>Home</strong> button and LHD/RHD placement.</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://dcsyhi1998.github.io/icons/CarMirror/preview-home.png",
+          "width": 1024,
+          "height": 384,
+          "cornerRadius": 12
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://dcsyhi1998.github.io/icons/CarMirror/preview-youtube.png",
+          "width": 1024,
+          "height": 384,
+          "cornerRadius": 12
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>ReplayKit Broadcast mirror on CarPlay</li><li>Touch control of the iPhone</li><li>Software Home button</li><li>Left / right-hand drive button placement</li><li>rootless (arm64 / arm64e)</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "How to use",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>Install CarMirror and respring</li><li>On the iPhone app, start the “CarMirror” broadcast (<strong>on iOS 16, start before connecting CarPlay</strong>)</li><li>Open CarMirror on CarPlay — touch to control, Home to go home</li></ol>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Information",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Dcsyhi"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Package",
+          "text": "jp.dcsyhi.carmirror"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS",
+          "text": "16.0+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Architecture",
+          "text": "arm64 / arm64e"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "More CarPlay tweaks",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarScrub",
+          "action": "https://dcsyhi1998.github.io/depiction/CarScrub.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarGlyph",
+          "action": "https://dcsyhi1998.github.io/depiction/CarGlyph.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Cylinder CarPlay",
+          "action": "https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarCast",
+          "action": "https://chariz.com/buy/carcast",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "X @linux_n1",
+          "action": "https://x.com/linux_n1",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Email",
+          "action": "mailto:dcsyhi1998@gmail.com",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "PayPal",
+          "action": "https://www.paypal.me/DevDcsyhi",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "日本語",
+      "tintColor": "#3B82F6",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "iPhone を CarPlay にミラー",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<p><strong>ReplayKit</strong> で iPhone 画面を CarPlay に表示し、タッチで操作できます。ソフトウェア・<strong>ホーム</strong>ボタンと、ハンドル左右の配置にも対応。</p>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "できること",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>ReplayKit Broadcast によるミラー</li><li>CarPlay からのタッチ操作</li><li>ソフトウェア・ホームボタン</li><li>左／右ハンドルのボタン配置</li><li>rootless 対応</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "使い方",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ol><li>CarMirror を入れて respring</li><li>iPhone アプリで「CarMirror」配信を開始（<strong>iOS 16 は CarPlay 接続前に開始</strong>）</li><li>CarPlay で CarMirror を開く — タッチで操作、ホームでホームへ</li></ol>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "他の CarPlay Tweak",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarScrub",
+          "action": "https://dcsyhi1998.github.io/depiction/CarScrub.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarGlyph",
+          "action": "https://dcsyhi1998.github.io/depiction/CarGlyph.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Cylinder CarPlay",
+          "action": "https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Airaw",
+          "action": "https://chariz.com/buy/airaw",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "CarCast",
+          "action": "https://chariz.com/buy/carcast",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "Changelog",
+      "tintColor": "#3B82F6",
+      "views": [
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.0",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "<ul><li>Initial release</li><li>ReplayKit mirror + touch + Home button</li><li>LHD/RHD placement</li><li>iOS 16+ rootless</li></ul>",
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 32
+        }
+      ]
+    }
+  ]
+}

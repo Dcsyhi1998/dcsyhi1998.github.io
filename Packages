@@ -146,6 +146,44 @@ Icon: https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png
 Name: CarGlyph
 Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CarGlyph.json
 
+Package: jp.dcsyhi.carmirror
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: dcsyhi
+Installed-Size: 1488
+Depends: firmware (>=16.0), ellekit | mobilesubstrate
+Filename: ./debs/jp.dcsyhi.carmirror_1.0.0_iphoneos-arm64.deb
+Size: 708456
+MD5sum: 4776175943e2302a43a01c5feab8b8eb
+SHA1: 1cd792e5370bd39125e09cf2d427f40b3e983b71
+SHA256: 44d5b73000d06a979f972c67bd7ef37d6cf0931aed33f8fe86c3de22d1b77958
+Section: Tweaks
+Description: CarMirror — ReplayKit iPhone mirror for CarPlay with touch control.
+Author: dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/CarMirror.html
+Icon: https://dcsyhi1998.github.io/icons/CarMirror/CarMirror.png
+Name: CarMirror
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CarMirror.json
+
+Package: jp.dcsyhi.carmirror
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: dcsyhi
+Installed-Size: 1488
+Depends: firmware (>=16.0), ellekit | mobilesubstrate
+Filename: ./debs/jp.dcsyhi.carmirror_1.0.0_iphoneos-arm.deb
+Size: 708392
+MD5sum: e7d71ca74433e6da4baa1a84fa2ea2e0
+SHA1: 97f943de81310a542408af0a1e5168d28e47f6b8
+SHA256: ee3829872b2891843c2495147704438b9a1d9f49caaa0a3dea022ba0278da70b
+Section: Tweaks
+Description: CarMirror — ReplayKit iPhone mirror for CarPlay with touch control.
+Author: dcsyhi
+Depiction: https://dcsyhi1998.github.io/depiction/CarMirror.html
+Icon: https://dcsyhi1998.github.io/icons/CarMirror/CarMirror.png
+Name: CarMirror
+Sileodepiction: https://dcsyhi1998.github.io/Sileodepiction/CarMirror.json
+
 Package: jp.dcsyhi.carscrub
 Version: 1.0
 Architecture: iphoneos-arm64

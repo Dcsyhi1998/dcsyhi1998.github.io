@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CarMirror</title>
+  <meta name="description" content="CarMirror — mirror the iPhone screen to CarPlay with touch control and a software Home button. Jailbreak tweak for iOS 16+.">
+  <link rel="icon" href="https://dcsyhi1998.github.io/icons/CarMirror/CarMirror.png">
+  <meta property="og:title" content="CarMirror">
+  <meta property="og:description" content="ReplayKit iPhone mirror for CarPlay with touch control.">
+  <meta property="og:image" content="https://dcsyhi1998.github.io/icons/CarMirror/preview-home.png">
+  <style>
+    :root {
+      --leaf: #3B82F6;
+      --mint: #93C5FD;
+      --forest: #1E3A8A;
+      --ink: #06101f;
+      --card: rgba(255,255,255,.06);
+      --line: rgba(255,255,255,.1);
+      --text: #f2f6fc;
+      --muted: rgba(242,246,252,.68);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+      background:
+        radial-gradient(1200px 420px at 50% -80px, rgba(59,130,246,.38), transparent 60%),
+        linear-gradient(180deg, #0f2748 0%, var(--ink) 42%, #040810 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    body.en [data-i18n="ja"],
+    body.ja [data-i18n="en"] { display: none; }
+
+    .page {
+      max-width: 430px;
+      margin: 0 auto;
+      padding: 22px 16px calc(28px + env(safe-area-inset-bottom));
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(59,130,246,.2), rgba(255,255,255,.03));
+      border-radius: 28px;
+      padding: 28px 20px 22px;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -40% -20%;
+      height: 140px;
+      background: radial-gradient(circle, rgba(147,197,253,.22), transparent 70%);
+      pointer-events: none;
+    }
+    .icon {
+      width: 84px;
+      height: 84px;
+      border-radius: 22px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.12);
+      object-fit: cover;
+    }
+    .kicker {
+      margin: 16px 0 6px;
+      color: var(--mint);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: -.04em;
+      font-weight: 800;
+    }
+    .lede {
+      margin: 10px auto 0;
+      max-width: 34em;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.22);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .lang {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: flex;
+      padding: 3px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.28);
+      border: 1px solid var(--line);
+      z-index: 1;
+    }
+    .lang button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 9px;
+      border-radius: 999px;
+    }
+    body.ja .lang [data-set="ja"],
+    body.en .lang [data-set="en"] {
+      background: var(--leaf);
+      color: #04122a;
+    }
+
+    .section { margin-top: 22px; }
+    .label {
+      margin: 0 4px 10px;
+      color: var(--mint);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .copy {
+      padding: 16px 16px 4px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .copy strong { color: var(--text); font-weight: 700; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .feature { padding: 14px 14px 16px; }
+    .feature b { display: block; margin-bottom: 6px; font-size: 14px; }
+    .feature span {
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--leaf);
+      box-shadow: 0 0 12px var(--leaf);
+      margin-bottom: 10px;
+    }
+
+    .steps { padding: 6px 4px; }
+    .step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 14px;
+    }
+    .step + .step { border-top: 1px solid var(--line); }
+    .num {
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      background: rgba(59,130,246,.18);
+      color: var(--mint);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .step p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .step b { font-size: 14px; }
+
+    details.faq { padding: 0 16px; }
+    details.faq + details.faq { border-top: 1px solid var(--line); }
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 0;
+      font-size: 14px;
+      font-weight: 650;
+    }
+    summary::-webkit-details-marker { display: none; }
+    details.faq p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .tweak {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      color: inherit;
+      text-decoration: none;
+    }
+    .tweak + .tweak { border-top: 1px solid var(--line); }
+    .tweak img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 18px rgba(0,0,0,.28);
+    }
+    .tweak .meta { flex: 1; min-width: 0; }
+    .tweak .name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 750;
+    }
+    .tweak .desc { margin-top: 2px; color: var(--muted); font-size: 12.5px; }
+    .now {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(59,130,246,.2);
+      color: var(--mint);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .chev { color: rgba(255,255,255,.28); font-size: 20px; font-weight: 300; }
+    .tweak.current { pointer-events: none; }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .stat { padding: 14px; }
+    .stat small { color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .stat b { display: block; margin-top: 4px; font-size: 15px; }
+
+    .actions { display: grid; gap: 8px; }
+    .btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 13px 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #04122a;
+      background: linear-gradient(180deg, var(--mint), var(--leaf));
+    }
+    .btn.ghost {
+      color: var(--text);
+      background: transparent;
+      border: 1px solid var(--line);
+    }
+
+    .preview { overflow: hidden; padding: 0; margin-bottom: 10px; }
+    .preview:last-child { margin-bottom: 0; }
+    .preview a { display: block; }
+    .preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: center;
+      background: #0a1628;
+    }
+    .preview .caption {
+      padding: 11px 14px 13px;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    footer {
+      margin-top: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body class="en">
+  <main class="page">
+    <header class="hero">
+      <div class="lang">
+        <button type="button" data-set="ja">JA</button>
+        <button type="button" data-set="en">EN</button>
+      </div>
+      <img class="icon" src="https://dcsyhi1998.github.io/icons/CarMirror/CarMirror.png" alt="CarMirror">
+      <div class="kicker">CarPlay Screen Mirror</div>
+      <h1>CarMirror</h1>
+      <p class="lede" data-i18n="ja">iPhone の画面を CarPlay にミラーリング。タッチ操作とソフトウェア・ホームボタン付き。</p>
+      <p class="lede" data-i18n="en">Mirror the iPhone screen to CarPlay with touch control and a software Home button.</p>
+      <div class="pills">
+        <span class="pill">iOS 16+</span>
+        <span class="pill">arm64 / arm64e</span>
+        <span class="pill">rootless</span>
+        <span class="pill">ReplayKit</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">プレビュー</p>
+      <p class="label" data-i18n="en">Preview</p>
+      <figure class="card preview">
+        <a href="../icons/CarMirror/preview-home.png">
+          <img src="../icons/CarMirror/preview-home.png" alt="CarMirror home screen mirror">
+        </a>
+        <figcaption class="caption" data-i18n="ja">ホーム画面をミラー表示。レターボックス側のホームボタンで iPhone のホームに戻れます。</figcaption>
+        <figcaption class="caption" data-i18n="en">Home screen mirrored on CarPlay. Use the letterbox Home button to go home on the iPhone.</figcaption>
+      </figure>
+      <figure class="card preview">
+        <a href="../icons/CarMirror/preview-youtube.png">
+          <img src="../icons/CarMirror/preview-youtube.png" alt="CarMirror YouTube landscape mirror">
+        </a>
+        <figcaption class="caption" data-i18n="ja">YouTube など横向きアプリもそのまま表示。CarPlay 上のタッチが iPhone に届きます。</figcaption>
+        <figcaption class="caption" data-i18n="en">Landscape apps like YouTube mirror as-is. Touches on CarPlay reach the iPhone.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">できること</p>
+      <p class="label" data-i18n="en">Features</p>
+      <div class="card copy">
+        <p data-i18n="ja">ReplayKit の画面収録で iPhone 映像を CarPlay に流し、<strong>タッチで iPhone を操作</strong>します。ソフトウェア・ホームと、ハンドル左右に合わせたボタン配置にも対応。</p>
+        <p data-i18n="en">Streams the iPhone via ReplayKit to CarPlay and lets you <strong>control the phone by touch</strong>. Includes a software Home button and LHD/RHD placement.</p>
+      </div>
+      <div class="grid" style="margin-top:10px">
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">画面ミラー</b><b data-i18n="en">Screen mirror</b><span data-i18n="ja">ReplayKit Broadcast で低遅延に表示。</span><span data-i18n="en">Low-latency ReplayKit Broadcast stream.</span></article>
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">タッチ操作</b><b data-i18n="en">Touch control</b><span data-i18n="ja">CarPlay 上のタップが iPhone に届く。</span><span data-i18n="en">Taps on CarPlay inject to the iPhone.</span></article>
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">ホームボタン</b><b data-i18n="en">Home button</b><span data-i18n="ja">レターボックスから iPhone ホームへ。</span><span data-i18n="en">Jump to iPhone Home from the letterbox.</span></article>
+        <article class="card feature"><div class="dot"></div><b data-i18n="ja">ハンドル位置</b><b data-i18n="en">Steering side</b><span data-i18n="ja">左／右ハンドルでボタン配置を切替。</span><span data-i18n="en">Place controls for LHD or RHD.</span></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">使い方</p>
+      <p class="label" data-i18n="en">How to use</p>
+      <div class="card steps">
+        <div class="step"><span class="num">1</span><div><b data-i18n="ja">インストール</b><b data-i18n="en">Install</b><p data-i18n="ja">Sileo / Zebra から CarMirror を入れ、SpringBoard を再起動。</p><p data-i18n="en">Install CarMirror from Sileo / Zebra, then respring.</p></div></div>
+        <div class="step"><span class="num">2</span><div><b data-i18n="ja">画面収録を開始</b><b data-i18n="en">Start broadcast</b><p data-i18n="ja">iPhone の CarMirror アプリで「CarMirror」配信を開始。<strong>iOS 16 は CarPlay 接続前に開始</strong>してください。</p><p data-i18n="en">In the CarMirror app, start the “CarMirror” broadcast. <strong>On iOS 16, start it before connecting CarPlay.</strong></p></div></div>
+        <div class="step"><span class="num">3</span><div><b data-i18n="ja">CarPlay で開く</b><b data-i18n="en">Open on CarPlay</b><p data-i18n="ja">CarPlay で CarMirror を開くと映像が流れます。画面をタッチして操作、ホームボタンでホームへ。</p><p data-i18n="en">Open CarMirror on CarPlay to see the stream. Touch to control; use Home to go home.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">よくある質問</p>
+      <p class="label" data-i18n="en">FAQ</p>
+      <div class="card">
+        <details class="faq" open>
+          <summary>
+            <span data-i18n="ja">脱獄は必要ですか？</span>
+            <span data-i18n="en">Do I need a jailbreak?</span>
+          </summary>
+          <p data-i18n="ja">はい。rootless（Dopamine など）向けです。ElleKit / MobileSubstrate が必要です。</p>
+          <p data-i18n="en">Yes. Built for rootless (e.g. Dopamine). ElleKit / MobileSubstrate required.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">iOS 16 で配信を開始できません</span>
+            <span data-i18n="en">Broadcast won’t start on iOS 16</span>
+          </summary>
+          <p data-i18n="ja">iOS 16 では CarPlay 接続中に ReplayKit を開始できないことがあります。<strong>先に CarMirror 配信を開始してから</strong> CarPlay に接続し、CarMirror を開いてください。</p>
+          <p data-i18n="en">On iOS 16, ReplayKit may refuse to start while CarPlay is already connected. <strong>Start the CarMirror broadcast first</strong>, then connect CarPlay and open CarMirror.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">映像が出ません / タッチが効きません</span>
+            <span data-i18n="en">No video / touch does nothing</span>
+          </summary>
+          <p data-i18n="ja">配信が「CarMirror」か確認し、一度止めて再開。SpringBoard 再起動後もだめなら、uicache と Broadcast Extension の再認識を試してください。</p>
+          <p data-i18n="en">Confirm the broadcast extension is “CarMirror”, then stop and restart it. After a respring, try refreshing with uicache if the extension is stale.</p>
+        </details>
+        <details class="faq">
+          <summary>
+            <span data-i18n="ja">ホームボタンの位置を変えたい</span>
+            <span data-i18n="en">I want to move the Home button</span>
+          </summary>
+          <p data-i18n="ja">iPhone の CarMirror アプリで「左ハンドル / 右ハンドル」を選べます（デフォルトは左ハンドル）。</p>
+          <p data-i18n="en">In the CarMirror iPhone app, choose Left-hand drive or Right-hand drive (default is LHD).</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">他の CarPlay アプリ / Tweak</p>
+      <p class="label" data-i18n="en">More CarPlay apps / tweaks</p>
+      <div class="card">
+        <a class="tweak current" href="#">
+          <img src="https://dcsyhi1998.github.io/icons/CarMirror/CarMirror.png" alt="">
+          <div class="meta">
+            <div class="name">CarMirror <span class="now" data-i18n="ja">このページ</span><span class="now" data-i18n="en">This page</span></div>
+            <div class="desc" data-i18n="ja">CarPlay へ iPhone 画面ミラー</div>
+            <div class="desc" data-i18n="en">Mirror iPhone to CarPlay</div>
+          </div>
+        </a>
+        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/CarScrub.html">
+          <img src="https://dcsyhi1998.github.io/icons/CarScrub/CarScrub.png" alt="">
+          <div class="meta">
+            <div class="name">CarScrub</div>
+            <div class="desc" data-i18n="ja">Now Playing バーをスクラブ可能に</div>
+            <div class="desc" data-i18n="en">Make the Now Playing bar scrubbable</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/CarGlyph.html">
+          <img src="https://dcsyhi1998.github.io/icons/CarGlyph/CarGlyph.png" alt="">
+          <div class="meta">
+            <div class="name">CarGlyph</div>
+            <div class="desc" data-i18n="ja">CarPlay アイコンをテーマ化</div>
+            <div class="desc" data-i18n="en">Theme CarPlay icons</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://dcsyhi1998.github.io/depiction/CylinderCarPlay.html">
+          <img src="https://dcsyhi1998.github.io/icons/Cylinder-CarPlay/Cylinder-CarPlay.png" alt="">
+          <div class="meta">
+            <div class="name">Cylinder CarPlay</div>
+            <div class="desc" data-i18n="ja">CarPlay ホームのページめくりエフェクト</div>
+            <div class="desc" data-i18n="en">Cylinder page effects on CarPlay</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://chariz.com/buy/airaw">
+          <img src="https://dcsyhi1998.github.io/icons/Airaw/Airaw.png" alt="">
+          <div class="meta">
+            <div class="name">Airaw</div>
+            <div class="desc" data-i18n="ja">壁紙・レイアウト・ウィジェットで CarPlay を拡張</div>
+            <div class="desc" data-i18n="en">Wallpaper, layout, widgets for CarPlay</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+        <a class="tweak" href="https://chariz.com/buy/carcast">
+          <img src="https://dcsyhi1998.github.io/icons/CarCast/CarCast.png" alt="">
+          <div class="meta">
+            <div class="name">CarCast</div>
+            <div class="desc" data-i18n="ja">非対応アプリを CarPlay ホームに追加</div>
+            <div class="desc" data-i18n="en">Pin non-CarPlay apps to the dashboard</div>
+          </div>
+          <span class="chev">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label" data-i18n="ja">対応</p>
+      <p class="label" data-i18n="en">Compatibility</p>
+      <div class="meta-row">
+        <div class="card stat"><small>Type</small><b>Tweak + App</b></div>
+        <div class="card stat"><small>iOS</small><b>16.0+</b></div>
+        <div class="card stat"><small>Arch</small><b>arm64e</b></div>
+      </div>
+    </section>
+
+    <section class="section actions">
+      <a class="btn ghost" href="https://x.com/linux_n1">X @linux_n1</a>
+      <a class="btn ghost" href="https://www.paypal.me/DevDcsyhi">PayPal</a>
+      <a class="btn ghost" href="mailto:dcsyhi1998@gmail.com?subject=CarMirror">Email</a>
+    </section>
+
+    <footer>
+      <span data-i18n="ja">不具合報告には iOS・機種・脱獄環境を添えてください。<br>CarMirror by Dcsyhi · jp.dcsyhi.carmirror</span>
+      <span data-i18n="en">When reporting bugs, include iOS, device, and jailbreak.<br>CarMirror by Dcsyhi · jp.dcsyhi.carmirror</span>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      var body = document.body;
+      var saved = null;
+      try { saved = localStorage.getItem("carmirror-lang"); } catch (e) {}
+      var lang = saved || ((navigator.language || "").toLowerCase().indexOf("ja") === 0 ? "ja" : "en");
+      body.className = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll(".lang button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          body.className = btn.getAttribute("data-set");
+          document.documentElement.lang = body.className;
+          try { localStorage.setItem("carmirror-lang", body.className); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
