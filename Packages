@@ -127,6 +127,40 @@ Author: Dcsyhi
 Icon: https://dcsyhi1998.github.io/icons/ADKeyboard/ADKeyboard.png
 Name: ADKeyboard
 
+Package: jp.dcsyhi.airaw.yahoomappatch
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: Dcsyhi
+Installed-Size: 172
+Depends: ellekit | mobilesubstrate, firmware (>=16.0), jp.dcsyhi.airaw, jp.dcsyhi.airaw.splitnative
+Filename: ./debs/jp.dcsyhi.airaw.yahoomappatch_1.0_iphoneos-arm64.deb
+Size: 11970
+MD5sum: 4805ff1b58996ade9c7cb21a6ea0c001
+SHA1: e14a7adcfaa856bad60a0178c0b9eafdf6634cf0
+SHA256: 4b17ae5311bc2b36d9ca7df2dc2efe01c48160e63872e91988fbf5c210c29088
+Section: Tweaks
+Description: Airaw Split Native上でYahoo!カーナビをSplit表示した際、Mapbox地図の表示領域をCarPlayのウィンドウサイズに追従させるためのパッチです。
+Tag: compatible_min::ios16.0
+Author: Dcsyhi
+Name: Airaw Yahoo Map Patch
+
+Package: jp.dcsyhi.airaw.yahoomappatch
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Dcsyhi
+Installed-Size: 172
+Depends: ellekit | mobilesubstrate, firmware (>=16.0), jp.dcsyhi.airaw, jp.dcsyhi.airaw.splitnative
+Filename: ./debs/jp.dcsyhi.airaw.yahoomappatch_1.0_iphoneos-arm.deb
+Size: 11896
+MD5sum: 022e720913e0723757970b090e014df5
+SHA1: 33cc0c95046e69e1c7ce2ef57abe106cee954c7e
+SHA256: 3c8621e8368874382b22942b367c38236c2b4b82729f0811b49d5e5d4ae48e19
+Section: Tweaks
+Description: Airaw Split Native上でYahoo!カーナビをSplit表示した際、Mapbox地図の表示領域をCarPlayのウィンドウサイズに追従させるためのパッチです。
+Tag: compatible_min::ios16.0
+Author: Dcsyhi
+Name: Airaw Yahoo Map Patch
+
 Package: jp.dcsyhi.carglyph
 Version: 1.0.0
 Architecture: iphoneos-arm64
